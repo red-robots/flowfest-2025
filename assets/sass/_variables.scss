@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'Letter Magic';
+  src: url('fonts/letter-magic/letter-magic-webfont.woff2') format('woff2'),
+       url('fonts/letter-magic/letter-magic-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Tan Nimbus';
+  src: url('fonts/tan-nimbus/TAN-NIMBUS.woff2') format('woff2'),
+       url('fonts/tan-nimbus/TAN-NIMBUS.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'CHUMI CHAMI';
+  src: local('CHUMI CHAMI'), url('fonts/ChumiChami-ZVYOZ.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon';
+  src: url('fonts/brandon/Brandon_Grotesque_regular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon Italic';
+  src: url('fonts/brandon/Brandon_Grotesque_regular_italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon Medium';
+  src: url('fonts/brandon/Brandon_Grotesque_medium.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Brandon Medium Italic';
+  src: url('fonts/brandon/Brandon_Grotesque_medium_italic.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$color_link: royalblue;
+$color_link_visited: purple;
+$color_link_hover: midnightblue;
+$color_text_main: #404040;
+$gray_dark: #51221F;
+$gray: #E9CBA2;
+$red: #E8B450;
+$primary: #51221F;
+
+$color-green: #035455;
+$color-yellow: #b4a859;
+$color-orange: #D56C22;
+$color-tan: #E9CBA2;
+$color-gold: #E8B450;
+$color-brown: #51221F;
+
+/*** new color 2025 ***/
+// Header Roylands Sans - All caps tracking set to -25
+// Sub Header Podium Sharp all caps tracking set to 100
+// Body copy: Brandon Grotesque Medium
+$green: #215D48;
+$light_blue: #5298A7;
+$blue: #13648D;
+$lime: #AFB660;
+
+
+/*** END new color 2025 ***/
+
+$color_primary: #F2E5C9;
+$color_secondary: #51221F;
+$color1: #C7A666;
+$color2: #9E7852;
+
+$font1: 'Hind', sans-serif;
+$font2: 'CHUMI CHAMI', sans-serif;
+$font3: 'Tan Nimbus', 'Trebuchet MS', sans-serif;
+$font_code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+$font_pre: "Courier 10 Pitch", Courier, monospace;
+$font-brandon-regular: 'Brandon';
+$font-brandon-regular-italic: 'Brandon Italic';
+$font-brandon-medium: 'Brandon Medium';
+$font-brandon-medium-italic: 'Brandon Medium Italic';
+$letter-magic: 'Letter Magic', sans-serif;
+$font_secondary: 'Lato', sans-serif;
+
+$xswidth: 782px;
+$tabwidth: 1140px;
+// $midwidth: 900px;
+// $deskwidth: 1200px;
+
+@mixin xs { @media (min-width: $xswidth) { @content; } }
+@mixin tab { @media (min-width: $tabwidth) { @content; } }
+// @mixin mid { @media (min-width: $midwidth) { @content; } }
+// @mixin desk {  @media (min-width: $deskwidth) { @content; } }
+
+// Rem output with px fallback
+@mixin font-size($sizeValue: 1) {
+	font-size: ($sizeValue * 16) * 1px;
+	font-size: $sizeValue * 1rem;
+}
+
+// Center block
+@mixin center-block {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+// Clearfix
+@mixin clearfix() {
+	content: "";
+	display: table;
+	table-layout: fixed;
+	clear: both;
+	*zoom: 1;
+}
+
+// Clear after (not all clearfix need this also)
+@mixin clearfix-after() {
+	clear: both;
+}
+@mixin flexbox(){
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+  }
+  @mixin flexbox-flex($first, $second, $third) {
+	-webkit-box-flex: $first $second $third;
+	-moz-box-flex: $first $second $third;
+	-webkit-flex: $first $second $third;
+	-ms-flex: $first $second $third;
+	flex: $first $second $third;
+  }
+  @mixin flexbox-wrap($value){
+	-webkit-flex-wrap: $value;
+	flex-wrap: $value;
+  }
+  @mixin flexbox-align-content($value){
+	-webkit-align-content: $value;
+	align-content: $value;
+  }
+  @mixin flexbox-align-items($value){
+	-webkit-align-items: $value;
+	align-items: $value;
+  }
+  @mixin flexbox-justify($value){
+	-webkit-justify-content: $value;
+	justify-content: $value;
+  }
+  @mixin flexbox-align-self($value){
+	-webkit-align-self: $value;
+	align-self: $value;
+  }
+  @mixin flexbox-direction($value){
+	-webkit-flex-direction: $value;
+	flex-direction: $value;
+  }
+  @mixin translatexy($value1,$value2){
+	-ms-transform: translateX($value1) translateY($value2);
+	-moz-transform: translateX($value1) translateY($value2);
+	-webkit-transform: translateX($value1) translateY($value2);
+	transform: translateX($value1) translateY($value2);
+  }
+
+@mixin flexgroup() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+}
+
+@mixin flexgroup-center() {
+	@include flexbox();
+	@include flexbox-wrap(wrap);
+	@include flexbox-direction(row);
+	@include flexbox-align-items(center);
+}
+
+@function tint($color, $percentage) {
+  @return mix(white, $color, $percentage);
+}
+
+@function shade($color, $percentage) {
+  @return mix(black, $color, $percentage);
+}
+
+@mixin backgroundImage($position:center) {
+  background-size: cover;
+  background-position: $position;
+  background-repeat: no-repeat;
+}
+
+
+@mixin animateThis($duration:1s) {
+  -webkit-animation-duration: $duration;
+  animation-duration: $duration;
+}
+
+@mixin animateEffect($effect:fadeIn) {
+  -webkit-animation-name: $effect;
+  animation-name: $effect;
+}
+
+@mixin custom_dashed() {
+  background-image: url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23333' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+}
