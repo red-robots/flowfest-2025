@@ -64,6 +64,7 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 	<?php get_template_part('parts/pagetitle');?>
 	<?php 
   $CS = get_field('coming_soon'); 
+
   if( $CS[0] == '' ) {
     get_template_part('parts/banner');
   } 

@@ -5,13 +5,13 @@
  *	
  *	Developed by: Lisa DeBona
  */
-
 jQuery(document).ready(function ($) {
   /* Mobile Navigation */
   adjustElements();
   $(window).on('orientationchange resize', function () {
     adjustElements();
   });
+
   function adjustElements() {
     if ($(window).width() < 1140) {
       $('.desktop-navigation .primary-menu-wrap').appendTo('.mobile-navigation');
@@ -21,6 +21,7 @@ jQuery(document).ready(function ($) {
       $('.home-content .reg-button').prependTo('.banner-top-text .wrapper');
     }
   }
+
   $(document).on('click', '#mobile-menu-toggle', function () {
     $('body').toggleClass('mobile-menu-open');
     $(this).toggleClass('active');
@@ -56,7 +57,6 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-
   /* Move Submenu Dropdown  to #dropdown-container */
   // $('#primary-menu > li.menu-item-has-children ul.sub-menu').each(function(){
   //   var menuId = $(this).parents('li').attr('id');
@@ -74,6 +74,7 @@ jQuery(document).ready(function ($) {
   $(window).on('orientationchange resize', function () {
     changeParentLinkMobile();
   });
+
   function changeParentLinkMobile() {
     if ($(window).width() < 1140) {
       /* Remove parent link on Mobile View for menu with dropdown */
@@ -87,12 +88,14 @@ jQuery(document).ready(function ($) {
       });
     }
   }
+
   $(document).on("click", "a.mobile-parent-link", function (e) {
     e.preventDefault();
     $(this).next().slideToggle();
   });
   var swiper = new Swiper('#slideshow', {
     effect: 'fade',
+
     /* "fade", "cube", "coverflow" or "flip" */
     loop: true,
     noSwiping: false,
@@ -102,15 +105,15 @@ jQuery(document).ready(function ($) {
       delay: 4000
     }
   });
-
   /* Smooth Scroll */
+
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
     // On-page links
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       // Figure out element to scroll to
       var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
+      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']'); // Does a scroll target exist?
+
       if (target.length) {
         // Only prevent default if animation is actually gonna happen
         event.preventDefault();
@@ -121,20 +124,23 @@ jQuery(document).ready(function ($) {
           // Must change focus!
           var $target = $(target);
           $target.focus();
+
           if ($target.is(":focus")) {
             // Checking if the target was focused
             return false;
           } else {
             $target.attr('tabindex', '-1'); // Adding tabindex for elements not focusable
+
             $target.focus(); // Set focus again
           }
+
           ;
         });
       }
     }
   });
-
   /* Artists */
+
   $('.column.post-type-artists').on("click", function (e) {
     e.preventDefault();
     var target = $(this);
@@ -155,6 +161,7 @@ jQuery(document).ready(function ($) {
         if ($('.event-details').length) {
           $('.event-details').remove();
         }
+
         $(window).on('orientationchange resize', function () {
           if ($('.event-details').length) {
             $('.event-details').remove();
@@ -170,12 +177,12 @@ jQuery(document).ready(function ($) {
           } else {
             $(response.content).appendTo(parent);
           }
+
           $(window).on('orientationchange resize', function () {
             if ($(window).width() < 821) {
               $(response.content).insertAfter(target);
             } else {
-              if ($('body').hasClass('closed-event-details')) {
-                //do nothing...
+              if ($('body').hasClass('closed-event-details')) {//do nothing...
               } else {
                 $(response.content).appendTo(parent);
               }
@@ -192,20 +199,20 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-
   /*
   *
   *	Wow Animation
   *
   ------------------------------------*/
+
   new WOW().init();
   $('.matchHeight').matchHeight();
   $(document).on("click", "#toggleMenu", function () {
     $(this).toggleClass('open');
     $('body').toggleClass('open-mobile-menu');
   });
-
   /* POP-UP POST TYPE INFO */
+
   $('#popup-info .postinfo').on("click", function (e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
@@ -244,8 +251,8 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-
   /* Pop-up Scheduled Activity */
+
   $('.popup-activity').on("click", function (e) {
     e.preventDefault();
     var id = $(this).attr('data-id');
@@ -273,10 +280,11 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-
   /* Close custom pop-up */
+
   $(document).click(function () {
     var container = $(".popup-content");
+
     if (!container.is(event.target) && !container.has(event.target).length) {
       closeCustomPopUp();
     }
@@ -285,14 +293,16 @@ jQuery(document).ready(function ($) {
     e.preventDefault();
     closeCustomPopUp();
   });
+
   function closeCustomPopUp() {
     $('#popup-content').removeClass('show');
     $('body').removeClass('popup-open');
     $('#overlay').removeClass('show');
     $('#popup-content .popup-content').remove();
   }
-
   /* FAQS */
+
+
   $(document).on('click', '.faqrow .question', function () {
     $(this).parent().toggleClass('active');
     $(this).next().slideToggle();

@@ -43,6 +43,18 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: 'Roylands Sans';
+  src: url('fonts/roylands-sans/Roylands-Sans.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Podium Sharp';
+  src: url('fonts/podium-sharp/Podium-Sharp-6.6.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 $color_link: royalblue;
 $color_link_visited: purple;
@@ -67,15 +79,15 @@ $color-brown: #51221F;
 $green: #215D48;
 $light_blue: #5298A7;
 $blue: #13648D;
-$lime: #AFB660;
-
+$color-lime: #AFB660;
+$yellow: #fef8e0;
 
 /*** END new color 2025 ***/
 
-$color_primary: #F2E5C9;
-$color_secondary: #51221F;
-$color1: #C7A666;
-$color2: #9E7852;
+$color_primary: $yellow;
+$color_secondary: $green;
+$color1: $color-lime;
+$color2: $blue;
 
 $font1: 'Hind', sans-serif;
 $font2: 'CHUMI CHAMI', sans-serif;
@@ -88,6 +100,8 @@ $font-brandon-medium: 'Brandon Medium';
 $font-brandon-medium-italic: 'Brandon Medium Italic';
 $letter-magic: 'Letter Magic', sans-serif;
 $font_secondary: 'Lato', sans-serif;
+$font-roylands: 'Roylands Sans', sans-serif;
+$font-podium-sharp: 'Podium Sharp';
 
 $xswidth: 782px;
 $tabwidth: 1140px;

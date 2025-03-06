@@ -56,13 +56,16 @@ pre {
 }
 a, button, input {
   transition: all ease .3s;
-  color: $color-brown;
+  color: $blue;
+  &:hover {
+    color: $light_blue;
+  }
 }
 body {
   font-family: $font-brandon-medium;
   font-size: 20px;
   line-height: 1.4;
-	background-color: $color-tan;
+	background-color: $color_primary;
 	color: $color_secondary;
 }
 body.page {
@@ -172,7 +175,7 @@ header.site-header {
 .floral-pattern {
   position: relative;
   background: {
-    image:url('images/n_floral.svg');
+    image:url('images/n_floral_green.svg');
     size:160%;
     position: center;
     repeat: repeat-x;
@@ -238,8 +241,8 @@ nav.main-navigation {
     display: block;
     text-decoration: none;
     padding: 18px 20px;
-    color: $color-brown;
-    font-family: $letter-magic;
+    color: $color_secondary;
+    font-family: $font-roylands;
     font-size: 15px;
     line-height: 1.3;
     position: relative;
@@ -274,7 +277,7 @@ nav.main-navigation {
         transform: translateX(-50%) scaleX(0);
         transition: all ease .3s;
         background:{
-          image:url('images/n_linkhover.svg');
+          image:url('images/n_linkhover_lime.svg');
           size: cover;
           position: center;
           repeat: no-repeat;
@@ -314,7 +317,7 @@ nav.main-navigation {
     overflow: hidden;
     opacity: 0;
     // background: rgba($color-gold,90%);
-    background: $color-gold;
+    background: $color-lime;
     margin: -2px 0 0;
     padding: 0 0;
     text-align: center;
@@ -330,7 +333,7 @@ nav.main-navigation {
   ul.menu ul a {
     display: block;
     text-decoration: none;
-    color: $color-brown;
+    color: $color_secondary;
     font-size: 15px;
     line-height: 1.2;
     padding: 10px 15px;
@@ -342,7 +345,7 @@ nav.main-navigation {
     }
   }
   ul.menu ul > li:hover > a {
-    color: #FFF;
+    color: $color_primary;
     transform: translateX(5px);
   }
   ul.menu > li:hover > ul {
@@ -374,7 +377,7 @@ nav.main-navigation.full-width-dropdown {
         width: calc(100% - 30px);
         opacity: 0;
         height: 2px;
-        background: $color-brown;
+        background: $color_secondary;
         position: absolute;
         left: 15px;
         bottom: 6px;
@@ -400,7 +403,7 @@ nav.main-navigation.full-width-dropdown {
 footer.site-footer {
   width: 100%;
   float: left;
-	background-color: $color-brown;
+	background-color: $color_secondary;
 	nav.footer {
 		ul {
 			margin: 0;
@@ -448,7 +451,7 @@ footer.site-footer {
   span.bar, span.bar:before, span.bar:after {
     position: absolute;
     height: 2px;
-    background: $color-brown;
+    background: $color_secondary;
     transition: all ease .2s;
   }
   span.bar:before, span.bar:after {
@@ -647,7 +650,7 @@ footer.site-footer {
 			text-align: center;
 			color: #FFF;
 			font-size: 6vw;
-			font-family: $letter-magic;
+			font-family: $font-roylands;
 			font-weight: 500;
 			line-height: 1.2;
 			text-transform: uppercase;
@@ -712,7 +715,7 @@ footer.site-footer {
 				padding: 0.5em 1em 0.4em;
 				background: rgba(0, 0, 0, 0.85);
 				color: #FFF;
-				font-family: $letter-magic;
+				font-family: $font-roylands;
 				font-size: 2em;
 				font-weight: 300;
 				text-transform: uppercase;
@@ -808,11 +811,10 @@ footer.site-footer {
 }
 section.pagetitle {
 	position: fixed;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    z-index: 15;
-
+  top: 60px;
+  left: 0;
+  width: 100%;
+  z-index: 15;
 	background-color: $color_secondary;
   
   @include tab {
@@ -826,10 +828,10 @@ section.pagetitle {
     display: block;
     width: 100%;
     text-align: right;
-    font-family: $letter-magic;
+    font-family: $font-roylands;
     font-size: 1.5rem;
     line-height: 1.2;
-    color: #fff;
+    color: $color_primary;
     text-transform: uppercase;
     position: relative;
     top: 0px;
@@ -895,7 +897,7 @@ section.pagetitle {
       span {
         display: inline-block;
         position: relative;
-        font-family: $letter-magic;
+        font-family: $font-roylands;
         font-size: 15px;
         letter-spacing: 0.02em;
         text-transform: uppercase;
@@ -1014,9 +1016,9 @@ section.tile-wrapper {
 				padding-left: 20px;
 
 				h2 {
-					font-family: $letter-magic;
+					font-family: $font-roylands;
 					font-size: 18px;
-					color: $color-tan;
+					color: $color_primary;
 					margin: 0;
 					line-height: 1;
 					text-transform: uppercase;
@@ -1031,7 +1033,7 @@ section.tile-wrapper {
       }
 			.time {
 		        color: #fff;
-		        background-color: #C7A666;
+		        background-color: $color2;
 		        padding: 10px 10px;
 		        width: 110px;
 		        // height: 100%;
@@ -1234,11 +1236,11 @@ section.homepage-cards {
       }
     }
     .title {
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 1.6rem;
       line-height: 1.2;
       text-transform: uppercase;
-      color: $color2;
+      color: $color_secondary;
       text-align: center;
     }
 
@@ -1265,6 +1267,9 @@ section.homepage-cards {
     &.even {
       .inside {
         background: $color_secondary;
+        .title {
+          color: $color_primary;
+        }
       }
     }
     &.third {
@@ -1318,7 +1323,7 @@ section.homepage-cards {
 .banner-top-text {
   position: relative;
   height: 45px;
-  background: $color-brown;
+  background: $color_secondary;
   .wrapper {
     height: 100%;
   }
@@ -1502,7 +1507,7 @@ body.popup-open {
       }
     }
     .title {
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 25px;
       line-height: 1.2;
       margin: 0 0;
@@ -1668,7 +1673,7 @@ body.page-template-page-repeatable-blocks {
   }
   .textcol {
     background: #fff;
-    color: $color-brown;
+    color: $color_secondary;
     padding: 20px;
     @include tab {
       height: 100%;
@@ -1682,14 +1687,10 @@ body.page-template-page-repeatable-blocks {
       }
     }
     a {
-      color: #e4d25c;
       text-decoration: underline;
-      &:hover {
-        color: #fcef9c;
-      }
     }
     .rb_title {
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 2em;
       font-weight: normal;
       line-height: 1.2;
@@ -1702,7 +1703,7 @@ body.page-template-page-repeatable-blocks {
       a {
         display: inline-block;
         text-decoration: none;
-        background: $color-gold;
+        background: $color1;
         color: $color_secondary;
         border-radius: 4px;
         padding: 10px 15px 8px;
@@ -1739,7 +1740,11 @@ body.page-template-page-repeatable-blocks {
   }
   .even {
     .textcol {
-      background: shade($color-gold,10%);
+      background: $color1;
+      color: $color_primary;
+      .rb_buttons a {
+        background: $color_primary;
+      }
     }
   }
   figure {
@@ -1757,7 +1762,7 @@ body.page-template-page-repeatable-blocks {
 
 #main .hentry {
   h1.entry-title {
-    font-family: $letter-magic;
+    font-family: $font-roylands;
     font-size: 3em;
     font-weight: normal;
     line-height: 1.2;
@@ -1772,7 +1777,7 @@ body.page-template-page-repeatable-blocks {
   .info {
     h3 {
       margin: 0 0;
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 20px;
       font-weight: normal;
       line-height: 1.1;
@@ -1941,10 +1946,10 @@ body.error404 {
     text-align: center;
     font-size: 20px;
     h1 {
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 1.8em;
       line-height: 1.2;
-      color: $color-brown;
+      color: $color_secondary;
       margin: 0 0;
       position: relative;
       top: 6px;
@@ -2221,7 +2226,7 @@ section.faqs {
 }
 .wp-block-buttons>.wp-block-button {margin-top:20px;}
 .wp-block-button__link {
-  background-color: $color-brown;
+  background-color: $color_secondary;
   color: #FFF;
   &:hover {
     background-color: $color-gold;
@@ -2239,7 +2244,7 @@ section.faqs {
     text-align: center;
     margin-bottom: 20px;
     h3 {
-      font-family: $letter-magic;
+      font-family: $font-roylands;
       font-size: 20px;
       line-height: 1.2;
       margin: 0 0;
@@ -2280,15 +2285,15 @@ section.faqs {
         display: inline-block;
         text-decoration: none;
         
-        color: $color-gold;
+        color: $color-lime;
         &:hover {
-          color: $color-gold;
+          color: $color-lime;
         }
         &.practices {
-        	color: $color-green;
+        	color: $color2;
         }
         &.workshops {
-        	color: $color-brown;
+        	color: $color_secondary;
         }
       }
     }
@@ -2530,7 +2535,7 @@ section.coming-soon {
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	font-family: $letter-magic;
+	font-family: $font-roylands;
 	text-align: center;
 	font-size: 28px;
 	color: $color-orange;
@@ -2636,12 +2641,12 @@ section.vendors {
     text-decoration: none;
     font-size: 1.65rem;
     font-weight: normal;
-    color: $color-tan;
+    color: $color_primary;
     padding: 15px 25px 13px;
   }
   #primary-menu > li:hover > a {
-    background: $color-gold;
-    color: #FFF;
+    background: $color_primary;
+    color: $color_secondary;
   }
   #primary-menu > li ul {
     display: none;
@@ -2649,7 +2654,7 @@ section.vendors {
     padding: 10px 0;
     list-style: none;
     text-align: center;
-    border-bottom: 1px solid $color-gold;
+    border-bottom: 1px solid $color_primary;
     a {
       display: inline-block;
       text-decoration: none;
@@ -2658,7 +2663,7 @@ section.vendors {
       font-weight: normal;
       padding: 7px 10px;
       &:hover {
-        color: #FFF;
+        color: $color_secondary;
       }
     }
   }
@@ -2669,7 +2674,7 @@ section.vendors {
   #mobile-menu-toggle {
     display: block;
     cursor: pointer;
-    z-index: 500005;
+    z-index: 9999;
   }
   .mobile-navigation {
     display: block;
@@ -2708,8 +2713,8 @@ section.vendors {
     ul.menu > li > a:focus,
     ul.menu > li.current_page_item > a,
     ul.menu > li.current_page_ancestor > a {
-      background: $color-gold;
-      color: #FFF!important;
+      background: $color_primary;
+      color: $color_secondary!important;
     }
   }
   .banner-top-text .reg-button {
@@ -2820,7 +2825,7 @@ section.vendors {
     margin:0 0;
     background: $color_secondary;
     color: $color-tan;
-    font-family: $letter-magic;
+    font-family: $font-roylands;
     font-size: 13px;
     font-weight: normal;
     line-height:1.1;
@@ -2855,7 +2860,7 @@ section.vendors {
       color: $color_secondary;
       text-decoration: underline;
       &:hover {
-        color: $color-brown;
+        color: $color_secondary;
       }
     }
   }
