@@ -891,7 +891,7 @@ section.teasers {
 			font-size: 18px;
 			font-weight: 400;
 			line-height: 1.2;
-			color: $gray_dark;
+			color: $color_secondary;
 			margin: 0 0 8px;
 			letter-spacing: 1px;
 			text-transform: uppercase;
@@ -900,14 +900,14 @@ section.teasers {
 			font-size: 20px;
 			font-weight: 600;
 			line-height: 1.2;
-			color: $color-brown;
+			color: $color_secondary;
 			text-transform: uppercase;
 		}
 	}
 	.wrap {
 		height: 100%;
 		padding: 30px 15px;
-		background: $color-gold;
+		background: $color-lime;
 	}
 	&.oneCol {
 		.info {

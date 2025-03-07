@@ -1141,10 +1141,8 @@ section.home-cards {
   position:relative;
 }
 
-
-
 section.homepage-cards {
-  background: $color-tan;
+  background: $color1;
   .wrapper {
     max-width: 100%;
     @include tab {
@@ -1266,7 +1264,7 @@ section.homepage-cards {
 
     &.even {
       .inside {
-        background: $color_secondary;
+        background: $light_blue;
         .title {
           color: $color_primary;
         }
@@ -1274,7 +1272,7 @@ section.homepage-cards {
     }
     &.third {
       .inside {
-        background: $color1;
+        background: $color2;
         .title {
           color: $color_primary;
         }
@@ -1468,10 +1466,10 @@ body.popup-open {
     max-width: 900px;
     width: 100%;
     min-height: 15em;
-    background: $color-gold;
+    background: $color_primary;
     box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     position: relative;
-    color: #000;
+    color: $color_secondary;
     @include animateThis(1s);
     @include animateEffect('fadeIn');
     .flex-wrap {
@@ -1815,9 +1813,9 @@ body.page-template-page-repeatable-blocks {
         margin: 30px 0;
       }
       a {
-        color: $color-gold;
+        color: $color-lime;
         &:hover {
-          color: tint($color-gold,30%);
+          color: tint($color-lime,30%);
         }
       }
       &.floral-pattern:before {
@@ -1825,7 +1823,7 @@ body.page-template-page-repeatable-blocks {
       }
     }
     &.map {
-      background: $color-gold;
+      background: $light_blue;
       padding: 5vw;
       .inside {
         background: #F0F3F4;
@@ -2169,7 +2167,7 @@ section.faqs {
       width: 20px;
       height: 20px;
       position: absolute;
-      top: 14px;
+      top: 21px;
       left: -35px;
       z-index: 2;
       transition: all ease .3s;
@@ -2181,7 +2179,7 @@ section.faqs {
         position: absolute;
         top: 0;
         left: 0;
-        background: $color_secondary;
+        background: $color2;
         transition: all ease .3s;
       }
       &:after {
@@ -2201,10 +2199,10 @@ section.faqs {
     border-bottom: 5px solid #ddccbc;
     @include animateThis(1s);
     a {
-      color: $color-yellow;
+      color: $color2;
       text-decoration: underline;
       &:hover {
-        color: tint($color-yellow,40%);
+        color: tint($color2,40%);
       }
     }
   }
@@ -2215,7 +2213,7 @@ section.faqs {
     .question {
       .plus-minus-toggle {
         &:before, &:after {
-          background: $color-orange;
+          background: $color-lime;
         }
         &:after {
           transform: rotate(0);
@@ -2550,7 +2548,7 @@ section.coming-soon {
 	color: #fff;
 	padding: 20px;
 	a {
-		color: $color-tan;
+		color: $color_primary;
 	}
 	@include tab() {
 		padding: 40px;
@@ -2926,7 +2924,7 @@ section.vendors {
 		display: block;
 		width: 40px;
 		height: 50px;
-		background: $gray_dark;
+		background: $color2;
 		position: absolute;
 		top: 43%;
 		transform: translateY(-43%);
@@ -2936,7 +2934,7 @@ section.vendors {
 			transform: translateY(-46%);
 		}
 		&:hover {
-			background: shade($gray_dark,40%);
+			background: shade($color2,40%);
 		}
 		span {
 			display: inline-block;
@@ -2994,14 +2992,14 @@ section.vendors {
 			display: inline-block;
 			-webkit-appearance: none;
 			border-radius: 100px;
-			border: 1px solid $gray_dark;
+			border: 1px solid $color2;
 			box-shadow: none;
 			text-shadow: none;
 			width: 10px;
 			height: 10px;
 			margin: 6px;
 			&.active {
-				background: $gray_dark;
+				background: $color2;
 			}
 		}
 	}

@@ -1621,9 +1621,9 @@ section.teasers .fullwidth-image .fullwidth-image__text h3{opacity:0}
 .stitle,.sectionTitle{font-family:"Letter Magic",sans-serif}
 .section-price-ages .flexwrap{margin-left:-6px;margin-right:-6px;padding-top:10px;padding-bottom:10px}
 .section-price-ages .info{width:100%;padding:6px;text-align:center}
-.section-price-ages .info .label{font-family:"Brandon";font-size:18px;font-weight:400;line-height:1.2;color:#51221f;margin:0 0 8px;letter-spacing:1px;text-transform:uppercase}
-.section-price-ages .info .val{font-size:20px;font-weight:600;line-height:1.2;color:#51221f;text-transform:uppercase}
-.section-price-ages .wrap{height:100%;padding:30px 15px;background:#e8b450}
+.section-price-ages .info .label{font-family:"Brandon";font-size:18px;font-weight:400;line-height:1.2;color:#215d48;margin:0 0 8px;letter-spacing:1px;text-transform:uppercase}
+.section-price-ages .info .val{font-size:20px;font-weight:600;line-height:1.2;color:#215d48;text-transform:uppercase}
+.section-price-ages .wrap{height:100%;padding:30px 15px;background:#afb660}
 .section-price-ages.oneCol .info{width:100%}
 .section-price-ages.twoCols .info{width:100%}
 .section-price-ages .fourCols .info{width:50%}
@@ -1780,7 +1780,7 @@ section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o3,sectio
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(213,108,34,.7)}
 section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content{position:relative}
-section.homepage-cards{background:#e9cba2}
+section.homepage-cards{background:#afb660}
 section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
 section.homepage-cards .card{width:100%;padding:15px;position:relative}
@@ -1795,9 +1795,9 @@ section.homepage-cards .card .titlediv .wrap{position:relative;top:-15px}
 section.homepage-cards .card .title{font-family:"Roylands Sans",sans-serif;font-size:1.6rem;line-height:1.2;text-transform:uppercase;color:#215d48;text-align:center}
 section.homepage-cards .card .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
 section.homepage-cards .card .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
-section.homepage-cards .card.even .inside{background:#215d48}
+section.homepage-cards .card.even .inside{background:#5298a7}
 section.homepage-cards .card.even .inside .title{color:#fef8e0}
-section.homepage-cards .card.third .inside{background:#afb660}
+section.homepage-cards .card.third .inside{background:#13648d}
 section.homepage-cards .card.third .inside .title{color:#fef8e0}
 section.homepage-cards .card.hide{display:none}
 section.homepage-cards .card a:hover figure span{-webkit-clip-path:inset(0 0 0 0);clip-path:inset(0 0 0 0);-webkit-transform:translateY(0);transform:translateY(0)}
@@ -1822,7 +1822,7 @@ section.homepage-cards.cols4 .cards .card{width:100%}
 body.popup-open{overflow:hidden}
 #popup-content{display:none;width:100%;height:100%;padding:8vh 20px 10vh;position:fixed;top:0;left:0;z-index:99999;overflow:auto}
 #popup-content.show{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
-#popup-content .popup-content{max-width:900px;width:100%;min-height:15em;background:#e8b450;-webkit-box-shadow:0 4px 14px rgba(0,0,0,.2);box-shadow:0 4px 14px rgba(0,0,0,.2);position:relative;color:#000;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
+#popup-content .popup-content{max-width:900px;width:100%;min-height:15em;background:#fef8e0;-webkit-box-shadow:0 4px 14px rgba(0,0,0,.2);box-shadow:0 4px 14px rgba(0,0,0,.2);position:relative;color:#215d48;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
 #popup-content .popup-content .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 #popup-content .popup-content .flex-wrap .text{padding:20px;width:100%}
 #popup-content .popup-content .flex-wrap .photo{width:100%}
@@ -1880,10 +1880,10 @@ body.page-template-page-repeatable-blocks .repeatable-block-page{margin:30px 0;w
 .contact-info-group .flexcol.contact .inside{width:100%;padding:30px;color:#fff}
 .contact-info-group .flexcol.contact h3{color:#fff;font-size:25px;line-height:1.2;text-transform:uppercase;letter-spacing:1px}
 .contact-info-group .flexcol.contact .info{margin:30px 0}
-.contact-info-group .flexcol.contact a{color:#e8b450}
-.contact-info-group .flexcol.contact a:hover{color:#efcb85}
+.contact-info-group .flexcol.contact a{color:#afb660}
+.contact-info-group .flexcol.contact a:hover{color:#c7cc90}
 .contact-info-group .flexcol.contact.floral-pattern:before{opacity:.05}
-.contact-info-group .flexcol.map{background:#e8b450;padding:5vw}
+.contact-info-group .flexcol.map{background:#5298a7;padding:5vw}
 .contact-info-group .flexcol.map .inside{background:#f0f3f4}
 .contact-info-group .flexcol.map iframe{width:100% !important;height:100% !important;position:absolute;top:0;left:0;z-index:10}
 .contact-info-group .flexcol img.iframe-resizer{width:100%;height:auto}
@@ -1926,14 +1926,14 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 section.faqs .wrapper{max-width:900px;padding-top:30px;padding-bottom:30px}
 section.faqs .faqrow{margin:30px 0;padding-left:40px;position:relative}
 section.faqs .question{display:block;cursor:pointer;font-family:"Brandon Medium";font-size:2em;font-weight:normal;line-height:1.2;color:#215d48;position:relative;text-decoration:none}
-section.faqs .question .plus-minus-toggle{display:inline-block;cursor:pointer;width:20px;height:20px;position:absolute;top:14px;left:-35px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
-section.faqs .question .plus-minus-toggle:before,section.faqs .question .plus-minus-toggle:after{content:"";width:100%;height:5px;left:0;position:absolute;top:0;left:0;background:#215d48;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.faqs .question .plus-minus-toggle{display:inline-block;cursor:pointer;width:20px;height:20px;position:absolute;top:21px;left:-35px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.faqs .question .plus-minus-toggle:before,section.faqs .question .plus-minus-toggle:after{content:"";width:100%;height:5px;left:0;position:absolute;top:0;left:0;background:#13648d;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.faqs .question .plus-minus-toggle:after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
 section.faqs .answer{display:none;padding:15px;background:#fff;font-size:1.2em;line-height:1.4;color:#215d48;margin-top:8px;margin-bottom:20px;border-bottom:5px solid #ddccbc;-webkit-animation-duration:1s;animation-duration:1s}
-section.faqs .answer a{color:#b4a859;text-decoration:underline}
-section.faqs .answer a:hover{color:#d2cb9b}
+section.faqs .answer a{color:#13648d;text-decoration:underline}
+section.faqs .answer a:hover{color:#71a2bb}
 section.faqs .faqrow.active .answer{-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
-section.faqs .faqrow.active .question .plus-minus-toggle:before,section.faqs .faqrow.active .question .plus-minus-toggle:after{background:#d56c22}
+section.faqs .faqrow.active .question .plus-minus-toggle:before,section.faqs .faqrow.active .question .plus-minus-toggle:after{background:#afb660}
 section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
 .wp-block-buttons>.wp-block-button{margin-top:20px}
 .wp-block-button__link{background-color:#215d48;color:#fff}
@@ -1982,7 +1982,7 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 #overlay.show{display:block;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
 section.coming-soon{width:100%;height:50vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:"Roylands Sans",sans-serif;text-align:center;font-size:28px;color:#d56c22;background-color:#fef8e0}
 .entry-content.vendorz{background-color:#215d48;color:#fff;padding:20px}
-.entry-content.vendorz a{color:#e9cba2}
+.entry-content.vendorz a{color:#fef8e0}
 section.vendors{width:100%;background-color:rgba(255,255,255,.6);padding:20px}
 section.vendors div.ven{-ms-flex-preferred-size:40%;flex-basis:40%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:40px}
 section.vendors div.ven img{width:100%}
@@ -2020,8 +2020,8 @@ section.vendors div.ven img{width:100%}
 #carousel-images .owl-carousel{position:relative}
 #carousel-images div.image{width:100%;height:auto;float:left;background-size:cover;background-position:50% 50%;background-repeat:no-repeat}
 #carousel-images .owl-nav{width:100%;position:static;top:0;left:0;z-index:200}
-#carousel-images .owl-prev,#carousel-images .owl-next{display:block;width:40px;height:50px;background:#51221f;position:absolute;top:43%;-webkit-transform:translateY(-43%);transform:translateY(-43%);-webkit-transition:all ease .3s;transition:all ease .3s}
-#carousel-images .owl-prev:hover,#carousel-images .owl-next:hover{background:#311413}
+#carousel-images .owl-prev,#carousel-images .owl-next{display:block;width:40px;height:50px;background:#13648d;position:absolute;top:43%;-webkit-transform:translateY(-43%);transform:translateY(-43%);-webkit-transition:all ease .3s;transition:all ease .3s}
+#carousel-images .owl-prev:hover,#carousel-images .owl-next:hover{background:#0b3c55}
 #carousel-images .owl-prev span,#carousel-images .owl-next span{display:inline-block;color:transparent;font-size:1px;line-height:1;position:relative;width:35%;height:1px;top:-3px;left:-2px}
 #carousel-images .owl-prev span:before,#carousel-images .owl-prev span:after,#carousel-images .owl-next span:before,#carousel-images .owl-next span:after{content:"";display:block;width:100%;height:100%;background:#fff;position:absolute;top:0;left:0}
 #carousel-images .owl-prev span:before,#carousel-images .owl-next span:before{top:-10px}
@@ -2034,8 +2034,8 @@ section.vendors div.ven img{width:100%}
 #carousel-images .owl-next span:before{-webkit-transform:translateY(5px) rotate(42deg);transform:translateY(5px) rotate(42deg)}
 #carousel-images .owl-next span:after{-webkit-transform:translateY(-6px) rotate(-42deg);transform:translateY(-6px) rotate(-42deg)}
 #carousel-images .owl-dots{text-align:center;margin:10px 0 8px}
-#carousel-images .owl-dots .owl-dot{display:inline-block;-webkit-appearance:none;border-radius:100px;border:1px solid #51221f;-webkit-box-shadow:none;box-shadow:none;text-shadow:none;width:10px;height:10px;margin:6px}
-#carousel-images .owl-dots .owl-dot.active{background:#51221f}
+#carousel-images .owl-dots .owl-dot{display:inline-block;-webkit-appearance:none;border-radius:100px;border:1px solid #13648d;-webkit-box-shadow:none;box-shadow:none;text-shadow:none;width:10px;height:10px;margin:6px}
+#carousel-images .owl-dots .owl-dot.active{background:#13648d}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
 html body.logged-in.admin-bar #mobile-menu-toggle{top:32px}
 html body.logged-in.admin-bar header.site-header{top:32px}
