@@ -48,7 +48,7 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 			
         <div id="site-logo" class="logo">
           <a href="<?php bloginfo('url'); ?>">
-           <img src="<?php bloginfo('template_url'); ?>/images/logo.jpg">
+           <img src="<?php bloginfo('template_url'); ?>/images/logo.svg">
           </a>
         </div>
   			<nav id="site-navigation" class="main-navigation desktop-navigation full-width-dropdown" role="navigation">
