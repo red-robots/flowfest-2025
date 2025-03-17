@@ -97,7 +97,7 @@ section.teasers {
 		}
 		.info {
 			width: 100%;
-			background-color: $color-gold;
+			background-color: $color-lime;
 			font-size: 16px;
 			@media screen and (min-width: $tabwidth) {
 				width: 40%;
@@ -310,12 +310,12 @@ section.teasers {
 				font-size: 15px;
 				line-height: 35px;
 				letter-spacing: 1px;
-		    text-transform: uppercase;
-		    padding: 0 10px;
-		    text-align: center;
-		    position: relative;
-		    right: -2px;
-		    z-index: 5;
+				text-transform: uppercase;
+				padding: 0 10px;
+				text-align: center;
+				position: relative;
+				right: -2px;
+				z-index: 5;
 			}
 		}
 		.filter-select {
@@ -498,7 +498,7 @@ section.teasers {
 }
 #primary {
 	#section-schedule, .section-schedule {
-		background: $gray;
+		background: $color1;
 		padding-top: 50px;
 		padding-bottom: 30px;
 		@include tab {
@@ -515,7 +515,7 @@ section.teasers {
 			margin: 15px 0 0 0;
 			padding: 30px;
 			list-style: none;
-			background-color: $color-gold;
+			background-color: $light_blue;
 		}
 		li.item {
 			@include flexgroup();
@@ -705,7 +705,7 @@ section.teasers {
 		position: absolute;
 		top: 0;
 		left: 0;
-		background: $red;
+		background: $color1;
 		transition: all ease .3s;
 	}
 	* {
