@@ -1,3 +1,5 @@
+@import url("https://p.typekit.net/p.css?s=1&k=nns2jkx&ht=tk&f=51544.51545&a=87745950&app=typekit&e=css");
+
 @font-face {
   font-family: 'Letter Magic';
   src: url('fonts/letter-magic/letter-magic-webfont.woff2') format('woff2'),
@@ -49,11 +51,17 @@
   font-weight: normal;
   font-style: normal;
 }
+
 @font-face {
-  font-family: 'Podium Sharp';
-  src: url('fonts/podium-sharp/Podium-Sharp-6.6.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
+font-family:"podium-sharp-variable";
+src:url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
+font-display:auto;font-style:italic;font-weight:100 1000;font-stretch:normal;
+}
+
+@font-face {
+font-family:"podium-sharp-variable";
+src:url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
+font-display:auto;font-style:normal;font-weight:100 1000;font-stretch:normal;
 }
 
 $color_link: royalblue;
@@ -101,7 +109,7 @@ $font-brandon-medium-italic: 'Brandon Medium Italic';
 $letter-magic: 'Letter Magic', sans-serif;
 $font_secondary: 'Lato', sans-serif;
 $font-roylands: 'Roylands Sans', sans-serif;
-$font-podium-sharp: 'Podium Sharp';
+$font-podium-sharp: "podium-sharp-variable",sans-serif;
 
 $xswidth: 782px;
 $tabwidth: 1140px;

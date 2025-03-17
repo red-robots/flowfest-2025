@@ -1,4 +1,4 @@
-/*!
+@import "https://p.typekit.net/p.css?s=1&k=nns2jkx&ht=tk&f=51544.51545&a=87745950&app=typekit&e=css";/*!
 Theme Name: Flowfest 2025
 Theme URI: https://bellaworksweb.com/
 Author: Bellaworksweb
@@ -1100,7 +1100,8 @@ button:focus{outline:0}
 @font-face{font-family:"Brandon Medium";src:url("fonts/brandon/Brandon_Grotesque_medium.woff") format("woff");font-weight:normal;font-style:normal}
 @font-face{font-family:"Brandon Medium Italic";src:url("fonts/brandon/Brandon_Grotesque_medium_italic.woff") format("woff");font-weight:normal;font-style:normal}
 @font-face{font-family:"Roylands Sans";src:url("fonts/roylands-sans/Roylands-Sans.woff") format("woff");font-weight:normal;font-style:normal}
-@font-face{font-family:"Podium Sharp";src:url("fonts/podium-sharp/Podium-Sharp-6.6.woff") format("woff");font-weight:normal;font-style:normal}
+@font-face{font-family:"podium-sharp-variable";src:url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");font-display:auto;font-style:italic;font-weight:100 1000;font-stretch:normal}
+@font-face{font-family:"podium-sharp-variable";src:url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");font-display:auto;font-style:normal;font-weight:100 1000;font-stretch:normal}
 /*!
  * animate.css -http://daneden.me/animate
  * Version - 3.5.0
@@ -1597,7 +1598,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3{opacity:0}
 .collapsible .option-name span.arrow:before,.collapsiblewtw .option-name span.arrow:before{-webkit-transform:translateX(-7px) rotate(45deg);transform:translateX(-7px) rotate(45deg)}
 .collapsible .option-name span.arrow:after,.collapsiblewtw .option-name span.arrow:after{-webkit-transform:translateX(5px) rotate(-45deg);transform:translateX(5px) rotate(-45deg)}
 .collapsible .option-text,.collapsiblewtw .option-text{font-size:20px;padding-top:10px;display:none;-webkit-animation-duration:1s;animation-duration:1s}
-.collapsible.active,.collapsiblewtw.active{border-top-color:#e8b450;z-index:10}
+.collapsible.active,.collapsiblewtw.active{border-top-color:#5298a7;z-index:10}
 .collapsible.active:before,.collapsiblewtw.active:before{height:100.5%}
 .collapsible.active .option-name span.arrow,.collapsible.active .option-text span.arrow,.collapsiblewtw.active .option-name span.arrow,.collapsiblewtw.active .option-text span.arrow{-webkit-transform:rotate(180deg);transform:rotate(180deg)}
 .collapsible.active .option-name span.arrow:before,.collapsible.active .option-name span.arrow:after,.collapsible.active .option-text span.arrow:before,.collapsible.active .option-text span.arrow:after,.collapsiblewtw.active .option-name span.arrow:before,.collapsiblewtw.active .option-name span.arrow:after,.collapsiblewtw.active .option-text span.arrow:before,.collapsiblewtw.active .option-text span.arrow:after{background:#fff}
@@ -1618,7 +1619,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3{opacity:0}
 .btn-sm.red{background-color:#e8b450;border-color:#e8b450;color:#fff}
 .btn-sm.red:hover{border-color:#000}
 .btn-sm.red:hover:before{background:#000}
-.stitle,.sectionTitle{font-family:"Letter Magic",sans-serif}
+.stitle,.sectionTitle{font-family:"podium-sharp-variable",sans-serif}
 .section-price-ages .flexwrap{margin-left:-6px;margin-right:-6px;padding-top:10px;padding-bottom:10px}
 .section-price-ages .info{width:100%;padding:6px;text-align:center}
 .section-price-ages .info .label{font-family:"Brandon";font-size:18px;font-weight:400;line-height:1.2;color:#215d48;margin:0 0 8px;letter-spacing:1px;text-transform:uppercase}
@@ -1763,7 +1764,7 @@ section.tile-wrapper .tile .img{width:100%;line-height:0;margin:0;width:100%;flo
 section.tile-wrapper .tile .img img{width:100%;height:auto;float:left;position:relative;z-index:9}
 section.tile-wrapper .tile .info{background-image:url(images/green-repeat.png);background-repeat:repeat;min-height:50px;width:100%;float:left;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowwrap;flex-wrap:nowwrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:self-end;-ms-flex-align:self-end;align-items:self-end;position:relative;z-index:15}
 section.tile-wrapper .tile .info .title{width:auto;padding-left:20px}
-section.tile-wrapper .tile .info .title h2{font-family:"Roylands Sans",sans-serif;font-size:18px;color:#fef8e0;margin:0;line-height:1;text-transform:uppercase;letter-spacing:1px;padding-top:10px;padding-bottom:10px}
+section.tile-wrapper .tile .info .title h2{font-family:"podium-sharp-variable",sans-serif;font-size:18px;color:#fef8e0;margin:0;line-height:1;text-transform:uppercase;letter-spacing:1px;padding-top:10px;padding-bottom:10px}
 section.tile-wrapper .tile .info.has-time .title{padding-right:100px;max-width:365px}
 section.tile-wrapper .tile .info .time{color:#fff;background-color:#13648d;padding:10px 10px;width:110px;height:60px;text-align:center;position:absolute;bottom:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 section.tile-wrapper .tile .pagelink:hover .img{-webkit-transform:scale(1.06);transform:scale(1.06)}
@@ -1792,7 +1793,7 @@ section.homepage-cards .card figure span.image:before{content:"";display:block;w
 section.homepage-cards .card figure img{display:none}
 section.homepage-cards .card .titlediv{width:100%;height:60%;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;position:absolute;left:0;bottom:0}
 section.homepage-cards .card .titlediv .wrap{position:relative;top:-15px}
-section.homepage-cards .card .title{font-family:"Roylands Sans",sans-serif;font-size:1.6rem;line-height:1.2;text-transform:uppercase;color:#215d48;text-align:center}
+section.homepage-cards .card .title{font-family:"podium-sharp-variable",sans-serif;font-size:1.6rem;line-height:1.2;text-transform:uppercase;color:#215d48;text-align:center}
 section.homepage-cards .card .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
 section.homepage-cards .card .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
 section.homepage-cards .card.even .inside{background:#5298a7}
@@ -1925,11 +1926,11 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .galleries figure.type_image a:hover span.image{-webkit-transform:scale(1.07);transform:scale(1.07)}
 section.faqs .wrapper{max-width:900px;padding-top:30px;padding-bottom:30px}
 section.faqs .faqrow{margin:30px 0;padding-left:40px;position:relative}
-section.faqs .question{display:block;cursor:pointer;font-family:"Brandon Medium";font-size:2em;font-weight:normal;line-height:1.2;color:#215d48;position:relative;text-decoration:none}
+section.faqs .question{display:block;cursor:pointer;font-family:"podium-sharp-variable",sans-serif;font-size:2em;font-weight:normal;line-height:1.2;color:#215d48;position:relative;text-decoration:none}
 section.faqs .question .plus-minus-toggle{display:inline-block;cursor:pointer;width:20px;height:20px;position:absolute;top:21px;left:-35px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.faqs .question .plus-minus-toggle:before,section.faqs .question .plus-minus-toggle:after{content:"";width:100%;height:5px;left:0;position:absolute;top:0;left:0;background:#13648d;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.faqs .question .plus-minus-toggle:after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
-section.faqs .answer{display:none;padding:15px;background:#fff;font-size:1.2em;line-height:1.4;color:#215d48;margin-top:8px;margin-bottom:20px;border-bottom:5px solid #ddccbc;-webkit-animation-duration:1s;animation-duration:1s}
+section.faqs .answer{display:none;padding:15px;background:#afb660;font-size:1.2em;line-height:1.4;color:#215d48;margin-top:8px;margin-bottom:20px;border-bottom:5px solid #5298a7;-webkit-animation-duration:1s;animation-duration:1s}
 section.faqs .answer a{color:#13648d;text-decoration:underline}
 section.faqs .answer a:hover{color:#71a2bb}
 section.faqs .faqrow.active .answer{-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
@@ -1982,6 +1983,7 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 #overlay.show{display:block;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
 section.coming-soon{width:100%;height:50vh;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;font-family:"Roylands Sans",sans-serif;text-align:center;font-size:28px;color:#d56c22;background-color:#fef8e0}
 .entry-content.vendorz{background-color:#215d48;color:#fff;padding:20px}
+.entry-content.vendorz h1{font-family:"Roylands Sans",sans-serif}
 .entry-content.vendorz a{color:#fef8e0}
 section.vendors{width:100%;background-color:rgba(255,255,255,.6);padding:20px}
 section.vendors div.ven{-ms-flex-preferred-size:40%;flex-basis:40%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch;margin-bottom:40px}

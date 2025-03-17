@@ -276,7 +276,7 @@ nav.main-navigation {
         // transform: translateX(-50%);
         transform: translateX(-50%) scaleX(0);
         transition: all ease .3s;
-        background:{
+        background: {
           image:url('images/n_linkhover_lime.svg');
           size: cover;
           position: center;
@@ -1016,7 +1016,7 @@ section.tile-wrapper {
 				padding-left: 20px;
 
 				h2 {
-					font-family: $font-roylands;
+					font-family: $font-podium-sharp;
 					font-size: 18px;
 					color: $color_primary;
 					margin: 0;
@@ -1234,7 +1234,7 @@ section.homepage-cards {
       }
     }
     .title {
-      font-family: $font-roylands;
+      font-family: $font-podium-sharp;
       font-size: 1.6rem;
       line-height: 1.2;
       text-transform: uppercase;
@@ -2154,7 +2154,7 @@ section.faqs {
   .question {
     display: block;
     cursor: pointer;
-    font-family: $font-brandon-medium;
+    font-family: $font-podium-sharp;
     font-size: 2em;
     font-weight: normal;
     line-height: 1.2;
@@ -2190,13 +2190,13 @@ section.faqs {
   .answer {
     display: none;
     padding: 15px;
-    background: #FFF;
+    background: $color1;
     font-size: 1.2em;
     line-height: 1.4;
     color: $color_secondary;
     margin-top: 8px;
     margin-bottom: 20px;
-    border-bottom: 5px solid #ddccbc;
+    border-bottom: 5px solid $light_blue;
     @include animateThis(1s);
     a {
       color: $color2;
@@ -2547,6 +2547,9 @@ section.coming-soon {
 	background-color: $color_secondary;
 	color: #fff;
 	padding: 20px;
+  h1 {
+    font-family: $font-roylands;
+  }
 	a {
 		color: $color_primary;
 	}

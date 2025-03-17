@@ -761,7 +761,7 @@ section.teasers {
 		@include animateThis(1s);
 	}
 	&.active {
-		border-top-color: $red;
+		border-top-color: $light_blue;
 		z-index: 10;
 		&:before {
 			height: 100.5%;
@@ -869,7 +869,7 @@ section.teasers {
 	}
 }
 .stitle, .sectionTitle {
-	font-family: $letter-magic;
+	font-family: $font-podium-sharp;
 }
 .section-price-ages {
 	.flexwrap {
