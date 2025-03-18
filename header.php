@@ -41,11 +41,17 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 <div id="overlay"></div>
 <div id="popup-content"></div>
 
+<?php 
+  $register = get_field('register_button_link','option');
+  $register_button_text = (isset($register['title']) && $register['title']) ? $register['title'] : '';
+  $register_button_link = (isset($register['url']) && $register['url']) ? $register['url'] : '';
+  $register_button_target = (isset($register['target']) && $register['target']) ? $register['target'] : '_self';
+?>
+
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>	
   <header id="masthead" class="site-header floral-pattern" role="banner">
 		<div class="wrapper head-flex">
-			
         <div id="site-logo" class="logo">
           <a href="<?php bloginfo('url'); ?>">
            <img src="<?php bloginfo('template_url'); ?>/images/logo.svg">
@@ -55,6 +61,14 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
   				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap','link_before'=>'<span><b>','link_after'=>'</b></span>' ) ); ?>
   			</nav><!-- #site-navigation -->
 			<div class="right-head">&nbsp;</div>
+
+      <?php if($register_button_text && $register_button_link) { ?>
+        <?php if( !is_page(1422) ) { ?>
+          <div class="reg">
+            <a href="<?php echo $register_button_link; ?>" target="<?php echo $register_button_target; ?>"><span><?php echo $register_button_text; ?></span></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 

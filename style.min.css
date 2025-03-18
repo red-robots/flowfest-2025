@@ -1653,8 +1653,16 @@ html body.logged-in.admin-bar section.pagetitle{top:102px}
 #page{padding-top:3px}
 .wrapper{position:relative;max-width:1200px;width:100%;margin:0 auto;padding:0 20px}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
-header.site-header{position:relative;width:100%;height:60px;background-color:#fef8e0;z-index:100}
+header.site-header{position:relative;width:100%;height:70px;background-color:#fef8e0;z-index:100}
 header.site-header .wrapper{z-index:10;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
+header.site-header .reg{display:inline-block;width:155px;height:64px;position:absolute;top:60px;left:30px;z-index:5}
+header.site-header .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:transparent;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
+header.site-header .reg a *{-webkit-transition:all ease .3s;transition:all ease .3s}
+header.site-header .reg a:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_register.svg");background-size:100%;background-repeat:no-repeat}
+header.site-header .reg a:hover:before{width:155px;height:64px;background-image:url("images/n_register_hover.svg");background-size:100%;background-repeat:no-repeat}
+header.site-header .reg a span{display:inline-block;position:relative;font-family:"Roylands Sans",sans-serif;font-size:15px;letter-spacing:.02em;text-transform:uppercase;line-height:1;top:-4px;opacity:.65;z-index:5;-webkit-transition:all ease .3s;transition:all ease .3s}
+header.site-header .reg a:hover span{-webkit-transform:translateY(5px);transform:translateY(5px)}
+header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1.1);transform:translateY(5px) scale(1.1)}
 .floral-pattern{position:relative;background-image:url("images/n_floral_green.svg");background-size:160%;background-position:center;background-repeat:repeat-x}
 #site-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:center;align-content:center;position:absolute;top:0;left:0;height:100%}
 #site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;background-color:#fef8e0;padding:5px 20px}
@@ -1665,7 +1673,7 @@ nav.main-navigation ul.menu{background:#fef8e0;padding:0 8px}
 nav.main-navigation ul{margin:0;padding:0}
 nav.main-navigation li{margin:0;padding:0;display:inline-block;line-height:3;position:relative}
 nav.main-navigation ul.menu>li{overflow:hidden}
-nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:18px 20px;color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:15px;line-height:1.3;position:relative;text-transform:uppercase}
+nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:24px 20px;color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:15px;line-height:1.3;position:relative;text-transform:uppercase}
 nav.main-navigation ul.menu>li>a span{display:inline-block;position:relative;padding:3px;line-height:1.1;z-index:5}
 nav.main-navigation ul.menu>li>a span b{display:inline-block;font-weight:normal;position:relative}
 nav.main-navigation ul.menu>li>a span:before{content:"";display:block;width:120%;min-width:100px;min-height:65px;height:150%;margin-left:-50%;position:absolute;top:-22px;left:50%;-webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_linkhover_lime.svg");background-size:cover;background-position:center;background-repeat:no-repeat}
@@ -1747,14 +1755,6 @@ footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
 section.pagetitle{position:fixed;top:60px;left:0;width:100%;z-index:15;background-color:#afb660}
 section.pagetitle h1{display:block;width:100%;text-align:right;font-family:"Roylands Sans",sans-serif;font-size:1.5rem;line-height:1.2;color:#215d48;text-transform:uppercase;position:relative;top:0;margin:0;padding:0 0 0 95px;letter-spacing:1px}
 section.pagetitle .wrapper{position:relative;height:100%;padding:10px 15px}
-section.pagetitle .reg{display:inline-block;width:195px;height:85px;position:absolute;top:-6px;left:-15px;z-index:5}
-section.pagetitle .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:transparent;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
-section.pagetitle .reg a *{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.pagetitle .reg a:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_register.svg");background-size:100%;background-repeat:no-repeat;background-postion:top center}
-section.pagetitle .reg a:hover:before{width:215px;height:94px;background-image:url("images/n_register_hover.svg");background-size:100%;background-repeat:no-repeat}
-section.pagetitle .reg a span{display:inline-block;position:relative;font-family:"Roylands Sans",sans-serif;font-size:15px;letter-spacing:.02em;text-transform:uppercase;line-height:1;top:-4px;opacity:.65;z-index:5;-webkit-transition:all ease .3s;transition:all ease .3s}
-section.pagetitle .reg a:hover span{-webkit-transform:translateY(5px);transform:translateY(5px)}
-section.pagetitle .reg a:hover:before{-webkit-transform:translateY(5px) scale(1.1);transform:translateY(5px) scale(1.1)}
 section.tile-wrapper{width:100%;padding:40px 0}
 section.tile-wrapper .tile{width:100%;float:left;margin-bottom:10px;padding:10px}
 section.tile-wrapper .tile .overlay{width:100%;height:100%;position:absolute;top:0;left:0;background:#000;background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0.5)),to(rgba(0,0,0,0)));background:linear-gradient(180deg,rgba(0,0,0,0.5) 0,rgba(0,0,0,0) 100%);-webkit-transition:all ease .2s;transition:all ease .2s;z-index:10}
@@ -2084,6 +2084,7 @@ html body.logged-in.admin-bar section.pagetitle{top:auto}
 .wrapper{padding:0}
 .head-flex,.foot-flex,.pagetitle-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 header.site-header .wrapper{height:100%}
+header.site-header .reg{top:4px;right:0;left:auto}
 .floral-pattern{background-size:50%}
 nav.main-navigation,nav.main-navigation .primary-menu-wrap,nav.main-navigation #primary-menu{height:100%}
 nav.main-navigation ul.menu>li>a{min-height:60px}

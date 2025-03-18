@@ -161,7 +161,7 @@ html body.logged-in.admin-bar {
 header.site-header {
   position: relative;
 	width: 100%;
-  height: 60px;
+  height: 70px;
   background-color: $color_primary;
   z-index: 100;
   .wrapper {
@@ -171,6 +171,85 @@ header.site-header {
       height: 100%;
     }
   }
+  .reg {
+    display: inline-block;
+    width: 155px;
+    height: 64px;
+    position: absolute;
+    top: 60px;
+    left: 30px;
+    z-index: 5;
+
+    @include tab {
+      top: 4px;
+      right: 0;
+      left: auto;
+    }
+
+		a {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      justify-content: center;
+      align-content: center;
+			line-height: 1.1;
+      color: transparent;
+			text-transform: uppercase;
+      width: 100%;
+      height: 100%;
+			text-decoration: none;
+      * {
+        transition: all ease .3s;
+      }
+      &:before {
+        content: "";
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        transition: all ease .3s;
+        background: {
+          image: url('images/n_register.svg');
+          size: 100%;
+          repeat: no-repeat;
+        }
+      }
+      &:hover {
+        &:before {
+          width: 155px;
+          height: 64px;
+          background: {
+            image: url('images/n_register_hover.svg');
+            size: 100%;
+            repeat: no-repeat;
+          }
+        }
+      }
+      span {
+        display: inline-block;
+        position: relative;
+        font-family: $font-roylands;
+        font-size: 15px;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+        line-height: 1;
+        top: -4px;
+        opacity: .65;
+        z-index: 5;
+        transition: all ease .3s;
+      }
+      &:hover {
+        span {
+          transform: translateY(5px);
+        }
+        &:before {
+          transform: translateY(5px) scale(1.1);
+        }
+      }
+		}
+	}
 }
 .floral-pattern {
   position: relative;
@@ -240,7 +319,7 @@ nav.main-navigation {
   ul.menu > li > a {
     display: block;
     text-decoration: none;
-    padding: 18px 20px;
+    padding: 24px 20px;
     color: $color_secondary;
     font-family: $font-roylands;
     font-size: 15px;
@@ -852,79 +931,6 @@ section.pagetitle {
       padding: 0 0;
     }
   }
-	.reg {
-    display: inline-block;
-    width: 195px;
-    height: 85px;
-    position: absolute;
-    top: -6px;
-    left: -15px;
-    z-index: 5;
-		a {
-      display: flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      justify-content: center;
-      align-content: center;
-			line-height: 1.1;
-      color: transparent;
-			text-transform: uppercase;
-      width: 100%;
-      height: 100%;
-			text-decoration: none;
-      * {
-        transition: all ease .3s;
-      }
-      &:before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 0;
-        transition: all ease .3s;
-        background: {
-          image: url('images/n_register.svg');
-          size: 100%;
-          repeat: no-repeat;
-          postion: top center;
-        }
-      }
-      &:hover {
-        &:before {
-          width: 215px;
-          height: 94px;
-          background: {
-            image: url('images/n_register_hover.svg');
-            size: 100%;
-            repeat: no-repeat;
-          }
-        }
-      }
-      span {
-        display: inline-block;
-        position: relative;
-        font-family: $font-roylands;
-        font-size: 15px;
-        letter-spacing: 0.02em;
-        text-transform: uppercase;
-        line-height: 1;
-        top: -4px;
-        opacity: .65;
-        z-index: 5;
-        transition: all ease .3s;
-      }
-      &:hover {
-        span {
-          transform: translateY(5px);
-        }
-        &:before {
-          transform: translateY(5px) scale(1.1);
-        }
-      }
-		}
-	}
 }
 section.tile-wrapper {
 	width: 100%;
