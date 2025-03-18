@@ -1744,13 +1744,14 @@ footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
 .overlay-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%;position:absolute;top:0;left:0}
 .logo-overlay{width:200px;z-index:10}
 .logo-overlay img{width:100%}
-section.pagetitle{position:fixed;top:60px;left:0;width:100%;z-index:15;background-color:#215d48}
-section.pagetitle h1{display:block;width:100%;text-align:right;font-family:"Roylands Sans",sans-serif;font-size:1.5rem;line-height:1.2;color:#fef8e0;text-transform:uppercase;position:relative;top:0;margin:0;padding:0 0 0 95px;letter-spacing:1px}
+section.pagetitle{position:fixed;top:60px;left:0;width:100%;z-index:15;background-color:#afb660}
+section.pagetitle h1{display:block;width:100%;text-align:right;font-family:"Roylands Sans",sans-serif;font-size:1.5rem;line-height:1.2;color:#215d48;text-transform:uppercase;position:relative;top:0;margin:0;padding:0 0 0 95px;letter-spacing:1px}
 section.pagetitle .wrapper{position:relative;height:100%;padding:10px 15px}
-section.pagetitle .reg{display:inline-block;width:120px;height:120px;position:absolute;top:-40px;left:50px;z-index:5}
-section.pagetitle .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:#fff;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
+section.pagetitle .reg{display:inline-block;width:195px;height:85px;position:absolute;top:-6px;left:-15px;z-index:5}
+section.pagetitle .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:transparent;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
 section.pagetitle .reg a *{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.pagetitle .reg a:before{content:"";display:block;width:195px;height:195px;position:absolute;top:-20px;left:-34px;-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_register.svg");background-size:100%;background-repeat:no-repeat}
+section.pagetitle .reg a:before{content:"";display:block;width:100%;height:100%;position:absolute;top:0;left:0;-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_register.svg");background-size:100%;background-repeat:no-repeat;background-postion:top center}
+section.pagetitle .reg a:hover:before{width:215px;height:94px;background-image:url("images/n_register_hover.svg");background-size:100%;background-repeat:no-repeat}
 section.pagetitle .reg a span{display:inline-block;position:relative;font-family:"Roylands Sans",sans-serif;font-size:15px;letter-spacing:.02em;text-transform:uppercase;line-height:1;top:-4px;opacity:.65;z-index:5;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.pagetitle .reg a:hover span{-webkit-transform:translateY(5px);transform:translateY(5px)}
 section.pagetitle .reg a:hover:before{-webkit-transform:translateY(5px) scale(1.1);transform:translateY(5px) scale(1.1)}
@@ -2098,7 +2099,6 @@ nav.main-navigation ul.menu>li>a{min-height:60px}
 section.pagetitle{height:40px;top:auto;position:relative}
 section.pagetitle h1{padding:0 15px;text-align:center}
 section.pagetitle .wrapper{padding:0}
-section.pagetitle .reg{left:38px;top:-40px}
 section.tile-wrapper .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 section.tile-wrapper .tile{width:33.33%;margin-bottom:45px}
 section.tile-wrapper .tile .overlay{background:-webkit-gradient(linear,left top,left bottom,from(rgba(0,0,0,0)),to(rgba(0,0,0,0.5)));background:linear-gradient(180deg,rgba(0,0,0,0) 0,rgba(0,0,0,0.5) 100%);-webkit-transition:all ease .2s;transition:all ease .2s}
