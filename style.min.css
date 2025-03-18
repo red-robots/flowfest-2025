@@ -2084,7 +2084,7 @@ html body.logged-in.admin-bar section.pagetitle{top:auto}
 .wrapper{padding:0}
 .head-flex,.foot-flex,.pagetitle-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 header.site-header .wrapper{height:100%}
-header.site-header .reg{top:4px;right:0;left:auto}
+header.site-header .reg{top:58px;right:0;left:auto}
 .floral-pattern{background-size:50%}
 nav.main-navigation,nav.main-navigation .primary-menu-wrap,nav.main-navigation #primary-menu{height:100%}
 nav.main-navigation ul.menu>li>a{min-height:60px}
