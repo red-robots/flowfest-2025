@@ -57,6 +57,26 @@ jQuery(document).ready(function ($) {
       }
     }
   });
+  $('.sponsors-loop').owlCarousel({
+    center: false,
+    items: 4,
+    nav: false,
+    loop: false,
+    margin: 15,
+    autoplay: true,
+    smartSpeed: 1000,
+    autoplayTimeout: 10000,
+    autoplayHoverPause: true,
+    // stagePadding: 20,
+    responsive: {
+      600: {
+        items: 2
+      },
+      400: {
+        items: 1
+      }
+    }
+  });
   /* Move Submenu Dropdown  to #dropdown-container */
   // $('#primary-menu > li.menu-item-has-children ul.sub-menu').each(function(){
   //   var menuId = $(this).parents('li').attr('id');

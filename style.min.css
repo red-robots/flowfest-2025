@@ -1700,6 +1700,9 @@ footer.site-footer nav.footer ul{margin:0;padding:0}
 footer.site-footer nav.footer li{margin:0;padding:0;display:inline-block;line-height:3}
 footer.site-footer nav.footer a{display:block;padding:10px 25px;color:#fff;text-decoration:none;opacity:.8}
 footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
+footer.site-footer .sponsors{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:1rem 0}
+footer.site-footer .sponsors .sponsor{width:100%;padding:15px;position:relative}
+footer.site-footer .sponsors .sponsor img{width:100%;height:auto;float:left}
 #mobile-menu-toggle{display:none;width:60px;height:60px;position:fixed;top:0;right:6px;text-align:center;background-color:#fef8e0}
 #mobile-menu-toggle span.bar{display:block;width:25px;margin:0 auto;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);margin-left:-2px}
 #mobile-menu-toggle span.bar,#mobile-menu-toggle span.bar:before,#mobile-menu-toggle span.bar:after{position:absolute;height:2px;background:#215d48;-webkit-transition:all ease .2s;transition:all ease .2s}
@@ -2088,6 +2091,7 @@ header.site-header .reg{top:58px;right:0;left:auto}
 .floral-pattern{background-size:50%}
 nav.main-navigation,nav.main-navigation .primary-menu-wrap,nav.main-navigation #primary-menu{height:100%}
 nav.main-navigation ul.menu>li>a{min-height:60px}
+footer.site-footer .sponsors .sponsor{width:25%}
 #banner .static-banner .slides .iframe-wrapper.yes-mobile .desktop,#banner .flexslider .slides .iframe-wrapper.yes-mobile .desktop{display:block}
 #banner .static-banner .slides .iframe-wrapper.yes-mobile .mobile,#banner .flexslider .slides .iframe-wrapper.yes-mobile .mobile{display:none}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}

@@ -483,6 +483,7 @@ footer.site-footer {
   width: 100%;
   float: left;
 	background-color: $color_secondary;
+
 	nav.footer {
 		ul {
 			margin: 0;
@@ -506,6 +507,29 @@ footer.site-footer {
 			}
 		}
 	}
+
+  .sponsors {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+
+    .sponsor {
+      width: 100%;
+      padding: 15px;
+      position: relative;
+      @include tab {
+        width: 25%;
+      }
+
+      img {
+				width: 100%;
+				height: auto;
+				float: left;
+			}
+    }
+  }
 }
 
 /* Mobile Menu */
