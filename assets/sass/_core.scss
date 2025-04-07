@@ -516,17 +516,18 @@ footer.site-footer {
     padding: 1rem 0;
 
     .sponsor {
-      width: 100%;
+      // width: 100%;
       padding: 15px;
       position: relative;
       @include tab {
-        width: 25%;
+        // width: 25%;
       }
 
       img {
 				width: 100%;
 				height: auto;
-				float: left;
+				aspect-ratio: 1/1;
+        object-fit: contain;
 			}
     }
   }

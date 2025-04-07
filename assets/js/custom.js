@@ -65,15 +65,18 @@ jQuery(document).ready(function ($) {
     margin: 15,
     autoplay: true,
     smartSpeed: 1000,
-    autoplayTimeout: 10000,
+    autoplayTimeout: 5000,
     autoplayHoverPause: true,
     // stagePadding: 20,
     responsive: {
-      600: {
-        items: 2
-      },
-      400: {
+      0: {
         items: 1
+      },
+      786: {
+        items: 3
+      },
+      960: {
+        items: 4
       }
     }
   });

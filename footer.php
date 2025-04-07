@@ -24,17 +24,17 @@
 			<nav class="footer">
 				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
 			</nav>
-			<div class="empty">&nbsp;</div>
+			<!-- <div class="empty">&nbsp;</div> -->
 		</div><!-- wrapper -->
 
 		<!-- Sign Up newsletter if there is -->
-		<?php  echo do_shortcode('[gravityform id="19" title="true"]'); ?>
+		<?php  //echo do_shortcode('[gravityform id="19" title="true"]'); ?>
 
 		<!-- Sponsors -->
 		<?php 
 			if( have_rows("sponsors_footer", "option") ):
 				echo "<div class='wrapper'>
-						<div class='sponsors'>";
+						<div class='sponsors owl-carousel owl-theme sponsors-loop'>";
 
 				while( have_rows("sponsors_footer", "option") ) : the_row();
 
