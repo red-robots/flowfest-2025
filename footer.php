@@ -25,54 +25,47 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
 			</nav>
 			<!-- <div class="empty">&nbsp;</div> -->
-		</div><!-- wrapper -->
+		</div><!-- wrapper foot-flex" -->
 
-		<!-- Sign Up newsletter if there is -->
-		<?php  //echo do_shortcode('[gravityform id="19" title="true"]'); ?>
+		<!-- Sign Up newsletter -->
+		<div class="wrapper">
+			<?php 
+				$newsletter_title = get_field("sign_up_newsletter_title","option");
+				$newsletter_code = get_field("sign_up_newsletter_code","option");
 
-		<!-- Sponsors -->
-		<?php 
-			if( have_rows("sponsors_footer", "option") ):
-				echo "<div class='wrapper'>
-						<div class='sponsors owl-carousel owl-theme sponsors-loop'>";
+				if( !empty($newsletter_title) ){
+					echo "<div class='newsletter'><h2>". $newsletter_title ."</h2>";
+					echo "<div clas=''>". $newsletter_code ."</div></div>";
+				}
+			?>
 
-				while( have_rows("sponsors_footer", "option") ) : the_row();
+			<!-- Sponsors -->
+			<?php 
+				if( have_rows("sponsors_footer", "option") ):
+					echo "<div class='sponsors owl-carousel owl-theme sponsors-loop'>";
 
-					$sponsor_img = get_sub_field("sponsor_image");
-					$sponsor_url = get_sub_field("sponsor_url");
+					while( have_rows("sponsors_footer", "option") ) : the_row();
 
-					if ( !empty($sponsor_img) ) { ?>
-						<div class="sponsor">
-							<?php if ( !empty($sponsor_url) ) { ?>
-								<a href="<?php echo $sponsor_url; ?>" target="_blank">
-							<?php } ?>
-								<img src="<?php echo $sponsor_img["url"]; ?>" alt="<?php echo $sponsor_img["alt"]; ?>" />
-							<?php if ( !empty($sponsor_url) ) { echo "</a>"; } ?>
-						</div>
-					<?php }
+						$sponsor_img = get_sub_field("sponsor_image");
+						$sponsor_url = get_sub_field("sponsor_url");
 
-				endwhile;
+						if ( !empty($sponsor_img) ) { ?>
+							<div class="sponsor">
+								<?php if ( !empty($sponsor_url) ) { ?>
+									<a href="<?php echo $sponsor_url; ?>" target="_blank">
+								<?php } ?>
+									<img src="<?php echo $sponsor_img["url"]; ?>" alt="<?php echo $sponsor_img["alt"]; ?>" />
+								<?php if ( !empty($sponsor_url) ) { echo "</a>"; } ?>
+							</div>
+						<?php }
 
-				echo "</div></div>";
-			endif;
+					endwhile;
 
-			if( $sponsors ):
-
-				print_r($sponsors);
-		?>
-			<div class="wrapper">
-				<div class="sponsors-loop">
-					<?php foreach( $sponsors as $sponsor ): ?>
-						<div>
-							<a href="<?php echo $sponsor['url']; ?>">
-								<img src="<?php echo $sponsor['sizes']['large']; ?>" alt="<?php echo $sponsor['alt']; ?>" />
-							</a>
-						</div>
-					<?php endforeach; ?>
-				</div>
-			</div>
-		<?php endif; ?>
-		<!-- Ends Sponsors -->
+					echo "</div>";
+				endif;
+			?>
+		
+		</div> <!-- wrapper -->
 	</footer><!-- #colophon -->
 	
 </div><!-- #page -->

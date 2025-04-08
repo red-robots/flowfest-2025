@@ -1703,6 +1703,15 @@ footer.site-footer nav.footer a:hover{opacity:1;color:#fff}
 footer.site-footer .sponsors{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:1rem 0}
 footer.site-footer .sponsors .sponsor{padding:15px;position:relative}
 footer.site-footer .sponsors .sponsor img{width:100%;height:auto;aspect-ratio:1/1;-o-object-fit:contain;object-fit:contain}
+footer.site-footer .newsletter{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;margin-top:15px}
+footer.site-footer .newsletter h2{color:#afb660;font-family:"Roylands Sans",sans-serif;font-style:normal}
+footer.site-footer #mc_embed_signup{background-color:transparent;width:600px}
+footer.site-footer #mc_embed_signup label,footer.site-footer #mc_embed_signup .indicates-required{display:none}
+footer.site-footer #mc_embed_signup #mc_embed_signup_scroll{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+footer.site-footer #mc_embed_shell input#mc-embedded-subscribe{background-color:#afb660;color:#215d48;padding:10px 15px;font-size:1.1rem;line-height:2.3rem;border:0;height:51px;display:inline-block;width:auto;color:#215d48;border-radius:10px;font-family:"podium-sharp-variable",sans-serif;margin:0 0 0 15px}
+footer.site-footer #mc_embed_shell input#mc-embedded-subscribe:hover{background-color:#5298a7;color:#fef8e0}
+footer.site-footer #mc_embed_shell input#mce-EMAIL{border-radius:10px;padding:10px 15px;display:inline-block;height:51px;width:auto;color:#215d48}
+footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error{background-color:transparent}
 #mobile-menu-toggle{display:none;width:60px;height:60px;position:fixed;top:0;right:6px;text-align:center;background-color:#fef8e0}
 #mobile-menu-toggle span.bar{display:block;width:25px;margin:0 auto;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);margin-left:-2px}
 #mobile-menu-toggle span.bar,#mobile-menu-toggle span.bar:before,#mobile-menu-toggle span.bar:after{position:absolute;height:2px;background:#215d48;-webkit-transition:all ease .2s;transition:all ease .2s}
