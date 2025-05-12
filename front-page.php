@@ -7,10 +7,22 @@ get_header();
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
+    <?php 
+      $registration = get_field('registration_button');
+      $registration_button_text = (isset($registration['title']) && $registration['title']) ? $registration['title'] : '';
+      $registration_button_link = (isset($registration['url']) && $registration['url']) ? $registration['url'] : '';
+      $registration_button_target = (isset($registration['target']) && $registration['target']) ? $registration['target'] : '_self';
+    ?>
+
       <?php if( get_the_content() ) { ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry-content">
 					<?php the_content(); ?>
+          <?php if($registration_button_text && $registration_button_link) { ?>
+            <div class="button">
+              <a href="<?php echo $registration_button_link; ?>" target="<?php echo $registration_button_target; ?>"><?php echo $registration_button_text; ?></a>
+            </div>
+          <?php } ?>
 				</div>
 			</article>
       <?php } ?>

@@ -1241,6 +1241,30 @@ section.home-cards {
 
 .home-content {
   position:relative;
+
+  .button {
+    text-align: center;
+
+    a {
+      display: inline-block;
+      text-decoration: none;
+      width: auto;
+      height: 100%;
+      text-align: center;
+      padding: 12px 18px;
+      border-radius: 10px;
+      background: $color_secondary;
+      color: #FFF;
+      font-size: 1em;
+      font-weight: 500;
+      line-height: 1.1;
+      text-transform: uppercase;
+      position: relative;
+      &:hover {
+        background: $color2;
+      }
+    }  
+  }
 }
 
 section.homepage-cards {
@@ -2257,9 +2281,9 @@ section.faqs {
     display: block;
     cursor: pointer;
     font-family: $font-podium-sharp;
-    font-size: 2em;
+    font-size: 1.3em;
     font-weight: normal;
-    line-height: 1.2;
+    line-height: 1.2em;
     color: $color_secondary;
     position: relative;
     text-decoration: none;
@@ -2269,7 +2293,7 @@ section.faqs {
       width: 20px;
       height: 20px;
       position: absolute;
-      top: 21px;
+      top: 9px;
       left: -35px;
       z-index: 2;
       transition: all ease .3s;
