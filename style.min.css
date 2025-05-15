@@ -1721,7 +1721,7 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 #mobile-menu-toggle.active span.bar{-webkit-transform:translateX(-10px) rotate(45deg);transform:translateX(-10px) rotate(45deg)}
 #mobile-menu-toggle.active span.bar:before{-webkit-transform:translateY(10px) rotate(90deg);transform:translateY(10px) rotate(90deg)}
 #mobile-menu-toggle.active span.bar:after{-webkit-transform:translateY(-10px) rotate(-90deg);transform:translateY(-10px) rotate(-90deg)}
-#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden}
+#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:60px}
 #banner.video-playing{z-index:300}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
@@ -2158,6 +2158,7 @@ header.site-header .reg{top:58px;right:0;left:auto}
 .floral-pattern{background-size:50%}
 nav.main-navigation,nav.main-navigation .primary-menu-wrap,nav.main-navigation #primary-menu{height:100%}
 nav.main-navigation ul.menu>li>a{min-height:60px}
+#banner{margin-top:0}
 #banner .static-banner .slides .iframe-wrapper.yes-mobile .desktop,#banner .flexslider .slides .iframe-wrapper.yes-mobile .desktop{display:block}
 #banner .static-banner .slides .iframe-wrapper.yes-mobile .mobile,#banner .flexslider .slides .iframe-wrapper.yes-mobile .mobile{display:none}
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}

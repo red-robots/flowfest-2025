@@ -655,10 +655,10 @@ footer.site-footer {
 	&.video-playing {
 		z-index: 300;
 	}
-	// margin-top: 85px;
+	margin-top: 60px;
 	// margin-bottom: 5px;
 	@include tab {
-		// margin-top: 90px;
+		margin-top: 0; //90px
 	}
 	.static-banner,
 	.flexslider {
