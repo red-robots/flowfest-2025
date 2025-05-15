@@ -1823,6 +1823,31 @@ section.homepage-cards .card a:hover .titlediv{height:100%}
 section.homepage-cards .card a:hover .title{color:#fff !important}
 section.homepage-cards.cols4 .wrapper{max-width:100%}
 section.homepage-cards.cols4 .cards .card{width:100%}
+section.homepage-storyBlocks{background:#afb660}
+section.homepage-storyBlocks .wrapper{max-width:100%}
+section.homepage-storyBlocks .storyBlocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
+section.homepage-storyBlocks .storyBlock{width:100%;padding:15px;position:relative}
+section.homepage-storyBlocks .storyBlock *{-webkit-transition:all ease .3s;transition:all ease .3s}
+section.homepage-storyBlocks .storyBlock .inside{display:block;text-decoration:none;background:#fef8e0;border-radius:10px;overflow:hidden;position:relative}
+section.homepage-storyBlocks .storyBlock figure{margin:0;padding-bottom:70%;position:relative;overflow:hidden;border-radius:10px 10px 0 0;-webkit-transition:all ease 1s;transition:all ease 1s}
+section.homepage-storyBlocks .storyBlock figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
+section.homepage-storyBlocks .storyBlock .titlediv{width:100%;height:60%;font-family:"podium-sharp-variable",sans-serif;font-size:1.3rem;line-height:1.2;text-transform:uppercase;color:#215d48;padding:15px}
+section.homepage-storyBlocks .storyBlock .contentdiv{color:#215d48;padding:0 15px 15px;-webkit-transition:all ease 1s;transition:all ease 1s;height:0;opacity:0;-webkit-transform:translateY(-5vw);transform:translateY(-5vw);-webkit-transition:all ease .5s;transition:all ease .5s;pointer-events:none}
+section.homepage-storyBlocks .storyBlock .contentdiv .button{margin-top:15px;text-align:left}
+section.homepage-storyBlocks .storyBlock .contentdiv .button a{display:inline-block;text-decoration:none;width:auto;height:100%;padding:8px 18px 6px;border-radius:10px;background:#215d48;color:#fff;font-size:13px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
+section.homepage-storyBlocks .storyBlock .contentdiv .button a:hover{background:#13648d}
+section.homepage-storyBlocks .storyBlock .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
+section.homepage-storyBlocks .storyBlock .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
+section.homepage-storyBlocks .storyBlock.even .inside{background:#5298a7}
+section.homepage-storyBlocks .storyBlock.even .inside .titlediv,section.homepage-storyBlocks .storyBlock.even .inside .contentdiv{color:#fef8e0}
+section.homepage-storyBlocks .storyBlock.third .inside{background:#13648d}
+section.homepage-storyBlocks .storyBlock.third .inside .titlediv,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv{color:#fef8e0}
+section.homepage-storyBlocks .storyBlock.hide{display:none}
+section.homepage-storyBlocks .storyBlock .inside:hover figure{padding-bottom:60%}
+section.homepage-storyBlocks .storyBlock .inside:hover .titlediv{height:100%}
+section.homepage-storyBlocks .storyBlock .inside:hover .contentdiv{overflow:visible !important;height:auto;opacity:1;-webkit-transform:translateY(0);transform:translateY(0);pointer-events:auto}
+section.homepage-storyBlocks.cols4 .wrapper{max-width:100%}
+section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:100%}
 .banner-top-text{position:relative;height:45px;background:#215d48}
 .banner-top-text .wrapper{height:100%}
 .banner-top-text .reg-button{display:inline-block;position:absolute;top:0;left:0;height:100%;z-index:15}
@@ -1864,7 +1889,7 @@ body.popup-open{overflow:hidden}
 #popup-content #closeModalBtn:before,#popup-content #closeModalBtn:after{content:"";display:block;width:100%;height:2px;background:rgba(0,0,0,.9);position:absolute;top:12px;left:0;-webkit-transition:all ease .3s;transition:all ease .3s}
 #popup-content #closeModalBtn:before{-webkit-transform:rotate(45deg);transform:rotate(45deg)}
 #popup-content #closeModalBtn:after{-webkit-transform:rotate(-45deg);transform:rotate(-45deg)}
-#popup-content #closeModalBtn:hover:before,#popup-content #closeModalBtn:hover:after{background:#fff}
+#popup-content #closeModalBtn:hover:before,#popup-content #closeModalBtn:hover:after{background:#215d48}
 #popup-content #closePopUp{display:block;text-decoration:none;width:30px;height:30px;position:absolute;top:-40px;right:-5px;opacity:.7;-webkit-transform:scale(0.8);transform:scale(0.8)}
 #popup-content #closePopUp span{display:none}
 #popup-content #closePopUp:before,#popup-content #closePopUp:after{content:"";display:block;width:100%;height:2px;background:#fff;position:absolute;top:14px;left:0}
@@ -1962,12 +1987,42 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 .schedule-activities .schedule-title .dayName{margin:5px 0 0;font-size:15px;line-height:1;text-transform:uppercase;letter-spacing:1px;position:relative}
 .schedule-activities .activities{max-width:700px;width:100%;margin:0 auto}
 .schedule-activities .activities .item{font-size:16px;margin:15px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
-.schedule-activities .activities .item .border-bottom{width:100%;height:1px;position:absolute;left:0;bottom:6px;background-image:url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23333' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")}
+.schedule-activities .activities .item .border-bottom{width:100%;height:1px;position:absolute;left:0;bottom:9px;background-image:url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23333' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e")}
 .schedule-activities .activities .item span.name{color:#000}
+.schedule-activities .activities .item span.name.practices{color:#13648d}
+.schedule-activities .activities .item span.name.workshops{color:#215d48}
+.schedule-activities .activities .item span.name.festival{color:#333}
 .schedule-activities .activities .item a{display:inline-block;text-decoration:none;color:#afb660}
 .schedule-activities .activities .item a:hover{color:#afb660}
 .schedule-activities .activities .item a.practices{color:#13648d}
-.schedule-activities .activities .item a.workshops{color:#215d48}
+.schedule-activities .activities .item a.time,.schedule-activities .activities .item a.workshops{color:#215d48}
+.schedule-activities .activities .item a.festival{color:#333}
+section.schedule-activities .sched-accordion{background-color:#afb660;border:1px solid #afb660;border-radius:10px;margin:0;padding:15px 40px 15px 15px;position:relative;width:100%}
+section.schedule-activities .sched-accordion.active{border-color:#13648d;background-color:#fef8e0}
+section.schedule-activities .sched-accordion.active .sched-title .time,section.schedule-activities .sched-accordion.active .sched-title .name{background-color:#fef8e0}
+section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
+section.schedule-activities .activities .sched-title{color:#215d48;display:block;cursor:pointer;position:relative;text-decoration:none;margin:15px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
+section.schedule-activities .activities .sched-title .time,section.schedule-activities .activities .sched-title .name{background-color:#afb660;position:relative;z-index:1}
+section.schedule-activities .activities .sched-title .time{padding-right:10px}
+section.schedule-activities .activities .sched-title .name{padding-left:10px}
+section.schedule-activities .activities .sched-title:hover{color:inherit}
+section.schedule-activities .activities .sched-title .plus-minus-toggle{display:inline-block;cursor:pointer;width:16px;height:16px;position:absolute;top:9px;right:-25px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.schedule-activities .activities .sched-title .plus-minus-toggle:before,section.schedule-activities .activities .sched-title .plus-minus-toggle:after{content:"";width:100%;height:5px;left:0;position:absolute;top:0;left:0;background:#13648d;-webkit-transition:all ease .3s;transition:all ease .3s}
+section.schedule-activities .activities .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
+section.schedule-activities .sched-content{display:none;padding:15px;font-size:1.2em;line-height:1.4;color:#215d48;-webkit-animation-duration:1s;animation-duration:1s}
+section.schedule-activities .sched-content a{color:#13648d;text-decoration:underline}
+section.schedule-activities .sched-content a:hover{color:#71a2bb}
+section.schedule-activities .sched-content #closeModalBtn,section.schedule-activities .sched-content #closePopUp{display:none}
+section.schedule-activities .sched-content .popup-content{width:100%;position:relative;color:#215d48;-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-name:"fadeIn";animation-name:"fadeIn"}
+section.schedule-activities .sched-content .popup-content .flex-wrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+section.schedule-activities .sched-content .popup-content .flex-wrap .text{padding:0 20px 0 0;width:100%}
+section.schedule-activities .sched-content .popup-content .flex-wrap .photo{width:100%}
+section.schedule-activities .sched-content .popup-content .flex-wrap .photo figure{width:100%;height:100%;margin:0;background-size:cover;background-position:center;background-repeat:no-repeat}
+section.schedule-activities .sched-content .popup-content .flex-wrap .photo img{width:100%;height:auto}
+section.schedule-activities .sched-content .popup-content .flex-wrap.full .text,section.schedule-activities .sched-content .popup-content .flex-wrap.full .photo{width:100%}
+section.schedule-activities .sched-content .popup-content .title{font-family:"Roylands Sans",sans-serif;font-size:25px;line-height:1.2;margin:0;text-transform:uppercase;letter-spacing:1px}
+section.schedule-activities .sched-content .popup-content .other-info{margin-top:30px;line-height:1.3;margin-bottom:30px}
+section.schedule-activities .sched-content .popup-content .other-info .time{margin-bottom:20px}
 .filter-option{max-width:350px;width:100%;margin:0 auto 50px;position:relative}
 .filter-option label{display:inline-block;margin:0;width:85px;height:32px;background:#707070;color:#fff;text-transform:uppercase;text-align:center;padding:10px 5px 8px;font-size:14px;line-height:1}
 .filter-option .select-wrap{width:calc(100% - 85px);height:32px;position:absolute;top:0;right:1px;border:1px solid #707070;background:#fff}
@@ -2128,6 +2183,10 @@ section.homepage-cards .wrapper{max-width:85vw}
 section.homepage-cards .card{width:33.333%}
 section.homepage-cards.cols4 .wrapper{max-width:85vw}
 section.homepage-cards.cols4 .cards .card{width:25%}
+section.homepage-storyBlocks .wrapper{max-width:85vw}
+section.homepage-storyBlocks .storyBlock{width:33.333%}
+section.homepage-storyBlocks.cols4 .wrapper{max-width:85vw}
+section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:25%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw}
 #popup-content .popup-content .flex-wrap .photo{width:40%}
 #popup-content .popup-content.activity .flex-wrap.half .text{padding:0 30px 0 0}
@@ -2146,6 +2205,8 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0 3vw}
 .galleries figure{padding:15px;width:33.333%}
 .galleries figure.type_video span.image .arrow{border:3px solid #fff;width:5vw;height:5vw}
 .galleries figure.type_video span.image .arrow:before{border-left:25px solid #fff;border-top:15px solid transparent;border-bottom:15px solid transparent;margin-left:5px}
+section.schedule-activities .sched-content .popup-content .flex-wrap .text{width:60%}
+section.schedule-activities .sched-content .popup-content .flex-wrap .photo{width:40%}
 section.coming-soon{font-size:40px;height:70vh}
 .entry-content.vendorz{padding:40px}
 section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}

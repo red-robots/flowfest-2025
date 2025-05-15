@@ -11,17 +11,14 @@ get_header();
 $CS = get_field('coming_soon'); 
 ?>
 
-
-
-
   <div id="primary" class="content-area-full content-default-template">
     <main id="main" class="site-main" role="main">
 
       <?php if( $CS[0] == 'soon' ) { ?>
-            <section class="coming-soon">
-              <div>Coming Soon</div>
-            </section>
-          <?php } else { ?>
+        <section class="coming-soon">
+          <div>Coming Soon</div>
+        </section>
+      <?php } else { ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
         <?php if ( get_the_content() ) {  ?>
@@ -29,18 +26,18 @@ $CS = get_field('coming_soon');
         <?php } ?>
       <?php endwhile; ?>
 
-	
 			<?php 
-      $evDate = get_field('event_date',get_the_ID());
-      $eventDay = ($evDate) ? date('l',strtotime($evDate)) : '';
-      $activities = get_field('activities',get_the_ID());
-      // $postTypes['festival'] = 'Festival Activities';
-      // $postTypes['practices'] = 'Practices';
-      // $postTypes['workshops'] = 'Workshops';
-      // $postTypes['other'] = 'Other';
-      // $postTypes = scheduled_activities_filter();
-      $postTypeList = array();
-      if($activities) {  ?>
+        $evDate = get_field('event_date',get_the_ID());
+        $eventDay = ($evDate) ? date('l',strtotime($evDate)) : '';
+        $activities = get_field('activities',get_the_ID());
+        // $postTypes['festival'] = 'Festival Activities';
+        // $postTypes['practices'] = 'Practices';
+        // $postTypes['workshops'] = 'Workshops';
+        // $postTypes['other'] = 'Other';
+        // $postTypes = scheduled_activities_filter();
+        $postTypeList = array();
+        if($activities) {
+      ?>
       <section class="schedule-activities">
         <div class="wrapper">
           <?php if ($evDate) { ?>
@@ -91,22 +88,36 @@ $CS = get_field('coming_soon');
               }
             ?>
             <div class="item" data-postid="<?php echo $postid ?>" data-posttypename="<?php echo $postTypeLabel ?>" data-posttypeslug="<?php echo $cpt ?>">
-              <?php if ($time) { ?>
-              <span class="time"><?php echo $time ?></span>
-              <?php } else { ?>
-              <span class="time-NA"></span>
-              <?php } ?>
 
               <?php if ( $item ) { ?>
                 <?php if ($show_popup) { ?>
+                  <?php if ($time) { ?>
+                    <span class="time"><?php echo $time ?></span>
+                  <?php } else { ?>
+                    <span class="time-NA"></span>
+                  <?php } ?>
                   <span class="name"><a class="popup-activity <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
+                  <div class="border-bottom"></div>
                 <?php } else { ?>
-                  <span class="name"><?php echo $item_title ?></span>
+                  <div class="sched-accordion">
+                    <a href="javascript:void(0)" class="sched-title" data-id="<?php echo $postid ?>">
+                      <?php if ($time) { ?>
+                        <span class="time"><?php echo $time ?></span>
+                      <?php } else { ?>
+                        <span class="time-NA"></span>
+                      <?php } ?>
+                      <span class="name <?php echo $cpt ?>"><?php echo $item_title ?></span>
+                      <span class="plus-minus-toggle"></span>
+                      <div class="border-bottom"></div>
+                    </a>
+                    <div class="sched-content">
+                      <?php echo 'hi'; ?>
+                  </div>
+                  </div>
                 <?php } ?>
               <?php } ?>
-
-              <div class="border-bottom"></div>
             </div>
+            
             <?php } ?>
           </div>
         </div>
@@ -119,23 +130,23 @@ $CS = get_field('coming_soon');
 
   <script>
     jQuery(document).ready(function($){
-      adjustBorderBottom();
-      $(window).on('orientationchange resize',function(){
-        adjustBorderBottom();
-      });
-      function adjustBorderBottom() {
-        $('.activities .item').each(function(){
-          var target = $(this);
-          var time_span = ( target.find('.time').length ) ? target.find('.time').width() + 10 : 0;
-          var name_span = ( target.find('.name').length ) ? target.find('.name').width() : 0;
-          var border_bottom = target.width();
-          var new_border_width = border_bottom - (time_span+name_span+10);
-          target.find('.border-bottom').css({
-            'width':new_border_width+'px',
-            'left':time_span+'px'
-          });
-        });
-      }
+      // adjustBorderBottom();
+      // $(window).on('orientationchange resize',function(){
+      //   adjustBorderBottom();
+      // });
+      // function adjustBorderBottom() {
+      //   $('.activities .item').each(function(){
+      //     var target = $(this);
+      //     var time_span = ( target.find('.time').length ) ? target.find('.time').width() + 10 : 0;
+      //     var name_span = ( target.find('.name').length ) ? target.find('.name').width() : 0;
+      //     var border_bottom = target.width();
+      //     var new_border_width = border_bottom - (time_span+name_span+10);
+      //     target.find('.border-bottom').css({
+      //       'width':new_border_width+'px',
+      //       'left':time_span+'px'
+      //     });
+      //   });
+      // }
 
       var postTypeList = <?php echo ( $postTypeList ) ? @json_encode($postTypeList):'[]' ?>;
       var filter_options = [];
@@ -164,7 +175,6 @@ $CS = get_field('coming_soon');
         });
         return result;
       }
-      
 
       /* Filter */
       $(".js-select2").select2({

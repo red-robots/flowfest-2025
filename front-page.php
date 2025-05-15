@@ -27,10 +27,8 @@ get_header();
 			</article>
       <?php } ?>
 
-
       <?php  
-
-      if ( $cards = get_field('homepage_cards') ) { 
+        if ( $cards = get_field('homepage_cards') ) { 
           foreach ($cards as $k=>$item) {
             $visibility = (isset($item['visibility'][0]) && $item['visibility'][0]) ? $item['visibility'][0] : '';
             if($visibility=='hide') {
@@ -38,11 +36,12 @@ get_header();
             }
           }
         ?>
-			<section class="homepage-cards <?php echo (count($cards)>3) ? 'cols4':'cols3'?>">
+      <section class="homepage-storyBlocks <?php echo (count($cards)>3) ? 'cols4':'cols3'?>">
         <div class="wrapper">
-          <div class="cards">
+          <div class="storyBlocks">
           <?php $n=1; foreach ($cards as $item) {  
             $title = $item['title'];
+            $content = $item['content'];
             $visibility = (isset($item['visibility'][0]) && $item['visibility'][0]) ? ' ' . $item['visibility'][0] : '';
             $img = $item['image'];
             $link = $item['link'];
@@ -59,27 +58,30 @@ get_header();
               $card_class .= ' third';
             }
             ?>
-            <div class="card <?php echo $card_class.$visibility ?>">
-              <a href="<?php echo $cardLink ?>" target="<?php echo $cardTarget ?>" class="inside">
+            <div class="storyBlock <?php echo $card_class.$visibility ?>">
+              <div class="inside">
                 <figure>
                   <?php if ($img) { ?>
-                  <span class="image"<?php echo $image_style ?>></span>
-                  <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>">
+                    <img src="<?php echo $img['url'] ?>" alt="<?php echo $img['title'] ?>">
                   <?php } ?>
                 </figure>
                 <div class="titlediv">
-                  <div class="wrap">
-                    <?php if ($icon && preg_replace('/\s+/', '', $icon)) { ?>
-                      <!-- <div class="icon <?php echo $icon ?>"><span></span></div> -->
-                      <style>
-                        .card .<?php echo preg_replace('/\s+/', '', $icon);?> span {background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>.png')}
-                        .card a:hover .<?php echo preg_replace('/\s+/', '', $icon); ?> span{background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>-hover.png')}
-                      </style>
-                    <?php } ?>
-                    <div class="title"><?php echo $title ?></div>
+                  <?php if ($icon && preg_replace('/\s+/', '', $icon)) { ?>
+                    <!-- <div class="icon <?php echo $icon ?>"><span></span></div> -->
+                    <style>
+                      .card .<?php echo preg_replace('/\s+/', '', $icon);?> span {background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>.png')}
+                      .card a:hover .<?php echo preg_replace('/\s+/', '', $icon); ?> span{background-image:url('<?php echo get_stylesheet_directory_uri() . '/images/_icons/' . preg_replace('/\s+/', '', $icon)?>-hover.png')}
+                    </style>
+                  <?php } ?>
+                  <?php echo $title; ?>
+                </div>
+                <div class="contentdiv">
+                  <?php echo $content; ?>
+                  <div class="button">
+                    <a href="<?php echo $cardLink ?>" target="<?php echo $cardTarget ?>"><?php echo $cardTitle; ?></a>
                   </div>
                 </div>
-              </a>
+              </div>
             </div>
           <?php $n++; } ?>
           </div>

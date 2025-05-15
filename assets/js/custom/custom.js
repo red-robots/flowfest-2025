@@ -346,5 +346,39 @@ $('.sponsors-loop').owlCarousel({
     $(this).next().slideToggle();
   });
 
+  /* SCHEDULE */
+  $(document).on('click','.sched-accordion .sched-title',function(){
+    var elem = $(this);
+    elem.parent().toggleClass('active');
+
+    var id = elem.attr('data-id');
+    if(!elem.hasClass('loaded')) {
+      $.ajax({
+        url : frontajax.ajaxurl,
+        type : 'post',
+        dataType : "json",
+        data : {
+          action : 'get_post_info',
+          postid : id
+        },
+        beforeSend:function(){
+          $('#loader').show();
+        },
+        success : function( response ) {
+          if(response.content) {
+            elem.next().html(response.content);
+            elem.addClass('loaded');
+            elem.next().slideToggle();
+          } 
+        },
+        complete: function() {
+          $('#loader').hide();
+        }
+      });
+    } else {
+      elem.next().slideToggle();
+    }
+  });
+
 
 });// END #####################################    END
