@@ -13,7 +13,7 @@
 		$footer_logo = get_field("footer_logo","option");
 	?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper	foot-flex">
+		<div class="wrapper	foot-flex cf">
 			<?php if ( $footer_logo ) { ?>
 				<div class="footer-logo">
 					<a href="https://whitewater.org" target="_blank">
@@ -25,7 +25,7 @@
 				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
 			</nav>
 			<!-- <div class="empty">&nbsp;</div> -->
-		</div><!-- wrapper foot-flex" -->
+		</div><!-- wrapper foot-flex -->
 
 		<!-- Sign Up newsletter -->
 		<div class="wrapper">
@@ -35,7 +35,7 @@
 
 				if( !empty($newsletter_title) ){
 					echo "<div class='newsletter'><h2>". $newsletter_title ."</h2>";
-					echo "<div clas=''>". $newsletter_code ."</div></div>";
+					echo "<div>". $newsletter_code ."</div></div>";
 				}
 			?>
 
