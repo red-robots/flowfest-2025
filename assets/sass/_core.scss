@@ -1988,7 +1988,11 @@ body.page-template-page-repeatable-blocks {
   width: 100%;
   float: left;
   .content-block {
-    margin: 50px 0;
+    margin: 30px 0;
+
+    @include tab {
+      margin: 50px 0;
+    }
   }
   .textcol, .imagecol {
     width: 100%;

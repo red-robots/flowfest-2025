@@ -1899,7 +1899,7 @@ body.popup-open{overflow:hidden}
 .repeatable-block-page article.page{margin-bottom:0;padding-bottom:20px}
 body.page-template-page-repeatable-blocks .repeatable-block-page{margin:30px 0;width:100%;float:left}
 .repeatable-content-blocks{margin:0;width:100%;float:left}
-.repeatable-content-blocks .content-block{margin:50px 0}
+.repeatable-content-blocks .content-block{margin:30px 0}
 .repeatable-content-blocks .textcol,.repeatable-content-blocks .imagecol{width:100%}
 .repeatable-content-blocks .textcol{background:#fff;color:#215d48;padding:20px}
 .repeatable-content-blocks .textcol a{text-decoration:underline}
@@ -2195,6 +2195,7 @@ section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:25%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw}
 #popup-content .popup-content .flex-wrap .photo{width:40%}
 #popup-content .popup-content.activity .flex-wrap.half .text{padding:0 30px 0 0}
+.repeatable-content-blocks .content-block{margin:50px 0}
 .repeatable-content-blocks .textcol{height:100%}
 .repeatable-content-blocks .textcol.matchHeight{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 .repeatable-content-blocks .textcol.matchHeight .inside{width:100%}
