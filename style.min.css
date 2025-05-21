@@ -1997,7 +1997,7 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 .schedule-activities .activities .item a.practices{color:#13648d}
 .schedule-activities .activities .item a.time,.schedule-activities .activities .item a.workshops{color:#215d48}
 .schedule-activities .activities .item a.festival{color:#333}
-section.schedule-activities .sched-accordion{background-color:#afb660;border:1px solid #afb660;border-radius:10px;margin:0;padding:15px 40px 15px 15px;position:relative;width:100%}
+section.schedule-activities .sched-accordion{background-color:#afb660;border:1px solid #afb660;border-radius:10px;margin:0;padding:2px 40px 2px 15px;position:relative;width:100%}
 section.schedule-activities .sched-accordion.active{border-color:#13648d;background-color:#fef8e0}
 section.schedule-activities .sched-accordion.active .sched-title .time,section.schedule-activities .sched-accordion.active .sched-title .name{background-color:#fef8e0}
 section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
