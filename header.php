@@ -75,7 +75,7 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
   <span id="mobile-menu-toggle"><span class="bar"><span></span></span></span>
   <div class="mobile-navigation floral-pattern"></div>
 
-	<?php get_template_part('parts/pagetitle');?>
+	<?php // get_template_part('parts/pagetitle');?>
 	<?php 
   $CS = get_field('coming_soon'); 
 

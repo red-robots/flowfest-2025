@@ -13,6 +13,9 @@ get_header(); ?>
     <main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>
+        <div class="wrapper">
+          <h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+        </div>
         <?php if ( get_the_content() ) {  ?>
           <div class="wrapper"><?php get_template_part( 'parts/content', 'page' ); ?></div>
         <?php } ?>

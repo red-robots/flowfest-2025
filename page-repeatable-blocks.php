@@ -10,12 +10,15 @@ get_header(); ?>
 
 			<?php while ( have_posts() ) : the_post(); ?>
 
+        <div class="wrapper">
+          <h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+        </div>
+
         <?php if ( get_the_content() ) { ?>
 				<article id="post-<?php the_ID(); ?>" <?php post_class('entry-content'); ?>>
           <?php the_content() ?>
 				</article><!-- #post-## -->
         <?php } ?>
-
 
         <?php if( have_rows('repeatable_block') ) { ?>
         <div class="repeatable-content-blocks">

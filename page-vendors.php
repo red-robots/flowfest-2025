@@ -27,8 +27,10 @@ $vendors = get_field('vendors');
 	<div id="primary" class="content-area-full default-template">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post(); ?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="wrapper">
+					<h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+				</div>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 

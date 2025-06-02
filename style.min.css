@@ -1676,7 +1676,7 @@ nav.main-navigation ul.menu>li{overflow:hidden}
 nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:15px 20px;color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:18px;line-height:1.3;position:relative;text-transform:uppercase}
 nav.main-navigation ul.menu>li>a span{display:inline-block;position:relative;padding:3px;line-height:1.1;z-index:5}
 nav.main-navigation ul.menu>li>a span b{display:inline-block;font-weight:normal;position:relative}
-nav.main-navigation ul.menu>li>a span:before{content:"";display:block;width:120%;min-width:100px;min-height:65px;height:150%;margin-left:-50%;position:absolute;top:-22px;left:50%;-webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_linkhover_lime.svg");background-size:auto 110px;background-position:center;background-repeat:no-repeat}
+nav.main-navigation ul.menu>li>a span:before{content:"";display:block;width:120%;min-width:100px;min-height:65px;height:150%;margin-left:-50%;position:absolute;top:-19px;left:50%;-webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_linkhover_lime.svg");background-size:auto 110px;background-position:center;background-repeat:no-repeat}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:before,nav.main-navigation ul.menu>li:hover>a:after{width:100%;left:0;opacity:1}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li:hover>a:before{top:3px;-webkit-transform:scaleX(1) translateX(0) rotate(0);transform:scaleX(1) translateX(0) rotate(0)}
 nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:after{bottom:3px;-webkit-transform:scaleX(1) translateX(0) rotate(180deg);transform:scaleX(1) translateX(0) rotate(180deg)}
@@ -1764,7 +1764,7 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 .overlay-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;height:100%;position:absolute;top:0;left:0}
 .logo-overlay{width:200px;z-index:10}
 .logo-overlay img{width:100%}
-section.pagetitle{display:none;position:fixed;top:60px;left:0;width:100%;z-index:15;background-color:#afb660}
+section.pagetitle{position:fixed;top:60px;left:0;width:100%;z-index:15;background-color:#afb660}
 section.pagetitle h1{display:block;width:100%;text-align:right;font-family:"Roylands Sans",sans-serif;font-size:1.5rem;line-height:1.2;color:#215d48;text-transform:uppercase;position:relative;top:0;margin:0;padding:0 0 0 95px;letter-spacing:1px}
 section.pagetitle .wrapper{position:relative;height:100%;padding:10px 15px}
 section.tile-wrapper{width:100%;padding:40px 0}
@@ -1781,6 +1781,7 @@ section.tile-wrapper .tile .info .title h2{font-family:"podium-sharp-variable",s
 section.tile-wrapper .tile .info.has-time .title{padding-right:100px;max-width:365px}
 section.tile-wrapper .tile .info .time{color:#fff;background-color:#13648d;padding:10px 10px;width:110px;height:60px;text-align:center;position:absolute;bottom:0;right:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-line-pack:center;align-content:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 section.tile-wrapper .tile .pagelink:hover .img{-webkit-transform:scale(1.06);transform:scale(1.06)}
+h1.pagetitle{color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:2em;font-weight:normal;line-height:1.2;letter-spacing:1px;text-transform:uppercase;margin:0;padding:0}
 #content{width:100%;clear:both}
 article.page{max-width:1230px;width:100%;margin:0 auto;padding:50px 15px;line-height:1.4}
 section.home-cards{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap}
@@ -1955,7 +1956,7 @@ body.error404 #sitemap-wrap{text-align:center;margin-bottom:50px}
 body.error404 #sitemap-wrap ul#sitemap{margin-top:20px;max-width:unset;width:auto;display:inline-block;text-align:left}
 body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .site-footer .footer-logo img{width:auto;height:20px;float:left;opacity:.75}
-.content-default-template #main{min-height:20em;padding:10px 0}
+.content-default-template #main{min-height:20em;padding:30px 0 0}
 .content-default-template #main .hentry{padding-bottom:10px}
 .galleries{padding:30px 0}
 .galleries .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}

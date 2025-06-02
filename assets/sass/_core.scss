@@ -360,7 +360,7 @@ nav.main-navigation {
         height: 150%;
         margin-left: -50%;
         position: absolute;
-        top: -22px;
+        top: -19px;
         left: 50%;
         // transform: translateX(-50%);
         transform: translateX(-50%) scaleX(0);
@@ -1007,8 +1007,8 @@ footer.site-footer {
 		width: 100%;
 	}
 }
+
 section.pagetitle {
-  display: none;
 	position: fixed;
   top: 60px;
   left: 0;
@@ -1188,6 +1188,17 @@ section.tile-wrapper {
       }
     }
 	}
+}
+h1.pagetitle {
+  color: $color_secondary;
+  font-family: $font-roylands;
+  font-size: 2em;
+  font-weight: normal;
+  line-height: 1.2;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0;
 }
 #content {
 	width: 100%;
@@ -2387,7 +2398,7 @@ body.error404 {
 
 .content-default-template #main {
   min-height: 20em;
-  padding: 10px 0;
+  padding: 30px 0 0;
   .hentry {
     padding-bottom: 10px;
   }

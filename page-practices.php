@@ -13,12 +13,11 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-			<?php
-			while ( have_posts() ) : the_post(); ?>
-
-
-			<?php endwhile; // End of the loop.
-			?>
+			<?php while ( have_posts() ) : the_post(); ?>
+				<div class="wrapper">
+					<h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+				</div>
+			<?php endwhile; // End of the loop. ?>
 
 			<?php 
 				$date_now = date('Y-m-d H:i:s');

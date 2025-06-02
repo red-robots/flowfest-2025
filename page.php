@@ -26,6 +26,9 @@ $CS = get_field('coming_soon');
 
 			<?php
 			while ( have_posts() ) : the_post(); ?>
+				<div class="wrapper">
+					<h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+				</div>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
