@@ -14,6 +14,8 @@
 <link rel="icon" type="image/png" sizes="32x32" href="<?php bloginfo('template_url'); ?>/images/favicon-32x32.png">
 <link rel="icon" type="image/png" sizes="16x16" href="<?php bloginfo('template_url'); ?>/images/favicon-16x16.png">
 <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/site.webmanifest">
+<link rel="stylesheet" href=https://use.typekit.net/zzb0tjr.css>
+
 
 
 <!-- Meta Pixel Code -->
