@@ -1842,6 +1842,12 @@ section.homepage-storyBlocks .storyBlock.even .inside{background:#5298a7}
 section.homepage-storyBlocks .storyBlock.even .inside .titlediv,section.homepage-storyBlocks .storyBlock.even .inside .contentdiv{color:#fef8e0}
 section.homepage-storyBlocks .storyBlock.third .inside{background:#13648d}
 section.homepage-storyBlocks .storyBlock.third .inside .titlediv,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv{color:#fef8e0}
+section.homepage-storyBlocks .storyBlock.third .inside .titlediv .button a,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv .button a{background:#5298a7}
+section.homepage-storyBlocks .storyBlock.third .inside .titlediv .button a:hover,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv .button a:hover{background:#215d48}
+section.homepage-storyBlocks .storyBlock.forth .inside{background:#215d48}
+section.homepage-storyBlocks .storyBlock.forth .inside .titlediv,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv{color:#fef8e0}
+section.homepage-storyBlocks .storyBlock.forth .inside .titlediv .button a,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv .button a{background:#5298a7}
+section.homepage-storyBlocks .storyBlock.forth .inside .titlediv .button a:hover,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv .button a:hover{background:#afb660}
 section.homepage-storyBlocks .storyBlock.hide{display:none}
 section.homepage-storyBlocks .storyBlock .inside figure{padding-bottom:60%}
 section.homepage-storyBlocks .storyBlock .inside .titlediv{height:100%}

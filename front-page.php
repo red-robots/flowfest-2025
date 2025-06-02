@@ -51,11 +51,14 @@ get_header();
             $cardTarget = (isset($link['target']) && $link['target']) ? $link['target'] : '_self';
             $image_style = ($img) ? ' style="background-image:url('.$img['url'].')"':'';
             $card_class = ($img) ? 'has-image':'no-image'; 
-            if($n % 2==0) {
-              $card_class .= ' even';
+            if($n % 4==0) {
+              $card_class .= ' forth';
             }
             else if($n % 3==0) {
               $card_class .= ' third';
+            }
+            else if($n % 2==0) {
+              $card_class .= ' even';
             }
             ?>
             <div class="storyBlock <?php echo $card_class.$visibility ?>">

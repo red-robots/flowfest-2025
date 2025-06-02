@@ -1612,6 +1612,34 @@ section.homepage-storyBlocks {
         background: $color2;
         .titlediv, .contentdiv {
           color: $color_primary;
+
+          .button {        
+            a {
+              background: $light_blue;
+    
+              &:hover {
+                background: $color_secondary;
+              }
+            }  
+          }
+        }
+      }
+    }
+    &.forth {
+      .inside {
+        background: $color_secondary;
+        .titlediv, .contentdiv {
+          color: $color_primary;
+
+          .button {        
+            a {
+              background: $light_blue;
+    
+              &:hover {
+                background: $color1;
+              }
+            }  
+          }
         }
       }
     }
