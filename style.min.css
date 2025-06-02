@@ -1832,7 +1832,7 @@ section.homepage-storyBlocks .storyBlock .inside{display:block;text-decoration:n
 section.homepage-storyBlocks .storyBlock figure{margin:0;padding-bottom:70%;position:relative;overflow:hidden;border-radius:10px 10px 0 0;-webkit-transition:all ease 1s;transition:all ease 1s}
 section.homepage-storyBlocks .storyBlock figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
 section.homepage-storyBlocks .storyBlock .titlediv{width:100%;height:60%;font-family:"podium-sharp-variable",sans-serif;font-size:1.3rem;line-height:1.2;text-transform:uppercase;color:#215d48;padding:15px}
-section.homepage-storyBlocks .storyBlock .contentdiv{color:#215d48;padding:0 15px 15px;-webkit-transition:all ease 1s;transition:all ease 1s;height:0;opacity:0;-webkit-transform:translateY(-5vw);transform:translateY(-5vw);-webkit-transition:all ease .5s;transition:all ease .5s;pointer-events:none}
+section.homepage-storyBlocks .storyBlock .contentdiv{color:#215d48;padding:0 15px 15px;-webkit-transition:all ease 1s;transition:all ease 1s;-webkit-transform:translateY(-5vw);transform:translateY(-5vw);-webkit-transition:all ease .5s;transition:all ease .5s;pointer-events:none}
 section.homepage-storyBlocks .storyBlock .contentdiv .button{margin-top:15px;text-align:left}
 section.homepage-storyBlocks .storyBlock .contentdiv .button a{display:inline-block;text-decoration:none;width:auto;height:100%;padding:8px 18px 6px;border-radius:10px;background:#215d48;color:#fff;font-size:13px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
 section.homepage-storyBlocks .storyBlock .contentdiv .button a:hover{background:#13648d}
@@ -1843,9 +1843,9 @@ section.homepage-storyBlocks .storyBlock.even .inside .titlediv,section.homepage
 section.homepage-storyBlocks .storyBlock.third .inside{background:#13648d}
 section.homepage-storyBlocks .storyBlock.third .inside .titlediv,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv{color:#fef8e0}
 section.homepage-storyBlocks .storyBlock.hide{display:none}
-section.homepage-storyBlocks .storyBlock .inside:hover figure{padding-bottom:60%}
-section.homepage-storyBlocks .storyBlock .inside:hover .titlediv{height:100%}
-section.homepage-storyBlocks .storyBlock .inside:hover .contentdiv{overflow:visible !important;height:auto;opacity:1;-webkit-transform:translateY(0);transform:translateY(0);pointer-events:auto}
+section.homepage-storyBlocks .storyBlock .inside figure{padding-bottom:60%}
+section.homepage-storyBlocks .storyBlock .inside .titlediv{height:100%}
+section.homepage-storyBlocks .storyBlock .inside .contentdiv{overflow:visible !important;height:auto;opacity:1;-webkit-transform:translateY(0);transform:translateY(0);pointer-events:auto}
 section.homepage-storyBlocks.cols4 .wrapper{max-width:100%}
 section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:100%}
 .banner-top-text{position:relative;height:45px;background:#215d48}

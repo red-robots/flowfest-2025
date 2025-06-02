@@ -1544,8 +1544,8 @@ section.homepage-storyBlocks {
       color: $color_secondary;
       padding: 0 15px 15px;
       transition: all ease 1s;
-      height: 0;
-      opacity: 0;
+      // height: 0;
+      // opacity: 0;
       -webkit-transform: translateY(-5vw);
       transform: translateY(-5vw);
       -webkit-transition: all ease .5s;
@@ -1618,7 +1618,8 @@ section.homepage-storyBlocks {
   }
 
   .storyBlock.hide{display:none;}
-  .storyBlock .inside:hover {
+  .storyBlock .inside:hover {}
+  .storyBlock .inside {
     figure {
       padding-bottom: 60%;
     }
