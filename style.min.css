@@ -1829,29 +1829,30 @@ section.homepage-storyBlocks .wrapper{max-width:100%}
 section.homepage-storyBlocks .storyBlocks{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
 section.homepage-storyBlocks .storyBlock{width:100%;padding:15px;position:relative}
 section.homepage-storyBlocks .storyBlock *{-webkit-transition:all ease .3s;transition:all ease .3s}
-section.homepage-storyBlocks .storyBlock .inside{display:block;text-decoration:none;background:#fef8e0;border-radius:10px;overflow:hidden;position:relative}
+section.homepage-storyBlocks .storyBlock .inside{display:block;height:100%;text-decoration:none;background:#fef8e0;border-radius:10px;overflow:hidden;position:relative;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;position:relative}
 section.homepage-storyBlocks .storyBlock figure{margin:0;padding-bottom:70%;position:relative;overflow:hidden;border-radius:10px 10px 0 0;-webkit-transition:all ease 1s;transition:all ease 1s}
 section.homepage-storyBlocks .storyBlock figure img{width:100%;height:100%;position:absolute;top:0;left:0;-o-object-fit:cover;object-fit:cover;-o-object-position:center;object-position:center}
-section.homepage-storyBlocks .storyBlock .titlediv{width:100%;height:60%;font-family:"podium-sharp-variable",sans-serif;font-size:1.3rem;line-height:1.2;text-transform:uppercase;color:#215d48;padding:15px}
-section.homepage-storyBlocks .storyBlock .contentdiv{color:#215d48;padding:0 15px 15px;-webkit-transition:all ease 1s;transition:all ease 1s;-webkit-transform:translateY(-5vw);transform:translateY(-5vw);-webkit-transition:all ease .5s;transition:all ease .5s;pointer-events:none}
-section.homepage-storyBlocks .storyBlock .contentdiv .button{margin-top:15px;text-align:left}
-section.homepage-storyBlocks .storyBlock .contentdiv .button a{display:inline-block;text-decoration:none;width:auto;height:100%;padding:8px 18px 6px;border-radius:10px;background:#215d48;color:#fff;font-size:13px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
-section.homepage-storyBlocks .storyBlock .contentdiv .button a:hover{background:#13648d}
+section.homepage-storyBlocks .storyBlock .titlediv{width:100%;height:auto;font-family:"podium-sharp-variable",sans-serif;font-size:1.3rem;line-height:1.2;text-transform:uppercase;color:#215d48;padding:15px}
+section.homepage-storyBlocks .storyBlock .contentdiv{color:#215d48;padding:0 15px 15px;-webkit-transition:all ease 1s;transition:all ease 1s;-webkit-transition:all ease .5s;transition:all ease .5s;pointer-events:none}
+section.homepage-storyBlocks .storyBlock .button{margin:0 0 15px 15px;text-align:left}
+section.homepage-storyBlocks .storyBlock .button a{display:inline-block;text-decoration:none;width:auto;height:100%;padding:8px 18px 6px;border-radius:10px;background:#215d48;color:#fff;font-size:13px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
+section.homepage-storyBlocks .storyBlock .button a:hover{background:#13648d}
 section.homepage-storyBlocks .storyBlock .icon{width:90px;height:90px;text-align:center;margin:0 auto;position:relative;top:-15px}
 section.homepage-storyBlocks .storyBlock .icon span{display:inline-block;width:120px;height:90px;background-size:80%;background-position:center;background-repeat:no-repeat;position:absolute;top:20px;left:-15px}
 section.homepage-storyBlocks .storyBlock.even .inside{background:#5298a7}
 section.homepage-storyBlocks .storyBlock.even .inside .titlediv,section.homepage-storyBlocks .storyBlock.even .inside .contentdiv{color:#fef8e0}
+section.homepage-storyBlocks .storyBlock.even .inside .button a{background:#13648d}
+section.homepage-storyBlocks .storyBlock.even .inside .button a:hover{background:#215d48}
 section.homepage-storyBlocks .storyBlock.third .inside{background:#13648d}
 section.homepage-storyBlocks .storyBlock.third .inside .titlediv,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv{color:#fef8e0}
-section.homepage-storyBlocks .storyBlock.third .inside .titlediv .button a,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv .button a{background:#5298a7}
-section.homepage-storyBlocks .storyBlock.third .inside .titlediv .button a:hover,section.homepage-storyBlocks .storyBlock.third .inside .contentdiv .button a:hover{background:#215d48}
+section.homepage-storyBlocks .storyBlock.third .inside .button a{background:#5298a7}
+section.homepage-storyBlocks .storyBlock.third .inside .button a:hover{background:#215d48}
 section.homepage-storyBlocks .storyBlock.forth .inside{background:#215d48}
 section.homepage-storyBlocks .storyBlock.forth .inside .titlediv,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv{color:#fef8e0}
-section.homepage-storyBlocks .storyBlock.forth .inside .titlediv .button a,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv .button a{background:#5298a7}
-section.homepage-storyBlocks .storyBlock.forth .inside .titlediv .button a:hover,section.homepage-storyBlocks .storyBlock.forth .inside .contentdiv .button a:hover{background:#afb660}
+section.homepage-storyBlocks .storyBlock.forth .inside .button a{background:#afb660}
+section.homepage-storyBlocks .storyBlock.forth .inside .button a:hover{background:#5298a7}
 section.homepage-storyBlocks .storyBlock.hide{display:none}
 section.homepage-storyBlocks .storyBlock .inside figure{padding-bottom:60%}
-section.homepage-storyBlocks .storyBlock .inside .titlediv{height:100%}
 section.homepage-storyBlocks .storyBlock .inside .contentdiv{overflow:visible !important;height:auto;opacity:1;-webkit-transform:translateY(0);transform:translateY(0);pointer-events:auto}
 section.homepage-storyBlocks.cols4 .wrapper{max-width:100%}
 section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:100%}
@@ -2197,6 +2198,8 @@ section.homepage-cards.cols4 .wrapper{max-width:85vw}
 section.homepage-cards.cols4 .cards .card{width:25%}
 section.homepage-storyBlocks .wrapper{max-width:85vw}
 section.homepage-storyBlocks .storyBlock{width:33.333%}
+section.homepage-storyBlocks .storyBlock .contentdiv{padding:0 15px 60px}
+section.homepage-storyBlocks .storyBlock .button{position:absolute;bottom:15px;left:15px;margin:0}
 section.homepage-storyBlocks.cols4 .wrapper{max-width:85vw}
 section.homepage-storyBlocks.cols4 .storyBlocks .storyBlock{width:25%}
 #popup-content .popup-content .flex-wrap .text{width:60%;padding:4vw}

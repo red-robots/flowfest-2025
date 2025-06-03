@@ -80,9 +80,9 @@ get_header();
                 </div>
                 <div class="contentdiv">
                   <?php echo $content; ?>
-                  <div class="button">
-                    <a href="<?php echo $cardLink ?>" target="<?php echo $cardTarget ?>"><?php echo $cardTitle; ?></a>
-                  </div>
+                </div>
+                <div class="button">
+                  <a href="<?php echo $cardLink ?>" target="<?php echo $cardTarget ?>"><?php echo $cardTitle; ?></a>
                 </div>
               </div>
             </div>

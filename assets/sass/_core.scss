@@ -1513,10 +1513,15 @@ section.homepage-storyBlocks {
     }
     .inside {
       display: block;
+      height: 100%;
       text-decoration: none;
       background: $color_primary;
       border-radius: 10px;
       overflow: hidden;
+      position: relative;
+      display: flex;
+      flex-flow: column;
+      justify-content: flex-start;
       position: relative;
     }
 
@@ -1543,7 +1548,7 @@ section.homepage-storyBlocks {
 
     .titlediv {
       width: 100%;
-      height: 60%;
+      height: auto; //60%
       font-family: $font-podium-sharp;
       font-size: 1.3rem;
       line-height: 1.2;
@@ -1558,36 +1563,47 @@ section.homepage-storyBlocks {
       transition: all ease 1s;
       // height: 0;
       // opacity: 0;
-      -webkit-transform: translateY(-5vw);
-      transform: translateY(-5vw);
+      // -webkit-transform: translateY(-5vw);
+      // transform: translateY(-5vw);
       -webkit-transition: all ease .5s;
       transition: all ease .5s;
       pointer-events: none;
 
-      .button {
-        margin-top: 15px;
-        text-align: left;
-    
-        a {
-          display: inline-block;
-          text-decoration: none;
-          width: auto;
-          height: 100%;
-          padding: 8px 18px 6px;
-          border-radius: 10px;
-          background: $color_secondary;
-          color: #FFF;
-          font-size: 13px;
-          font-weight: 500;
-          line-height: 1.1;
-          text-transform: uppercase;
-          position: relative;
-
-          &:hover {
-            background: $color2;
-          }
-        }  
+      @include tab {
+        padding: 0 15px 60px;
       }
+    }
+
+    .button {
+      margin: 0 0 15px 15px;
+      text-align: left;
+
+      @include tab {
+        position: absolute;
+        bottom: 15px;
+        left: 15px;
+        margin: 0;
+      }
+  
+      a {
+        display: inline-block;
+        text-decoration: none;
+        width: auto;
+        height: 100%;
+        padding: 8px 18px 6px;
+        border-radius: 10px;
+        background: $color_secondary;
+        color: #FFF;
+        font-size: 13px;
+        font-weight: 500;
+        line-height: 1.1;
+        text-transform: uppercase;
+        position: relative;
+
+        &:hover {
+          background: $color2;
+        }
+      }  
     }
 
     .icon {
@@ -1617,6 +1633,15 @@ section.homepage-storyBlocks {
         .titlediv, .contentdiv {
           color: $color_primary;
         }
+        .button {     
+          a {
+            background: $color2;
+  
+            &:hover {
+              background: $color_secondary;
+            }
+          }  
+        }
       }
     }
     &.third {
@@ -1624,16 +1649,15 @@ section.homepage-storyBlocks {
         background: $color2;
         .titlediv, .contentdiv {
           color: $color_primary;
-
-          .button {        
-            a {
-              background: $light_blue;
-    
-              &:hover {
-                background: $color_secondary;
-              }
-            }  
-          }
+        }
+        .button {     
+          a {
+            background: $light_blue;
+  
+            &:hover {
+              background: $color_secondary;
+            }
+          }  
         }
       }
     }
@@ -1642,16 +1666,15 @@ section.homepage-storyBlocks {
         background: $color_secondary;
         .titlediv, .contentdiv {
           color: $color_primary;
-
-          .button {        
-            a {
+        }
+        .button {        
+          a {
+            background: $color1;
+  
+            &:hover {
               background: $light_blue;
-    
-              &:hover {
-                background: $color1;
-              }
-            }  
-          }
+            }
+          }  
         }
       }
     }
@@ -1662,9 +1685,6 @@ section.homepage-storyBlocks {
   .storyBlock .inside {
     figure {
       padding-bottom: 60%;
-    }
-    .titlediv {
-      height: 100%;
     }
     .contentdiv {
       overflow: visible !important;
