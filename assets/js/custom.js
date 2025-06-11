@@ -364,4 +364,27 @@ jQuery(document).ready(function ($) {
       elem.next().slideToggle();
     }
   });
+
+  if ($('.insider-content-sidebar').length) {
+    $(window).on('scroll', function () {
+      var s = $('#main'),
+          sw = s.find('.insider-content-sidebar'),
+          sn = s.find('.stickyNav'),
+          windowWidth = $(window).width(),
+          windowScrollTop = $(window).scrollTop(),
+          elementOffset = s.offset().top + 85;
+
+      if (elementOffset <= windowScrollTop && windowWidth >= 1140) {
+        sn.css({
+          position: 'fixed',
+          width: sw.width() + 'px'
+        });
+      } else {
+        sn.css({
+          position: 'initial',
+          width: 'auto'
+        });
+      }
+    });
+  }
 }); // END #####################################    END

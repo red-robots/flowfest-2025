@@ -98,9 +98,9 @@ html body.logged-in.admin-bar {
 	}
 	
 	#mobile-menu-toggle {
-		top: 42px;
+		top: 80px;
 		@include xs {
-			top: 32px;
+			top: 70px;
 		}
 	}
 	header.site-header {
@@ -3580,3 +3580,176 @@ section.vendors {
 		}
 	}
 }
+
+/* INSIDER GUIDE */
+.insider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-top: 30px;
+
+  @include tab {
+    flex-direction: row;
+  }
+
+  &-sidebar {
+    border-top: .0625rem solid $color1;
+    border-bottom: .0625rem solid $color1;
+    margin-bottom: 16px;
+    position: relative;
+    width: 100%;
+    
+    @include tab {
+      border-top: none;
+      border-bottom: none;
+      float: left;
+      padding-right: .625rem;
+      width: 20.8333%;
+      margin-top: 3.125rem;
+    }
+
+    &-title {
+      padding: .9375rem 0;
+      color: $color_secondary;
+      flex-wrap: wrap;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &:first-child {
+        display: none;
+      }
+
+      @include tab {
+        border-bottom: .0625rem solid $color1;
+
+        &:first-child {
+          display: block;
+          border-top: .0625rem solid $color1;
+        }
+      }
+
+      a {
+        color: $light_blue;
+        text-decoration: none;
+
+        &:hover {
+          color: $color2;
+        }
+      }
+    }
+
+    .stickyNav {
+      display: none;
+      position: absolute;
+      z-index: 1;
+      @include animateThis(0.5s);
+
+      &.show {
+        display: block;
+        @include animateEffect('fadeIn');
+      }
+    }
+
+    @include tab {
+      .stickyNav {
+        display: block !important;
+        max-height: calc(100vh - 5.5rem);
+        position: -webkit-sticky;
+        position: sticky;
+        top: 5.5rem;
+        z-index: 5;
+      }
+    }
+
+    .dropbtn {
+      color: $color2;
+      background: none;
+      padding: 16px 0;
+      border: none;
+      cursor: pointer;
+      width: 100%;
+      text-align: left;
+
+      @include tab {
+        display: none;
+      }
+
+      &:hover,
+      &:focus {
+        background: none;
+      }
+
+      .plus-minus-toggle {
+        display: inline-block;
+        cursor: pointer;
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        top: 26px;
+        right: 15px;
+        z-index: 2;
+        transition: all ease .3s;
+        &:before, &:after {
+          content: '';
+          width: 100%;
+          height: 5px;
+          left: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          background: $color2;
+          transition: all ease .3s;
+        }
+        &:after {
+          transform: rotate(90deg);
+        }
+      }
+
+      &.show {
+        .plus-minus-toggle {
+          
+          &:after {
+            transform: rotate(0);
+          }
+        }
+      }
+    }
+  }
+
+  &-main {
+    width: 100%;
+
+    @include tab {
+      float: right;
+      padding-left: .625rem;
+      width: 75%;
+      padding-bottom: 3.125rem;
+    }
+
+    &-inner {
+      margin-top: 3.125rem;
+
+      h2 {
+        font-family: "podium-sharp-variable", sans-serif;
+        font-size: 1.4em;
+        font-weight: 500;
+        line-height: 1.2em;
+      }
+
+      h3 {
+        color: $color2;
+        font-family: "podium-sharp-variable", sans-serif;
+        font-size: 1.1em;
+        font-weight: 500;
+        line-height: 1.2em;
+      }
+
+      p {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+/* INSIDER GUIDE END */
