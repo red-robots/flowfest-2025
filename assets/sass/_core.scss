@@ -3728,7 +3728,11 @@ section.vendors {
     }
 
     &-inner {
-      margin-top: 3.125rem;
+      padding-top: 3.125rem;
+      
+      @include tab {
+        height: 80vh;
+      }
 
       h2 {
         font-family: "podium-sharp-variable", sans-serif;
