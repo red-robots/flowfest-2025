@@ -2005,6 +2005,11 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 .schedule-activities .activities .item a.practices{color:#13648d}
 .schedule-activities .activities .item a.time,.schedule-activities .activities .item a.workshops{color:#215d48}
 .schedule-activities .activities .item a.festival{color:#333}
+section.affiliate{margin:30px auto}
+section.affiliate .wrapper{margin:50px auto 80px;width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center;row-gap:30px}
+section.affiliate .affiliates{display:-webkit-box;display:-ms-flexbox;display:flex;width:65%;aspect-ratio:3/2;-o-object-fit:contain;object-fit:contain;margin:0 auto;-ms-flex-preferred-size:65%;flex-basis:65%}
+section.affiliate .affiliates img{width:100%;-webkit-transform:scale(0.9);transform:scale(0.9);-webkit-transition:all ease .2s;transition:all ease .2s}
+section.affiliate .affiliates img:hover{-webkit-transform:scale(1);transform:scale(1)}
 section.schedule-activities .sched-accordion{background-color:#afb660;border:1px solid #afb660;border-radius:10px;margin:0;padding:2px 40px 2px 15px;position:relative;width:100%}
 section.schedule-activities .sched-accordion.active{border-color:#13648d;background-color:#fef8e0}
 section.schedule-activities .sched-accordion.active .sched-title .time,section.schedule-activities .sched-accordion.active .sched-title .name{background-color:#fef8e0}
@@ -2141,6 +2146,7 @@ html body.logged-in.admin-bar #mobile-menu-toggle{top:70px}
 html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
 #page{padding-top:17px}
+section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
 }@media all and (min-width:1024px){.fancybox__container{--carousel-button-width:48px;--carousel-button-height:48px;--carousel-button-svg-width:27px;--carousel-button-svg-height:27px}
 .fancybox__slide{padding:64px 100px}
 .fancybox__nav .carousel__button.is-next{right:40px}

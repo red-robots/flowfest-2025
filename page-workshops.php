@@ -41,10 +41,8 @@ get_header(); ?>
               <?php endwhile; ?>
               </div>
             </div>  
-					</section>
-				<?php endif; ?>
-
-
+			</section>
+		<?php endif; ?>
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
