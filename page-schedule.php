@@ -61,6 +61,12 @@ $CS = get_field('coming_soon');
           </div>
 
           <div class="activities">
+
+            <div class="indication">
+              <div class="header">Legend:</div>
+              <div class="indication-practices">Practices</div>
+              <div class="indication-workshops">Workshops</div>
+            </div>
             <?php 
             // echo '<pre>';
             // print_r($activities);
@@ -102,7 +108,7 @@ $CS = get_field('coming_soon');
                   <span class="name"><a class="popup-activity <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
                   <div class="border-bottom"></div>
                 <?php } else { ?>
-                  <div class="sched-accordion">
+                  <div class="sched-accordion <?php echo $cpt ?>">
                     <a href="javascript:void(0)" class="sched-title" data-id="<?php echo $postid ?>">
                       <?php if ($time) { ?>
                         <span class="time"><?php echo $time ?></span>

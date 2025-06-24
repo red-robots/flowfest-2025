@@ -2662,7 +2662,7 @@ section.faqs {
     margin:0 auto;
     .item {
       font-size: 16px;
-      margin: 15px 0;
+      margin: 18px 0;
       @include flexgroup();
       @include flexbox-justify(space-between);
       position: relative;
@@ -2673,20 +2673,7 @@ section.faqs {
         left: 0;
         bottom: 9px;
         @include custom_dashed();
-      }
-
-      span.name {
-        color: #000;
-
-        &.practices {
-        	color: $color2;
-        }
-        &.workshops {
-        	color: $color_secondary;
-        }
-        &.festival {
-          color: #333;
-        }
+        z-index: 1;
       }
 
       a {
@@ -2790,28 +2777,122 @@ section.affiliate {
 section.schedule-activities {
   .sched-accordion {
     background-color: $color1;
-    border: 1px solid $color1;
     border-radius: 10px;
     margin: 0;
-    padding: 2px 40px 2px 15px;
+    padding: 3px 40px 3px 15px;
     position: relative;
     width: 100%;
+
+    .sched-title {
+      .time,
+      .name {
+        color: $color_primary;
+        position: relative;
+        z-index: 2;
+      }
+    }
+
+    &.practices {
+      background-color: $color2;
+
+      .sched-title {
+        .time,
+        .name {
+          background-color: $color2;
+        }
+      }
+    }
+    &.workshops {
+      background-color: $color_secondary;
+
+      .sched-title {
+        .time,
+        .name {
+          background-color: $color_secondary;
+        }
+      }
+    }
+    &.festival {
+      background-color: $color1;
+
+      .sched-title {
+        .time,
+        .name {
+          background-color: $color1;
+        }
+      }
+    }
 
     &.active {
       border-color: $color2;
       background-color: $color_primary;
 
       .sched-title {
-        .time,
-        .name {
-          background-color: $color_primary;
-        }
         .plus-minus-toggle {
           &:after {
             transform: rotate(0);
           }
         }
       }
+
+      &.practices {
+        background-color: $color2;
+
+        .sched-title {
+          .time,
+          .name {
+            background-color: $color2;
+          }
+        }
+      }
+      &.workshops {
+        background-color: $color_secondary;
+
+        .sched-title {
+          .time,
+          .name {
+            background-color: $color_secondary;
+          }
+        }
+      }
+      &.festival {
+        background-color: $color1;
+
+        .sched-title {
+          .time,
+          .name {
+            background-color: $color1;
+          }
+        }
+      }
+    }
+  }
+  .indication {
+    column-gap: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+    position: relative;
+
+    div {
+      color: $color_primary;
+      border-radius: 10px;
+      padding: 15px;
+    }
+
+    .header {
+      color: $color_secondary;
+    }
+
+    &-practices {
+      background-color: $color2;
+    }
+    &-workshops {
+      background-color: $color_secondary;
+    }
+    &-festival {
+      background-color: $color1;
     }
   }
   .activities .sched-title {
@@ -2825,13 +2906,6 @@ section.schedule-activities {
     flex-direction: row;
     justify-content: space-between;
     position: relative;
-
-    .time,
-    .name {
-      background-color: $color1;
-      position: relative;
-      z-index: 1;
-    }
 
     .time {
       padding-right: 10px;
@@ -2863,7 +2937,7 @@ section.schedule-activities {
         position: absolute;
         top: 0;
         left: 0;
-        background: $color2;
+        background: $color1;
         transition: all ease .3s;
       }
       &:after {
@@ -2876,7 +2950,7 @@ section.schedule-activities {
     padding: 15px;
     font-size: 1.2em;
     line-height: 1.4;
-    color: $color_secondary;
+    color: $color_primary;
 
     @include animateThis(1s);
 
@@ -2896,9 +2970,9 @@ section.schedule-activities {
     .popup-content {
       width: 100%;
       position: relative;
-      color: $color_secondary;
       @include animateThis(1s);
       @include animateEffect('fadeIn');
+
       .flex-wrap {
         @include flexgroup();
         .text {
