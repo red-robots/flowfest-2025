@@ -2024,8 +2024,8 @@ section.schedule-activities .sched-accordion.active.festival .sched-title .time,
 section.schedule-activities .indication{-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative}
 section.schedule-activities .indication div{color:#fef8e0;border-radius:10px;padding:15px}
 section.schedule-activities .indication .header{color:#215d48}
-section.schedule-activities .indication-practices{background-color:#13648d}
-section.schedule-activities .indication-workshops{background-color:#215d48}
+section.schedule-activities .indication-practices{background-color:#215d48}
+section.schedule-activities .indication-workshops{background-color:#13648d}
 section.schedule-activities .indication-festival{background-color:#afb660}
 section.schedule-activities .activities .sched-title{color:#215d48;display:block;cursor:pointer;position:relative;text-decoration:none;margin:15px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
 section.schedule-activities .activities .sched-title .time{padding-right:10px}
