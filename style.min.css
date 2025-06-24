@@ -2008,18 +2008,17 @@ section.affiliate .affiliates img{width:100%;-webkit-transform:scale(0.9);transf
 section.affiliate .affiliates img:hover{-webkit-transform:scale(1);transform:scale(1)}
 section.schedule-activities .sched-accordion{background-color:#afb660;border-radius:10px;margin:0;padding:3px 40px 3px 15px;position:relative;width:100%}
 section.schedule-activities .sched-accordion .sched-title .time,section.schedule-activities .sched-accordion .sched-title .name{color:#fef8e0;position:relative;z-index:2}
-section.schedule-activities .sched-accordion.practices{background-color:#13648d}
-section.schedule-activities .sched-accordion.practices .sched-title .time,section.schedule-activities .sched-accordion.practices .sched-title .name{background-color:#13648d}
-section.schedule-activities .sched-accordion.workshops{background-color:#215d48}
-section.schedule-activities .sched-accordion.workshops .sched-title .time,section.schedule-activities .sched-accordion.workshops .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.practices{background-color:#215d48}
+section.schedule-activities .sched-accordion.practices .sched-title .time,section.schedule-activities .sched-accordion.practices .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.workshops{background-color:#13648d}
+section.schedule-activities .sched-accordion.workshops .sched-title .time,section.schedule-activities .sched-accordion.workshops .sched-title .name{background-color:#13648d}
 section.schedule-activities .sched-accordion.festival{background-color:#afb660}
 section.schedule-activities .sched-accordion.festival .sched-title .time,section.schedule-activities .sched-accordion.festival .sched-title .name{background-color:#afb660}
-section.schedule-activities .sched-accordion.active{border-color:#13648d;background-color:#fef8e0}
 section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
-section.schedule-activities .sched-accordion.active.practices{background-color:#13648d}
-section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#13648d}
-section.schedule-activities .sched-accordion.active.workshops{background-color:#215d48}
-section.schedule-activities .sched-accordion.active.workshops .sched-title .time,section.schedule-activities .sched-accordion.active.workshops .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.practices{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.workshops{background-color:#13648d}
+section.schedule-activities .sched-accordion.active.workshops .sched-title .time,section.schedule-activities .sched-accordion.active.workshops .sched-title .name{background-color:#13648d}
 section.schedule-activities .sched-accordion.active.festival{background-color:#afb660}
 section.schedule-activities .sched-accordion.active.festival .sched-title .time,section.schedule-activities .sched-accordion.active.festival .sched-title .name{background-color:#afb660}
 section.schedule-activities .indication{-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative}
