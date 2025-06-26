@@ -5,8 +5,9 @@ $img = wp_get_attachment_image_src($thumbId,'full');
 $image_style = ($img) ? ' style="background-image:url('.$img[0].')"':'';
 $imgURL = ($img) ? $img[0]:'';
 $imgALT = ($img) ? get_the_title($thumbId):'';
-$content = $post->post_content;
-apply_filters('the_content',$content);
+$content = apply_filters('the_content', $post->post_content);
+$spotify_url = get_field('spotify_embed',$post_id);
+$spotify = apply_filters('the_content', $spotify_url);
 
 if( $img = get_field('tile_image',$post_id) ) {
   $image_style = ($img) ? ' style="background-image:url('.$img['url'].')"':'';
@@ -26,17 +27,9 @@ $flexClass = ($imgURL) ? 'half':'full';
 <div class="popup-content activity">
   <a href="javascript:void(0)" id="closeModalBtn"><span>close</span></a>
   <div class="middle-content">
-    
     <div class="flex-wrap <?php echo $flexClass ?>">
-    
       <div class="text">
-        <h2 class="title"><?php echo $post->post_title ?></h2>
-        
-        <?php 
-          // echo '<pre>';
-          // print_r($img);
-         ?>
-
+        <h2 class="title"><?php echo $post->post_title ?></h2> 
         <?php if ( $time_only || $other_info ) { ?>
         <div class="other-info">
           <?php if ( $time_only ) { ?>
@@ -49,21 +42,23 @@ $flexClass = ($imgURL) ? 'half':'full';
         <?php } ?>
 
         <?php if ( $content ) { ?>
-        <div class="description"><?php echo $content ?></div>
+          <div class="description"><?php echo $content; ?></div>
         <?php } ?>
-
-
       </div>
 
       <?php if ($imgURL) { ?>
-      <div class="photo">
-        <figure <?php //echo $image_style ?>>
-          <img src="<?php echo $img['sizes']['big-square']; ?>" alt="">
-          <!-- <img src="<?php echo THEMEURI ?>images/image-helper.png" alt=""> -->
-        </figure>
-      </div>
+        <div class="photo">
+          <figure <?php echo $image_style ?>>
+            <img src="<?php echo $img['sizes']['big-square']; ?>" alt="">
+            <img src="<?php echo THEMEURI ?>images/image-helper.png" alt="">
+          </figure>
+        </div>
       <?php } ?>
-
     </div>
+    <?php if ($spotify) { ?>
+      <div class="cf">
+        <?php echo $spotify; ?>
+      </div>
+    <?php } ?>
   </div>
 </div>

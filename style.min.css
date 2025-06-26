@@ -1957,8 +1957,8 @@ body.error404 #sitemap-wrap{text-align:center;margin-bottom:50px}
 body.error404 #sitemap-wrap ul#sitemap{margin-top:20px;max-width:unset;width:auto;display:inline-block;text-align:left}
 body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .site-footer .footer-logo img{width:auto;height:20px;float:left;opacity:.75}
-.content-default-template #main{min-height:20em;padding:30px 0 0}
-.content-default-template #main .hentry{padding-bottom:10px}
+.content-default-template #main,.default-template #main{min-height:20em;padding:30px 0 0}
+.content-default-template #main .hentry,.default-template #main .hentry{padding-bottom:10px}
 .galleries{padding:30px 0}
 .galleries .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .galleries figure{display:block;margin:0;width:50%;padding:10px}
@@ -2017,10 +2017,16 @@ section.schedule-activities .sched-accordion.festival .sched-title .time,section
 section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
 section.schedule-activities .sched-accordion.active.practices{background-color:#215d48}
 section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a{background-color:#5298a7}
+section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a:hover{background-color:#afb660}
 section.schedule-activities .sched-accordion.active.workshops{background-color:#13648d}
 section.schedule-activities .sched-accordion.active.workshops .sched-title .time,section.schedule-activities .sched-accordion.active.workshops .sched-title .name{background-color:#13648d}
+section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a:hover{background-color:#5298a7}
 section.schedule-activities .sched-accordion.active.festival{background-color:#afb660}
 section.schedule-activities .sched-accordion.active.festival .sched-title .time,section.schedule-activities .sched-accordion.active.festival .sched-title .name{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a:hover{background-color:#5298a7}
 section.schedule-activities .indication{-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative}
 section.schedule-activities .indication div{color:#fef8e0;border-radius:10px;padding:15px}
 section.schedule-activities .indication .header{color:#215d48}
@@ -2034,7 +2040,7 @@ section.schedule-activities .activities .sched-title:hover{color:inherit}
 section.schedule-activities .activities .sched-title .plus-minus-toggle{display:inline-block;cursor:pointer;width:16px;height:16px;position:absolute;top:9px;right:-25px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.schedule-activities .activities .sched-title .plus-minus-toggle:before,section.schedule-activities .activities .sched-title .plus-minus-toggle:after{content:"";width:100%;height:5px;left:0;position:absolute;top:0;left:0;background:#afb660;-webkit-transition:all ease .3s;transition:all ease .3s}
 section.schedule-activities .activities .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(90deg);transform:rotate(90deg)}
-section.schedule-activities .sched-content{display:none;padding:15px;font-size:1.2em;line-height:1.4;color:#fef8e0;-webkit-animation-duration:1s;animation-duration:1s}
+section.schedule-activities .sched-content{display:none;padding:15px 0 15px 15px;font-size:1.2em;line-height:1.4;color:#fef8e0;-webkit-animation-duration:1s;animation-duration:1s}
 section.schedule-activities .sched-content a{color:#13648d;text-decoration:underline}
 section.schedule-activities .sched-content a:hover{color:#71a2bb}
 section.schedule-activities .sched-content #closeModalBtn,section.schedule-activities .sched-content #closePopUp{display:none}
@@ -2048,6 +2054,8 @@ section.schedule-activities .sched-content .popup-content .flex-wrap.full .text,
 section.schedule-activities .sched-content .popup-content .title{font-family:"Roylands Sans",sans-serif;font-size:25px;line-height:1.2;margin:0;text-transform:uppercase;letter-spacing:1px}
 section.schedule-activities .sched-content .popup-content .other-info{margin-top:30px;line-height:1.3;margin-bottom:30px}
 section.schedule-activities .sched-content .popup-content .other-info .time{margin-bottom:20px}
+section.schedule-activities .sched-content .popup-content .button-small{margin-top:15px}
+section.schedule-activities .sched-content .popup-content .button-small a{color:#fef8e0}
 .filter-option{max-width:350px;width:100%;margin:0 auto 50px;position:relative}
 .filter-option label{display:inline-block;margin:0;width:85px;height:32px;background:#707070;color:#fff;text-transform:uppercase;text-align:center;padding:10px 5px 8px;font-size:14px;line-height:1}
 .filter-option .select-wrap{width:calc(100% - 85px);height:32px;position:absolute;top:0;right:1px;border:1px solid #707070;background:#fff}
@@ -2088,20 +2096,25 @@ section.vendors div.ven img{width:100%}
 .gform_legacy_markup_wrapper span.ginput_total{color:#fff !important}
 .feeds-wrapper{padding:50px 0}
 .feeds-wrapper .columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
-.feeds-wrapper .column{width:100%;margin:0;position:relative}
+.feeds-wrapper .column{width:100%;margin:0 0 30px;position:relative}
 .feeds-wrapper .column .inner{width:100%;float:left;padding:10px}
-.feeds-wrapper .column.active{z-index:30}
-.feeds-wrapper .column.active:after{content:"";display:inline-block;width:0;height:0;border-top:12px solid #215d48;border-left:12px solid transparent;border-right:12px solid transparent;position:absolute;left:50%;bottom:0}
-.feeds-wrapper .column.active figure{-webkit-transform:scale(0.97);transform:scale(0.97)}
 .feeds-wrapper .parent-wrap{width:100%;margin-left:0;margin-right:-10px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .feeds-wrapper div.image{width:100%;float:left;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48}
 .feeds-wrapper figure{width:100%;float:left;margin:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48;-webkit-transition:all ease .3s;transition:all ease .3s}
 .feeds-wrapper figure a{display:block;width:100%;float:left}
 .feeds-wrapper figure img{width:100%;height:auto;float:left}
-.feeds-wrapper div.image:hover figure{-webkit-transform:scale(0.97);transform:scale(0.97)}
 .feeds-wrapper .column p:empty{display:none}
-.feeds-wrapper .title{width:100%;float:left;margin:0;background:#215d48;color:#e9cba2;font-family:"Roylands Sans",sans-serif;font-size:13px;font-weight:normal;line-height:1.1;text-transform:uppercase;text-decoration:none;padding:8px 15px}
-.feeds-wrapper .title a{color:#e9cba2;text-decoration:none}
+.feeds-wrapper .title{width:100%;float:left;margin:0 0 15px;background:#215d48;color:#fef8e0;font-family:"Roylands Sans",sans-serif;font-size:25px;font-weight:normal;line-height:1.2;text-transform:uppercase;text-decoration:none;padding:12px 15px 15px}
+.feeds-wrapper .title a{color:#fef8e0;text-decoration:none}
+.feeds-wrapper .schedule{font-size:16px;margin:20px 0 0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
+.feeds-wrapper .schedule .location,.feeds-wrapper .schedule .time{color:#13648d;background-color:#fef8e0;position:relative;z-index:2}
+.feeds-wrapper .schedule .location{padding-right:15px;font-weight:600;text-transform:uppercase}
+.feeds-wrapper .schedule .time{padding-left:15px}
+.feeds-wrapper .schedule:before{content:"";width:100%;height:1px;position:absolute;left:0;bottom:9px;background-image:url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%2313648D' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");z-index:1}
+.feeds-wrapper .learn-more{color:#afb660;font-size:13px;font-weight:500;line-height:1.1}
+.feeds-wrapper .learn-more:hover{color:#5298a7}
+.button-small a{display:inline-block;text-decoration:none;width:auto;height:100%;text-align:center;padding:8px 18px 6px;border-radius:10px;background:#afb660;color:#fff;font-size:13px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
+.button-small a:hover{background:#13648d}
 .fullwidth-block.event-details{width:100%;padding:0 10px;position:relative;top:-10px}
 .fullwidth-block.event-details .inner{background:#fff;position:relative;width:100%;padding:20px;text-align:center;font-size:1.2em}
 .fullwidth-block.event-details .inner *:last-child{margin-bottom:0}
@@ -2159,6 +2172,7 @@ html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
 #page{padding-top:17px}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
+.feeds-wrapper .column{width:50%}
 }@media all and (min-width:1024px){.fancybox__container{--carousel-button-width:48px;--carousel-button-height:48px;--carousel-button-svg-width:27px;--carousel-button-svg-height:27px}
 .fancybox__slide{padding:64px 100px}
 .fancybox__nav .carousel__button.is-next{right:40px}

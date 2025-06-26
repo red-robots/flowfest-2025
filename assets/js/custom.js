@@ -162,62 +162,143 @@ jQuery(document).ready(function ($) {
       }
     }
   });
-  /* Artists */
+  /* Artists - Accordion */
+  // $('.column.post-type-artists').on("click",function(e){
+  //   e.preventDefault();
+  //   var target = $(this);
+  //   var post_id = $(this).attr('data-postid');
+  //   var parent = $(this).parents('.parent-wrap');
+  //   $('.column.post-type-artists').not(target).removeClass('active');
+  //   target.addClass('active');
+  //   $.ajax({
+  //     url : frontajax.ajaxurl,
+  //     type : 'post',
+  //     dataType : "json",
+  //     data : {
+  //       action : 'getPostData',
+  //       post_id : post_id
+  //     },
+  //     beforeSend:function(){
+  //       //$(".ml-loader-wrap").show();
+  //       if( $('.event-details').length ) {
+  //         $('.event-details').remove();
+  //       }
+  //       $(window).on('orientationchange resize',function(){
+  //         if( $('.event-details').length ) {
+  //           $('.event-details').remove();
+  //         }
+  //       });
+  //       $('body').removeClass('closed-event-details');
+  //     },
+  //     success:function(response) {
+  //       if(response.content) {
+  //         if( $(window).width() < 821 ) {
+  //           //$(response.content).appendTo(target);
+  //           $(response.content).insertAfter(target);
+  //         } else {
+  //           $(response.content).appendTo(parent);
+  //         }
+  //         $(window).on('orientationchange resize',function(){
+  //           if( $(window).width() < 821 ) {
+  //             $(response.content).insertAfter(target);
+  //           } else {
+  //             if( $('body').hasClass('closed-event-details') ){
+  //               //do nothing...
+  //             } else {
+  //               $(response.content).appendTo(parent);
+  //             }
+  //           }
+  //         });
+  //       }
+  //     },
+  //     complete:function(){
+  //       $(document).on('click','.close-event-info',function(){
+  //         $('#event-details').remove();
+  //         $('body').addClass('closed-event-details');
+  //         $('.column.post-type-artists').removeClass('active');
+  //       });
+  //     }
+  //   });
+  // });
 
-  $('.column.post-type-artists').on("click", function (e) {
+  /* Artists - Popup */
+
+  $('.column.post-type-artists .button-small a').on("click", function (e) {
     e.preventDefault();
-    var target = $(this);
-    var post_id = $(this).attr('data-postid');
-    var parent = $(this).parents('.parent-wrap');
-    $('.column.post-type-artists').not(target).removeClass('active');
-    target.addClass('active');
+    var id = $(this).attr('data-id');
     $.ajax({
       url: frontajax.ajaxurl,
       type: 'post',
       dataType: "json",
       data: {
         action: 'getPostData',
-        post_id: post_id
+        post_id: id
       },
       beforeSend: function beforeSend() {
-        //$(".ml-loader-wrap").show();
-        if ($('.event-details').length) {
-          $('.event-details').remove();
-        }
-
-        $(window).on('orientationchange resize', function () {
-          if ($('.event-details').length) {
-            $('.event-details').remove();
-          }
-        });
-        $('body').removeClass('closed-event-details');
+        $('#loader').show();
       },
       success: function success(response) {
         if (response.content) {
-          if ($(window).width() < 821) {
-            //$(response.content).appendTo(target);
-            $(response.content).insertAfter(target);
-          } else {
-            $(response.content).appendTo(parent);
-          }
-
-          $(window).on('orientationchange resize', function () {
-            if ($(window).width() < 821) {
-              $(response.content).insertAfter(target);
-            } else {
-              if ($('body').hasClass('closed-event-details')) {//do nothing...
-              } else {
-                $(response.content).appendTo(parent);
-              }
-            }
-          });
+          $('#popup-content').html(response.content);
+          $('#popup-content').addClass('show');
+          $('#overlay').addClass('show');
+          $('body').addClass('popup-open');
         }
       },
       complete: function complete() {
-        $(document).on('click', '.close-event-info', function () {
-          $('#event-details').remove();
-          $('body').addClass('closed-event-details');
-          $('.column.post-type-artists').removeClass('active');
+        $('#loader').hide();
+        $(document).on('click', '#overlay', function () {
+          $('#popup-content').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#overlay').removeClass('show');
+        });
+        $('#closePopUp').on('click', function () {
+          $('#popup-content').removeClass('show');
+          $('#overlay').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#popup-content').html("");
+        });
+      }
+    });
+  });
+  /* Artists - Popup for Learn MOre */
+
+  $('.column.post-type-artists .more-details').on("click", function (e) {
+    e.preventDefault();
+    var item = $(this).data('item');
+    var postId = $(this).data('id');
+    $.ajax({
+      url: frontajax.ajaxurl,
+      type: 'post',
+      dataType: "json",
+      data: {
+        action: 'activity_learn_more',
+        postId: postId,
+        item: item
+      },
+      beforeSend: function beforeSend() {
+        $('#loader').show();
+      },
+      success: function success(response) {
+        if (response.content) {
+          $('#popup-content').html(response.content);
+          $('#popup-content').addClass('show');
+          $('#overlay').addClass('show');
+          $('body').addClass('popup-open');
+        }
+      },
+      complete: function complete() {
+        $('#loader').hide();
+        $(document).on('click', '#overlay', function () {
+          $('#popup-content').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#overlay').removeClass('show');
+        });
+        $('#closePopUp').on('click', function () {
+          $('#popup-content').removeClass('show');
+          $('#overlay').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#popup-content').html("");
         });
       }
     });

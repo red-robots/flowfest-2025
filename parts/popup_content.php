@@ -11,6 +11,12 @@ if($dateTime) {
 $content = $post->post_content;
 apply_filters('the_content',$content);
 $flexClass = ($img) ? 'half':'full';
+
+$registration = get_field('registration_button',$post_id);
+$registration_button_text = (isset($registration['title']) && $registration['title']) ? $registration['title'] : 'Register';
+$registration_button_link = (isset($registration['url']) && $registration['url']) ? $registration['url'] : '';
+$registration_button_target = (isset($registration['target']) && $registration['target']) ? $registration['target'] : '_self';
+
 ?>
 <div class="popup-content">
   <a href="javascript:void(0)" id="closePopUp"><span>x</span></a>
@@ -22,9 +28,13 @@ $flexClass = ($img) ? 'half':'full';
         <?php 
           // echo '<pre>';
           // print_r($img);
-         ?>
-        
-
+          
+          if($registration_button_text && $registration_button_link) { ?>
+            <div class="button-small">
+              <a href="<?php echo $registration_button_link; ?>" target="<?php echo $registration_button_target; ?>"><?php echo $registration_button_text; ?></a>
+            </div>
+          <?php } ?>
+      
         <?php if ( $time_only || $other_info ) { ?>
         <div class="other-info">
           <?php if ( $time_only ) { ?>

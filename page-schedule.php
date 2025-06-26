@@ -119,9 +119,7 @@ $CS = get_field('coming_soon');
                       <span class="plus-minus-toggle"></span>
                       <div class="border-bottom"></div>
                     </a>
-                    <div class="sched-content">
-                      <?php echo 'hi'; ?>
-                  </div>
+                    <div class="sched-content"></div>
                   </div>
                 <?php } ?>
               <?php } ?>

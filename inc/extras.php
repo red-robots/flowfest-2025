@@ -209,8 +209,6 @@ function get_social_links() {
           }
         }
       }
-
-      
     }
     return $social;
 }
@@ -299,10 +297,6 @@ function get_post_info() {
   die();
 }
 
-
-
-
-
 function my_ajax_files() {
  wp_localize_script( 'function', 'my_ajax_script', array( 'ajaxurl' => admin_url( 'admin-ajax.php' ) ) );
 }
@@ -345,19 +339,11 @@ function getPostContentHTML($obj) {
 }
 
 
-
-
-
-
-
-
 /* Disable Gutenberg by post_type */
 function ea_disable_gutenberg( $can_edit, $post_type ) {
 
   if( ! ( is_admin() && (!empty($_GET['post']) || !empty($_GET['post_type'])) ) )
     return $can_edit;
-
-  
 
   $exclude_post_types = ['schedule'];
   $current_post_type = get_post_type($_GET['post']);
@@ -436,7 +422,6 @@ function get_scheduled_activity() {
 }
 
 
-
 add_action( 'wp_ajax_nopriv_get_post_basic_content', 'get_post_basic_content' );
 add_action( 'wp_ajax_get_post_basic_content', 'get_post_basic_content' );
 function get_post_basic_content() {
@@ -459,7 +444,6 @@ function get_post_basic_content() {
   die();
 }
 
-
 function scheduled_activities_filter($key=null) {
   $postTypes['festival'] = 'Festival Activities';
   $postTypes['practices'] = 'Practices';
@@ -470,6 +454,31 @@ function scheduled_activities_filter($key=null) {
   } else {
     return $postTypes;
   }
+}
+
+// Music - Learn more
+add_action( 'wp_ajax_nopriv_activity_learn_more', 'activity_learn_more' );
+add_action( 'wp_ajax_activity_learn_more', 'activity_learn_more' );
+function activity_learn_more() {
+  if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $post_id = ($_POST['postId']) ? $_POST['postId'] : 0;
+    $item = ($_POST['item']) ? $_POST['item'] : 1;
+
+    if($post_id) {
+      ob_start();
+      include(locate_template('parts/popup_content_more.php'));
+      $html = ob_get_contents();
+      ob_end_clean();
+    }
+
+    $response['content'] = $html;
+    echo json_encode($response);
+
+  }
+  else {
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
+  }
+  die();
 }
 
 
