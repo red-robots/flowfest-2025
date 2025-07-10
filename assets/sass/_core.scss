@@ -94,10 +94,7 @@ html body.logged-in.admin-bar {
 		top: 32px;
 	}
 	#mobile-menu-toggle {
-		top: 108px;
-		@include xs {
-			top: 94px;
-		}
+		top: 85px;
 	}
 	header.site-header {
 		top: 42px;
@@ -271,13 +268,9 @@ header.site-header {
   flex-wrap: wrap;
   align-content: end;
   position: absolute;
-  top: 15px;
+  top: 0;
   left: 0;
   height: 100%;
-
-  @include tab {
-    top: 0;
-  }
 
   a {
     display: flex;
@@ -695,7 +688,7 @@ footer.site-footer {
 	&.video-playing {
 		z-index: 300;
 	}
-	margin-top: 80px;
+	margin-top: 70px;
 	// margin-bottom: 5px;
 	@include tab {
 		margin-top: 0; //90px
@@ -3342,11 +3335,11 @@ section.vendors {
       height: 100%;
     }
     #site-logo {
+      top: 15px;
       left: 20px;
     }
   }
  
-
   body.home {
     // header.site-header {
     //   width: 120px;

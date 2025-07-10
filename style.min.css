@@ -1646,7 +1646,7 @@ body.home li.home{display:inline-block}
 html body.logged-in.admin-bar #wpadminbar{position:fixed}
 html body.logged-in.admin-bar .mobile-navigation .primary-menu-wrap{padding-top:105px}
 html body.logged-in.admin-bar header.site-header{top:32px}
-html body.logged-in.admin-bar #mobile-menu-toggle{top:108px}
+html body.logged-in.admin-bar #mobile-menu-toggle{top:85px}
 html body.logged-in.admin-bar header.site-header{top:42px}
 html body.logged-in.admin-bar section.pagetitle{top:102px}
 #page{padding-top:3px}
@@ -1663,7 +1663,7 @@ header.site-header .reg a span{display:inline-block;position:relative;font-famil
 header.site-header .reg a:hover span{-webkit-transform:translateY(5px);transform:translateY(5px)}
 header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1.1);transform:translateY(5px) scale(1.1)}
 .floral-pattern{position:relative;background-image:url("images/n_floral_green.svg");background-size:160%;background-position:0 10px;background-repeat:repeat-x}
-#site-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:end;align-content:end;position:absolute;top:15px;left:0;height:100%}
+#site-logo{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-ms-flex-line-pack:end;align-content:end;position:absolute;top:0;left:0;height:100%}
 #site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;padding:5px 0}
 #site-logo a img{width:auto;height:70px;position:relative;left:-1px}
 body.home h1.page-title{display:none}
@@ -1721,7 +1721,7 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 #mobile-menu-toggle.active span.bar{-webkit-transform:translateX(-10px) rotate(45deg);transform:translateX(-10px) rotate(45deg)}
 #mobile-menu-toggle.active span.bar:before{-webkit-transform:translateY(10px) rotate(90deg);transform:translateY(10px) rotate(90deg)}
 #mobile-menu-toggle.active span.bar:after{-webkit-transform:translateY(-10px) rotate(-90deg);transform:translateY(-10px) rotate(-90deg)}
-#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:80px}
+#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:70px}
 #banner.video-playing{z-index:300}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
@@ -2167,7 +2167,6 @@ section.vendors div.ven img{width:100%}
 .insider-content-main-inner h3{color:#13648d;font-family:"podium-sharp-variable",sans-serif;font-size:1.1em;font-weight:500;line-height:1.2em}
 .insider-content-main-inner p{font-size:18px}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
-html body.logged-in.admin-bar #mobile-menu-toggle{top:94px}
 html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
 #page{padding-top:17px}
@@ -2216,7 +2215,6 @@ html body.logged-in.admin-bar section.pagetitle{top:auto}
 header.site-header .wrapper{height:100%}
 header.site-header .reg{top:43px}
 .floral-pattern{background-size:50%}
-#site-logo{top:0}
 #site-logo a{padding:5px 20px}
 nav.main-navigation ul.menu>li>a{min-height:60px}
 footer.site-footer .newsletter{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;margin-top:15px}
@@ -2302,7 +2300,7 @@ section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;di
 .site-footer .footer #footer-menu a{display:inline-block;padding:8px 10px}
 header.site-header{position:fixed;top:0;left:0;z-index:100}
 header.site-header .wrapper{width:100%;height:100%}
-header.site-header #site-logo{left:20px}
+header.site-header #site-logo{top:15px;left:20px}
 body.subpage{padding-top:60px}
 body.subpage header.site-header{position:fixed;top:0}
 body.mobile-menu-open{overflow:hidden}
