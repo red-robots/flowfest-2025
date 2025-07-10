@@ -361,7 +361,7 @@ nav.main-navigation {
         transform: translateX(-50%) scaleX(0);
         transition: all ease .3s;
         background: {
-          image:url('images/n_linkhover_lime.svg');
+          image:url('images/n_linkhover_blue.svg');
           size: cover;
           position: center;
           repeat: no-repeat;
@@ -372,8 +372,7 @@ nav.main-navigation {
 
   ul.menu > li.current_page_ancestor > a,
   ul.menu > li.current_page_item > a,
-  ul.menu > li:hover > a,
-  ul.menu > li:last-child > a {
+  ul.menu > li:hover > a {
     &:before, &:after {
       width: 100%;
       left: 0;
@@ -388,15 +387,21 @@ nav.main-navigation {
       transform: scaleX(1) translateX(0) rotate(180deg);
     }
     span {
+      color: $color_primary;
       &:before {
         margin-left: 0;
         transform: translateX(-50%) scaleX(1);
       }
     }
   }
-  ul.menu > li:last-child > a:hover {
-    color: $color_primary;
+  ul.menu > li:last-child > a {
     span:before {
+      background-image: url('images/n_linkhover_lime.svg');
+      transform: translateX(-50%) scaleX(1);
+      margin-left: 0;
+    }
+
+    &:hover span:before {
       background-image: url('images/n_linkhover_blue.svg');
     }
   }
