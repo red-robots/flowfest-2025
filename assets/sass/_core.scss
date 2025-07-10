@@ -310,16 +310,12 @@ nav.main-navigation #primary-menu {
 }
 nav.main-navigation {
   margin-top: 42px;
-  margin-right: 178px;
 	width: auto;
 	text-align: center;
   ul.menu {
     // background: $color_primary;
     padding: 0;
-  }
-	ul {
 		margin: 0;
-		padding: 0;
 	}
 	li {
 		margin: 0 0 0 10px;
@@ -383,7 +379,8 @@ nav.main-navigation {
 
   ul.menu > li.current_page_ancestor > a,
   ul.menu > li.current_page_item > a,
-  ul.menu > li:hover > a {
+  ul.menu > li:hover > a,
+  ul.menu > li:last-child > a {
     &:before, &:after {
       width: 100%;
       left: 0;
@@ -402,6 +399,12 @@ nav.main-navigation {
         margin-left: 0;
         transform: translateX(-50%) scaleX(1);
       }
+    }
+  }
+  ul.menu > li:last-child > a:hover {
+    color: $color_primary;
+    span:before {
+      background-image: url('images/n_linkhover_blue.svg');
     }
   }
   ul.menu > li ul {

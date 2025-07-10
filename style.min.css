@@ -1667,19 +1667,20 @@ header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1
 #site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;padding:5px 0}
 #site-logo a img{width:auto;height:70px;position:relative;left:-1px}
 body.home h1.page-title{display:none}
-nav.main-navigation{margin-top:42px;margin-right:178px;width:auto;text-align:center}
-nav.main-navigation ul.menu{padding:0}
-nav.main-navigation ul{margin:0;padding:0}
+nav.main-navigation{margin-top:42px;width:auto;text-align:center}
+nav.main-navigation ul.menu{padding:0;margin:0}
 nav.main-navigation li{margin:0 0 0 10px;padding:0;display:inline-block;line-height:3;position:relative}
 nav.main-navigation ul.menu>li{overflow:hidden}
 nav.main-navigation ul.menu>li>a{display:block;text-decoration:none;padding:15px 20px;color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:18px;line-height:1.3;position:relative;text-transform:uppercase;overflow:hidden}
 nav.main-navigation ul.menu>li>a span{display:inline-block;position:relative;padding:3px;line-height:1.1;z-index:5}
 nav.main-navigation ul.menu>li>a span b{display:inline-block;font-weight:normal;position:relative}
 nav.main-navigation ul.menu>li>a span:before{content:"";display:block;width:215px;min-width:100px;height:65px;margin-left:-50%;position:absolute;top:-19px;left:50%;-webkit-transform:translateX(-50%) scaleX(0);transform:translateX(-50%) scaleX(0);-webkit-transition:all ease .3s;transition:all ease .3s;background-image:url("images/n_linkhover_lime.svg");background-size:cover;background-position:center;background-repeat:no-repeat}
-nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:before,nav.main-navigation ul.menu>li:hover>a:after{width:100%;left:0;opacity:1}
-nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li:hover>a:before{top:3px;-webkit-transform:scaleX(1) translateX(0) rotate(0);transform:scaleX(1) translateX(0) rotate(0)}
-nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:after{bottom:3px;-webkit-transform:scaleX(1) translateX(0) rotate(180deg);transform:scaleX(1) translateX(0) rotate(180deg)}
-nav.main-navigation ul.menu>li.current_page_ancestor>a span:before,nav.main-navigation ul.menu>li.current_page_item>a span:before,nav.main-navigation ul.menu>li:hover>a span:before{margin-left:0;-webkit-transform:translateX(-50%) scaleX(1);transform:translateX(-50%) scaleX(1)}
+nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:before,nav.main-navigation ul.menu>li:hover>a:after,nav.main-navigation ul.menu>li:last-child>a:before,nav.main-navigation ul.menu>li:last-child>a:after{width:100%;left:0;opacity:1}
+nav.main-navigation ul.menu>li.current_page_ancestor>a:before,nav.main-navigation ul.menu>li.current_page_item>a:before,nav.main-navigation ul.menu>li:hover>a:before,nav.main-navigation ul.menu>li:last-child>a:before{top:3px;-webkit-transform:scaleX(1) translateX(0) rotate(0);transform:scaleX(1) translateX(0) rotate(0)}
+nav.main-navigation ul.menu>li.current_page_ancestor>a:after,nav.main-navigation ul.menu>li.current_page_item>a:after,nav.main-navigation ul.menu>li:hover>a:after,nav.main-navigation ul.menu>li:last-child>a:after{bottom:3px;-webkit-transform:scaleX(1) translateX(0) rotate(180deg);transform:scaleX(1) translateX(0) rotate(180deg)}
+nav.main-navigation ul.menu>li.current_page_ancestor>a span:before,nav.main-navigation ul.menu>li.current_page_item>a span:before,nav.main-navigation ul.menu>li:hover>a span:before,nav.main-navigation ul.menu>li:last-child>a span:before{margin-left:0;-webkit-transform:translateX(-50%) scaleX(1);transform:translateX(-50%) scaleX(1)}
+nav.main-navigation ul.menu>li:last-child>a:hover{color:#fef8e0}
+nav.main-navigation ul.menu>li:last-child>a:hover span:before{background-image:url("images/n_linkhover_blue.svg")}
 nav.main-navigation ul.menu>li ul{display:block;position:absolute;width:180px;height:0;overflow:hidden;opacity:0;background:#afb660;margin:-2px 0 0;padding:0;text-align:center;-webkit-transform:translate(-5px,-5px) scale(0.85);transform:translate(-5px,-5px) scale(0.85);-webkit-transition:all ease-in-out .3s;transition:all ease-in-out .3s;z-index:-999}
 nav.main-navigation ul.menu>li ul li{display:block;width:100%;text-align:left}
 nav.main-navigation ul.menu ul a{display:block;text-decoration:none;color:#215d48;font-size:15px;line-height:1.2;padding:10px 15px}
