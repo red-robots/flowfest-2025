@@ -94,13 +94,9 @@ html body.logged-in.admin-bar {
 		top: 32px;
 	}
 	#mobile-menu-toggle {
-		top: 32px;
-	}
-	
-	#mobile-menu-toggle {
-		top: 80px;
+		top: 108px;
 		@include xs {
-			top: 70px;
+			top: 94px;
 		}
 	}
 	header.site-header {
@@ -185,14 +181,12 @@ header.site-header {
     width: 155px;
     height: 64px;
     position: absolute;
-    top: 60px;
-    left: 30px;
+    top: 108px;
+    right: 15px;
     z-index: 5;
 
     @include tab {
-      top: 58px;
-      right: 0;
-      left: auto;
+      top: 43px;
     }
 
 		a {
@@ -277,16 +271,26 @@ header.site-header {
   flex-wrap: wrap;
   align-content: end;
   position: absolute;
-  top: 0;
+  top: 15px;
   left: 0;
   height: 100%;
+
+  @include tab {
+    top: 0;
+  }
+
   a {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-content: center;
     // background-color: $color_primary;
-    padding: 5px 20px;
+    padding: 5px 0;
+
+    @include tab {
+      padding: 5px 20px;
+    }
+
     img {
       width: auto;
       height: 70px;
@@ -306,6 +310,7 @@ nav.main-navigation #primary-menu {
 }
 nav.main-navigation {
   margin-top: 42px;
+  margin-right: 178px;
 	width: auto;
 	text-align: center;
   ul.menu {
@@ -687,7 +692,7 @@ footer.site-footer {
 	&.video-playing {
 		z-index: 300;
 	}
-	margin-top: 60px;
+	margin-top: 80px;
 	// margin-bottom: 5px;
 	@include tab {
 		margin-top: 0; //90px
@@ -2420,7 +2425,7 @@ body.error404 {
 .content-default-template #main,
 .default-template #main {
   min-height: 20em;
-  padding: 30px 0 0;
+  padding: 40px 0 0;
   .hentry {
     padding-bottom: 10px;
   }
