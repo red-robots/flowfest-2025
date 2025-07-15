@@ -2285,7 +2285,7 @@ section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;di
 .insider-content-sidebar{border-top:0;border-bottom:0;float:left;padding-right:.625rem;width:20.8333%;margin-top:3.125rem}
 .insider-content-sidebar-title{border-bottom:.0625rem solid #afb660}
 .insider-content-sidebar-title:first-child{display:block;border-top:.0625rem solid #afb660}
-.insider-content-sidebar .stickyNav{display:block !important;max-height:calc(100vh - 5.5rem);position:sticky;top:5.5rem;z-index:5}
+.insider-content-sidebar .stickyNav{display:block !important;max-height:calc(100vh - 5.5rem);position:sticky;top:5rem;z-index:5}
 .insider-content-sidebar .dropbtn{display:none}
 .insider-content-main{float:right;padding-left:.625rem;width:75%;padding-bottom:3.125rem}
 .insider-content-main-inner{height:80vh}

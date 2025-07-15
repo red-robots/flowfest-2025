@@ -444,13 +444,14 @@ jQuery(document).ready(function ($) {
     } else {
       elem.next().slideToggle();
     }
-  });
+  }); // Insider's guide sidebar scroll
 
   if ($('.insider-content-sidebar').length) {
     $(window).on('scroll', function () {
       var s = $('#main'),
           sw = s.find('.insider-content-sidebar'),
           sn = s.find('.stickyNav'),
+          f = $('footer'),
           windowWidth = $(window).width(),
           windowScrollTop = $(window).scrollTop(),
           elementOffset = s.offset().top + 85;
@@ -460,6 +461,18 @@ jQuery(document).ready(function ($) {
           position: 'fixed',
           width: sw.width() + 'px'
         });
+
+        if (sn.offset().top + sn.height() >= s.offset().top + s.height()) {
+          sn.css({
+            top: 'initial',
+            bottom: f.height() + 30 + 'px'
+          });
+        } else {
+          sn.css({
+            top: '5rem',
+            bottom: 'initial'
+          });
+        }
       } else {
         sn.css({
           position: 'initial',
