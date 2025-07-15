@@ -467,5 +467,36 @@ jQuery(document).ready(function ($) {
         });
       }
     });
+  } // Schedule sticky legends
+
+
+  if ($('.indication').length) {
+    $(window).on('scroll', function () {
+      var s = $('#main'),
+          sn = s.find('.indication'),
+          windowWidth = $(window).width(),
+          windowScrollTop = $(window).scrollTop(),
+          elementOffset = s.offset().top + 350;
+
+      if (elementOffset <= windowScrollTop && windowWidth >= 1140) {
+        sn.css({
+          position: 'fixed',
+          top: '32px',
+          width: '100%',
+          padding: '15px 0'
+        });
+      } else if (elementOffset <= windowScrollTop && windowWidth < 1140) {
+        sn.css({
+          position: 'fixed',
+          top: '147px',
+          width: '100%',
+          padding: '30px 0 15px'
+        });
+      } else {
+        sn.css({
+          position: 'initial'
+        });
+      }
+    });
   }
 }); // END #####################################    END

@@ -2028,7 +2028,7 @@ section.schedule-activities .sched-accordion.active.festival{background-color:#a
 section.schedule-activities .sched-accordion.active.festival .sched-title .time,section.schedule-activities .sched-accordion.active.festival .sched-title .name{background-color:#afb660}
 section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a{background-color:#215d48}
 section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a:hover{background-color:#5298a7}
-section.schedule-activities .indication{-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative}
+section.schedule-activities .indication{background-color:#fef8e0;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;font-size:16px;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative;z-index:3}
 section.schedule-activities .indication div{color:#fef8e0;border-radius:10px;padding:15px}
 section.schedule-activities .indication .header{color:#215d48}
 section.schedule-activities .indication-practices{background-color:#215d48}
@@ -2170,8 +2170,8 @@ section.vendors div.ven img{width:100%}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
 html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
-#page{padding-top:17px}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
+section.schedule-activities .indication{font-size:20px}
 .feeds-wrapper .column{width:50%}
 }@media all and (min-width:1024px){.fancybox__container{--carousel-button-width:48px;--carousel-button-height:48px;--carousel-button-svg-width:27px;--carousel-button-svg-height:27px}
 .fancybox__slide{padding:64px 100px}

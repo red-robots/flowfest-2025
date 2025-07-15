@@ -117,9 +117,6 @@ html body.logged-in.admin-bar {
 }
 #page {
     padding-top: 3px;
-    @include xs {
-    	padding-top: 17px;
-    }
     @include tab {
     	padding: 0;
     }
@@ -2902,12 +2899,19 @@ section.schedule-activities {
     }
   }
   .indication {
+    background-color: $color_primary;
     column-gap: 20px;
     display: flex;
     flex-direction: row;
+    font-size: 16px;
     justify-content: flex-start;
     margin-bottom: 20px;
     position: relative;
+    z-index: 3;
+
+    @include xs {
+     font-size: 20px; 
+    }
 
     div {
       color: $color_primary;
