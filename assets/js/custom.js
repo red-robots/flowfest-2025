@@ -490,7 +490,7 @@ jQuery(document).ready(function ($) {
           position: 'fixed',
           top: '147px',
           width: '100%',
-          padding: '30px 0 15px'
+          padding: '10px 0 15px'
         });
       } else {
         sn.css({

@@ -1652,7 +1652,7 @@ html body.logged-in.admin-bar section.pagetitle{top:102px}
 #page{padding-top:3px}
 .wrapper{position:relative;max-width:1200px;width:100%;margin:0 auto;padding:0 20px}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
-header.site-header{position:relative;width:100%;height:115px;background-color:#fef8e0;z-index:100}
+header.site-header{position:relative;width:100%;height:120px;background-color:#fef8e0;z-index:100;padding-bottom:15px}
 header.site-header .wrapper{z-index:10;-webkit-box-pack:end;-ms-flex-pack:end;justify-content:end}
 header.site-header .reg{display:inline-block;width:155px;height:64px;position:absolute;top:108px;right:15px;z-index:5}
 header.site-header .reg a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;line-height:1.1;color:transparent;text-transform:uppercase;width:100%;height:100%;text-decoration:none}
@@ -1722,7 +1722,7 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 #mobile-menu-toggle.active span.bar{-webkit-transform:translateX(-10px) rotate(45deg);transform:translateX(-10px) rotate(45deg)}
 #mobile-menu-toggle.active span.bar:before{-webkit-transform:translateY(10px) rotate(90deg);transform:translateY(10px) rotate(90deg)}
 #mobile-menu-toggle.active span.bar:after{-webkit-transform:translateY(-10px) rotate(-90deg);transform:translateY(-10px) rotate(-90deg)}
-#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:70px}
+#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:53px}
 #banner.video-playing{z-index:300}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
