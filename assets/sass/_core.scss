@@ -270,6 +270,10 @@ header.site-header {
   left: 0;
   height: 100%;
 
+  @include tab {
+    top: 10px
+  }
+
   a {
     display: flex;
     flex-wrap: wrap;
@@ -279,7 +283,7 @@ header.site-header {
     padding: 5px 0;
 
     @include tab {
-      padding: 5px 20px;
+      padding: 0 20px;
     }
 
     img {
@@ -300,7 +304,7 @@ nav.main-navigation #primary-menu {
   }
 }
 nav.main-navigation {
-  margin-top: 42px;
+  margin-top: 50px;
 	width: auto;
 	text-align: center;
   ul.menu {

@@ -1667,7 +1667,7 @@ header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1
 #site-logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;padding:5px 0}
 #site-logo a img{width:auto;height:70px;position:relative;left:-1px}
 body.home h1.page-title{display:none}
-nav.main-navigation{margin-top:42px;width:auto;text-align:center}
+nav.main-navigation{margin-top:50px;width:auto;text-align:center}
 nav.main-navigation ul.menu{padding:0;margin:0}
 nav.main-navigation li{margin:0 0 0 10px;padding:0;display:inline-block;line-height:3;position:relative}
 nav.main-navigation ul.menu>li{overflow:hidden}
@@ -2216,7 +2216,8 @@ html body.logged-in.admin-bar section.pagetitle{top:auto}
 header.site-header .wrapper{height:100%}
 header.site-header .reg{top:43px}
 .floral-pattern{background-size:50%}
-#site-logo a{padding:5px 20px}
+#site-logo{top:10px}
+#site-logo a{padding:0 20px}
 nav.main-navigation ul.menu>li>a{min-height:60px}
 footer.site-footer .newsletter{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-flow:column;flex-flow:column;margin-top:15px}
 footer.site-footer #mc_embed_signup{width:600px}
