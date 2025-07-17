@@ -3977,7 +3977,7 @@ section.vendors {
       padding-top: 3.125rem;
       
       @include tab {
-        height: 80vh;
+        min-height: 80vh;
       }
 
       h2 {

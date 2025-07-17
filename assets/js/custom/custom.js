@@ -472,7 +472,7 @@ $('.sponsors-loop').owlCarousel({
       if(elementOffset <= windowScrollTop && windowWidth >= 1140) {
         sn.css({position:'fixed',width:sw.width()+'px'});
 
-        if( (sn.offset().top + sn.height()) >= (s.offset().top + s.height()) ) {
+        if( ((s.offset().top + s.height()) - sn.height() - 20) <= windowScrollTop ) {
           sn.css({top:'initial',bottom:(f.height()+30)+'px'});
         } else {
           sn.css({top:'5rem',bottom:'initial'});

@@ -462,7 +462,7 @@ jQuery(document).ready(function ($) {
           width: sw.width() + 'px'
         });
 
-        if (sn.offset().top + sn.height() >= s.offset().top + s.height()) {
+        if (s.offset().top + s.height() - sn.height() - 20 <= windowScrollTop) {
           sn.css({
             top: 'initial',
             bottom: f.height() + 30 + 'px'
