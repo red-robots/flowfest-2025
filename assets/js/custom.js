@@ -494,14 +494,14 @@ jQuery(document).ready(function ($) {
       if (elementOffset <= windowScrollTop && windowWidth >= 1140) {
         sn.css({
           position: 'fixed',
-          top: '32px',
+          top: '0',
           width: '100%',
           padding: '15px 0'
         });
       } else if (elementOffset <= windowScrollTop && windowWidth < 1140) {
         sn.css({
           position: 'fixed',
-          top: '147px',
+          top: '120px',
           width: '100%',
           padding: '10px 0 15px'
         });
