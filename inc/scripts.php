@@ -38,7 +38,14 @@ function bellaworks_scripts() {
       get_template_directory_uri() . '/assets/js/vendors/owl.carousel.min.js', 
       array(), '20220514', 
       true 
-    );
+  );
+
+  wp_enqueue_script( 
+    'bellaworks-swiper', 
+    get_template_directory_uri() . '/assets/js/vendors/swiper.js', 
+    array(), '20250724', 
+    true 
+  );
 
   wp_enqueue_script( 
     'bellaworks-select', 

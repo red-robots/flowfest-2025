@@ -19,6 +19,8 @@ jQuery(document).ready(function ($) {
     } else {
       $('.mobile-navigation .primary-menu-wrap').appendTo('.desktop-navigation');
       $('.home-content .reg-button').prependTo('.banner-top-text .wrapper');
+      // For new homepage
+      $('.desktop-navigation .primary-menu-wrap').appendTo('.navigation-forall');
     }
   }
 
@@ -36,9 +38,9 @@ jQuery(document).ready(function ($) {
   });
 
   $('.subpageSlides').flexslider({
-      animation: "fade",
-      smoothHeight: true
-    });
+    animation: "fade",
+    smoothHeight: true
+  });
 
   $('.loop').owlCarousel({
     center: true,
@@ -60,6 +62,85 @@ jQuery(document).ready(function ($) {
       }
     }
 });
+
+// Festival Schedule for New Homepage
+// $('.festival-sched-loop').owlCarousel({
+//   center: false,
+//   items: 2,
+//   nav: true,
+//   loop: true,
+//   margin: 15,
+//   autoplay:true,
+//   smartSpeed: 1000,
+//   autoplayTimeout:5000,
+//   autoplayHoverPause: true,
+//   responsive:{
+//     0:{
+//       items:1
+//     },
+//     786:{
+//       items:2
+//     }
+//   }
+// });
+
+var swiper = new Swiper(".festival-sched-swiper", {
+  slidesPerView: 2,
+  spaceBetween: 30,
+  speed: 1000,
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
+  autoplay: {
+    delay: 5000,
+  },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+  },
+  // Responsive breakpoints
+  breakpoints: {
+    // when window width is >= 640px
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 20
+    },
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 40
+    }
+  }
+});
+
+
+// $('.festival-sched-loop').slick({
+//   arrows: true,
+//   dots: true,
+//   infinite: true,
+//   slidesToShow: 2,
+//   slidesToScroll: 1,
+//   autoplay: true,
+//   autoplaySpeed: 2000,
+//   responsive: [
+//     {
+//       breakpoint: 768,
+//       settings: {
+//         centerMode: fasle,
+//         centerPadding: '40px',
+//         slidesToShow: 2
+//       }
+//     },
+//     {
+//       breakpoint: 480,
+//       settings: {
+//         centerMode: true,
+//         centerPadding: '40px',
+//         slidesToShow: 1
+//       }
+//     }
+//   ]
+// });
 
 $('.sponsors-loop').owlCarousel({
   center: false,

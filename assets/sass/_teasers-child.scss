@@ -515,7 +515,7 @@ section.teasers {
 			margin: 15px 0 0 0;
 			padding: 30px;
 			list-style: none;
-			background-color: $light_blue;
+			background-color: $color_lightblue1;
 		}
 		li.item {
 			@include flexgroup();
@@ -761,7 +761,7 @@ section.teasers {
 		@include animateThis(1s);
 	}
 	&.active {
-		border-top-color: $light_blue;
+		border-top-color: $color_lightblue1;
 		z-index: 10;
 		&:before {
 			height: 100.5%;

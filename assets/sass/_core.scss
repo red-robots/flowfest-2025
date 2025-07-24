@@ -26,7 +26,20 @@ pre {
 }
 .cf:after { clear: both; }
 .cf { *zoom: 1; }
-.text-center {text-align:center;}
+.text {
+  &-center {
+    text-align:center;
+  }
+
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}
+p {
+  line-height: 1.7em;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
 
 /* Text meant only for screen readers. */
 .sr {
@@ -56,17 +69,26 @@ pre {
 }
 a, button, input {
   transition: all ease .3s;
-  color: $blue;
+  color: $color_blue;
+
   &:hover {
-    color: $light_blue;
+    color: $color_lightblue1;
   }
 }
 body {
-  font-family: $font-brandon-medium;
+  font-family: $font-brandon-regular;
   font-size: 20px;
   line-height: 1.4;
 	background-color: $color_primary;
 	color: $color_secondary;
+
+  &.new-homepage {
+    padding-top: 90px;
+
+    &.logged-in.admin-bar .redtag {
+      top: 122px !important;
+    }
+  }
 }
 body.page {
 	li.home {
@@ -90,19 +112,17 @@ html body.logged-in.admin-bar {
 	.mobile-navigation .primary-menu-wrap {
 		padding-top:105px;
 	}
-	header.site-header {
-		top: 32px;
-	}
 	#mobile-menu-toggle {
 		top: 85px;
+
+    &.main-menu {
+      top: 48px;
+    }
 	}
 	header.site-header {
 		top: 42px;
 		@include xs {
 			top: 32px;
-		}
-		@include tab {
-			top: auto;
 		}
 	}
 	section.pagetitle {
@@ -145,6 +165,18 @@ html body.logged-in.admin-bar {
 		align-items: center;
 	}
 }
+.header-flex {
+	@include tab() {
+		display: flex;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		justify-content: space-between;
+		align-items: center;
+	}
+  .desktop-navigation.main-navigation {
+    display: none;
+  }
+}
 .foot-flex, .pagetitle-flex {
 	@include tab() {
 		display: flex;
@@ -160,24 +192,38 @@ html body.logged-in.admin-bar {
 header.site-header {
   position: relative;
 	width: 100%;
-  height: 120px;
+  height: 90px;
   background-color: $color_primary;
   z-index: 100;
-  padding-bottom: 15px;
-  .wrapper {
+  &.floral-pattern {
+    height: 120px;
+    padding-bottom: 15px;
+  }
+  &-new {
+    position: fixed;
+    top: 0;
+  }
+  .head-flex {
     z-index: 10;
     @include flexbox-justify(end);
     @include tab {
       height: 100%;
     }
   }
+  .header-flex {
+    z-index: 10;
+    @include flexbox-justify(center);
+    @include tab {
+      height: 100%;
+    }
+  }
   .reg {
-    display: inline-block;
+    display: none; //inline-block
     width: 155px;
     height: 64px;
     position: absolute;
-    top: 108px;
-    right: 15px;
+    top: 90px;
+    left: 0;
     z-index: 5;
 
     @include tab {
@@ -248,6 +294,7 @@ header.site-header {
       }
 		}
 	}
+
 }
 .floral-pattern {
   position: relative;
@@ -261,17 +308,26 @@ header.site-header {
     background-size: 50%;
   }
 }
-#site-logo {
+.logo {
   display: flex;
   flex-wrap: wrap;
-  align-content: end;
-  position: absolute;
-  top: 0;
-  left: 0;
   height: 100%;
 
-  @include tab {
-    top: 10px
+  &-left {
+    align-content: end;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    @include tab {
+      top: 10px
+    }
+  }
+
+  &-center {
+    align-content: center;
+    justify-content: center;
+    position: relative;
   }
 
   a {
@@ -291,6 +347,63 @@ header.site-header {
       height: 70px;
       position: relative;
       left: -1px;
+    }
+  }
+}
+.redtag {
+  position: fixed;
+  top: 90px !important;
+  left: 0;
+  z-index: 50;
+  -webkit-box-shadow: -12px 8px 17px rgba(0, 0, 0, .3);
+  box-shadow: -12px 8px 17px rgba(0, 0, 0, .3);
+  -webkit-transition: all ease .3s;
+  transition: all ease .3s;
+
+  .registerBtn {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff !important;
+    text-transform: uppercase;
+    font-family: "Lato", sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 50px;
+    background: #ba0d30;
+    height: 50;
+    padding: 0 35px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    left: 0;
+
+    @include tab() {
+      width: auto;
+    }
+
+    &:after {
+      content: "";
+      display: block;
+      width: 0;
+      height: 0;
+      border-left: 28px solid #ba0d30;
+      border-top: 25px solid transparent;
+      border-bottom: 25px solid transparent;
+      position: absolute;
+      top: 0;
+      right: -28px;
+      -webkit-transition: all ease .3s;
+      transition: all ease .3s;
+    }
+
+    &:hover,
+    &:focus {
+      background: #000;
+
+      &:after {
+        border-left-color: #000;
+      }
     }
   }
 }
@@ -502,6 +615,7 @@ footer.site-footer {
   width: 100%;
   float: left;
 	background-color: $color_secondary;
+  padding-top: 40px;
 
 	nav.footer {
 		ul {
@@ -526,6 +640,19 @@ footer.site-footer {
 			}
 		}
 	}
+
+  .footer-social-media {
+    a {
+      background-color: $color_white;
+      border-radius: 30px;;
+      color: $color_secondary;
+      font-size: 1em;
+      height: 30px;
+      text-align: center;
+      padding: 5px;
+      width: 30px;
+    }
+  }
 
   .sponsors {
     display: flex;
@@ -617,7 +744,7 @@ footer.site-footer {
       }
 
       &:hover {
-        background-color: $light_blue;
+        background-color: $color_lightblue1;
         color: $yellow;
       }
   }
@@ -642,10 +769,18 @@ footer.site-footer {
   width: 60px;
   height:  60px;
   position: fixed;
-  top: 32px;
+  top: 45px;
   right: 6px;
   text-align: center;
   background-color: $color_primary;
+  
+  &.main-menu {
+    display: block;
+    top: 15px;
+    cursor: pointer;
+    z-index: 9999;
+  }
+
   span.bar {
     display: block;
     width: 25px;
@@ -681,6 +816,38 @@ footer.site-footer {
     }
     span.bar:after {
       transform: translateY(-10px) rotate(-90deg);
+    }
+  }
+}
+
+@include tab() {
+  .navigation-forall {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: -100%;
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background-color: #215d48;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-transition: all ease .3s;
+    transition: all ease .3s;
+    z-index: -999;
+    &.active {
+      right: 0;
+      z-index: 500;
+    }
+    .primary-menu-wrap {
+      width: 100%;
+      padding: 13vh 0;
+      position: relative;
+      z-index: 10;
+      height: 100%;
+      @include flexgroup();
+      @include flexbox-justify(center);
+      @include flexbox-align-items(center);
     }
   }
 }
@@ -1198,16 +1365,24 @@ section.tile-wrapper {
     }
 	}
 }
-h1.pagetitle {
+.pagetitle {
   color: $color_secondary;
   font-family: $font-roylands;
-  font-size: 2em;
+  font-size: 3em;
   font-weight: normal;
   line-height: 1.2;
-  letter-spacing: 1px;
+  // letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  &.lime {
+    color: $color1;
+  }
+
+  &.blue {
+    color: $color_blue;
+  }
 }
 #content {
 	width: 100%;
@@ -1217,7 +1392,7 @@ article.page {
   max-width: 1230px;
   width: 100%;
 	margin: 0px auto;
-	padding: 50px 15px;
+	padding: 60px 15px;
 	line-height: 1.4;
 }
 section.home-cards {
@@ -1291,8 +1466,245 @@ section.home-cards {
 	}
 }
 
+.swiper {
+
+  &-button {
+    &-prev,
+    &-next {
+      color: $color_white;
+      top: var(--swiper-navigation-top-offset, 46%);
+
+      &:after {
+        font-size: 25px;
+      }
+    }
+
+    &-prev {
+      left: -50px;
+    }
+    &-next {
+      right: -50px;
+    }
+  }
+
+  &-pagination {
+    position: relative;
+    margin: 30px 0 20px;
+
+    &-bullet {
+      background-color: $color_lightgreen;
+      border: 1px solid $color_white;
+      height: 15px;
+      width: 15px;
+      opacity: 1;
+
+      &-active {
+        background-color: $color_secondary;
+      }
+    }
+    // .owl-dots {
+    //   text-align: center;
+    //   margin: 10px 0 8px;
+    //   .owl-dot {
+    //     display: inline-block;
+    //     -webkit-appearance: none;
+    //     border-radius: 100px;
+    //     border: 1px solid $color2;
+    //     box-shadow: none;
+    //     text-shadow: none;
+    //     width: 10px;
+    //     height: 10px;
+    //     margin: 6px;
+    //     &.active {
+    //       background: $color2;
+    //     }
+    //   }
+    // }
+    // // Festival Carousel in New homepage
+    // &.festival-sched-content {
+    //   .owl-dots {
+    //     margin: 15px 0 0;
+    //     .owl-dot {
+    //       border: 1px solid $color_white;
+    //       width: 15px;
+    //       height: 15px;
+    //       margin: 4px;
+  
+    //       &.active {
+    //         background: $color_secondary;
+    //       }
+    //     }
+    //   }
+    // }
+  }
+}
+
+/*** New Homepage ***/
 .home-content {
   position:relative;
+
+  p {
+    color: $color_black;
+  }
+
+  section {
+    padding: 60px 15px 80px;
+
+    h2 {
+      color: $color_primary;
+      margin-bottom: 60px;
+    }
+
+    .mb-40 {
+      margin-bottom: 40px;
+    }
+
+    /*** Festival Schedule ***/
+    &.festival-sched {
+      background-color: $color_lightgreen;
+      color: $color_white;
+
+      .festival-sched-list {
+        border-radius: 10px;
+        overflow: hidden;
+
+        figure {
+          margin: 0;
+          width: 100%;
+          height: 265px;
+          overflow: hidden;
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .festival-sched-details {
+        background-color: $color_white;
+        color: $color_black;
+        padding: 15px 40px;
+        text-align: center;
+
+        h3 {
+          font-size: 17px;
+          text-transform: uppercase;
+        }
+
+        .contentDiv {
+          font-size: 10px;
+          text-transform: uppercase;
+          margin: 15px 0;
+          height: 28px;
+          overflow: hidden;
+        }
+
+        .button-small a {
+          font-size: 10px;
+          letter-spacing: 1px;
+          min-width: 128px;
+          padding: 6px 18px;
+        }
+      }
+    }
+    /*** Festival Schedule END ***/
+
+    /*** Live Music ***/
+    &.live-music {
+      background-color: $color_primary;
+
+      h2 {
+        color: $color_lime1;
+        margin-bottom: 60px;
+      }
+    }
+    /*** Live Music END ***/
+
+    /*** Contact Information ***/
+    &.contact-info {
+      background-color: $color_lightgreen;
+      color: $color_grey;
+      padding-bottom: 30px;
+
+      h3 {
+        font-family: $font-roylands;
+        margin: 0 0 5px;
+      }
+      p {
+        color: $color_grey;
+        margin: 0;
+      }
+
+      .flexwrap {
+        @include flexbox-justify(space-between);
+        @include flexbox-direction(column-reverse);
+
+        @include xs() {
+          @include flexbox-direction(row);
+        }
+        
+        .flexcol {
+          position: relative;
+          width: 100%;
+
+          div {
+            margin-bottom: 30px;
+          }
+
+          @include xs() {
+            width: 50%;
+          }
+
+          &.contact {
+            @include flexgroup();
+            @include flexbox-justify(center);
+            @include flexbox-align-items(flex-start);
+            a {
+              color: $color_black;
+              &:hover {
+                color: tint($color_black,10%);
+              }
+            }
+            &.floral-pattern:before {
+              opacity: .05;
+            }
+          }
+          &.map {
+            background: $color_lightgreen;
+            .inside {
+              background: #F0F3F4;
+            }
+            iframe {
+              width: 92%!important;
+              height: 90%!important;
+              position: absolute;
+              top: 0;
+              left: 0;
+              z-index: 10;
+            }
+          }
+          img.iframe-resizer {
+            width: 100%;
+            height: auto;
+          }
+        }
+        &.half {
+          .flexwrap {
+            @include flexgroup();
+          }
+          .flexcol {
+            width: 100%;
+            @include tab {
+              width: 50%;
+            }
+          }
+        }
+      }
+    }
+    /*** Contact Information END ***/
+  }
 
   .button {
     text-align: center;
@@ -1317,6 +1729,48 @@ section.home-cards {
       }
     }  
   }
+
+  /*** New Homepage ***/
+  .buttons-content {
+    @include flexgroup();
+    @include flexbox-justify(center);
+    @include flexbox-align-items(center);
+    @include flexbox-direction(column);
+
+    a {
+      background-color: $color_secondary;
+      border-radius: 10px;
+      color: $color_white;
+      display: inline-block;
+      font-size: 15px;
+      margin: 10px 15px;
+      min-width: 170px;
+      padding: 9px 18px;
+      text-decoration: none;
+      text-transform: uppercase;
+
+      &.button_1 {
+        background-color: $color_red1;
+      }
+      &.button_2 {
+        background-color: $color_lightgreen;
+      }
+      &.button_3 {
+        background-color: $color_lime1;
+      }
+
+      &:hover,
+      &:focus {
+        background-color: $color2;
+      }
+    }
+
+    @include tab() {
+      @include flexbox-direction(row);
+      margin: 0 15px;
+    }
+  }
+  /*** New Homepage END ***/
 }
 
 section.homepage-cards {
@@ -1399,13 +1853,13 @@ section.homepage-cards {
     .titlediv {
       width: 100%;
       height: 60%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
       position: absolute;
       left: 0;
       bottom: 0;
+      @include flexgroup();
+      @include flexbox-justify(center);
+      @include flexbox-align-items(center);
+
       .wrap {
         position: relative;
         top: -15px;
@@ -1442,7 +1896,7 @@ section.homepage-cards {
 
     &.even {
       .inside {
-        background: $light_blue;
+        background: $color_lightblue1;
         .title {
           color: $color_primary;
         }
@@ -1637,7 +2091,7 @@ section.homepage-storyBlocks {
 
     &.even {
       .inside {
-        background: $light_blue;
+        background: $color_lightblue1;
         .titlediv, .contentdiv {
           color: $color_primary;
         }
@@ -1660,7 +2114,7 @@ section.homepage-storyBlocks {
         }
         .button {     
           a {
-            background: $light_blue;
+            background: $color_lightblue1;
   
             &:hover {
               background: $color_secondary;
@@ -1680,7 +2134,7 @@ section.homepage-storyBlocks {
             background: $color1;
   
             &:hover {
-              background: $light_blue;
+              background: $color_lightblue1;
             }
           }  
         }
@@ -1721,6 +2175,10 @@ section.homepage-storyBlocks {
     }
   }
 }
+
+/*** Festival Schedule ***/
+
+/*** Festival Schedule END ***/
 
 .banner-top-text {
   position: relative;
@@ -1841,10 +2299,10 @@ section.homepage-storyBlocks {
 }
 
 #content {
-  background: {
-    image:url('images/floral.svg');
-    position: center;
-  }
+  // background: {
+  //   image:url('images/floral.svg');
+  //   position: center;
+  // }
 }
 
 body.popup-open {
@@ -1861,7 +2319,6 @@ body.popup-open {
   z-index: 99999;
   overflow: auto;
   &.show {
-    // display: block;
     @include flexgroup();
     @include flexbox-justify(center);
     @include flexbox-align-items(center);
@@ -2231,7 +2688,7 @@ body.page-template-page-repeatable-blocks {
       }
     }
     &.map {
-      background: $light_blue;
+      background: $color_lightblue1;
       padding: 5vw;
       .inside {
         background: #F0F3F4;
@@ -2605,7 +3062,7 @@ section.faqs {
     color: $color_secondary;
     margin-top: 8px;
     margin-bottom: 20px;
-    border-bottom: 5px solid $light_blue;
+    border-bottom: 5px solid $color_lightblue1;
     @include animateThis(1s);
     a {
       color: $color2;
@@ -2743,9 +3200,9 @@ section.affiliate {
     -webkit-box-direction: normal;
     flex-direction: row;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     row-gap: 30px;
+    @include flexbox-justify(space-between);
+    @include flexbox-align-items(center);
   }
 
   .affiliates {
@@ -2853,7 +3310,7 @@ section.schedule-activities {
         .sched-content {
           .button-small {
             a {
-              background-color: $light_blue;
+              background-color: $color_lightblue1;
               &:hover {
                 background-color: $color1;
               }
@@ -2875,7 +3332,7 @@ section.schedule-activities {
             a {
               background-color: $color1;
               &:hover {
-                background-color: $light_blue;
+                background-color: $color_lightblue1;
               }
             }
           }
@@ -2895,7 +3352,7 @@ section.schedule-activities {
             a {
               background-color: $color_secondary;
               &:hover {
-                background-color: $light_blue;
+                background-color: $color_lightblue1;
               }
             }
           }
@@ -3155,7 +3612,6 @@ section.schedule-activities {
     right: -10px;
     color: #acabab;
   }
-
 }
 
 .select2-results__options[aria-multiselectable="true"] {
@@ -3261,7 +3717,69 @@ body.logged-in.admin-bar {
 }
 
 /* MOBILE < 768 */
-.mobile-navigation {display:none;}
+.mobile-navigation {
+  display: none;
+  &.navigation-forall {
+    display: block;
+  }
+  
+  ul.menu {
+    width: 100%;
+  }
+  ul.menu > li.current_page_ancestor > ul {
+    display: block!important;
+  }
+  ul.menu > li > a:focus,
+  ul.menu > li.current_page_item > a,
+  ul.menu > li.current_page_ancestor > a {
+    background: $color_primary;
+    color: $color_secondary!important;
+  }
+  #primary-menu {
+    margin:-10vh 0 0;
+    padding: 0 0;
+    list-style: none;
+  }
+  #primary-menu > li {
+    width: 100%;
+    text-align: center;
+  }
+  #primary-menu > li > a {
+    display: block;
+    text-decoration: none;
+    font-size: 1.65rem;
+    font-weight: normal;
+    color: $color_primary;
+    padding: 15px 25px 13px;
+  }
+  #primary-menu > li:hover > a {
+    background: $color_primary;
+    color: $color_secondary;
+  }
+  #primary-menu > li ul {
+    display: none;
+    margin: 0 0;
+    padding: 10px 0;
+    list-style: none;
+    text-align: center;
+    border-bottom: 1px solid $color_primary;
+    a {
+      display: inline-block;
+      text-decoration: none;
+      color: $color-tan;
+      font-size: 18px;
+      font-weight: normal;
+      padding: 7px 10px;
+      &:hover {
+        color: $color_secondary;
+      }
+    }
+  }
+  #primary-menu > li ul li.current_page_item > a {
+    color: #FFF;
+    opacity: 0.5;
+  }
+}
 #overlay {
   display: none;
   cursor: pointer;
@@ -3281,10 +3799,10 @@ body.logged-in.admin-bar {
 section.coming-soon {
 	width: 100%;
 	height: 50vh;
-	display: flex;
 	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  @include flexgroup();
+  @include flexbox-justify(center);
+  @include flexbox-align-items(center);
 	font-family: $font-roylands;
 	text-align: center;
 	font-size: 28px;
@@ -3348,7 +3866,7 @@ section.vendors {
       width: 100%;
       height: 100%;
     }
-    #site-logo {
+    .logo-left {
       top: 15px;
       left: 20px;
     }
@@ -3379,50 +3897,6 @@ section.vendors {
   }
   #site-navigation {
     display: none;
-  }
-  #primary-menu {
-    margin:-10vh 0 0;
-    padding: 0 0;
-    list-style: none;
-  }
-  #primary-menu > li {
-    width: 100%;
-    text-align: center;
-  }
-  #primary-menu > li > a {
-    display: block;
-    text-decoration: none;
-    font-size: 1.65rem;
-    font-weight: normal;
-    color: $color_primary;
-    padding: 15px 25px 13px;
-  }
-  #primary-menu > li:hover > a {
-    background: $color_primary;
-    color: $color_secondary;
-  }
-  #primary-menu > li ul {
-    display: none;
-    margin: 0 0;
-    padding: 10px 0;
-    list-style: none;
-    text-align: center;
-    border-bottom: 1px solid $color_primary;
-    a {
-      display: inline-block;
-      text-decoration: none;
-      color: $color-tan;
-      font-size: 18px;
-      font-weight: normal;
-      padding: 7px 10px;
-      &:hover {
-        color: $color_secondary;
-      }
-    }
-  }
-  #primary-menu > li ul li.current_page_item > a {
-    color: #FFF;
-    opacity: 0.5;
   }
   #mobile-menu-toggle {
     display: block;
@@ -3456,18 +3930,6 @@ section.vendors {
     &.active {
       right: 0;
       z-index: 500;
-    }
-    ul.menu {
-      width: 100%;
-    }
-    ul.menu > li.current_page_ancestor > ul {
-      display: block!important;
-    }
-    ul.menu > li > a:focus,
-    ul.menu > li.current_page_item > a,
-    ul.menu > li.current_page_ancestor > a {
-      background: $color_primary;
-      color: $color_secondary!important;
     }
   }
   .banner-top-text .reg-button {
@@ -3633,7 +4095,7 @@ section.vendors {
     line-height: 1.1;
 
     &:hover {
-      color: $light_blue;
+      color: $color_lightblue1;
     }
   }
 }
@@ -3657,6 +4119,28 @@ section.vendors {
       background: $color2;
     }
   }  
+}
+.button-big {
+  border-radius: 10px;
+  background: $color_red1;
+  color: $color_white;
+  font-size: 17px;
+  font-weight: 500;
+  display: inline-block;
+  min-width: 375px;
+  text-decoration: none;
+  width: auto;
+  height: 100%;
+  text-align: center;
+  padding: 16px 20px 14px;
+  line-height: 1.1;
+  text-transform: uppercase;
+  position: relative;
+  
+  &:hover {
+    color: $color_primary;
+    background: $color_secondary;
+  }
 }
 .fullwidth-block.event-details {
   width: 100%;
@@ -3876,7 +4360,7 @@ section.vendors {
       }
 
       a {
-        color: $light_blue;
+        color: $color_lightblue1;
         text-decoration: none;
 
         &:hover {

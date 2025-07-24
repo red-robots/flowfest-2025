@@ -351,8 +351,8 @@ function ea_disable_gutenberg( $can_edit, $post_type ) {
   if( in_array($current_post_type,$exclude_post_types) )
     $can_edit = false;
 
-  if( in_array($_GET['post_type'],$exclude_post_types) )
-    $can_edit = false;
+  // if( in_array($_GET['post_type'],$exclude_post_types) )
+  //   $can_edit = false;
 
   return $can_edit;
 

@@ -85,17 +85,22 @@ $color-brown: #51221F;
 // Sub Header Podium Sharp all caps tracking set to 100
 // Body copy: Brandon Grotesque Medium
 $green: #215D48;
-$light_blue: #5298A7;
-$blue: #13648D;
+$color_lightblue1: #5298A7;
+$color_blue: #13648D;
 $color-lime: #AFB660;
 $yellow: #fef8e0;
+$color_red1: #ba0e2f;
+$color_lightgreen: #85a79b;
+$color_lime1: #b2b662;
+$color_white: #FFF;
+$color_black: #07080a;
+$color_grey: #3a3a3a;
 
 /*** END new color 2025 ***/
-
 $color_primary: $yellow;
 $color_secondary: $green;
 $color1: $color-lime;
-$color2: $blue;
+$color2: $color_blue;
 
 $font1: 'Hind', sans-serif;
 $font2: 'CHUMI CHAMI', sans-serif;

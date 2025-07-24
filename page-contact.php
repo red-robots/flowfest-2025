@@ -22,11 +22,10 @@ get_header(); ?>
       <?php endwhile; ?>
 
       <?php  
-      $map = get_field('map_embed');
-      $contact = get_field('contact-info-group');
-      $section_class = ($map && $contact) ? 'half':'full';
+        $map = get_field('map_embed');
+        $contact = get_field('contact-info-group');
+        $section_class = ($map && $contact) ? 'half':'full';
       ?>
-
 
       <?php if(have_rows('contact-info-group') || $map) { ?>
       <section class="contact-info-group <?php echo $section_class ?>">
@@ -66,9 +65,8 @@ get_header(); ?>
           </div>
         </div>
       </section>
-      <?php } ?>
+    <?php } ?>
 			
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
 

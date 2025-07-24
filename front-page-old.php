@@ -60,7 +60,7 @@ get_header();
             else if($n % 2==0) {
               $card_class .= ' even';
             }
-          ?>
+            ?>
             <div class="storyBlock <?php echo $card_class.$visibility ?>">
               <div class="inside">
                 <figure>
