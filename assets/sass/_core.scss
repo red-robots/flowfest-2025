@@ -1650,16 +1650,16 @@ section.home-cards {
             width: 47%;
           }
 
+          figure {
+            height: 500px;
+          }
+
           &_full {
             @include xs {
               width: 100%;
             }
             @include tab {
               width: 100%;
-            }
-
-            figure {
-              height: 465px;
             }
 
             .title {

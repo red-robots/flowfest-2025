@@ -1967,7 +1967,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.live-music{background-color:#fef8e0}
 .home-content section.live-music h2{color:#b2b662;margin-bottom:60px}
 .home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_full figure{height:465px}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column figure{height:500px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .title{margin:0;padding-right:140px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:25px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:hover,.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:focus{background-color:#5298a7}
