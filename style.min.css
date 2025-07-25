@@ -2084,7 +2084,7 @@ body.popup-open{overflow:hidden}
 #popup-content .popup-content.activity .middle-content{padding:40px 30px}
 #popup-content .popup-content.activity figure,#popup-content .popup-content.activity .wp-block-image{margin:0 0 30px}
 #popup-content .popup-content.activity figure img,#popup-content .popup-content.activity .wp-block-image img{width:100%;height:auto}
-#popup-content .popup-content.activity .description p{margin:1em 0}
+#popup-content .popup-content.activity .description p{margin:15px 0}
 #popup-content .popup-content.activity a{color:#215d48}
 #popup-content .popup-content.activity a:hover{color:#4d7d6d}
 #popup-content .popup-content.activity .wp-block-button__link{background-color:#fff;color:#215d48;padding:15px 25px 13px}
