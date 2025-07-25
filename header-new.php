@@ -60,7 +60,6 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
   			<nav id="site-navigation" class="main-navigation desktop-navigation full-width-dropdown" role="navigation">
   				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap','link_before'=>'<span><b>','link_after'=>'</b></span>' ) ); ?>
   			</nav>
-			<div class="right-head">&nbsp;</div>
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
@@ -74,5 +73,13 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 
   <span id="mobile-menu-toggle" class="main-menu"><span class="bar"><span></span></span></span>
   <div class="mobile-navigation navigation-forall"></div>
+
+  <?php 
+    $CS = get_field('coming_soon');
+
+    if( $CS == null ) {
+      get_template_part('parts/banner');
+    } 
+  ?>
 
 	<div id="content" class="site-content">

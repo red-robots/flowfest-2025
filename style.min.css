@@ -1772,6 +1772,7 @@ a,button,input{-webkit-transition:all ease .3s;transition:all ease .3s;color:#13
 a:hover,button:hover,input:hover{color:#5298a7}
 body{font-family:"Brandon";font-size:20px;line-height:1.4;background-color:#fef8e0;color:#215d48}
 body.new-homepage{padding-top:90px}
+body.new-homepage.logged-in.admin-bar header.site-header{top:32px}
 body.new-homepage.logged-in.admin-bar .redtag{top:122px !important}
 body.page li.home{display:none}
 body.home li.home{display:inline-block}
@@ -1867,7 +1868,7 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 #mobile-menu-toggle.active span.bar{-webkit-transform:translateX(-10px) rotate(45deg);transform:translateX(-10px) rotate(45deg)}
 #mobile-menu-toggle.active span.bar:before{-webkit-transform:translateY(10px) rotate(90deg);transform:translateY(10px) rotate(90deg)}
 #mobile-menu-toggle.active span.bar:after{-webkit-transform:translateY(-10px) rotate(-90deg);transform:translateY(-10px) rotate(-90deg)}
-#banner{width:100%;float:left;position:relative;background-color:#000;overflow:hidden;margin-top:53px}
+#banner{width:100%;float:left;position:relative;background-color:#fef8e0;overflow:hidden;margin-top:13px}
 #banner.video-playing{z-index:300}
 #banner .static-banner,#banner .flexslider{border-radius:0}
 #banner .static-banner .slides .iframe-wrapper,#banner .flexslider .slides .iframe-wrapper{padding:0;position:relative;width:100%}
@@ -1888,11 +1889,12 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 #banner .static-banner .slides .videoIframeDiv .playVidBtn:before,#banner .flexslider .slides .videoIframeDiv .playVidBtn:before{content:"";width:0;height:0;border-left:50px solid #fff;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;top:50%;left:56%;z-index:5;-webkit-transform:translate(-50%,-50%);transform:translate(-50%,-50%)}
 #banner .static-banner .slides .videoIframeDiv .playVidBtn span,#banner .flexslider .slides .videoIframeDiv .playVidBtn span{display:inline-block;width:0;width:0;text-indent:-999em;overflow:none;background:rgba(255,255,255,.85)}
 #banner .static-banner .slides .videoIframeDiv .playVidBtn:hover,#banner .flexslider .slides .videoIframeDiv .playVidBtn:hover{background:rgba(0,0,0,.45)}
+#banner .static-banner .slides .library-media,#banner .flexslider .slides .library-media{height:auto;width:100%;-o-object-fit:fill;object-fit:fill}
 #banner .slideCaption{width:100%;height:100%;position:absolute;top:0;left:0;z-index:10;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
 #banner .slideCaption .text{width:100%;text-align:center;color:#fff;font-size:6vw;font-family:"Roylands Sans",sans-serif;font-weight:500;line-height:1.2;text-transform:uppercase}
 #banner .static-banner{width:100%;float:left}
 #banner .static-banner ul.slides,#banner .static-banner li.slideItem,#banner .static-banner .image-wrapper{width:100%;float:left;position:relative}
-#banner .static-banner .image-wrapper{background-size:cover;background-position:center;background-repeat:no-repeat}
+#banner .static-banner .image-wrapper{background-size:cover;background-position:center;background-repeat:no-repeat;margin-top:60px}
 #banner .static-banner .image-wrapper img{width:100%;height:auto;float:left}
 #banner .static-banner .image-wrapper.yes-mobile img.desktop{display:none}
 #banner .static-banner .image-wrapper.yes-mobile img.mobile{display:block}
@@ -2449,6 +2451,7 @@ footer.site-footer #mc_embed_shell input#mc-embedded-subscribe{margin:0 0 0 15px
 #banner .static-banner .slides img.image-size-ref-helper,#banner .flexslider .slides img.image-size-ref-helper{display:block}
 #banner .static-banner .slides img.image-helper-mobile,#banner .flexslider .slides img.image-helper-mobile{display:none}
 #banner .slideCaption .text{font-size:40px}
+#banner .static-banner .image-wrapper{margin-top:0}
 #banner .static-banner .image-wrapper.yes-mobile img.desktop{display:block}
 #banner .static-banner .image-wrapper.yes-mobile img.mobile{display:none}
 #banner ul.slides.single-slide .type-video{margin-top:0}

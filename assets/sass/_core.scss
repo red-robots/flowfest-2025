@@ -85,8 +85,13 @@ body {
   &.new-homepage {
     padding-top: 90px;
 
-    &.logged-in.admin-bar .redtag {
-      top: 122px !important;
+    &.logged-in.admin-bar {
+      header.site-header {
+        top: 32px;
+      }
+      .redtag {
+        top: 122px !important;
+      }
     }
   }
 }
@@ -860,12 +865,12 @@ footer.site-footer {
 	width: 100%;
 	float: left;
 	position: relative;
-	background-color: #000;
+	background-color: $color_primary;
   overflow: hidden;
 	&.video-playing {
 		z-index: 300;
 	}
-	margin-top: 53px;
+	margin-top: 13px;
 	// margin-bottom: 5px;
 	@include tab {
 		margin-top: 0; //90px
@@ -882,7 +887,6 @@ footer.site-footer {
 					width: 100%;
 				}
 				&.yes-mobile {
-					
 					.desktop {
 						display: none;
 						@include tab {
@@ -1008,10 +1012,13 @@ footer.site-footer {
 					&:hover {
 						background: rgba(0,0,0,.45);
 					}
-
 				}
-
 			}
+      .library-media {
+        height: auto;
+        width: 100%;
+        object-fit: fill;
+      }
 		}
 	}
 	.slideCaption {
@@ -1049,6 +1056,10 @@ footer.site-footer {
 			background-size: cover;
 			background-position: center;
 			background-repeat: no-repeat;
+      margin-top: 60px;
+      @include tab {
+        margin-top: 0;
+      }
 			img {
 				width: 100%;
 				height: auto;

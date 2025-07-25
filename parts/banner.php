@@ -26,7 +26,6 @@ if ( is_singular( get_post_type() ) && in_array(get_post_type(),$excludePostType
 }
 ?>
 
-
 <?php if($is_default_slide) { ?>
 	<?php 
 	$flexslider = get_field( "flexslider_banner",$post_id);
@@ -62,32 +61,29 @@ if ( is_singular( get_post_type() ) && in_array(get_post_type(),$excludePostType
 						<li class="slideItem <?php echo $slideType; ?>">
 							<?php include(locate_template('parts/slideshow-overlay.php')); ?>
 							<div class="iframe-wrapper <?php echo ($row['mobile_video']||$row['mobile_image'])?'yes-mobile':'no-mobile';?>">
-		                            <?php if($row['link']):?>
+		                        <?php if($row['link']):?>
 								    <a href="<?php echo $row['link']; ?>" class="slideLink" <?php if ( $row['target'] ):echo 'target="_blank"'; endif; ?>></a>
 								<?php endif;?>
-									<?php if($row['native_video']):?>
-										<video class="desktop" autoPlay loop muted playsinline>
-											<source src="<?php echo $row['native_video'];?>" type="video/mp4">
-										</video>
-									<?php elseif($row['video']):?>
-											
-										<?php 
-											$videoURL = $row['video'];
-											$parts = parse_url($videoURL);
-											parse_str($parts['query'], $query);
-
-											?>
-
-											<?php if ($slidesCount==1) { ?>
-												<img src="<?php echo $videoHelper ?>" alt="" aria-hidden="true" class="image-size-ref-helper">	
-												<img src="<?php echo $placeholder ?>" alt="" aria-hidden="true" class="image-helper-mobile">	
+								<?php if($row['native_video']):?>
+									<video class="desktop" autoPlay loop muted playsinline>
+										<source src="<?php echo $row['native_video'];?>" type="video/mp4">
+									</video>
+								<?php elseif($row['video']):?>
+									<?php 
+										$videoURL = $row['video'];
+										$parts = parse_url($videoURL);
+										parse_str($parts['query'], $query);
+									?>
+										<?php if ($slidesCount==1) { ?>
+											<img src="<?php echo $videoHelper ?>" alt="" aria-hidden="true" class="image-size-ref-helper">	
+											<img src="<?php echo $placeholder ?>" alt="" aria-hidden="true" class="image-helper-mobile">	
+										<?php } else { ?>
+											<?php if ( isset($firstImg[0]) && $firstImg[0] ) { ?>
+												<img src="<?php echo $firstImg[0] ?>" alt="" class="image-size-ref uploadedImg">	
 											<?php } else { ?>
-												<?php if ( isset($firstImg[0]) && $firstImg[0] ) { ?>
-													<img src="<?php echo $firstImg[0] ?>" alt="" class="image-size-ref uploadedImg">	
-												<?php } else { ?>
-													<img src="<?php echo $placeholder; ?>" alt="" aria-hidden="true" class="blank-image image-size-ref">
-												<?php } ?>
+												<img src="<?php echo $placeholder; ?>" alt="" aria-hidden="true" class="blank-image image-size-ref">
 											<?php } ?>
+										<?php } ?>
 
 											<?php /* YOUTUBE VIDEO */ ?>
 											<?php if (strpos( strtolower($videoURL), 'youtube.com') !== false) {
@@ -152,33 +148,44 @@ if ( is_singular( get_post_type() ) && in_array(get_post_type(),$excludePostType
 									<?php endif;?> 
 							</div><!--.iframe-wrapper-->
 						</li>
-					<?php } 
-					elseif($featuredType=='image' && $row['image']) { ?>
-					<li class="slideItem <?php echo $slideType; ?>">
-						<?php include(locate_template('parts/slideshow-overlay.php')); ?>
-						<div class="image-wrapper <?php echo $row['mobile_image']?'yes-mobile':'no-mobile';?>"
-						     style="background-image: url(<?php if($row['mobile_image']):
-							     echo $row['mobile_image']['url'];
-						     else:
-	                                 echo $row['image']['url'];
-						     endif;?>);">
-	                            <?php if($row['link']):?>
-							    <a href="<?php echo $row['link']; ?>" class="slideLink" <?php if ( $row['target'] ):echo 'target="_blank"'; endif; ?>>
-							<?php endif;?>
-	                                    <img class="desktop <?php if($i!==0) echo 'lazy';?>" <?php if($i!==0) echo 'data-';?>src="<?php echo $row['image']['url']; ?>"
-								     alt="<?php echo $row['image']['alt']; ?>">
-	                                    <?php if($row['mobile_image']):?>
-	                                        <img class="mobile <?php if($i!==0) echo 'lazy';?>" <?php if($i!==0) echo 'data-';?>src="<?php echo $row['mobile_image']['url']; ?>"
-	                                             alt="<?php echo $row['mobile_image']['alt']; ?>">
-	                                    <?php endif;?>
-	                            <?php if($row['link']):?>
-							    </a>
-	                            <?php endif;?>
-						</div><!--.image-wrapper-->
-						<?php if ( isset($row['slide_text']) && $row['slide_text'] ) { ?>
-						<div class="slideCaption"><div class="text"><?php echo $row['slide_text'] ?></div></div>
-						<?php } ?>
-					</li>
+					<?php } elseif( $featuredType=='video' && ($row['video']||$row['library_video']) ) { ?>
+					<?php
+						// echo '<pre>';
+						// print_r($row['library_video']);
+						// echo '</pre>';
+
+						$media_link = $row['library_video']['url'];					
+					?>
+						<video class="library-media" autoplay loop muted playsinline disableremoteplayback>
+							<source src="<?php echo $media_link;?>" type="video/mp4">
+							Your browser does not support the video tag.
+						</video>
+					<?php } elseif($featuredType=='image' && $row['image']) { ?>
+							<li class="slideItem <?php echo $slideType; ?>">
+								<?php include(locate_template('parts/slideshow-overlay.php')); ?>
+								<div class="image-wrapper <?php echo $row['mobile_image']?'yes-mobile':'no-mobile';?>"
+									style="background-image: url(<?php if($row['mobile_image']):
+										echo $row['mobile_image']['url'];
+									else:
+											echo $row['image']['url'];
+									endif;?>);">
+										<?php if($row['link']):?>
+										<a href="<?php echo $row['link']; ?>" class="slideLink" <?php if ( $row['target'] ):echo 'target="_blank"'; endif; ?>>
+									<?php endif;?>
+												<img class="desktop <?php if($i!==0) echo 'lazy';?>" <?php if($i!==0) echo 'data-';?>src="<?php echo $row['image']['url']; ?>"
+											alt="<?php echo $row['image']['alt']; ?>">
+												<?php if($row['mobile_image']):?>
+													<img class="mobile <?php if($i!==0) echo 'lazy';?>" <?php if($i!==0) echo 'data-';?>src="<?php echo $row['mobile_image']['url']; ?>"
+														alt="<?php echo $row['mobile_image']['alt']; ?>">
+												<?php endif;?>
+										<?php if($row['link']):?>
+										</a>
+										<?php endif;?>
+								</div><!--.image-wrapper-->
+								<?php if ( isset($row['slide_text']) && $row['slide_text'] ) { ?>
+								<div class="slideCaption"><div class="text"><?php echo $row['slide_text'] ?></div></div>
+								<?php } ?>
+							</li>
 					<?php } ?>
 				<?php $i++; } ?>
 			</ul>
