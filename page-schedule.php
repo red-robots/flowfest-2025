@@ -14,7 +14,7 @@ $CS = get_field('coming_soon');
   <div id="primary" class="content-area-full content-default-template">
     <main id="main" class="site-main" role="main">
 
-      <?php if( $CS[0] == 'soon' ) { ?>
+      <?php if( !empty($CS) && $CS[0] === 'soon' ) { ?>
         <section class="coming-soon">
           <div>Coming Soon</div>
         </section>
@@ -105,7 +105,7 @@ $CS = get_field('coming_soon');
                   <?php } else { ?>
                     <span class="time-NA"></span>
                   <?php } ?>
-                  <span class="name"><a class="popup-activity <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
+                  <span class="name"><a class="popup-activity popup-activity-schedule <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
                   <div class="border-bottom"></div>
                 <?php } else { ?>
                   <div class="sched-accordion <?php echo $cpt ?>">

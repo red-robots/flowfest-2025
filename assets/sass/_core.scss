@@ -323,7 +323,7 @@ header.site-header {
     left: 0;
 
     @include tab {
-      top: 10px
+      top: 8px
     }
   }
 
@@ -1660,6 +1660,11 @@ section.home-cards {
               position: absolute;
               right: 25px;
               bottom: 25px;
+
+              a:hover,
+              a:focus {
+                background-color: $color_lightblue1;
+              }
             }
           }
         }
@@ -2443,6 +2448,9 @@ body.popup-open {
           width: 100%;
           height: auto;
         }
+      }
+      .description p {
+        margin: 1em 0;
       }
       a {
         color: $color_secondary;

@@ -452,7 +452,7 @@ $('.sponsors-loop').owlCarousel({
 
 
   /* Pop-up Scheduled Activity */
-  $('.popup-activity').on("click",function(e){
+  $('.popup-activity-schedule').on("click",function(e){
     e.preventDefault();
     var id = $(this).attr('data-id');
     $.ajax({

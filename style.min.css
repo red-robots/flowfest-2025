@@ -1968,6 +1968,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full figure{height:465px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .title{margin:0;padding-right:140px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:25px}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:hover,.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:focus{background-color:#5298a7}
 .home-content section.contact-info{background-color:#85a79b;color:#3a3a3a;padding-bottom:30px}
 .home-content section.contact-info h3{font-family:"Roylands Sans",sans-serif;margin:0 0 5px}
 .home-content section.contact-info p{color:#3a3a3a;margin:0}
@@ -2081,6 +2082,7 @@ body.popup-open{overflow:hidden}
 #popup-content .popup-content.activity .middle-content{padding:40px 30px}
 #popup-content .popup-content.activity figure,#popup-content .popup-content.activity .wp-block-image{margin:0 0 30px}
 #popup-content .popup-content.activity figure img,#popup-content .popup-content.activity .wp-block-image img{width:100%;height:auto}
+#popup-content .popup-content.activity .description p{margin:1em 0}
 #popup-content .popup-content.activity a{color:#215d48}
 #popup-content .popup-content.activity a:hover{color:#4d7d6d}
 #popup-content .popup-content.activity .wp-block-button__link{background-color:#fff;color:#215d48;padding:15px 25px 13px}
@@ -2430,7 +2432,7 @@ header.site-header .head-flex{height:100%}
 header.site-header .header-flex{height:100%}
 header.site-header .reg{top:43px}
 .floral-pattern{background-size:50%}
-.logo-left{top:10px}
+.logo-left{top:8px}
 .logo a{padding:0 20px}
 .redtag .registerBtn{width:auto}
 nav.main-navigation ul.menu>li>a{min-height:60px}

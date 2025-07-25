@@ -75,12 +75,4 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
   <span id="mobile-menu-toggle" class="main-menu"><span class="bar"><span></span></span></span>
   <div class="mobile-navigation navigation-forall"></div>
 
-	<?php 
-  $CS = get_field('coming_soon'); 
-
-  // if( $CS[0] == '' ) {
-  //   get_template_part('parts/banner-video');
-  // } 
-  ?>
-
 	<div id="content" class="site-content">

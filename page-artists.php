@@ -9,7 +9,7 @@
 
 get_header(); 
 
-$CS = get_field('coming_soon'); 
+$CS = get_field('coming_soon');
 ?>
 
 	<div id="primary" class="content-area-full default-template">
@@ -21,7 +21,7 @@ $CS = get_field('coming_soon');
 				</div>
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-					<?php if( $CS[0] == 'soon' ) { ?>
+					<?php if( !empty($CS) && $CS[0] === 'soon' ) { ?>
 						<section class="coming-soon">
 							<div>Coming Soon</div>
 						</section>
