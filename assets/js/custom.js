@@ -338,7 +338,7 @@ jQuery(document).ready(function ($) {
       }
     });
   });
-  /* Artists - Popup for Learn MOre */
+  /* Artists - Popup for Learn More */
 
   $('.column.post-type-artists .more-details').on("click", function (e) {
     e.preventDefault();

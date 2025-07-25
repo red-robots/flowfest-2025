@@ -178,17 +178,81 @@ get_header('new'); ?>
 
     <!-- Live Music -->
     <?php
+        if( have_rows('live_music_artists') ){
         $live_music_title = get_field('live_music_title');
-        $map = get_field('google_map');
-        $address = get_field('contact_address');
-
-        if($address || $map) {
     ?>
       <section class="live-music">
         <div class="wrapper">
           <h2 class="pagetitle text-center"><?php echo $live_music_title; ?></h2>
-          <div class="flexwrap">
+          <div class="live-music-artists feeds-wrapper cf">
+            <?php
+              $count = 1;
 
+              while( have_rows('live_music_artists') ): the_row();
+
+              $music_artist = get_sub_field('music_artist');
+              //$custom_field = get_field( 'field_name', $music_artist->ID );
+              $post_id = $music_artist-> ID;
+              $music_artist_title = get_the_title($post_id);
+              $thumbnail_id = get_post_thumbnail_id($post_id);
+              $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
+              $imageStyle = ($featImage) ? ' style="background-image:url('.$featImage[0].')"':'';
+              $postType = get_post_type($post_id);
+              $postTypeTitle = 'post-type-'.$postType;
+              $pagelink = ($postType=='artists') ? 'javascript:void(0)' : get_permalink($post_id);
+              $popup = ($postType=='artists') ? 'popup-activity' : '';
+              $location_time = get_field('location_time', $post_id);
+              $spotify = get_field('spotify_embed', $post_id);
+              $column = ($count==1) ? 'column column_full' : 'column column_half';
+            ?>
+            <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
+              <div class="inner">
+                <div class="image">
+                  <figure<?php echo $imageStyle ?>>
+                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/square.png" class="helper" alt="">
+                  </figure>
+                </div>
+                <h4 class="title"><?php echo $music_artist_title; ?></h4>
+                <?php
+                  if($spotify){ ?>
+                  <div class="button-small">
+                    <a href="<?php echo $pagelink; ?>" data-id="<?php echo $post_id ?>" class="<?php echo $popup; ?> see-details">See Details</a>
+                  </div>
+                <?php
+                  }
+
+                  if( $location_time ){
+                  $j = 1;
+
+                  foreach( $location_time as $detail ) {
+                    $location = $detail['location'][0];
+                    $time = $detail['start_time'];
+                    $title = $detail['title'];
+
+                    if($count!=1 && $location && $time) {
+                ?>
+                  <div class="schedule">
+                    <div class="location"><?php echo $location; ?></div>
+                    <div class="time"><?php echo $time; ?></div>
+                  </div>
+                  <?php if($title){ ?>
+                    <!-- <div class="cf more-details" data-id="<?php echo $post_id; ?>" data-item="<?php echo $j; ?>">
+                      <a href="<?php echo $pagelink; ?>" class="learn-more">Learn More</a>
+                    </div> -->
+                  <?php
+                    }
+                    $j++; 
+                  }
+                }
+              }
+              ?>
+              </div>
+            </div>
+            <?php
+              $count++;
+
+              endwhile;
+            ?>
           </div>
         </div>
       </section>

@@ -1964,6 +1964,10 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.festival-sched .festival-sched-details .button-small a{font-size:10px;letter-spacing:1px;min-width:128px;padding:6px 18px}
 .home-content section.live-music{background-color:#fef8e0}
 .home-content section.live-music h2{color:#b2b662;margin-bottom:60px}
+.home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full figure{height:465px}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .title{margin:0;padding-right:140px}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:25px}
 .home-content section.contact-info{background-color:#85a79b;color:#3a3a3a;padding-bottom:30px}
 .home-content section.contact-info h3{font-family:"Roylands Sans",sans-serif;margin:0 0 5px}
 .home-content section.contact-info p{color:#3a3a3a;margin:0}
@@ -2373,11 +2377,14 @@ section.vendors div.ven img{width:100%}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
 html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
+.home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;padding:0}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column{width:47%}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
 section.schedule-activities .indication{font-size:20px}
-.feeds-wrapper .column{width:50%}
+.feeds-wrapper .column{width:48.3%}
 }@media all and (min-width:1024px){.fancybox__container{--carousel-button-width:48px;--carousel-button-height:48px;--carousel-button-svg-width:27px;--carousel-button-svg-height:27px}
 .fancybox__slide{padding:64px 100px}
 .fancybox__nav .carousel__button.is-next{right:40px}
@@ -2455,6 +2462,7 @@ section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(213,108,34,.7)}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap.half .flexcol{width:50%}
 .home-content .buttons-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:0 15px}
 section.homepage-cards .wrapper{max-width:85vw}
@@ -2491,6 +2499,7 @@ section.schedule-activities .sched-content .popup-content .flex-wrap .photo{widt
 section.coming-soon{font-size:40px;height:70vh}
 .entry-content.vendorz{padding:40px}
 section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:stretch;-ms-flex-align:stretch;align-items:stretch}
+.feeds-wrapper{padding:50px 0 40px 0}
 .feeds-wrapper .column{width:33.333%}
 #carousel-images .owl-prev,#carousel-images .owl-next{top:46%;-webkit-transform:translateY(-46%);transform:translateY(-46%)}
 .insider-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
@@ -2501,7 +2510,6 @@ section.vendors{width:600px;padding:40px;margin:20px auto;display:-webkit-box;di
 .insider-content-sidebar .dropbtn{display:none}
 .insider-content-main{float:right;padding-left:.625rem;width:75%;padding-bottom:3.125rem}
 .insider-content-main-inner{min-height:80vh}
-}@media only screen and (min-width:1140px){.feeds-wrapper{padding:50px 0 400px 0}
 }@media screen and (max-width:1140px){#content .reg-button{position:absolute;top:0;left:0;width:100%;text-align:center}
 #content .reg-button a{display:block;text-decoration:none;max-width:100%;width:100%;height:100%;text-align:center;padding:14px 10px 10px;border-radius:0;background:#e8b450;color:#fff;font-size:18px;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
 #content .reg-button a:hover{background:#215d48}
