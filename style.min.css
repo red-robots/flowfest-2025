@@ -2419,6 +2419,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3.mobile{display:none}
 .section-price-ages .info{width:33.33%}
 .section-price-ages.oneCol .info{width:100%}
 .section-price-ages .fourCols .info{width:25%}
+html body.logged-in.admin-bar header.site-header{top:0}
 html body.logged-in.admin-bar section.pagetitle{top:auto}
 #page{padding:0}
 .wrapper{padding:0}

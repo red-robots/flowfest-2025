@@ -124,6 +124,9 @@ html body.logged-in.admin-bar {
 		@include xs {
 			top: 32px;
 		}
+    @include tab {
+			top: 0;
+		}
 	}
 	section.pagetitle {
 		top: 102px;
