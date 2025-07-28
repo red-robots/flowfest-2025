@@ -1970,9 +1970,6 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.live-music h2{color:#b2b662;margin-bottom:60px}
 .home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column figure{height:500px}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .title{margin:0;padding-right:140px}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:15px}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:hover,.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:focus{background-color:#5298a7}
 .home-content section.contact-info{background-color:#85a79b;color:#3a3a3a;padding-bottom:30px}
 .home-content section.contact-info h3{font-family:"Roylands Sans",sans-serif;margin:0 0 5px}
 .home-content section.contact-info p{color:#3a3a3a;margin:0}
@@ -2385,7 +2382,7 @@ html body.logged-in.admin-bar header.site-header{top:32px}
 html body.logged-in.admin-bar section.pagetitle{top:90px}
 #banner .static-banner .slides .library-media-desktop,#banner .flexslider .slides .library-media-desktop{display:block}
 #banner .static-banner .slides .library-media-mobile,#banner .flexslider .slides .library-media-mobile{display:none}
-.home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;padding:0}
+.home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;row-gap:20px;padding:0}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column{width:46%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
