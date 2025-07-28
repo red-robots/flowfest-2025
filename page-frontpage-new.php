@@ -187,6 +187,8 @@ get_header('new'); ?>
           <div class="live-music-artists feeds-wrapper cf">
             <?php
               $count = 1;
+              $rows = get_field('live_music_artists'); 
+              $count_column = count($rows);
 
               while( have_rows('live_music_artists') ): the_row();
 
@@ -203,7 +205,7 @@ get_header('new'); ?>
               $popup = ($postType=='artists') ? 'popup-activity' : '';
               $location_time = get_field('location_time', $post_id);
               $spotify = get_field('spotify_embed', $post_id);
-              $column = ($count==1) ? 'column column_full' : 'column column_half';
+              $column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
             ?>
             <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
               <div class="inner">

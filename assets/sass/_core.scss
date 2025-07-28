@@ -1664,11 +1664,17 @@ section.home-cards {
 
         &.feeds-wrapper .column {
           @include xs {
-            width: 47%;
+            width: 45%;
           }
 
           figure {
             height: 500px;
+          }
+
+          &_half {
+            @include tab {
+              width: 48%;
+            }
           }
 
           &_full {
@@ -1687,7 +1693,7 @@ section.home-cards {
             .button-small {
               position: absolute;
               right: 25px;
-              bottom: 25px;
+              bottom: 15px;
 
               a:hover,
               a:focus {
@@ -4055,7 +4061,6 @@ section.vendors {
     .inner {
       width: 100%;
       float: left;
-      padding: 10px;
     }
     // &.active {
     //   z-index: 30;

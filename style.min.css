@@ -1971,7 +1971,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column figure{height:500px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .title{margin:0;padding-right:140px}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:25px}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small{position:absolute;right:25px;bottom:15px}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:hover,.home-content section.live-music .live-music-artists.feeds-wrapper .column_full .button-small a:focus{background-color:#5298a7}
 .home-content section.contact-info{background-color:#85a79b;color:#3a3a3a;padding-bottom:30px}
 .home-content section.contact-info h3{font-family:"Roylands Sans",sans-serif;margin:0 0 5px}
@@ -2309,7 +2309,7 @@ section.vendors div.ven img{width:100%}
 .feeds-wrapper{padding:50px 0}
 .feeds-wrapper .columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .feeds-wrapper .column{width:100%;margin:0 0 30px;position:relative}
-.feeds-wrapper .column .inner{width:100%;float:left;padding:10px}
+.feeds-wrapper .column .inner{width:100%;float:left}
 .feeds-wrapper .parent-wrap{width:100%;margin-left:0;margin-right:-10px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .feeds-wrapper div.image{width:100%;float:left;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48}
 .feeds-wrapper figure{width:100%;float:left;margin:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48;-webkit-transition:all ease .3s;transition:all ease .3s}
@@ -2386,7 +2386,7 @@ html body.logged-in.admin-bar section.pagetitle{top:90px}
 #banner .static-banner .slides .library-media-desktop,#banner .flexslider .slides .library-media-desktop{display:block}
 #banner .static-banner .slides .library-media-mobile,#banner .flexslider .slides .library-media-mobile{display:none}
 .home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;padding:0}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column{width:47%}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column{width:45%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
@@ -2472,6 +2472,7 @@ section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(213,108,34,.7)}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_half{width:48%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap.half .flexcol{width:50%}
 .home-content .buttons-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:0 15px}
