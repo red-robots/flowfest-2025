@@ -1826,10 +1826,15 @@ section.home-cards {
       display: inline-block;
       font-size: 15px;
       margin: 10px 15px;
-      min-width: 170px;
+      width: 93%;
       padding: 9px 18px;
       text-decoration: none;
       text-transform: uppercase;
+
+      @include tab {
+        min-width: 170px;
+        width: auto;
+      }
 
       &.button_1 {
         background-color: $color_blue;

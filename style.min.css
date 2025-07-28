@@ -1993,7 +1993,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content .button a{display:inline-block;text-decoration:none;width:auto;height:100%;text-align:center;padding:12px 18px;border-radius:10px;background:#215d48;color:#fff;font-size:1em;font-weight:500;line-height:1.1;text-transform:uppercase;position:relative}
 .home-content .button a:hover{background:#13648d}
 .home-content .buttons-content{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}
-.home-content .buttons-content a{background-color:#215d48;border-radius:10px;color:#fff;display:inline-block;font-size:15px;margin:10px 15px;min-width:170px;padding:9px 18px;text-decoration:none;text-transform:uppercase}
+.home-content .buttons-content a{background-color:#215d48;border-radius:10px;color:#fff;display:inline-block;font-size:15px;margin:10px 15px;width:93%;padding:9px 18px;text-decoration:none;text-transform:uppercase}
 .home-content .buttons-content a.button_1{background-color:#13648d}
 .home-content .buttons-content a.button_2{background-color:#b2b662}
 .home-content .buttons-content a.button_3{background-color:#85a79b}
@@ -2475,6 +2475,7 @@ section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,sectio
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full+.column_half{width:48%}
 .home-content section.contact-info .flexwrap.half .flexcol{width:50%}
+.home-content .buttons-content a{min-width:170px;width:auto}
 .home-content .buttons-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:0 15px}
 section.homepage-cards .wrapper{max-width:85vw}
 section.homepage-cards .card{width:33.333%}
