@@ -4549,10 +4549,12 @@ section.vendors {
     }
 
     &-inner {
+      border-top: 1px solid $color_lime1;
       padding-top: 3.125rem;
       
       @include tab {
-        min-height: 80vh;
+        min-height: 55vh; //80vh
+        padding-bottom: 3.125rem;
       }
 
       h2 {
@@ -4572,6 +4574,10 @@ section.vendors {
 
       p {
         font-size: 18px;
+      }
+
+      &:first-child {
+        border-top: none;
       }
     }
   }
