@@ -25,12 +25,11 @@ $CS = get_field('coming_soon');
 
 				<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
-					<?php if( $CS[0] == 'soon' ) { ?>
+					<?php if( !empty($CS) && $CS[0] === 'soon' ) { ?>
 						<section class="coming-soon">
 							<div>Coming Soon</div>
 						</section>
 					<?php } else { ?>
-						
 						<section class="teasers">
 							<?php get_template_part('parts/flexible-content'); ?>
 						</section>

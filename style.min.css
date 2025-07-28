@@ -2307,7 +2307,7 @@ section.vendors div.ven img{width:100%}
 .feeds-wrapper .columns{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .feeds-wrapper .column{width:100%;margin:0 0 30px;position:relative}
 .feeds-wrapper .column .inner{width:100%;float:left}
-.feeds-wrapper .parent-wrap{width:100%;margin-left:0;margin-right:-10px;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.feeds-wrapper .parent-wrap{width:100%;margin-left:0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;gap:30px}
 .feeds-wrapper div.image{width:100%;float:left;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48}
 .feeds-wrapper figure{width:100%;float:left;margin:0;background-size:cover;background-position:center;background-repeat:no-repeat;background-color:#215d48;-webkit-transition:all ease .3s;transition:all ease .3s}
 .feeds-wrapper figure a{display:block;width:100%;float:left}

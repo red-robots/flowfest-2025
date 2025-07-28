@@ -4089,8 +4089,9 @@ section.vendors {
     width: 100%;
     // margin-left: -10px;
     margin-left: 0;
-    margin-right: -10px;
+    //margin-right: -10px;
     @include flexgroup();
+    gap: 30px;
   }
   div.image {
     width: 100%;
