@@ -382,7 +382,7 @@ header.site-header {
     font-size: 18px;
     font-weight: 400;
     line-height: 50px;
-    background: $color_lime1;
+    background: $color_blue;
     height: 50;
     padding: 0 35px;
     width: 100%;
@@ -400,7 +400,7 @@ header.site-header {
       display: block;
       width: 0;
       height: 0;
-      border-left: 28px solid $color_lime1;
+      border-left: 28px solid $color_blue;
       border-top: 25px solid transparent;
       border-bottom: 25px solid transparent;
       position: absolute;
@@ -1858,8 +1858,16 @@ section.home-cards {
       margin: 0 15px;
     }
   }
-  /*** New Homepage END ***/
 }
+/*** New Homepage END ***/
+
+/*** New Yoga Immersion ***/
+.yoga-immersion {
+
+}
+
+
+/*** New Yoga Immersion END ***/
 
 section.homepage-cards {
   background: $color1;

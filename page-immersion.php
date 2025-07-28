@@ -1,6 +1,6 @@
 <?php 
 /**
- * Template Name: New Homepage
+ * Template Name: Yoga Immersion
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -8,35 +8,31 @@
  */
 
 get_header('new'); ?>
-<div id="primary" class="home-content content-area-full new-home">
+<div id="primary" class="home-content content-area-full yoga-immersion">
 	<main id="main" class="site-main" role="main">
 
-		<?php while ( have_posts() ) : the_post(); ?>
+	<?php while ( have_posts() ) : the_post(); ?>
 
       <?php if( get_the_content() ) { ?>
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-          <div class="entry-content text-center">
-            <h1 class="pagetitle lime"><?php the_title(); ?></h1>
-            <div>
-              <?php the_content(); ?>
-            </div>
-            <?php
-              if( have_rows('buttons_main_content') ):
-                $i = 1;
-            ?>
-              <div class="buttons-content">
-                <?php while( have_rows('buttons_main_content') ): the_row(); 
-                  $button = get_sub_field('button_content');
-                  $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
-                  $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
-                  $button_target = (isset($button['target']) && $button['target']) ? $button['target'] : '_self';
-                ?>
-                  <a href="<?php echo $button_link; ?>" target="<?php echo $button_target; ?>" class="button_<?php echo $i; ?>"><?php echo $button_text; ?></a>
-                <?php $i++; endwhile; ?>
-              </div>
-            <?php endif; ?>
+		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+			<div class="entry-content text-center">
+                <h1 class="pagetitle lime"><?php the_title(); ?></h1>
+			<div>
+            <?php the_content(); ?>
           </div>
-        </article>
+          <?php
+            $register_btn = get_field('register_button');
+
+            if( $register_btn ):
+                $register_btn_text = (isset($register_btn['title']) && $register_btn['title']) ? $register_btn['title'] : '';
+                $register_btn_link = (isset($register_btn['url']) && $register_btn['url']) ? $register_btn['url'] : '';
+                $register_btn_target = (isset($register_btn['target']) && $register_btn['target']) ? $register_btn['target'] : '_self';
+          ?>
+            <div class="buttons-content">
+                <a href="<?php echo $register_btn_link; ?>" target="<?php echo $register_btn_target; ?>" class="button_<?php echo $i; ?>"><?php echo $register_btn_text; ?></a>
+            </div>
+          <?php endif; ?>
+		</article>
       <?php } ?>
 
     <!-- Festival Schedule -->
