@@ -52,17 +52,7 @@
   font-style: normal;
 }
 
-@font-face {
-font-family:"podium-sharp-variable";
-src:url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff2"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("woff"),url("https://use.typekit.net/af/6ef228/0000000000000000774b8f79/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=i4&v=3") format("opentype");
-font-display:auto;font-style:italic;font-weight:100 1000;font-stretch:normal;
-}
-
-@font-face {
-font-family:"podium-sharp-variable";
-src:url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/l?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff2"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/d?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("woff"),url("https://use.typekit.net/af/eb8b67/0000000000000000774be984/30/a?primer=7cdcb44be4a7db8877ffa5c0007b8dd865b3bbc383831fe2ea177f62257a9191&fvd=n4&v=3") format("opentype");
-font-display:auto;font-style:normal;font-weight:100 1000;font-stretch:normal;
-}
+@import url("https://use.typekit.net/zzb0tjr.css");
 
 $color_link: royalblue;
 $color_link_visited: purple;
@@ -107,7 +97,8 @@ $font2: 'CHUMI CHAMI', sans-serif;
 $font3: 'Tan Nimbus', 'Trebuchet MS', sans-serif;
 $font_code: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
 $font_pre: "Courier 10 Pitch", Courier, monospace;
-$font-brandon-regular: 'Brandon';
+//$font-brandon-regular: 'Brandon';
+$font-brandon-regular: 'brandon-grotesque';
 $font-brandon-regular-italic: 'Brandon Italic';
 $font-brandon-medium: 'Brandon Medium';
 $font-brandon-medium-italic: 'Brandon Medium Italic';
