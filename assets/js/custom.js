@@ -59,28 +59,9 @@ jQuery(document).ready(function ($) {
       }
     }
   }); // Festival Schedule for New Homepage
-  // $('.festival-sched-loop').owlCarousel({
-  //   center: false,
-  //   items: 2,
-  //   nav: true,
-  //   loop: true,
-  //   margin: 15,
-  //   autoplay:true,
-  //   smartSpeed: 1000,
-  //   autoplayTimeout:5000,
-  //   autoplayHoverPause: true,
-  //   responsive:{
-  //     0:{
-  //       items:1
-  //     },
-  //     786:{
-  //       items:2
-  //     }
-  //   }
-  // });
 
   var swiper = new Swiper(".festival-sched-swiper", {
-    slidesPerView: 2,
+    slidesPerView: 3,
     spaceBetween: 30,
     speed: 1000,
     navigation: {
@@ -96,44 +77,21 @@ jQuery(document).ready(function ($) {
     },
     // Responsive breakpoints
     breakpoints: {
-      // when window width is >= 640px
+      // when window width is >= 320px
       320: {
         slidesPerView: 1,
         spaceBetween: 20
       },
-      640: {
+      768: {
         slidesPerView: 2,
+        spaceBetween: 40
+      },
+      1140: {
+        slidesPerView: 3,
         spaceBetween: 40
       }
     }
-  }); // $('.festival-sched-loop').slick({
-  //   arrows: true,
-  //   dots: true,
-  //   infinite: true,
-  //   slidesToShow: 2,
-  //   slidesToScroll: 1,
-  //   autoplay: true,
-  //   autoplaySpeed: 2000,
-  //   responsive: [
-  //     {
-  //       breakpoint: 768,
-  //       settings: {
-  //         centerMode: fasle,
-  //         centerPadding: '40px',
-  //         slidesToShow: 2
-  //       }
-  //     },
-  //     {
-  //       breakpoint: 480,
-  //       settings: {
-  //         centerMode: true,
-  //         centerPadding: '40px',
-  //         slidesToShow: 1
-  //       }
-  //     }
-  //   ]
-  // });
-
+  });
   $('.sponsors-loop').owlCarousel({
     center: false,
     items: 4,
