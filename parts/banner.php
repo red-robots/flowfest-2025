@@ -151,15 +151,26 @@ if ( is_singular( get_post_type() ) && in_array(get_post_type(),$excludePostType
 					<?php } elseif( $featuredType=='video' && ($row['video']||$row['library_video']) ) { ?>
 					<?php
 						// echo '<pre>';
-						// print_r($row['library_video']);
+						// print_r($row['library_mobile_video']);
 						// echo '</pre>';
 
-						$media_link = $row['library_video']['url'];					
+						$media_link = $row['library_video']['url'];
+						$media_link_mobile = '';
+
+						if( $row['library_mobile_video'] ){
+							$media_link_mobile = $row['library_mobile_video']['url'];
+						}
 					?>
-						<video class="library-media" autoplay loop muted playsinline disableremoteplayback>
+						<video class="library-media <?php if( $media_link_mobile ) { echo 'library-media-desktop'; } ?>" autoplay loop muted playsinline disableremoteplayback>
 							<source src="<?php echo $media_link;?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
+						<?php if( $media_link_mobile ) { ?>
+							<video class="library-media library-media-mobile" autoplay loop muted playsinline disableremoteplayback>
+								<source src="<?php echo $media_link_mobile;?>" type="video/mp4">
+								Your browser does not support the video tag.
+							</video>
+						<?php } ?>
 					<?php } elseif($featuredType=='image' && $row['image']) { ?>
 							<li class="slideItem <?php echo $slideType; ?>">
 								<?php include(locate_template('parts/slideshow-overlay.php')); ?>

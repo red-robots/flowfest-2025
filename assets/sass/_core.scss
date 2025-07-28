@@ -1018,6 +1018,20 @@ footer.site-footer {
         height: auto;
         width: 100%;
         object-fit: fill;
+
+        &-desktop {
+          display: none;
+
+          @include xs {
+            display: block;
+          }
+        }
+
+        @include xs {
+          &-mobile {
+            display: none;
+          }
+        }
       }
 		}
 	}
@@ -2461,7 +2475,7 @@ body.popup-open {
         }
       }
       .description p {
-        margin: 15px 0;
+        margin: 15pxp 0;
       }
       a {
         color: $color_secondary;
