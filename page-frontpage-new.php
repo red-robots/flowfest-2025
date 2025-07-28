@@ -17,7 +17,7 @@ get_header('new'); ?>
 			<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 				<div class="entry-content text-center">
           <h1 class="pagetitle lime"><?php the_title(); ?></h1>
-					<div class="text-uppercase">
+					<div>
             <?php the_content(); ?>
           </div>
           <?php
@@ -163,7 +163,7 @@ get_header('new'); ?>
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <div class="text-uppercase text-center mb-40">
+          <div class="text-center mb-40">
             <?php echo $festival_content; ?>
           </div>
           <?php if($festival_link_text && $festival_url_link) { ?>

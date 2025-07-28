@@ -1962,8 +1962,8 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.festival-sched .festival-sched-list figure{margin:0;width:100%;height:265px;overflow:hidden}
 .home-content section.festival-sched .festival-sched-list figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 .home-content section.festival-sched .festival-sched-details{background-color:#fff;color:#07080a;padding:15px 40px;text-align:center}
-.home-content section.festival-sched .festival-sched-details h3{font-size:17px;text-transform:uppercase}
-.home-content section.festival-sched .festival-sched-details .contentDiv{font-size:10px;text-transform:uppercase;margin:15px 0;height:28px;overflow:hidden}
+.home-content section.festival-sched .festival-sched-details h3{font-size:17px}
+.home-content section.festival-sched .festival-sched-details .contentDiv{font-size:12px;margin:15px 0;height:34px;overflow:hidden}
 .home-content section.festival-sched .festival-sched-details .button-small a{font-size:10px;letter-spacing:1px;min-width:128px;padding:6px 18px}
 .home-content section.live-music{background-color:#fef8e0}
 .home-content section.live-music h2{color:#b2b662;margin-bottom:60px}
