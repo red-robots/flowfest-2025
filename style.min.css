@@ -2386,7 +2386,7 @@ html body.logged-in.admin-bar section.pagetitle{top:90px}
 #banner .static-banner .slides .library-media-desktop,#banner .flexslider .slides .library-media-desktop{display:block}
 #banner .static-banner .slides .library-media-mobile,#banner .flexslider .slides .library-media-mobile{display:none}
 .home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;padding:0}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column{width:45%}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column{width:46%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
@@ -2472,8 +2472,8 @@ section.tile-wrapper .tile .info{position:absolute;bottom:0;left:0}
 section.home-cards .card{width:50%}
 section.home-cards .card .overlay.o1,section.home-cards .card .overlay.o4,section.home-cards .card .overlay.o5,section.home-cards .card .overlay.o8,section.home-cards .card .overlay.o10{background-color:rgba(180,168,89,.7)}
 section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,section.home-cards .card .overlay.o6,section.home-cards .card .overlay.o7,section.home-cards .card .overlay.o9{background-color:rgba(213,108,34,.7)}
-.home-content section.live-music .live-music-artists.feeds-wrapper .column_half{width:48%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
+.home-content section.live-music .live-music-artists.feeds-wrapper .column_full+.column_half{width:48%}
 .home-content section.contact-info .flexwrap.half .flexcol{width:50%}
 .home-content .buttons-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:0 15px}
 section.homepage-cards .wrapper{max-width:85vw}

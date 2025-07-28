@@ -1664,17 +1664,11 @@ section.home-cards {
 
         &.feeds-wrapper .column {
           @include xs {
-            width: 45%;
+            width: 46%;
           }
 
           figure {
             height: 500px;
-          }
-
-          &_half {
-            @include tab {
-              width: 48%;
-            }
           }
 
           &_full {
@@ -1683,6 +1677,10 @@ section.home-cards {
             }
             @include tab {
               width: 100%;
+
+              + .column_half {
+                width: 48%;
+              }
             }
 
             .title {
