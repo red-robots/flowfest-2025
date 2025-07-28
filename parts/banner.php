@@ -161,12 +161,12 @@ if ( is_singular( get_post_type() ) && in_array(get_post_type(),$excludePostType
 							$media_link_mobile = $row['library_mobile_video']['url'];
 						}
 					?>
-						<video class="library-media <?php if( $media_link_mobile ) { echo 'library-media-desktop'; } ?>" autoplay loop muted playsinline disableremoteplayback>
+						<video class="library-media <?php if( $media_link_mobile ) { echo 'library-media-desktop'; } ?>" autoplay loop muted playsinline disableRemotePlayback>
 							<source src="<?php echo $media_link;?>" type="video/mp4">
 							Your browser does not support the video tag.
 						</video>
 						<?php if( $media_link_mobile ) { ?>
-							<video class="library-media library-media-mobile" autoplay loop muted playsinline disableremoteplayback>
+							<video class="library-media library-media-mobile" autoplay loop muted playsinline disableRemotePlayback>
 								<source src="<?php echo $media_link_mobile;?>" type="video/mp4">
 								Your browser does not support the video tag.
 							</video>

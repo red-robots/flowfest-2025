@@ -1774,6 +1774,7 @@ body{font-family:"Brandon";font-size:20px;line-height:1.4;background-color:#fef8
 body.new-homepage{padding-top:90px}
 body.new-homepage.logged-in.admin-bar header.site-header{top:32px}
 body.new-homepage.logged-in.admin-bar .redtag{top:122px !important}
+body #controller,body .vsc-controller{display:none !important}
 body.page li.home{display:none}
 body.home li.home{display:inline-block}
 html body.logged-in.admin-bar #wpadminbar{position:fixed}
@@ -1806,10 +1807,10 @@ header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1
 .logo a{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-ms-flex-line-pack:center;align-content:center;padding:5px 0}
 .logo a img{width:auto;height:70px;position:relative;left:-1px}
 .redtag{position:fixed;top:90px !important;left:0;z-index:50;-webkit-box-shadow:-12px 8px 17px rgba(0,0,0,.3);box-shadow:-12px 8px 17px rgba(0,0,0,.3);-webkit-transition:all ease .3s;transition:all ease .3s}
-.redtag .registerBtn{display:inline-block;text-decoration:none;color:#fff !important;text-transform:uppercase;font-family:"Lato",sans-serif;font-size:18px;font-weight:400;line-height:50px;background:#ba0d30;height:50;padding:0 35px;width:100%;text-align:center;position:relative;bottom:0;left:0}
-.redtag .registerBtn:after{content:"";display:block;width:0;height:0;border-left:28px solid #ba0d30;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;top:0;right:-28px;-webkit-transition:all ease .3s;transition:all ease .3s}
-.redtag .registerBtn:hover,.redtag .registerBtn:focus{background:#000}
-.redtag .registerBtn:hover:after,.redtag .registerBtn:focus:after{border-left-color:#000}
+.redtag .registerBtn{display:inline-block;text-decoration:none;color:#fff !important;text-transform:uppercase;font-family:"Lato",sans-serif;font-size:18px;font-weight:400;line-height:50px;background:#b2b662;height:50;padding:0 35px;width:100%;text-align:center;position:relative;bottom:0;left:0}
+.redtag .registerBtn:after{content:"";display:block;width:0;height:0;border-left:28px solid #b2b662;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;top:0;right:-28px;-webkit-transition:all ease .3s;transition:all ease .3s}
+.redtag .registerBtn:hover,.redtag .registerBtn:focus{background:#215d48}
+.redtag .registerBtn:hover:after,.redtag .registerBtn:focus:after{border-left-color:#215d48}
 body.home h1.page-title{display:none}
 nav.main-navigation{margin-top:50px;width:auto;text-align:center}
 nav.main-navigation ul.menu{padding:0;margin:0}
@@ -1993,10 +1994,10 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content .button a:hover{background:#13648d}
 .home-content .buttons-content{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-ms-flex-direction:column;flex-direction:column}
 .home-content .buttons-content a{background-color:#215d48;border-radius:10px;color:#fff;display:inline-block;font-size:15px;margin:10px 15px;min-width:170px;padding:9px 18px;text-decoration:none;text-transform:uppercase}
-.home-content .buttons-content a.button_1{background-color:#ba0e2f}
-.home-content .buttons-content a.button_2{background-color:#85a79b}
-.home-content .buttons-content a.button_3{background-color:#b2b662}
-.home-content .buttons-content a:hover,.home-content .buttons-content a:focus{background-color:#13648d}
+.home-content .buttons-content a.button_1{background-color:#13648d}
+.home-content .buttons-content a.button_2{background-color:#b2b662}
+.home-content .buttons-content a.button_3{background-color:#85a79b}
+.home-content .buttons-content a:hover,.home-content .buttons-content a:focus{background-color:#5298a7}
 section.homepage-cards{background:#afb660}
 section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
