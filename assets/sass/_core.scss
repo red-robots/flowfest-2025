@@ -1939,9 +1939,9 @@ section.home-cards {
           height: 485px;
           overflow: hidden;
 
-          @include tab {
-            height: 720px;
-          }
+          // @include tab {
+          //   height: 720px;
+          // }
 
           img {
             width: 100%;
