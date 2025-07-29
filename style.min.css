@@ -2304,7 +2304,7 @@ section.schedule-activities .sched-content .popup-content .button-small a{color:
 .mobile-navigation.navigation-forall{display:block}
 .mobile-navigation ul.menu{width:100%}
 .mobile-navigation ul.menu>li.current_page_ancestor>ul{display:block !important}
-.mobile-navigation ul.menu>li>a:focus,.mobile-navigation ul.menu>li.current_page_item>a,.mobile-navigation ul.menu>li.current_page_ancestor>a{background:#fef8e0;color:#215d48 !important}
+.mobile-navigation ul.menu>li>a:focus,.mobile-navigation ul.menu>li.current_page_ancestor>a{background:#fef8e0;color:#215d48 !important}
 .mobile-navigation #primary-menu{margin:-10vh 0 0;padding:0;list-style:none}
 .mobile-navigation #primary-menu>li{width:100%;text-align:center}
 .mobile-navigation #primary-menu>li>a{display:block;text-decoration:none;font-size:1.65rem;font-weight:normal;color:#fef8e0;padding:15px 25px 13px}

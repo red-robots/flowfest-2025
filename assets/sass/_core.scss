@@ -3986,7 +3986,7 @@ body.logged-in.admin-bar {
     display: block!important;
   }
   ul.menu > li > a:focus,
-  ul.menu > li.current_page_item > a,
+  // ul.menu > li.current_page_item > a,
   ul.menu > li.current_page_ancestor > a {
     background: $color_primary;
     color: $color_secondary!important;
