@@ -1952,7 +1952,7 @@ section.home-cards {
     color: $color_primary;
 
     h2 {
-      color: $color_primary;
+      color: $color_primary !important;
     }
 
     .collapsible {
