@@ -2002,6 +2002,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .yoga-immersion .instructor-title{color:#13648d;font-size:1.4em;margin-top:10px}
 .yoga-immersion .instructor .flexwrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
 .yoga-immersion .instructor .flexwrap .flexcol{width:100%}
+.yoga-immersion .instructor .flexwrap .flexcol-content h3{font-size:2.3em}
 .yoga-immersion .instructor .flexwrap .text{padding:20px;width:100%}
 .yoga-immersion .instructor .flexwrap .photo{width:100%}
 .yoga-immersion .instructor .flexwrap .photo figure{margin:0;width:100%;height:485px;overflow:hidden}
