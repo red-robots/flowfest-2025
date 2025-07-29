@@ -120,7 +120,7 @@ get_header('new'); ?>
         $live_music_url = (isset($live_music_link['url']) && $live_music_link['url']) ? $live_music_link['url'] : '';
         $live_music_link_target = (isset($live_music_link['target']) && $live_music_link['target']) ? $live_music_link['target'] : '_self';
     ?>
-      <section class="live-music">
+      <section id="live-music" class="live-music">
         <div class="wrapper">
           <h2 class="pagetitle text-center"><?php echo $live_music_title; ?></h2>
           <div class="live-music-artists feeds-wrapper cf">
