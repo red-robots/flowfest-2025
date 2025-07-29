@@ -115,6 +115,10 @@ get_header('new'); ?>
     <?php
         if( have_rows('live_music_artists') ){
         $live_music_title = get_field('live_music_title');
+        $live_music_link = get_field('live_music_button');
+        $live_music_link_text = (isset($live_music_link['title']) && $live_music_link['title']) ? $live_music_link['title'] : '';
+        $live_music_url = (isset($live_music_link['url']) && $live_music_link['url']) ? $live_music_link['url'] : '';
+        $live_music_link_target = (isset($live_music_link['target']) && $live_music_link['target']) ? $live_music_link['target'] : '_self';
     ?>
       <section class="live-music">
         <div class="wrapper">
@@ -122,7 +126,7 @@ get_header('new'); ?>
           <div class="live-music-artists feeds-wrapper cf">
             <?php
               $count = 1;
-              $rows = get_field('live_music_artists'); 
+              $rows = get_field('live_music_artists');
               $count_column = count($rows);
 
               while( have_rows('live_music_artists') ): the_row();
@@ -192,6 +196,12 @@ get_header('new'); ?>
             ?>
           </div>
         </div>
+        
+        <?php if($live_music_link_text && $live_music_url) { ?>
+          <div class="text-center">
+            <a class="button-big" href="<?php echo $live_music_url; ?>" target="<?php echo $live_music_link_target; ?>"><?php echo $live_music_link_text; ?></a>
+          </div>
+        <?php } ?>
       </section>
     <?php } ?>
     <!-- Live Music END -->
