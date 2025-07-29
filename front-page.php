@@ -1,4 +1,4 @@
-<?php get_header('new'); ?>
+<?php get_header(); ?>
 <div id="primary" class="home-content content-area-full new-home">
 	<main id="main" class="site-main" role="main">
 
@@ -206,4 +206,4 @@
 	</main><!-- #main -->
 </div><!-- #primary -->
 <?php
-get_footer('new');
+get_footer();

@@ -16,6 +16,8 @@
 <link rel="manifest" href="<?php bloginfo('template_url'); ?>/images/site.webmanifest">
 <link rel="stylesheet" href=https://use.typekit.net/zzb0tjr.css>
 
+
+
 <!-- Meta Pixel Code -->
 <script>
 !function(f,b,e,v,n,t,s)
@@ -37,7 +39,7 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 <?php wp_head(); ?>
 </head>
 
-<body <?php body_class('new-homepage'); ?>>
+<body <?php body_class(); ?>>
 <div id="overlay"></div>
 <div id="popup-content"></div>
 
@@ -50,36 +52,38 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 
 <div id="page" class="site cf">
 	<a class="skip-link sr" href="#content"><?php esc_html_e( 'Skip to content', 'bellaworks' ); ?></a>	
-  <header id="masthead" class="site-header site-header-new" role="banner">
-		<div class="wrapper header-flex">
-        <div id="site-logo" class="logo logo-center">
+  <header id="masthead" class="site-header floral-pattern" role="banner">
+		<div class="wrapper head-flex">
+        <div id="site-logo" class="logo logo-left">
           <a href="<?php bloginfo('url'); ?>">
            <img src="<?php bloginfo('template_url'); ?>/images/logo.svg">
           </a>
         </div>
   			<nav id="site-navigation" class="main-navigation desktop-navigation full-width-dropdown" role="navigation">
   				<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_id' => 'primary-menu', 'container_class'=>'primary-menu-wrap','link_before'=>'<span><b>','link_after'=>'</b></span>' ) ); ?>
-  			</nav>
+  			</nav><!-- #site-navigation -->
+			<div class="right-head">&nbsp;</div>
+
+      <?php if($register_button_text && $register_button_link) { ?>
+        <?php if( !is_page(1422) ) { ?>
+          <div class="reg">
+            <a href="<?php echo $register_button_link; ?>" target="<?php echo $register_button_target; ?>"><span><?php echo $register_button_text; ?></span></a>
+          </div>
+        <?php } ?>
+      <?php } ?>
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-  <?php if($register_button_text && $register_button_link) { ?>
-    <?php if( !is_page(1422) ) { ?>
-      <div class="redtag">
-        <a href="<?php echo $register_button_link; ?>" target="<?php echo $register_button_target; ?>" class="registerBtn"><?php echo $register_button_text; ?></a>
-      </div>
-    <?php } ?>
-  <?php } ?>
+  <span id="mobile-menu-toggle"><span class="bar"><span></span></span></span>
+  <div class="mobile-navigation floral-pattern"></div>
 
-  <span id="mobile-menu-toggle" class="main-menu"><span class="bar"><span></span></span></span>
-  <div class="mobile-navigation navigation-forall"></div>
+	<?php // get_template_part('parts/pagetitle');?>
+	<?php 
+  $CS = get_field('coming_soon');
 
-  <?php 
-    $CS = get_field('coming_soon');
-
-    if( $CS == null ) {
-      get_template_part('parts/banner');
-    } 
+  if( $CS == null ) {
+    get_template_part('parts/banner');
+  } 
   ?>
 
 	<div id="content" class="site-content">

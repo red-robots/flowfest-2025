@@ -21,8 +21,8 @@
 					</a>
 				</div>
 			<?php } ?>
-			<nav class="footer-social-media">
-				<?php echo do_shortcode('[display_social_media]'); ?>
+			<nav class="footer">
+				<?php wp_nav_menu( array( 'theme_location' => 'footer', 'menu_id' => 'footer-menu' ) ); ?>
 			</nav>
 			<!-- <div class="empty">&nbsp;</div> -->
 		</div><!-- wrapper foot-flex -->
