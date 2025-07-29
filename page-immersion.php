@@ -143,7 +143,7 @@ get_header('new'); ?>
             </div>
           </div>
         <?php } ?>
-        <div class="flexcol">
+        <div class="flexcol flexcol-content">
           <h3 class="pagetitle"><?php echo $instructor_name; ?></h3>
           <div>
             <?php if ($instructor_details) { ?>

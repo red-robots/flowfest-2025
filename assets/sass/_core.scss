@@ -1903,6 +1903,10 @@ section.home-cards {
         width: 100%;
         @include tab {
           width: 50%;
+
+          &-content {
+            padding-left: 40px;
+          }
         }
       }
 
@@ -3501,20 +3505,25 @@ section.schedule-activities {
       padding-top: 10px;  
 
       .sched-title {
-        margin: 8px 0;
+        margin: 4px 0 8px;
         .time,
         .name {
           background-color: $color_lightgreen1;
           color: $color_white;
+          font-size: 14px;
           padding: 0;
         }
         a {
           color: $color_white;
+          font-size: 14px;
         }
         .plus-minus-toggle {
           &:before,
           &:after {
             background: $color_secondary;
+            height: 3px;
+            width: 13px;
+            left: 4px;
           }
         }
       }
@@ -3528,7 +3537,7 @@ section.schedule-activities {
         padding: 0 40px 0 15px;
 
         .sched-title {
-          margin: 15px 0;
+          margin: 10px 0;
           .name {
             padding-left: 10px;
           }
