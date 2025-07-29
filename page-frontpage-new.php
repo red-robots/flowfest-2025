@@ -153,7 +153,7 @@ get_header('new'); ?>
                 <?php
                   if($spotify){ ?>
                   <div class="button-small">
-                    <a href="<?php echo $pagelink; ?>" data-id="<?php echo $post_id ?>" class="<?php echo $popup; ?> see-details">See Details</a>
+                    <a href="<?php echo $pagelink; ?>" data-id="<?php echo $post_id ?>" class="<?php echo $popup; ?>">See Details</a>
                   </div>
                 <?php
                   }

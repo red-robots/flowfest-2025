@@ -257,45 +257,45 @@ jQuery(document).ready(function ($) {
   // });
 
   /* Artists - Popup */
+  // $('.column.post-type-artists .button-small .see-details').on("click",function(e){
+  //   e.preventDefault();
+  //   var id = $(this).attr('data-id');
+  //   $.ajax({
+  //     url : frontajax.ajaxurl,
+  //     type : 'post',
+  //     dataType : "json",
+  //     data : {
+  //       action : 'getPostData',
+  //       post_id : id
+  //     },
+  //     beforeSend:function(){
+  //       $('#loader').show();
+  //     },
+  //     success : function( response ) {
+  //       if(response.content) {
+  //         $('#popup-content').html(response.content);
+  //         $('#popup-content').addClass('show');
+  //         $('#overlay').addClass('show');
+  //         $('body').addClass('popup-open');
+  //       } 
+  //     },
+  //     complete: function() {
+  //       $('#loader').hide();
+  //       $(document).on('click','#overlay',function(){
+  //         $('#popup-content').removeClass('show');
+  //         $('body').removeClass('popup-open');
+  //         $('#overlay').removeClass('show');
+  //       });
+  //       $('#closePopUp').on('click',function(){
+  //         $('#popup-content').removeClass('show');
+  //         $('#overlay').removeClass('show');
+  //         $('body').removeClass('popup-open');
+  //         $('#popup-content').html("");
+  //       });
+  //     }
+  //   });
+  // });
 
-  $('.column.post-type-artists .button-small .see-details').on("click", function (e) {
-    e.preventDefault();
-    var id = $(this).attr('data-id');
-    $.ajax({
-      url: frontajax.ajaxurl,
-      type: 'post',
-      dataType: "json",
-      data: {
-        action: 'getPostData',
-        post_id: id
-      },
-      beforeSend: function beforeSend() {
-        $('#loader').show();
-      },
-      success: function success(response) {
-        if (response.content) {
-          $('#popup-content').html(response.content);
-          $('#popup-content').addClass('show');
-          $('#overlay').addClass('show');
-          $('body').addClass('popup-open');
-        }
-      },
-      complete: function complete() {
-        $('#loader').hide();
-        $(document).on('click', '#overlay', function () {
-          $('#popup-content').removeClass('show');
-          $('body').removeClass('popup-open');
-          $('#overlay').removeClass('show');
-        });
-        $('#closePopUp').on('click', function () {
-          $('#popup-content').removeClass('show');
-          $('#overlay').removeClass('show');
-          $('body').removeClass('popup-open');
-          $('#popup-content').html("");
-        });
-      }
-    });
-  });
   /* Artists - Popup for Learn More */
 
   $('.column.post-type-artists .more-details').on("click", function (e) {
