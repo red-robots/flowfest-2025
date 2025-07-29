@@ -2231,7 +2231,7 @@ section.schedule-activities .sched-accordion.yoga-immersion .sched-title{margin:
 section.schedule-activities .sched-accordion.yoga-immersion .sched-title .time,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name{background-color:#95b7ab;color:#fff;padding:0}
 section.schedule-activities .sched-accordion.yoga-immersion .sched-title a{color:#fff}
 section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:before,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:after{background:#215d48}
-section.schedule-activities .sched-accordion.yoga-immersion.no-plus{cursor:none;padding-right:15px}
+section.schedule-activities .sched-accordion.yoga-immersion.no-plus{padding-right:15px}
 section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
 section.schedule-activities .sched-accordion.active.practices{background-color:#215d48}
 section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#215d48}
