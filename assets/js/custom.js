@@ -166,7 +166,13 @@ jQuery(document).ready(function ($) {
   /* Smooth Scroll */
 
   $('a[href*="#"]').not('[href="#"]').not('[href="#0"]').click(function (event) {
-    // On-page links
+    if ($('body').hasClass('mobile-menu-open')) {
+      $('body').removeClass('mobile-menu-open');
+      $('#mobile-menu-toggle').removeClass('active');
+      $('.mobile-navigation').removeClass('active');
+    } // On-page links
+
+
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       // Figure out element to scroll to
       var target = $(this.hash);
