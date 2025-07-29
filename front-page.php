@@ -114,7 +114,7 @@
       <section id="live-music" class="live-music">
         <div class="wrapper">
           <h2 class="pagetitle text-center"><?php echo $live_music_title; ?></h2>
-          <div class="live-music-artists feeds-wrapper cf">
+          <div class="live-music-artists feeds-wrapper">
             <?php
               $count = 1;
               $rows = get_field('live_music_artists');
