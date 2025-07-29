@@ -1955,6 +1955,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content p{color:#07080a}
 .home-content section{padding:60px 15px 80px}
 .home-content section h2{color:#fef8e0;margin-bottom:60px}
+.home-content section h2.text-green{color:#215d48}
 .home-content section .mb-40{margin-bottom:40px}
 .home-content section.festival-sched{background-color:#85a79b;color:#fff}
 .home-content section.festival-sched .festival-sched-list{border-radius:10px;overflow:hidden}
@@ -1993,6 +1994,21 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content .buttons-content a.button_2{background-color:#b2b662}
 .home-content .buttons-content a.button_3{background-color:#85a79b}
 .home-content .buttons-content a:hover,.home-content .buttons-content a:focus{background-color:#5298a7}
+.yoga-immersion .schedule-activities{background-color:#85a79b;color:#fff}
+.yoga-immersion .schedule-activities .schedule-list{margin-bottom:40px}
+.yoga-immersion .schedule-activities .schedule-title{font-style:italic;text-transform:uppercase}
+.yoga-immersion .instructor h2{color:#b2b662}
+.yoga-immersion .instructor .flexwrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.yoga-immersion .instructor .flexwrap .flexcol{width:100%}
+.yoga-immersion .instructor .flexwrap .text{padding:20px;width:100%}
+.yoga-immersion .instructor .flexwrap .photo{width:100%}
+.yoga-immersion .instructor .flexwrap .photo figure{margin:0;width:100%;height:485px;overflow:hidden}
+.yoga-immersion .instructor .flexwrap .photo figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
+.yoga-immersion .instructor .flexwrap.full .text,.yoga-immersion .instructor .flexwrap.full .photo{width:100%}
+.yoga-immersion .faqs-race{background-color:#85a79b;color:#fef8e0}
+.yoga-immersion .faqs-race h2{color:#fef8e0}
+.yoga-immersion .faqs-race .collapsible{border-color:#fef8e0}
+.yoga-immersion .faqs-race .collapsible .option-name span.arrow:after,.yoga-immersion .faqs-race .collapsible .option-name span.arrow:before{background-color:#fef8e0}
 section.homepage-cards{background:#afb660}
 section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
@@ -2209,6 +2225,12 @@ section.schedule-activities .sched-accordion.workshops{background-color:#13648d}
 section.schedule-activities .sched-accordion.workshops .sched-title .time,section.schedule-activities .sched-accordion.workshops .sched-title .name{background-color:#13648d}
 section.schedule-activities .sched-accordion.festival{background-color:#afb660}
 section.schedule-activities .sched-accordion.festival .sched-title .time,section.schedule-activities .sched-accordion.festival .sched-title .name{background-color:#afb660}
+section.schedule-activities .sched-accordion.yoga-immersion{background-color:#95b7ab;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:10px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title{margin:8px 0}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .time,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name{background-color:#95b7ab;color:#fff;padding:0}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title a{color:#fff}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:before,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:after{background:#215d48}
+section.schedule-activities .sched-accordion.yoga-immersion.no-plus{cursor:none;padding-right:15px}
 section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
 section.schedule-activities .sched-accordion.active.practices{background-color:#215d48}
 section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#215d48}
@@ -2387,6 +2409,9 @@ html body.logged-in.admin-bar section.pagetitle{top:90px}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
+section.schedule-activities .sched-accordion.yoga-immersion{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0 40px 0 15px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title{margin:15px 0}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name{padding-left:10px}
 section.schedule-activities .indication{font-size:20px}
 .feeds-wrapper .column{width:48.3%}
 }@media all and (min-width:1024px){.fancybox__container{--carousel-button-width:48px;--carousel-button-height:48px;--carousel-button-svg-width:27px;--carousel-button-svg-height:27px}
@@ -2473,6 +2498,11 @@ section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,sectio
 .home-content section.contact-info .flexwrap.half .flexcol{width:50%}
 .home-content .buttons-content a{min-width:170px;width:auto}
 .home-content .buttons-content{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;margin:0 15px}
+.yoga-immersion .instructor .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.yoga-immersion .instructor .flexwrap .flexcol{width:50%}
+.yoga-immersion .instructor .flexwrap .text{width:60%;padding:4vw}
+.yoga-immersion .instructor .flexwrap .photo{padding-right:40px}
+.yoga-immersion .instructor .flexwrap .photo figure{height:720px}
 section.homepage-cards .wrapper{max-width:85vw}
 section.homepage-cards .card{width:33.333%}
 section.homepage-cards.cols4 .wrapper{max-width:85vw}

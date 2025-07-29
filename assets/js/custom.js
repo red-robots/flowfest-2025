@@ -448,7 +448,7 @@ jQuery(document).ready(function ($) {
   });
   /* SCHEDULE */
 
-  $(document).on('click', '.sched-accordion .sched-title', function () {
+  $(document).on('click', '.sched-accordion .show-sched', function () {
     var elem = $(this);
     elem.parent().toggleClass('active');
     var id = elem.attr('data-id');

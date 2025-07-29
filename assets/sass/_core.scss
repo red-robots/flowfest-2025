@@ -1586,6 +1586,10 @@ section.home-cards {
     h2 {
       color: $color_primary;
       margin-bottom: 60px;
+
+      &.text-green {
+        color: $color_secondary;
+      }
     }
 
     .mb-40 {
@@ -1715,6 +1719,7 @@ section.home-cards {
         font-family: $font-roylands;
         margin: 0 0 5px;
       }
+      
       p {
         color: $color_grey;
         margin: 0;
@@ -1864,9 +1869,104 @@ section.home-cards {
 /*** New Yoga Immersion ***/
 .yoga-immersion {
 
+  /*** Schedule ***/
+  .schedule-activities {
+    background-color: $color_lightgreen;
+    color: $color_white;
+
+    .schedule-list {
+      margin-bottom: 40px;
+    }
+
+    .schedule-title {
+      font-style: italic;
+      text-transform: uppercase;
+    }
+
+    
+  }
+
+  /*** FAQ ***/
+  .instructor {
+    h2 {
+      color: $color_lime1;
+    }
+
+    .flexwrap {   
+      @include flexbox-direction(column);   
+
+      @include tab {
+        @include flexbox-direction(row);
+      }
+
+      .flexcol {
+        width: 100%;
+        @include tab {
+          width: 50%;
+        }
+      }
+
+      .text {
+        padding: 20px;
+        width: 100%;
+        @include tab {
+          width: 60%;
+          padding: 4vw;
+        }
+      }
+      .photo {
+        width: 100%;
+
+        @include tab {
+          padding-right: 40px;
+        }
+
+        figure {
+          margin: 0;
+          width: 100%;
+          height: 485px;
+          overflow: hidden;
+
+          @include tab {
+            height: 720px;
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+      &.full {
+        .text, .photo {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  /*** FAQ ***/
+  .faqs-race {
+    background-color: $color_lightgreen;
+    color: $color_primary;
+
+    h2 {
+      color: $color_primary;
+    }
+
+    .collapsible {
+      border-color: $color_primary;
+
+      .option-name span.arrow {
+        &:after,
+        &:before {
+          background-color: $color_primary;
+        }
+      }
+    }
+  }
 }
-
-
 /*** New Yoga Immersion END ***/
 
 section.homepage-cards {
@@ -3384,6 +3484,49 @@ section.schedule-activities {
         .time,
         .name {
           background-color: $color1;
+        }
+      }
+    }
+
+    &.yoga-immersion {
+      background-color: $color_lightgrren1;
+      color: $color_white;
+      @include flexgroup();
+      @include flexbox-align-items(center);
+      padding-top: 10px;  
+
+      .sched-title {
+        margin: 8px 0;
+        .time,
+        .name {
+          background-color: $color_lightgrren1;
+          color: $color_white;
+          padding: 0;
+        }
+        a {
+          color: $color_white;
+        }
+        .plus-minus-toggle {
+          &:before,
+          &:after {
+            background: $color_secondary;
+          }
+        }
+      }
+      &.no-plus {
+        cursor: none;
+        padding-right: 15px;
+      }
+
+      @include xs {
+        @include flexbox-justify(space-between);
+        padding: 0 40px 0 15px;
+
+        .sched-title {
+          margin: 15px 0;
+          .name {
+            padding-left: 10px;
+          }
         }
       }
     }

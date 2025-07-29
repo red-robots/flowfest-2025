@@ -109,7 +109,7 @@ $CS = get_field('coming_soon');
                   <div class="border-bottom"></div>
                 <?php } else { ?>
                   <div class="sched-accordion <?php echo $cpt ?>">
-                    <a href="javascript:void(0)" class="sched-title" data-id="<?php echo $postid ?>">
+                    <a href="javascript:void(0)" class="sched-title show-sched" data-id="<?php echo $postid ?>">
                       <?php if ($time) { ?>
                         <span class="time"><?php echo $time ?></span>
                       <?php } else { ?>

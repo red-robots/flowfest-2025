@@ -13,192 +13,166 @@ get_header('new'); ?>
 
 	<?php while ( have_posts() ) : the_post(); ?>
 
-      <?php if( get_the_content() ) { ?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-			<div class="entry-content text-center">
-                <h1 class="pagetitle lime"><?php the_title(); ?></h1>
-			<div>
-            <?php the_content(); ?>
+    <?php if( get_the_content() ) { ?>
+      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+        <div class="entry-content text-center">
+          <h1 class="pagetitle lime"><?php the_title(); ?></h1>
+        <div>
+        <?php the_content(); ?>
           </div>
-          <?php
-            $register_btn = get_field('register_button');
-
-            if( $register_btn ):
-                $register_btn_text = (isset($register_btn['title']) && $register_btn['title']) ? $register_btn['title'] : '';
-                $register_btn_link = (isset($register_btn['url']) && $register_btn['url']) ? $register_btn['url'] : '';
-                $register_btn_target = (isset($register_btn['target']) && $register_btn['target']) ? $register_btn['target'] : '_self';
-          ?>
-            <div class="buttons-content">
-                <a href="<?php echo $register_btn_link; ?>" target="<?php echo $register_btn_target; ?>" class="button_<?php echo $i; ?>"><?php echo $register_btn_text; ?></a>
-            </div>
-          <?php endif; ?>
-		</article>
-      <?php } ?>
-
-    <!-- Festival Schedule -->
-    <?php
-        $festival_sched_title = get_field('festival_schedule_title');
-        $festival_content = get_field('festival_schedule_content');
-        $festival_link = get_field('festival_schedule_link');
-        $festival_link_text = (isset($festival_link['title']) && $festival_link['title']) ? $festival_link['title'] : '';
-        $festival_url_link = (isset($festival_link['url']) && $festival_link['url']) ? $festival_link['url'] : '';
-        $festival_link_target = (isset($festival_link['target']) && $festival_link['target']) ? $festival_link['target'] : '_self';
-
-        if($festival_sched_title) {
-    ?>
-      <section class="festival-sched">
-        <div class="wrapper">
-          <h2 class="pagetitle text-center"><?php echo $festival_sched_title; ?></h2>
-          <div class="swiper festival-sched-swiper">
             <?php
-              if( have_rows('festival_schedule') ):
+              $register_btn = get_field('register_button');
+
+              if( $register_btn ):
+                  $register_btn_text = (isset($register_btn['title']) && $register_btn['title']) ? $register_btn['title'] : '';
+                  $register_btn_link = (isset($register_btn['url']) && $register_btn['url']) ? $register_btn['url'] : '';
+                  $register_btn_target = (isset($register_btn['target']) && $register_btn['target']) ? $register_btn['target'] : '_self';
             ?>
-              <div class="festival-sched-content swiper-wrapper">
-                <?php while( have_rows('festival_schedule') ): the_row();
-                  $fest_title = get_sub_field('title');
-                  $fest_img = get_sub_field('image');
-                  $fest_content = get_sub_field('content');
-                  $fest_link = get_sub_field('link');
-                  $fest_link_text = (isset($fest_link['title']) && $fest_link['title']) ? $fest_link['title'] : '';
-                  $fest_url_link = (isset($fest_link['url']) && $fest_link['url']) ? $fest_link['url'] : '';
-                  $fest_link_target = (isset($fest_link['target']) && $fest_link['target']) ? $fest_link['target'] : '_self';
-                ?>
-                <div class="swiper-slide">
-                  <div class="festival-sched-list">
-                    <figure>
-                      <?php if( !empty($fest_img) ) { ?>
-                        <img src="<?php echo esc_url($fest_img['url']); ?>" alt="<?php echo esc_attr($fest_img['title']); ?>">
-                      <?php } ?>
-                    </figure>
-                    <div class="festival-sched-details">
-                      <h3 class="titleDiv">
-                        <?php echo $fest_title; ?>
-                      </h3>
-                      <div class="contentDiv">
-                        <?php echo $fest_content; ?>
-                      </div>
-                      <?php if($fest_link_text && $fest_url_link) { ?>
-                        <div class="text-center button-small">
-                          <a href="<?php echo $fest_url_link; ?>" target="<?php echo $fest_link_target; ?>"><?php echo $fest_link_text; ?></a>
-                        </div>
-                      <?php } ?>
-                    </div>
-                  </div>
-                </div>
-                <?php endwhile; ?>
-              </div> <!-- END carousel -->
-              <!-- If we need pagination -->
-              <div class="swiper-pagination"></div>
-            <?php endif; ?>
-          </div>
-          <!-- If we need navigation buttons -->
-          <div class="swiper-button-prev"></div>
-          <div class="swiper-button-next"></div>
-          <div class="text-center mb-40">
-            <?php echo $festival_content; ?>
-          </div>
-          <?php if($festival_link_text && $festival_url_link) { ?>
-            <div class="text-center">
-              <a href="<?php echo $festival_url_link; ?>" target="<?php echo $festival_link_target; ?>" class="button-big"><?php echo $festival_link_text; ?></a>
-            </div>
-          <?php } ?>
-        </div>
-      </section>
-    <?php } ?>
-    <!-- Festival Schedule END -->
-
-    <!-- Live Music -->
-    <?php
-        if( have_rows('live_music_artists') ){
-        $live_music_title = get_field('live_music_title');
-    ?>
-      <section class="live-music">
-        <div class="wrapper">
-          <h2 class="pagetitle text-center"><?php echo $live_music_title; ?></h2>
-          <div class="live-music-artists feeds-wrapper cf">
-            <?php
-              $count = 1;
-              $rows = get_field('live_music_artists'); 
-              $count_column = count($rows);
-
-              while( have_rows('live_music_artists') ): the_row();
-
-              $music_artist = get_sub_field('music_artist');
-              //$custom_field = get_field( 'field_name', $music_artist->ID );
-              $post_id = $music_artist-> ID;
-              $music_artist_title = get_the_title($post_id);
-              $thumbnail_id = get_post_thumbnail_id($post_id);
-              $featImage = wp_get_attachment_image_src($thumbnail_id,'large');
-              $imageStyle = ($featImage) ? ' style="background-image:url('.$featImage[0].')"':'';
-              $postType = get_post_type($post_id);
-              $postTypeTitle = 'post-type-'.$postType;
-              $pagelink = ($postType=='artists') ? 'javascript:void(0)' : get_permalink($post_id);
-              $popup = ($postType=='artists') ? 'popup-activity' : '';
-              $location_time = get_field('location_time', $post_id);
-              $spotify = get_field('spotify_embed', $post_id);
-              $column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
-            ?>
-            <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
-              <div class="inner">
-                <div class="image">
-                  <figure<?php echo $imageStyle ?>>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/square.png" class="helper" alt="">
-                  </figure>
-                </div>
-                <h4 class="title"><?php echo $music_artist_title; ?></h4>
-                <?php
-                  if($spotify){ ?>
-                  <div class="button-small">
-                    <a href="<?php echo $pagelink; ?>" data-id="<?php echo $post_id ?>" class="<?php echo $popup; ?> see-details">See Details</a>
-                  </div>
-                <?php
-                  }
-
-                  if( $location_time ){
-                  $j = 1;
-
-                  foreach( $location_time as $detail ) {
-                    $location = $detail['location'][0];
-                    $time = $detail['start_time'];
-                    $title = $detail['title'];
-
-                    if($count!=1 && $location && $time) {
-                ?>
-                  <div class="schedule">
-                    <div class="location"><?php echo $location; ?></div>
-                    <div class="time"><?php echo $time; ?></div>
-                  </div>
-                  <?php if($title){ ?>
-                    <!-- <div class="cf more-details" data-id="<?php echo $post_id; ?>" data-item="<?php echo $j; ?>">
-                      <a href="<?php echo $pagelink; ?>" class="learn-more">Learn More</a>
-                    </div> -->
-                  <?php
-                    }
-                    $j++; 
-                  }
-                }
-              }
-              ?>
+              <div class="buttons-content">
+                  <a href="<?php echo $register_btn_link; ?>" target="<?php echo $register_btn_target; ?>" class="button_<?php echo $i; ?>"><?php echo $register_btn_text; ?></a>
               </div>
-            </div>
-            <?php
-              $count++;
+            <?php endif; ?>
+      </article>
+    <?php } ?>
 
+    <!-- Schedule -->
+    <?php if( have_rows('schedule') ): ?>
+      <section class="schedule-activities">
+        <div class="wrapper">
+          <h2 class="pagetitle text-center">Schedule</h2>
+            <?php
+              while( have_rows('schedule') ): the_row();
+                $event_date = get_sub_field('event_date');
+                $event_date_complete = date('F j, Y',strtotime($event_date));
+                $event_day = ($event_date) ? date('l',strtotime($event_date)) : '';
+                $activities = get_sub_field('activities');
+
+                if($event_date) {
+            ?>
+              <div class="schedule-list">
+                <div class="schedule-title text-center">
+                  <?php echo  $event_date_complete .' - '. $event_day; ?>
+                </div>
+                <div class="activities">
+                  <?php
+                    if( have_rows('activities') ):
+                      foreach ($activities as $activity) {
+                        $time = (isset($activity['time']) && $activity['time']) ? $activity['time'] : '';
+                        $custom_title = $activity['custom_title'];
+                        $item = $activity['activity'];
+                        $postid = (isset($item->ID) && $item->ID) ? $item->ID : '';
+                        $dropdown = (isset($activity['dropdown_info'][0]) && $activity['dropdown_info'][0]=='Yes') ? true:false;
+                        $cpt = ($postid) ? get_post_type($postid) : 'other';
+                        $item_title = (isset($item->post_title) && $item->post_title) ? $item->post_title : '';
+                        if($custom_title) {
+                          $item_title = $custom_title;
+                        }
+                        if($cpt=='page') {
+                          $cpt='other';
+                        }
+                        if($postid) {
+                          $post_type_obj = get_post_type_object( get_post_type($postid) );
+                          $postTypeLabel = $post_type_obj->label;
+                          if($postTypeLabel=='Pages') {
+                            $postTypeLabel = 'Other';
+                          }
+                          $postTypeList[$cpt] = $postTypeLabel;
+                        }
+                        
+                        if ( $item ) { ?>
+                        <div class="item" data-posttypename="<?php echo $postTypeLabel ?>" data-posttypeslug="<?php echo $cpt ?>">
+                          <div class="sched-accordion <?php echo $cpt ?> <?php echo ($dropdown) ? 'has-plus' : 'no-plus'; ?>">
+                            <?php if ($time) { ?>
+                              <span class="time"><?php echo $time ?></span>
+                            <?php } else { ?>
+                              <span class="time-NA"></span>
+                            <?php } ?>
+
+                            <div class="sched-title <?php echo ($dropdown) ? 'show-sched' : ''; ?>" data-id="<?php echo $postid ?>">
+                              <?php if ($dropdown) { ?>
+                                <span class="name"><a class="<?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
+                                  <span class="plus-minus-toggle"></span>
+                              <?php } else { ?>
+                                <span class="name <?php echo $cpt ?>"><?php echo $item_title ?></span>
+                              <?php } ?>
+                            </div>
+                            <div class="sched-content"></div>
+                          </div>
+                      </div>
+                    <?php } ?>
+                  <?php } endif; ?>
+                </div>
+              </div>
+            <?php
+                }
               endwhile;
             ?>
-          </div>
+
+          
         </div>
       </section>
+
+    <?php
+      endif;
+    ?>
+    <!-- Schedule END -->
+
+    <!-- Instructor -->
+    <?php      
+      $instructor_name = get_field('instructor_name');
+      $instructor_details = get_field('instructor_details');
+      $instructor_image = get_field('instructor_image');
+
+      if($instructor_name || $instructor_image) {
+        $instructor_button = get_field('instructor_button');
+        $instructor_button_text = (isset($instructor_button['title']) && $instructor_button['title']) ? $instructor_button['title'] : '';
+        $instructor_button_url = (isset($instructor_button['url']) && $instructor_button['url']) ? $instructor_button['url'] : '';
+        $instructor_button_target = (isset($instructor_button['target']) && $instructor_button['target']) ? $instructor_button['target'] : '_self';
+    ?>
+      <section class="instructor">
+      <div class="wrapper">
+        <h2 class="pagetitle text-center">Instructor</h2>
+        <div class="flexwrap">
+        <?php if ($instructor_image) { ?>
+          <div class="flexcol">
+            <div class="photo">
+              <figure>
+                <img src="<?php echo $instructor_image['sizes']['large']; ?>" alt="">
+                <!-- <img src="<?php echo THEMEURI ?>images/image-helper.png" alt=""> -->
+              </figure>
+            </div>
+          </div>
+        <?php } ?>
+        <div class="flexcol">
+          <h3 class="pagetitle"><?php echo $instructor_name; ?></h3>
+          <div>
+            <?php if ($instructor_details) { ?>
+              <div><?php echo $instructor_details; ?></div>
+            <?php } ?>
+            <?php if($instructor_button_text && $instructor_button_url) { ?>
+              <div class="button-small">
+                <a href="<?php echo $instructor_button_url; ?>" target="<?php echo $instructor_button_target; ?>"><?php echo $instructor_button_text; ?></a>
+              </div>
+            <?php } ?>
+          </div>
+        </div>
+        </div>
+      </div>
+      </section>
     <?php } ?>
-    <!-- Live Music END -->
+    <!-- Instructor END -->
 
     <!-- Contact Information -->
-    <?php get_template_part( 'parts/content', 'contact' ); ?>
+    <?php get_template_part('parts/flexible-content'); ?>
     <!-- Contact Information END -->
 
 		<?php endwhile; // End of the loop. ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
+
 <?php
+		/* FAQS JAVASCRIPT */ 
+		include( locate_template('inc/faqs-script.php') ); 
+
 get_footer('new');

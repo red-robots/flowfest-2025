@@ -39,6 +39,14 @@ function js_custom_init() {
             'single'    => 'Practice',
             'menu_icon' => 'dashicons-location',
             'supports'  => array('title','editor')
+        ),
+        array(
+            'post_type' => 'yoga-immersion',
+            'menu_name' => 'Yoga Immersion',
+            'plural'    => 'Yoga Immersions',
+            'single'    => 'Yoga Immersion',
+            'menu_icon' => 'dashicons-universal-access',
+            'supports'  => array('title','editor')
         )
     );
     

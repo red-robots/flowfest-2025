@@ -434,7 +434,7 @@ $placeholder = THEMEURI . 'images/rectangle.png';
                             <?php if ($faq_icon) { ?>
                                 <div class="icon-img text-center"><span style="background-image:url('<?php echo  $faq_icon['url']?>')"></span></div>
                             <?php } ?>
-                            <h2 class="sectionTitle text-center"><?php echo $faq_title ?></h2>
+                            <h2 class="sectionTitle text-center pagetitle text-green"><?php echo $faq_title; ?></h2>
                         </div>
                         <?php } ?>
 
