@@ -120,6 +120,7 @@ get_header('new'); ?>
     <!-- Instructor -->
     <?php      
       $instructor_name = get_field('instructor_name');
+      $instructor_title = get_field('instructor_title');
       $instructor_details = get_field('instructor_details');
       $instructor_image = get_field('instructor_image');
 
@@ -145,6 +146,11 @@ get_header('new'); ?>
         <?php } ?>
         <div class="flexcol flexcol-content">
           <h3 class="pagetitle"><?php echo $instructor_name; ?></h3>
+          <?php if ($instructor_title) { ?>
+            <div class="instructor-title">
+              <?php echo $instructor_title; ?>
+            </div>
+          <?php } ?>
           <div>
             <?php if ($instructor_details) { ?>
               <div><?php echo $instructor_details; ?></div>

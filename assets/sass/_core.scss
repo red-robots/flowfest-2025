@@ -1894,6 +1894,12 @@ section.home-cards {
       color: $color_lime1;
     }
 
+    &-title {
+      color: $color_blue;
+      font-size: 1.4em;
+      margin-top: 10px;
+    }
+
     .flexwrap {   
       @include flexbox-direction(column);   
 
