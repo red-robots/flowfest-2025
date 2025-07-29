@@ -1957,12 +1957,17 @@ section.home-cards {
 
     .collapsible {
       border-color: $color_primary;
+      z-index: auto;
 
       .option-name span.arrow {
         &:after,
         &:before {
           background-color: $color_primary;
         }
+      }
+
+      &:before {
+        background-color: $color_lightgreen;
       }
     }
   }
@@ -3489,7 +3494,7 @@ section.schedule-activities {
     }
 
     &.yoga-immersion {
-      background-color: $color_lightgrren1;
+      background-color: $color_lightgreen1;
       color: $color_white;
       @include flexgroup();
       @include flexbox-align-items(center);
@@ -3499,7 +3504,7 @@ section.schedule-activities {
         margin: 8px 0;
         .time,
         .name {
-          background-color: $color_lightgrren1;
+          background-color: $color_lightgreen1;
           color: $color_white;
           padding: 0;
         }

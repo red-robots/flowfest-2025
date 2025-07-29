@@ -2007,8 +2007,9 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .yoga-immersion .instructor .flexwrap.full .text,.yoga-immersion .instructor .flexwrap.full .photo{width:100%}
 .yoga-immersion .faqs-race{background-color:#85a79b;color:#fef8e0}
 .yoga-immersion .faqs-race h2{color:#fef8e0 !important}
-.yoga-immersion .faqs-race .collapsible{border-color:#fef8e0}
+.yoga-immersion .faqs-race .collapsible{border-color:#fef8e0;z-index:auto}
 .yoga-immersion .faqs-race .collapsible .option-name span.arrow:after,.yoga-immersion .faqs-race .collapsible .option-name span.arrow:before{background-color:#fef8e0}
+.yoga-immersion .faqs-race .collapsible:before{background-color:#85a79b}
 section.homepage-cards{background:#afb660}
 section.homepage-cards .wrapper{max-width:100%}
 section.homepage-cards .cards{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;padding:5rem 0}
