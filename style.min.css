@@ -1995,6 +1995,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content .buttons-content a.button_3{background-color:#85a79b}
 .home-content .buttons-content a:hover,.home-content .buttons-content a:focus{background-color:#5298a7}
 .yoga-immersion .schedule-activities{background-color:#85a79b;color:#fff}
+.yoga-immersion .schedule-activities .activities{max-width:100%}
 .yoga-immersion .schedule-activities .schedule-list{margin-bottom:40px}
 .yoga-immersion .schedule-activities .schedule-title{font-style:italic;text-transform:uppercase}
 .yoga-immersion .instructor h2{color:#b2b662}

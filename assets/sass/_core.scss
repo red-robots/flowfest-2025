@@ -1874,6 +1874,10 @@ section.home-cards {
     background-color: $color_lightgreen;
     color: $color_white;
 
+    .activities {
+      max-width: 100%;
+    }
+
     .schedule-list {
       margin-bottom: 40px;
     }
@@ -1882,8 +1886,6 @@ section.home-cards {
       font-style: italic;
       text-transform: uppercase;
     }
-
-    
   }
 
   /*** FAQ ***/
