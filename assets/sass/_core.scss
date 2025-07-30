@@ -1491,13 +1491,17 @@ section.tile-wrapper {
 .pagetitle {
   color: $color_secondary;
   font-family: $font-roylands;
-  font-size: 3em;
+  font-size: 2.4em;
   font-weight: normal;
   line-height: 1.2;
   // letter-spacing: 1px;
   text-transform: uppercase;
   margin: 0;
   padding: 0;
+
+  @include xs {
+    font-size: 3em;
+  }
 
   &.lime {
     color: $color1;
@@ -1804,14 +1808,6 @@ section.home-cards {
       background-color: $color_lightgreen;
       color: $color_grey;
       padding-bottom: 30px;
-
-      h2 {
-        font-size: 2.4em;
-        
-        @include xs {
-          font-size: 3em;
-        }
-      }
 
       h3 {
         font-family: $font-roylands;
@@ -3205,7 +3201,12 @@ body.error404 {
 .content-default-template #main,
 .default-template #main {
   min-height: 20em;
-  padding: 40px 0 0;
+  padding: 80px 0 0;
+
+  @include tab {
+    padding: 40px 0 0;
+  }
+
   .hentry {
     padding-bottom: 10px;
   }
