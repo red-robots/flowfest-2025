@@ -1988,6 +1988,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column figure{height:500px}
 .home-content section.contact-info{background-color:#85a79b;color:#3a3a3a;padding-bottom:30px}
+.home-content section.contact-info h2{font-size:2.4em}
 .home-content section.contact-info h3{font-family:"Roylands Sans",sans-serif;margin:0 0 5px}
 .home-content section.contact-info p{color:#3a3a3a;margin:0}
 .home-content section.contact-info .flexwrap{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:vertical;-webkit-box-direction:reverse;-ms-flex-direction:column-reverse;flex-direction:column-reverse}
@@ -2428,6 +2429,7 @@ html body.logged-in.admin-bar section.pagetitle{top:90px}
 .home-content section.live-music .live-music-artists{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-column-gap:40px;-moz-column-gap:40px;column-gap:40px;row-gap:20px;padding:0}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column{width:46%}
 .home-content section.live-music .live-music-artists.feeds-wrapper .column_full{width:100%}
+.home-content section.contact-info h2{font-size:3em}
 .home-content section.contact-info .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
