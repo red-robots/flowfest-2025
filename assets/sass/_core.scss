@@ -667,30 +667,6 @@ footer.site-footer {
     }
   }
 
-  .sponsors {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem 0;
-
-    .sponsor {
-      // width: 100%;
-      padding: 15px;
-      position: relative;
-      @include tab {
-        // width: 25%;
-      }
-
-      img {
-				width: 100%;
-				height: auto;
-				aspect-ratio: 1/1;
-        object-fit: contain;
-			}
-    }
-  }
-
   .newsletter {
     @include tab {
       // color: #fbf1ea;
@@ -773,6 +749,120 @@ footer.site-footer {
 
   #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_error {
     background-color: transparent;
+  }
+}
+
+/*** Sponsors / Vendors ***/
+.sponsors {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
+
+  &-container {
+    background-color: $color_lime1;
+
+    h2.pagetitle {
+      margin-bottom: 0;
+    }
+
+    .button-big {
+      background-color: $color_olive;
+    }
+  }
+
+  .sponsor {
+    // width: 100%;
+    padding: 15px;
+    position: relative;
+    @include tab {
+      // width: 25%;
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      aspect-ratio: 1/1;
+      object-fit: contain;
+    }
+  }
+
+  .owl-nav {
+		width: 100%;
+		position: static;
+		top: 0;
+		left: 0;
+		z-index: 200;
+	}
+	.owl-prev, .owl-next {
+		display: block;
+		width: 40px;
+		height: 50px;
+		background: $color2;
+		position: absolute;
+		top: 43%;
+		transform: translateY(-43%);
+		transition: all ease .3s;
+		@include tab {
+			top: 46%;
+			transform: translateY(-46%);
+		}
+		&:hover {
+			background: shade($color2,40%);
+		}
+		span {
+			display: inline-block;
+			color: transparent;
+			font-size: 1px;
+			line-height: 1;
+			position: relative;
+			width: 35%;
+			height: 1px;
+			top: -3px;
+			left: -2px;
+			&:before, &:after {
+				content:"";
+				display: block;
+				width: 100%;
+				height: 100%;
+				background: $color_secondary;
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+			&:before {
+				top: -10px;
+			}
+			&:after {
+				top: 10px;
+			}
+		}
+	}
+	.owl-prev{
+		left: -30px;
+		span:before {
+			transform: translateY(5px) rotate(-42deg);
+		}
+		span:after {
+			transform: translateY(-6px)  rotate(42deg);
+		}
+	}
+	.owl-next {
+		right: -30px;
+		span {
+			left: 2px;
+		}
+		span:before {
+			transform: translateY(5px) rotate(42deg);
+		}
+		span:after {
+			transform: translateY(-6px)  rotate(-42deg);
+		}
+	}
+
+  .owl-dots {
+    display: none;
   }
 }
 

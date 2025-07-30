@@ -95,8 +95,8 @@ jQuery(document).ready(function ($) {
   $('.sponsors-loop').owlCarousel({
     center: false,
     items: 4,
-    nav: false,
-    loop: false,
+    nav: true,
+    loop: true,
     margin: 15,
     autoplay: true,
     smartSpeed: 1000,

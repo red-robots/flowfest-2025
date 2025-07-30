@@ -197,6 +197,10 @@
     <?php } ?>
     <!-- Live Music END -->
 
+    <!-- Sponsors -->
+    <?php get_template_part( 'parts/content', 'vendors' ); ?>
+    <!-- Sponsors END -->
+
     <!-- Contact Information -->
     <?php get_template_part( 'parts/content', 'contact' ); ?>
     <!-- Contact Information END -->
