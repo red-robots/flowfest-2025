@@ -13,7 +13,7 @@
 		$footer_logo = get_field("footer_logo","option");
 	?>
 	<footer id="colophon" class="site-footer" role="contentinfo">
-		<div class="wrapper	foot-flex cf">
+		<div class="wrapper	foot-flex">
 			<?php if ( $footer_logo ) { ?>
 				<div class="footer-logo">
 					<a href="https://whitewater.org" target="_blank">
@@ -24,8 +24,7 @@
 			<nav class="footer-social-media">
 				<?php echo do_shortcode('[display_social_media]'); ?>
 			</nav>
-			<!-- <div class="empty">&nbsp;</div> -->
-		</div><!-- wrapper foot-flex -->
+		</div><!-- foot-flex -->
 
 		<!-- Sign Up newsletter -->
 		<div class="wrapper">
