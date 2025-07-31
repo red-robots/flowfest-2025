@@ -2022,7 +2022,7 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .yoga-immersion .instructor .flexwrap .flexcol-content h3{font-size:2.3em}
 .yoga-immersion .instructor .flexwrap .text{padding:20px;width:100%}
 .yoga-immersion .instructor .flexwrap .photo{width:100%}
-.yoga-immersion .instructor .flexwrap .photo figure{margin:0;width:100%;height:485px;overflow:hidden}
+.yoga-immersion .instructor .flexwrap .photo figure{margin:0;width:100%;height:auto;overflow:hidden}
 .yoga-immersion .instructor .flexwrap .photo figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 .yoga-immersion .instructor .flexwrap.full .text,.yoga-immersion .instructor .flexwrap.full .photo{width:100%}
 .yoga-immersion .faqs-race{background-color:#85a79b;color:#fef8e0}

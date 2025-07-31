@@ -2024,12 +2024,8 @@ section.home-cards {
         figure {
           margin: 0;
           width: 100%;
-          height: 485px;
+          height: auto;
           overflow: hidden;
-
-          // @include tab {
-          //   height: 720px;
-          // }
 
           img {
             width: 100%;
