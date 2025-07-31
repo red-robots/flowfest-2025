@@ -1706,7 +1706,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3{opacity:0}
 #primary #section-faqs{padding-top:50px;padding-bottom:50px}
 #section-faqs{padding-top:0;padding-bottom:70px}
 #section-faqs .titlediv{text-align:right;margin-bottom:20px}
-#section-faqs.no-image .faqsItems{max-width:900px;width:100%;margin:0 auto}
+#section-faqs.no-image .faqsItems{width:100%;margin:0 auto}
 #section-faqs .faqs,#section-faqs .faq-image{width:100%;position:relative}
 #section-faqs .faq-image{text-align:center}
 #section-faqs .faq-image img{width:100%;height:auto}
@@ -2207,7 +2207,7 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .galleries figure.type_video span.image .arrow:before{content:"";display:block;width:0;height:0;position:absolute;top:50%;left:50%;-webkit-transform:translateX(-50%) translateY(-50%);transform:translateX(-50%) translateY(-50%);border-left:10px solid #fff;border-top:5px solid transparent;border-bottom:5px solid transparent;margin-left:1px}
 .galleries figure.type_video a:hover span.image .arrow{background:rgba(0,0,0,.5);opacity:1}
 .galleries figure.type_image a:hover span.image{-webkit-transform:scale(1.07);transform:scale(1.07)}
-section.faqs .wrapper{max-width:900px;padding-top:30px;padding-bottom:30px}
+section.faqs .wrapper{padding-top:30px;padding-bottom:30px}
 section.faqs .faqrow{margin:30px 0;padding-left:40px;position:relative}
 section.faqs .question{display:block;cursor:pointer;font-family:"podium-sharp-variable",sans-serif;font-size:1.3em;font-weight:normal;line-height:1.2em;color:#215d48;position:relative;text-decoration:none}
 section.faqs .question .plus-minus-toggle{display:inline-block;cursor:pointer;width:20px;height:20px;position:absolute;top:9px;left:-35px;z-index:2;-webkit-transition:all ease .3s;transition:all ease .3s}
