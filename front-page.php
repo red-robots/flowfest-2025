@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<div id="primary" class="home-content content-area-full new-home">
+<div id="primary" class="home-content content-area-full">
 	<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>

@@ -81,16 +81,41 @@ body {
   line-height: 1.4;
 	background-color: $color_primary;
 	color: $color_secondary;
+  padding-top: 90px;
 
-  &.new-homepage {
-    padding-top: 90px;
-
-    &.logged-in.admin-bar {
-      header.site-header {
+  &.logged-in.admin-bar {
+    #wpadminbar {
+      position: fixed;
+    }
+    header.site-header {
+      top: 32px;
+    }
+    .redtag {
+      top: 122px !important;
+    }
+    .mobile-navigation .primary-menu-wrap {
+      padding-top:105px;
+    }
+    #mobile-menu-toggle {
+      top: 85px;
+  
+      &.main-menu {
+        top: 48px;
+      }
+    }
+    header.site-header {
+      top: 42px;
+      @include xs {
         top: 32px;
       }
-      .redtag {
-        top: 122px !important;
+    }
+    section.pagetitle {
+      top: 102px;
+      @include xs {
+        top: 90px;
+      }
+      @include tab {
+        top: auto;
       }
     }
   }
@@ -108,44 +133,6 @@ body.page {
 body.home {
 	li.home {
 		display: inline-block;
-	}
-}
-html body.logged-in.admin-bar {
-	// &.subpage {
-	// 	header.site-header{
-	// 		top:46px;
-	// 	}
-	// }
-	#wpadminbar {
-		position: fixed;
-	}
-	.mobile-navigation .primary-menu-wrap {
-		padding-top:105px;
-	}
-	#mobile-menu-toggle {
-		top: 85px;
-
-    &.main-menu {
-      top: 48px;
-    }
-	}
-	header.site-header {
-		top: 42px;
-		@include xs {
-			top: 32px;
-		}
-    @include tab {
-			top: 0;
-		}
-	}
-	section.pagetitle {
-		top: 102px;
-		@include xs {
-			top: 90px;
-		}
-		@include tab {
-			top: auto;
-		}
 	}
 }
 #page {
@@ -3199,17 +3186,28 @@ body.error404 {
   }
 }
 
-.content-default-template #main,
-.default-template #main {
-  min-height: 20em;
-  padding: 80px 0 0;
+.content-default-template,
+.default-template {
+  #main {
+    min-height: 20em;
+    padding: 80px 0 0;
 
-  @include tab {
-    padding: 40px 0 0;
+    @include tab {
+      padding: 40px 0 0;
+    }
+
+    .hentry {
+      padding-bottom: 10px;
+    }
   }
 
-  .hentry {
-    padding-bottom: 10px;
+  &.bg-green {
+    background-color: $color_secondary;
+    border-bottom: 1px solid $color_primary;
+
+    .pagetitle {
+      color: $color_primary;
+    }
   }
 }
 

@@ -14,14 +14,14 @@
 
 get_header(); 
 
-$CS = get_field('coming_soon'); 
+$CS = get_field('coming_soon');
+$green_bg = get_field('green_background');
 // echo '<pre>';
-// print_r($CS);
+// print_r($green_bg);
 // echo '</pre>';
-
 ?>
 
-	<div id="primary" class="content-area-full default-template">
+	<div id="primary" class="content-area-full default-template <?php echo ($green_bg[0] == 'Yes') ? 'bg-green' : '' ;?>">
 		<main id="main" class="site-main" role="main">
 
 			<?php

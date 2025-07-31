@@ -1768,19 +1768,18 @@ p{line-height:1.7em;margin-bottom:40px;margin-top:40px}
 .sr:focus{background-color:#333;border-radius:3px;-webkit-box-shadow:0 0 2px 2px rgba(0,0,0,.6);box-shadow:0 0 2px 2px rgba(0,0,0,.6);clip:auto !important;color:#fff;display:block;font-size:14px;font-size:.875rem;font-weight:bold;height:auto;left:5px;line-height:normal;padding:15px 23px 14px;text-decoration:none;top:5px;width:auto;z-index:100000}
 a,button,input{-webkit-transition:all ease .3s;transition:all ease .3s;color:#13648d}
 a:hover,button:hover,input:hover{color:#5298a7}
-body{font-family:"brandon-grotesque";font-size:20px;line-height:1.4;background-color:#fef8e0;color:#215d48}
-body.new-homepage{padding-top:90px}
-body.new-homepage.logged-in.admin-bar header.site-header{top:32px}
-body.new-homepage.logged-in.admin-bar .redtag{top:122px !important}
+body{font-family:"brandon-grotesque";font-size:20px;line-height:1.4;background-color:#fef8e0;color:#215d48;padding-top:90px}
+body.logged-in.admin-bar #wpadminbar{position:fixed}
+body.logged-in.admin-bar header.site-header{top:32px}
+body.logged-in.admin-bar .redtag{top:122px !important}
+body.logged-in.admin-bar .mobile-navigation .primary-menu-wrap{padding-top:105px}
+body.logged-in.admin-bar #mobile-menu-toggle{top:85px}
+body.logged-in.admin-bar #mobile-menu-toggle.main-menu{top:48px}
+body.logged-in.admin-bar header.site-header{top:42px}
+body.logged-in.admin-bar section.pagetitle{top:102px}
 body #controller,body .vsc-controller{display:none !important}
 body.page li.home{display:none}
 body.home li.home{display:inline-block}
-html body.logged-in.admin-bar #wpadminbar{position:fixed}
-html body.logged-in.admin-bar .mobile-navigation .primary-menu-wrap{padding-top:105px}
-html body.logged-in.admin-bar #mobile-menu-toggle{top:85px}
-html body.logged-in.admin-bar #mobile-menu-toggle.main-menu{top:48px}
-html body.logged-in.admin-bar header.site-header{top:42px}
-html body.logged-in.admin-bar section.pagetitle{top:102px}
 #page{padding-top:3px}
 .wrapper{position:relative;max-width:1200px;width:100%;margin:0 auto;padding:0 20px}
 .site{position:relative;overflow-x:hidden;overflow-y:auto}
@@ -2192,6 +2191,8 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .site-footer .footer-logo img{width:auto;height:20px;float:left;opacity:.75}
 .content-default-template #main,.default-template #main{min-height:20em;padding:80px 0 0}
 .content-default-template #main .hentry,.default-template #main .hentry{padding-bottom:10px}
+.content-default-template.bg-green,.default-template.bg-green{background-color:#215d48;border-bottom:1px solid #fef8e0}
+.content-default-template.bg-green .pagetitle,.default-template.bg-green .pagetitle{color:#fef8e0}
 .galleries{padding:30px 0}
 .galleries .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 .galleries figure{display:block;margin:0;width:50%;padding:10px}
@@ -2421,8 +2422,8 @@ section.vendors div.ven img{width:100%}
 .insider-content-main-inner p{font-size:18px}
 .insider-content-main-inner:first-child{border-top:0}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
-html body.logged-in.admin-bar header.site-header{top:32px}
-html body.logged-in.admin-bar section.pagetitle{top:90px}
+body.logged-in.admin-bar header.site-header{top:32px}
+body.logged-in.admin-bar section.pagetitle{top:90px}
 #banner .static-banner .slides .library-media-desktop,#banner .flexslider .slides .library-media-desktop{display:block}
 #banner .static-banner .slides .library-media-mobile,#banner .flexslider .slides .library-media-mobile{display:none}
 .pagetitle{font-size:3em}
@@ -2472,8 +2473,7 @@ section.teasers .fullwidth-image .fullwidth-image__text h3.mobile{display:none}
 .section-price-ages .info{width:33.33%}
 .section-price-ages.oneCol .info{width:100%}
 .section-price-ages .fourCols .info{width:25%}
-html body.logged-in.admin-bar header.site-header{top:0}
-html body.logged-in.admin-bar section.pagetitle{top:auto}
+body.logged-in.admin-bar section.pagetitle{top:auto}
 #page{padding:0}
 .wrapper{padding:0}
 .head-flex{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-ms-flex-wrap:nowrap;flex-wrap:nowrap;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-align:center;-ms-flex-align:center;align-items:center}
