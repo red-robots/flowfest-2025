@@ -2191,7 +2191,7 @@ body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
 .site-footer .footer-logo img{width:auto;height:20px;float:left;opacity:.75}
 .content-default-template #main,.default-template #main{min-height:20em;padding:80px 0 0}
 .content-default-template #main .hentry,.default-template #main .hentry{padding-bottom:10px}
-.content-default-template.bg-green,.default-template.bg-green{background-color:#215d48;border-bottom:1px solid #fef8e0}
+.content-default-template.bg-green,.default-template.bg-green{background-color:#215d48;border-bottom:1px solid #fef8e0;color:#fef8e0}
 .content-default-template.bg-green .pagetitle,.default-template.bg-green .pagetitle{color:#fef8e0}
 .galleries{padding:30px 0}
 .galleries .flexwrap{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}

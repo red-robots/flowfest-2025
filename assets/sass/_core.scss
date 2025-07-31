@@ -3204,6 +3204,7 @@ body.error404 {
   &.bg-green {
     background-color: $color_secondary;
     border-bottom: 1px solid $color_primary;
+    color: $color_primary;
 
     .pagetitle {
       color: $color_primary;
