@@ -1,5 +1,4 @@
 <!-- Sponsors -->
-asdsd
 <?php
 	$vendor_page = 1764;
 

@@ -107,8 +107,6 @@ get_header('new'); ?>
                 }
               endwhile;
             ?>
-
-          
         </div>
       </section>
 
@@ -131,42 +129,92 @@ get_header('new'); ?>
         $instructor_button_target = (isset($instructor_button['target']) && $instructor_button['target']) ? $instructor_button['target'] : '_self';
     ?>
       <section class="instructor">
-      <div class="wrapper">
-        <h2 class="pagetitle text-center">Instructor</h2>
-        <div class="flexwrap">
-        <?php if ($instructor_image) { ?>
-          <div class="flexcol">
-            <div class="photo">
-              <figure>
-                <img src="<?php echo $instructor_image['sizes']['large']; ?>" alt="">
-                <!-- <img src="<?php echo THEMEURI ?>images/image-helper.png" alt=""> -->
-              </figure>
-            </div>
-          </div>
-        <?php } ?>
-        <div class="flexcol flexcol-content">
-          <h3 class="pagetitle"><?php echo $instructor_name; ?></h3>
-          <?php if ($instructor_title) { ?>
-            <div class="instructor-title">
-              <?php echo $instructor_title; ?>
+        <div class="wrapper">
+          <h2 class="pagetitle text-center">Instructor</h2>
+          <div class="flexwrap">
+          <?php if ($instructor_image) { ?>
+            <div class="flexcol">
+              <div class="photo">
+                <figure>
+                  <img src="<?php echo $instructor_image['sizes']['large']; ?>" alt="">
+                  <!-- <img src="<?php echo THEMEURI ?>images/image-helper.png" alt=""> -->
+                </figure>
+              </div>
             </div>
           <?php } ?>
-          <div>
-            <?php if ($instructor_details) { ?>
-              <div><?php echo $instructor_details; ?></div>
-            <?php } ?>
-            <?php if($instructor_button_text && $instructor_button_url) { ?>
-              <div class="button-small">
-                <a href="<?php echo $instructor_button_url; ?>" target="<?php echo $instructor_button_target; ?>"><?php echo $instructor_button_text; ?></a>
+          <div class="flexcol flexcol-content">
+            <h3 class="pagetitle"><?php echo $instructor_name; ?></h3>
+            <?php if ($instructor_title) { ?>
+              <div class="instructor-title">
+                <?php echo $instructor_title; ?>
               </div>
             <?php } ?>
+            <div>
+              <?php if ($instructor_details) { ?>
+                <div><?php echo $instructor_details; ?></div>
+              <?php } ?>
+              <?php if($instructor_button_text && $instructor_button_url) { ?>
+                <div class="button-small">
+                  <a href="<?php echo $instructor_button_url; ?>" target="<?php echo $instructor_button_target; ?>"><?php echo $instructor_button_text; ?></a>
+                </div>
+              <?php } ?>
+            </div>
           </div>
-        </div>
         </div>
       </div>
       </section>
     <?php } ?>
     <!-- Instructor END -->
+
+    <!-- Music -->
+    <?php
+      $artist_name = get_field('artist_name');
+      $artist_details = get_field('artists_details');
+        if( $artist_name && $artist_details ){
+          $artist_image = get_field('artist_image');
+          $featured_artist = get_field('featured_artist');
+          $featured_artist_btn = get_field('artist_button_text');
+
+          $post_id = $featured_artist-> ID;    
+          $featured_artist_spotify = get_field('spotify_embed', $post_id);    
+          $postType = get_post_type($post_id);
+          $postTypeTitle = 'post-type-'.$postType;
+          $pagelink = ($postType=='artists') ? 'javascript:void(0)' : get_permalink($post_id);
+    ?>
+      <section class="live-music">
+        <div class="wrapper">
+          <h2 class="pagetitle text-center">Music</h2>
+          <div class="live-music-artist">
+            <div data-postid="<?php echo $post_id ?>" class="flexwrap <?php echo $postTypeTitle; ?>">
+              <?php if ($artist_image) { ?>
+                <div class="flexcol">
+                  <div class="photo">
+                    <figure>
+                      <img src="<?php echo $artist_image['sizes']['large']; ?>" alt="">
+                      <!-- <img src="<?php echo THEMEURI ?>images/image-helper.png" alt=""> -->
+                    </figure>
+                  </div>
+                </div>
+              <?php } ?>
+              <div class="flexcol flexcol-content">
+                <h3 class="pagetitle"><?php echo $artist_name; ?></h3>
+                <div>
+                  <?php if ($artist_details) { ?>
+                    <div><?php echo $artist_details; ?></div>
+                  <?php } ?>
+                  <?php if($featured_artist_btn && $featured_artist_spotify ){ ?>
+                    <div>
+                      <a href="<?php echo $pagelink; ?>" data-id="<?php echo $post_id ?>" class="popup-details button-big"><?php echo $featured_artist_btn; ?></a>
+                    </div>
+                  <?php } ?>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <?php } ?>
+    <!-- Music END -->
 
     <!-- Contact Information -->
     <?php get_template_part('parts/flexible-content'); ?>

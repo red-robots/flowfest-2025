@@ -344,6 +344,46 @@ jQuery(document).ready(function ($) {
       }
     });
   });
+  /* Artists - Popup for Learn More */
+
+  $('.live-music .popup-details').on("click", function (e) {
+    e.preventDefault();
+    var postId = $(this).data('id');
+    $.ajax({
+      url: frontajax.ajaxurl,
+      type: 'post',
+      dataType: "json",
+      data: {
+        action: 'popup_content_spotify',
+        postId: postId
+      },
+      beforeSend: function beforeSend() {
+        $('#loader').show();
+      },
+      success: function success(response) {
+        if (response.content) {
+          $('#popup-content').html(response.content);
+          $('#popup-content').addClass('show');
+          $('#overlay').addClass('show');
+          $('body').addClass('popup-open');
+        }
+      },
+      complete: function complete() {
+        $('#loader').hide();
+        $(document).on('click', '#overlay', function () {
+          $('#popup-content').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#overlay').removeClass('show');
+        });
+        $('#closePopUp').on('click', function () {
+          $('#popup-content').removeClass('show');
+          $('#overlay').removeClass('show');
+          $('body').removeClass('popup-open');
+          $('#popup-content').html("");
+        });
+      }
+    });
+  });
   /*
   *
   *	Wow Animation

@@ -1805,7 +1805,7 @@ header.site-header .reg a:hover:before{-webkit-transform:translateY(5px) scale(1
 .logo a img{width:auto;height:70px;position:relative;left:-1px}
 .redtag{position:fixed;top:90px !important;left:0;z-index:50;-webkit-box-shadow:-12px 8px 17px rgba(0,0,0,.3);box-shadow:-12px 8px 17px rgba(0,0,0,.3);-webkit-transition:all ease .3s;transition:all ease .3s}
 .redtag .registerBtn{display:inline-block;text-decoration:none;color:#fff !important;text-transform:uppercase;font-family:"Lato",sans-serif;font-size:18px;font-weight:400;line-height:50px;background:#13648d;height:50;padding:0 35px;width:100%;text-align:center;position:relative;bottom:0;left:0}
-.redtag .registerBtn:after{content:"";display:block;width:0;height:0;border-left:28px solid #13648d;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;top:0;right:-28px;-webkit-transition:all ease .3s;transition:all ease .3s}
+.redtag .registerBtn:after{content:"";display:block;width:0;height:0;border-left:28px solid #13648d;border-top:25px solid transparent;border-bottom:25px solid transparent;position:absolute;top:0;right:-27px;-webkit-transition:all ease .3s;transition:all ease .3s}
 .redtag .registerBtn:hover,.redtag .registerBtn:focus{background:#215d48}
 .redtag .registerBtn:hover:after,.redtag .registerBtn:focus:after{border-left-color:#215d48}
 body.home h1.page-title{display:none}
@@ -2025,6 +2025,16 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .yoga-immersion .instructor .flexwrap .photo figure{margin:0;width:100%;height:auto;overflow:hidden}
 .yoga-immersion .instructor .flexwrap .photo figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
 .yoga-immersion .instructor .flexwrap.full .text,.yoga-immersion .instructor .flexwrap.full .photo{width:100%}
+.yoga-immersion section.live-music{background-color:#b2b662;color:#fef8e0}
+.yoga-immersion section.live-music h2,.yoga-immersion section.live-music h3,.yoga-immersion section.live-music p{color:#fef8e0}
+.yoga-immersion section.live-music .flexwrap{-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column}
+.yoga-immersion section.live-music .flexwrap .flexcol{width:100%}
+.yoga-immersion section.live-music .flexwrap .flexcol-content h3{font-size:2.3em}
+.yoga-immersion section.live-music .flexwrap .text{padding:20px;width:100%}
+.yoga-immersion section.live-music .flexwrap .photo{width:100%}
+.yoga-immersion section.live-music .flexwrap .photo figure{margin:0;width:100%;height:auto;overflow:hidden}
+.yoga-immersion section.live-music .flexwrap .photo figure img{width:100%;height:100%;-o-object-fit:cover;object-fit:cover}
+.yoga-immersion section.live-music .flexwrap.full .text,.yoga-immersion section.live-music .flexwrap.full .photo{width:100%}
 .yoga-immersion .faqs-race{background-color:#85a79b;color:#fef8e0}
 .yoga-immersion .faqs-race h2{color:#fef8e0 !important}
 .yoga-immersion .faqs-race .collapsible{border-color:#fef8e0;z-index:auto}
@@ -2118,7 +2128,7 @@ body.popup-open{overflow:hidden}
 #popup-content .popup-content.activity .middle-content{padding:40px 30px}
 #popup-content .popup-content.activity figure,#popup-content .popup-content.activity .wp-block-image{margin:0 0 30px}
 #popup-content .popup-content.activity figure img,#popup-content .popup-content.activity .wp-block-image img{width:100%;height:auto}
-#popup-content .popup-content.activity .description p{margin:15pxp 0}
+#popup-content .popup-content.activity .description p{margin:15px 0}
 #popup-content .popup-content.activity a{color:#215d48}
 #popup-content .popup-content.activity a:hover{color:#4d7d6d}
 #popup-content .popup-content.activity .wp-block-button__link{background-color:#fff;color:#215d48;padding:15px 25px 13px}
@@ -2528,6 +2538,11 @@ section.home-cards .card .overlay.o2,section.home-cards .card .overlay.o3,sectio
 .yoga-immersion .instructor .flexwrap .flexcol-content{padding-left:40px}
 .yoga-immersion .instructor .flexwrap .text{width:60%;padding:4vw}
 .yoga-immersion .instructor .flexwrap .photo{padding-right:40px}
+.yoga-immersion section.live-music .flexwrap{-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
+.yoga-immersion section.live-music .flexwrap .flexcol{width:50%}
+.yoga-immersion section.live-music .flexwrap .flexcol-content{padding-left:40px}
+.yoga-immersion section.live-music .flexwrap .text{width:60%;padding:4vw}
+.yoga-immersion section.live-music .flexwrap .photo{padding-right:40px}
 section.homepage-cards .wrapper{max-width:85vw}
 section.homepage-cards .card{width:33.333%}
 section.homepage-cards.cols4 .wrapper{max-width:85vw}

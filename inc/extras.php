@@ -481,6 +481,30 @@ function activity_learn_more() {
   die();
 }
 
+// Yoga Immersion - Music
+add_action( 'wp_ajax_nopriv_popup_content_spotify', 'popup_content_spotify' );
+add_action( 'wp_ajax_popup_content_spotify', 'popup_content_spotify' );
+function popup_content_spotify() {
+  if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+    $post_id = ($_POST['postId']) ? $_POST['postId'] : 0;
+
+    if($post_id) {
+      ob_start();
+      include(locate_template('parts/popup_content_spotify.php'));
+      $html = ob_get_contents();
+      ob_end_clean();
+    }
+
+    $response['content'] = $html;
+    echo json_encode($response);
+
+  }
+  else {
+    header("Location: ".$_SERVER["HTTP_REFERER"]);
+  }
+  die();
+}
+
 
 /* SOCIAL MEDIA SHORTCODE */
 add_shortcode( 'display_social_media', 'display_social_media_func' );
