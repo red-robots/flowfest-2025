@@ -46,6 +46,10 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
   $register_button_text = (isset($register['title']) && $register['title']) ? $register['title'] : '';
   $register_button_link = (isset($register['url']) && $register['url']) ? $register['url'] : '';
   $register_button_target = (isset($register['target']) && $register['target']) ? $register['target'] : '_self';
+
+  $pageID = get_the_ID();
+
+  $show_register = get_field('show_register_button', $pageID);
 ?>
 
 <div id="page" class="site cf">
@@ -63,8 +67,8 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 		</div><!-- wrapper -->
 	</header><!-- #masthead -->
 
-  <?php if($register_button_text && $register_button_link) { ?>
-    <?php if( !is_page(1422) ) { ?>
+  <?php if( empty($show_register) ) { ?>
+    <?php if($register_button_text && $register_button_link) { ?>
       <div class="redtag">
         <a href="<?php echo $register_button_link; ?>" target="<?php echo $register_button_target; ?>" class="registerBtn"><?php echo $register_button_text; ?></a>
       </div>
@@ -79,7 +83,7 @@ src="https://www.facebook.com/tr?id=236370623380911&ev=PageView&noscript=1"
 
     if( $CS == null ) {
       get_template_part('parts/banner');
-    } 
+    }
   ?>
 
 	<div id="content" class="site-content">
