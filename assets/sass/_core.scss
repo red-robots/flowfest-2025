@@ -3251,6 +3251,27 @@ body.error404 {
       }
     }
   }
+
+  .sponsor {
+    width: 100%;
+    padding: 15px;
+    position: relative;
+    text-align: center;
+
+    @include xs {
+      width: 20%;
+    }
+
+    @include xs {
+      width: 20%;
+    }
+
+    img {
+      height: auto;
+      width: auto;
+      max-width: 100%;
+    }
+  }
 }
 
 .content-default-template,
