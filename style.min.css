@@ -1857,8 +1857,8 @@ footer.site-footer #mc_embed_signup #mc-embedded-subscribe-form div.mce_inline_e
 .sponsors-container{background-color:#b2b662}
 .sponsors-container h2.pagetitle{margin-bottom:0}
 .sponsors-container .button-big{background-color:#5c5e38}
-.sponsors .sponsor{width:100%;padding:15px;position:relative;text-align:center}
-.sponsors .sponsor img{height:auto;width:auto;max-width:100%}
+.sponsors .sponsor{width:100%;padding:15px;position:relative}
+.sponsors .sponsor img{width:100%;height:auto;aspect-ratio:1/1;-o-object-fit:contain;object-fit:contain}
 .sponsors .owl-nav{width:100%;position:static;top:0;left:0;z-index:200}
 .sponsors .owl-prev,.sponsors .owl-next{display:block;width:40px;height:50px;background:#13648d;position:absolute;top:43%;-webkit-transform:translateY(-43%);transform:translateY(-43%);-webkit-transition:all ease .3s;transition:all ease .3s}
 .sponsors .owl-prev:hover,.sponsors .owl-next:hover{background:#0b3c55}
@@ -2434,7 +2434,6 @@ section.vendors div.ven img{width:100%}
 @media(min-width:782px){.section-price-ages.twoCols .info{width:50%}
 body.logged-in.admin-bar header.site-header{top:32px}
 body.logged-in.admin-bar section.pagetitle{top:90px}
-.sponsors .sponsor{width:30%}
 #banner .static-banner .slides .library-media-desktop,#banner .flexslider .slides .library-media-desktop{display:block}
 #banner .static-banner .slides .library-media-mobile,#banner .flexslider .slides .library-media-mobile{display:none}
 .pagetitle{font-size:3em}
@@ -2502,7 +2501,7 @@ footer.site-footer .newsletter{display:-webkit-box;display:-ms-flexbox;display:f
 footer.site-footer #mc_embed_signup{width:600px}
 footer.site-footer #mc_embed_signup #mc_embed_signup_scroll{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 footer.site-footer #mc_embed_shell input#mc-embedded-subscribe{margin:0 0 0 15px}
-.sponsors .sponsor{width:20%}
+.sponsors .sponsor{width:25%}
 .sponsors .owl-prev,.sponsors .owl-next{top:46%;-webkit-transform:translateY(-46%);transform:translateY(-46%)}
 .navigation-forall{display:block;position:fixed;top:0;right:-100%;max-width:100%;width:100%;height:100%;background-color:#215d48;overflow-x:hidden;overflow-y:auto;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:-999}
 .navigation-forall.active{right:0;z-index:500}
