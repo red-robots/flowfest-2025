@@ -3254,16 +3254,11 @@ body.error404 {
 
   .sponsor {
     width: 100%;
-    padding: 15px;
-    position: relative;
     text-align: center;
 
     @include xs {
-      width: 20%;
-    }
-
-    @include xs {
-      width: 20%;
+      max-width: 20%;
+      width: auto;
     }
 
     img {
