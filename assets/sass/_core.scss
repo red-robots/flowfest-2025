@@ -760,18 +760,26 @@ footer.site-footer {
   }
 
   .sponsor {
-    // width: 100%;
+    width: 100%;
     padding: 15px;
     position: relative;
+    text-align: center;
+
+    @include xs {
+      width: 30%;
+    }
+
     @include tab {
-      // width: 25%;
+      width: 20%;
     }
 
     img {
-      width: 100%;
+      // width: 100%;
       height: auto;
-      aspect-ratio: 1/1;
-      object-fit: contain;
+      width: auto;
+      max-width: 100%;
+      // aspect-ratio: 1/1;
+      // object-fit: contain;
     }
   }
 

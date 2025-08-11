@@ -36,7 +36,33 @@
 					echo "<div class='newsletter'><h2>". $newsletter_title ."</h2>";
 					echo "<div>". $newsletter_code ."</div></div>";
 				}
-			?>		
+			?>
+
+			<!-- Sponsors -->
+			<?php 
+				if( have_rows("sponsors_footer", "option") ):
+					echo "<div class='sponsors flexwrap'>";
+
+					while( have_rows("sponsors_footer", "option") ) : the_row();
+
+						$sponsor_img = get_sub_field("sponsor_image");
+						$sponsor_url = get_sub_field("sponsor_url");
+
+						if ( !empty($sponsor_img) ) { ?>
+							<div class="sponsor">
+								<?php if ( !empty($sponsor_url) ) { ?>
+									<a href="<?php echo $sponsor_url; ?>" target="_blank">
+								<?php } ?>
+									<img src="<?php echo $sponsor_img["url"]; ?>" alt="<?php echo $sponsor_img["alt"]; ?>" />
+								<?php if ( !empty($sponsor_url) ) { echo "</a>"; } ?>
+							</div>
+						<?php }
+
+					endwhile;
+
+					echo "</div>";
+				endif;
+			?>
 		</div> <!-- wrapper -->
 	</footer><!-- #colophon -->
 	
