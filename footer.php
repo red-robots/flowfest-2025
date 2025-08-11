@@ -41,7 +41,7 @@
 			<!-- Sponsors -->
 			<?php 
 				if( have_rows("sponsors_footer", "option") ):
-					echo "<div class='sponsors flexwrap'>";
+					echo "<div class='sponsor-footer flexwrap'>";
 
 					while( have_rows("sponsors_footer", "option") ) : the_row();
 
