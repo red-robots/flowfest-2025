@@ -2501,7 +2501,6 @@ footer.site-footer .newsletter{display:-webkit-box;display:-ms-flexbox;display:f
 footer.site-footer #mc_embed_signup{width:600px}
 footer.site-footer #mc_embed_signup #mc_embed_signup_scroll{display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row}
 footer.site-footer #mc_embed_shell input#mc-embedded-subscribe{margin:0 0 0 15px}
-.sponsors .sponsor{width:25%}
 .sponsors .owl-prev,.sponsors .owl-next{top:46%;-webkit-transform:translateY(-46%);transform:translateY(-46%)}
 .navigation-forall{display:block;position:fixed;top:0;right:-100%;max-width:100%;width:100%;height:100%;background-color:#215d48;overflow-x:hidden;overflow-y:auto;-webkit-transition:all ease .3s;transition:all ease .3s;z-index:-999}
 .navigation-forall.active{right:0;z-index:500}
