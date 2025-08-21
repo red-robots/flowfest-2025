@@ -2198,7 +2198,7 @@ body.error404 section.error-404 h1{font-family:"Roylands Sans",sans-serif;font-s
 body.error404 #sitemap-wrap{text-align:center;margin-bottom:50px}
 body.error404 #sitemap-wrap ul#sitemap{margin-top:20px;max-width:unset;width:auto;display:inline-block;text-align:left}
 body.error404 #sitemap-wrap ul#sitemap>li{padding:0}
-.site-footer .footer-logo img{width:auto;height:20px;float:left;opacity:.75}
+.site-footer .footer-logo img{width:auto;height:35px;float:left;opacity:.75}
 .site-footer .sponsor-footer{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center}
 .site-footer .sponsor-footer .sponsor{width:100%;text-align:center;padding:0 1rem 1rem}
 .site-footer .sponsor-footer .sponsor img{height:auto;width:auto;max-width:100%}
