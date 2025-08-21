@@ -647,10 +647,17 @@ footer.site-footer {
       border-radius: 30px;;
       color: $color_secondary;
       font-size: 18px;
-      height: 30px;
+      height: 32px;
       text-align: center;
-      padding: 5px 0;
-      width: 30px;
+      padding: 0;
+      width: 32px;
+      line-height: 2.2rem;
+    }
+
+    .social-media-links div:last-child {
+      a {
+        padding-left: 1px;
+      }
     }
   }
 
