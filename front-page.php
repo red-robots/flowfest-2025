@@ -135,7 +135,8 @@
               $popup = ($postType=='artists') ? 'popup-activity' : '';
               $location_time = get_field('location_time', $post_id);
               $spotify = get_field('spotify_embed', $post_id);
-              $column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
+              //$column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
+              $column = ($count==1 && $count_column==3) ? 'column column_half' : 'column column_half';
             ?>
             <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
               <div class="inner">

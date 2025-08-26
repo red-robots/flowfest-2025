@@ -1758,23 +1758,31 @@ section.home-cards {
 
         &.feeds-wrapper .column {
           @include xs {
-            width: 46%;
+            width: 100%;
+          }
+
+          &_half {
+            @include tab {
+              width: 30.9%;
+            }
           }
 
           figure {
             height: 500px;
+            
+            @include tab {
+              height: 350px;
+            }
           }
+          
 
           &_full {
-            @include xs {
-              width: 100%;
-            }
             @include tab {
               width: 100%;
 
-              + .column_half {
-                width: 48%;
-              }
+              // + .column_half {
+              //   width: 48%;
+              // }
             }
 
             // .title {
@@ -4514,6 +4522,11 @@ section.vendors {
     text-transform: uppercase;
     text-decoration: none;
     padding: 12px 15px 15px;
+
+    @include tab {
+      min-height: 87px;
+    }
+
     a {
       color: $color_primary;
       text-decoration: none;
