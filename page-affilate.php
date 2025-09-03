@@ -31,7 +31,7 @@ get_header(); ?>
 						if($img && $url) {
 					?>
 						<div class="affiliates">
-							<a href="<?php echo $url; ?>" taregt="_blank">
+							<a href="<?php echo $url; ?>" target="_blank">
 								<img src="<?php echo esc_url($img['url']); ?>" alt="<?php echo esc_attr($img['alt']); ?>" />
 							</a>
 						</div>
