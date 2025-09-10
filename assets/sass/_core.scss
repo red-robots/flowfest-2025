@@ -3549,6 +3549,17 @@ section.faqs {
       position: relative;
     }
   }
+  .more-information {
+    @include flexgroup();
+    @include flexbox-justify(center);
+    gap: 15px;
+    margin-bottom: 20px;
+
+    .button-big {
+      min-width: auto;
+      text-transform: none;
+    }
+  }
   .activities {
     max-width: 700px;
     width: 100%;

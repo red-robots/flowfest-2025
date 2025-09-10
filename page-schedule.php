@@ -42,12 +42,34 @@ $CS = get_field('coming_soon');
         if($activities) {
       ?>
       <section class="schedule-activities">
+
         <div class="wrapper">
+
+          <!-- File uploads -->
+          <?php if( have_rows('information') ): ?>
+            <div class="more-information">
+              <?php while( have_rows('information') ): the_row();
+                  $title = get_sub_field('file_name');
+                  $file = get_sub_field('file_information');
+                  
+                  if( $file && $title ):
+                    $url = $file['url'];
+              ?>
+                  <a href="<?php echo esc_attr($url); ?>" title="<?php echo esc_attr($title); ?>" target="_blank" class="button-big">
+                    <span><?php echo esc_html($title); ?></span>
+                  </a>
+              <?php
+                  endif;
+              endwhile; ?>
+            </div>
+          <?php endif; ?>
+          <!-- File uploads -->
+
           <?php if ($evDate) { ?>
-          <div class="schedule-title">
-            <h3><?php echo date('F j, Y',strtotime($evDate)) ?></h3>
-            <p class="dayName"><?php echo $eventDay ?></p>
-          </div>
+            <div class="schedule-title">
+              <h3><?php echo date('F j, Y',strtotime($evDate)) ?></h3>
+              <p class="dayName"><?php echo $eventDay ?></p>
+            </div>
           <?php } ?>
 
           <div class="filter-option">

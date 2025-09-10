@@ -2241,6 +2241,8 @@ section.faqs .faqrow.active .question .plus-minus-toggle:after{-webkit-transform
 .schedule-activities .schedule-title{text-align:center;margin-bottom:20px}
 .schedule-activities .schedule-title h3{font-family:"Roylands Sans",sans-serif;font-size:20px;line-height:1.2;margin:0}
 .schedule-activities .schedule-title .dayName{margin:5px 0 0;font-size:15px;line-height:1;text-transform:uppercase;letter-spacing:1px;position:relative}
+.schedule-activities .more-information{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:center;-ms-flex-pack:center;justify-content:center;gap:15px;margin-bottom:20px}
+.schedule-activities .more-information .button-big{min-width:auto;text-transform:none}
 .schedule-activities .activities{max-width:700px;width:100%;margin:0 auto}
 .schedule-activities .activities .item{font-size:16px;margin:18px 0;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;position:relative}
 .schedule-activities .activities .item .border-bottom{width:100%;height:1px;position:absolute;left:0;bottom:9px;background-image:url("data:image/svg+xml,%3csvg width='100%30' height='100%30' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%30' height='100%30' fill='none' stroke='%23fef8e0' stroke-width='3' stroke-dasharray='5%2c10' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");z-index:1}
