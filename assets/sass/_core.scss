@@ -1732,6 +1732,21 @@ section.home-cards {
           padding: 6px 18px;
         }
       }
+
+      .text-content {
+        p {
+          color: $color_white;
+        }
+        a {
+          color: $green;
+          text-decoration: none;
+
+          &:hover  {
+            color: $color_blue;
+            text-decoration: underline;
+          }
+        }
+      }
     }
     /*** Festival Schedule END ***/
 

@@ -89,7 +89,7 @@
           <!-- If we need navigation buttons -->
           <div class="swiper-button-prev"></div>
           <div class="swiper-button-next"></div>
-          <div class="text-center mb-40">
+          <div class="text-content text-center mb-40">
             <?php echo $festival_content; ?>
           </div>
           <?php if($festival_link_text && $festival_url_link) { ?>

@@ -1983,6 +1983,9 @@ section.home-cards .card .overlay h2{width:100%;text-align:center;color:#fff}
 .home-content section.festival-sched .festival-sched-details h3{font-size:17px;margin-top:0}
 .home-content section.festival-sched .festival-sched-details .contentDiv{font-size:12px;margin:15px 0;height:34px;overflow:hidden}
 .home-content section.festival-sched .festival-sched-details .button-small a{font-size:10px;letter-spacing:1px;min-width:128px;padding:6px 18px}
+.home-content section.festival-sched .text-content p{color:#fff}
+.home-content section.festival-sched .text-content a{color:#215d48;text-decoration:none}
+.home-content section.festival-sched .text-content a:hover{color:#13648d;text-decoration:underline}
 .home-content section.live-music{background-color:#fef8e0}
 .home-content section.live-music h2{color:#b2b662;margin-bottom:60px}
 .home-content section.live-music .live-music-artists{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;flex-direction:column}
