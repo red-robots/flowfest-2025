@@ -12,9 +12,12 @@
               <?php the_content(); ?>
             </div>
             <?php
+						$buttons_visibility = get_field('buttons_visibility');
+						$buttons_is_on = ($buttons_visibility=='off') ? false : true;
+						if($buttons_is_on) {
               if( have_rows('buttons_main_content') ):
                 $i = 1;
-            ?>
+              ?>
               <div class="buttons-content">
                 <?php while( have_rows('buttons_main_content') ): the_row();
                   $button = get_sub_field('button_content');
@@ -26,6 +29,7 @@
                 <?php $i++; endwhile; ?>
               </div>
             <?php endif; ?>
+		  <?php } ?>
           </div>
         </article>
       <?php } ?>
