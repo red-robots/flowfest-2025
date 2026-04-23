@@ -29,7 +29,7 @@
                 <?php $i++; endwhile; ?>
               </div>
             <?php endif; ?>
-		  <?php } ?>
+		  		<?php } ?>
           </div>
         </article>
       <?php } ?>
