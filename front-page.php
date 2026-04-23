@@ -16,7 +16,7 @@
                 $i = 1;
             ?>
               <div class="buttons-content">
-                <?php while( have_rows('buttons_main_content') ): the_row(); 
+                <?php while( have_rows('buttons_main_content') ): the_row();
                   $button = get_sub_field('button_content');
                   $button_text = (isset($button['title']) && $button['title']) ? $button['title'] : '';
                   $button_link = (isset($button['url']) && $button['url']) ? $button['url'] : '';
@@ -30,17 +30,18 @@
         </article>
       <?php } ?>
 
-    <!-- Festival Schedule -->
     <?php
-        $festival_sched_title = get_field('festival_schedule_title');
-        $festival_content = get_field('festival_schedule_content');
-        $festival_link = get_field('festival_schedule_link');
-        $festival_link_text = (isset($festival_link['title']) && $festival_link['title']) ? $festival_link['title'] : '';
-        $festival_url_link = (isset($festival_link['url']) && $festival_link['url']) ? $festival_link['url'] : '';
-        $festival_link_target = (isset($festival_link['target']) && $festival_link['target']) ? $festival_link['target'] : '_self';
-
-        if($festival_sched_title) {
-    ?>
+	/*==== Festival Schedule ====*/
+	$festival_visibility = get_field('festival_section_visibility');
+	$festival_is_on = ($festival_visibility=='off') ? false : true;
+	if($festival_is_on) {
+		$festival_sched_title = get_field('festival_schedule_title');
+		$festival_content = get_field('festival_schedule_content');
+		$festival_link = get_field('festival_schedule_link');
+		$festival_link_text = (isset($festival_link['title']) && $festival_link['title']) ? $festival_link['title'] : '';
+		$festival_url_link = (isset($festival_link['url']) && $festival_link['url']) ? $festival_link['url'] : '';
+		$festival_link_target = (isset($festival_link['target']) && $festival_link['target']) ? $festival_link['target'] : '_self';
+	  	if($festival_sched_title) { ?>
       <section class="festival-sched">
         <div class="wrapper">
           <h2 class="pagetitle text-center"><?php echo $festival_sched_title; ?></h2>
@@ -100,17 +101,22 @@
         </div>
       </section>
     <?php } ?>
-    <!-- Festival Schedule END -->
+	<!-- Festival Schedule END -->
+  <?php } ?>
 
-    <!-- Live Music -->
+
     <?php
+	/*==== Live Music ====*/
+	$live_music_visibility = get_field('live_music_section_visibility');
+	$live_music_is_on = ($live_music_visibility=='off') ? false : true;
+	if($live_music_is_on) {
         if( have_rows('live_music_artists') ){
         $live_music_title = get_field('live_music_title');
         $live_music_link = get_field('live_music_button');
         $live_music_link_text = (isset($live_music_link['title']) && $live_music_link['title']) ? $live_music_link['title'] : '';
         $live_music_url = (isset($live_music_link['url']) && $live_music_link['url']) ? $live_music_link['url'] : '';
         $live_music_link_target = (isset($live_music_link['target']) && $live_music_link['target']) ? $live_music_link['target'] : '_self';
-    ?>
+        ?>
       <section id="live-music" class="live-music">
         <div class="wrapper">
           <h2 class="pagetitle text-center"><?php echo $live_music_title; ?></h2>
@@ -174,7 +180,7 @@
                     </div> -->
                   <?php
                     }
-                    $j++; 
+                    $j++;
                   }
                 }
               }
@@ -188,7 +194,7 @@
             ?>
           </div>
         </div>
-        
+
         <?php if($live_music_link_text && $live_music_url) { ?>
           <div class="text-center">
             <a class="button-big" href="<?php echo $live_music_url; ?>" target="<?php echo $live_music_link_target; ?>"><?php echo $live_music_link_text; ?></a>
@@ -197,16 +203,24 @@
       </section>
     <?php } ?>
     <!-- Live Music END -->
+  <?php } ?>
 
-    <!-- Sponsors -->
-    <?php get_template_part( 'parts/content', 'vendors' ); ?>
-    <!-- Sponsors END -->
+    <?php /*===== Sponsors ===== */
+	$vendor_visibility = get_field('vendor_section_visibility');
+	$vendor_is_on = ($vendor_visibility=='off') ? false : true;
+	if($vendor_is_on) {
+	  get_template_part( 'parts/content', 'vendors' );
+	} ?>
 
-    <!-- Contact Information -->
-    <?php get_template_part( 'parts/content', 'contact' ); ?>
-    <!-- Contact Information END -->
+    <?php
+	/*===== Contact Information ===== */
+	$contact_visibility = get_field('contact_information_visibility', 'option');
+	$contact_is_on = ($contact_visibility=='off') ? false : true;
+	if($contact_is_on) {
+	  get_template_part( 'parts/content', 'contact' );
+	} ?>
 
-		<?php endwhile; // End of the loop. ?>
+	<?php endwhile; // End of the loop. ?>
 
 	</main><!-- #main -->
 </div><!-- #primary -->
