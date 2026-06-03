@@ -3740,6 +3740,11 @@ section.schedule-activities {
         .name {
           background-color: $color1;
         }
+        .plus-minus-toggle{
+          &:before, &:after {
+            background-color: $color_secondary;
+          }
+        }
       }
     }
 
@@ -3857,11 +3862,6 @@ section.schedule-activities {
                 background-color: $color_lightblue1;
               }
             }
-          }
-        }
-        .plus-minus-toggle{
-          &:before, &:after {
-            background-color: $color_secondary;
           }
         }
       }
