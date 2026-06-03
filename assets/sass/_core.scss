@@ -3732,7 +3732,8 @@ section.schedule-activities {
         }
       }
     }
-    &.festival {
+    &.festival,
+    &.other {
       background-color: $color1;
 
       .sched-title {
