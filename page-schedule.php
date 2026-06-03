@@ -88,6 +88,7 @@ $CS = get_field('coming_soon');
               <div class="header">Legend:</div>
               <div class="indication-practices">Practices</div>
               <div class="indication-workshops">Workshops</div>
+              <div class="indication-festival">Festival</div>
             </div>
             <?php 
             // echo '<pre>';
