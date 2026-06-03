@@ -3859,6 +3859,11 @@ section.schedule-activities {
             }
           }
         }
+        .plus-minus-toggle{
+          &:before, &:after {
+            background-color: $color_secondary;
+          }
+        }
       }
     }
   }
