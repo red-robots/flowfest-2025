@@ -122,13 +122,18 @@ $CS = get_field('coming_soon');
 
               <?php if ( $item ) { ?>
                 <?php if ($show_popup) { ?>
-                  <?php if ($time) { ?>
-                    <span class="time"><?php echo $time ?></span>
-                  <?php } else { ?>
-                    <span class="time-NA"></span>
-                  <?php } ?>
-                  <span class="name"><a class="popup-activity popup-activity-schedule <?php echo $cpt ?>" href="javascript:void(0)" data-id="<?php echo $postid ?>"><?php echo $item_title ?></a></span>
-                  <div class="border-bottom"></div>
+                  <div class="sched-popup <?php echo $cpt ?>">
+                    <a class="popup-activity popup-activity-schedule <?php echo $cpt ?> sched-title show-sched" href="javascript:void(0)" data-id="<?php echo $postid ?>">
+                      <?php if ($time) { ?>
+                        <span class="time"><?php echo $time ?></span>
+                      <?php } else { ?>
+                        <span class="time-NA"></span>
+                      <?php } ?>
+                      <span class="name"><?php echo $item_title ?></span>
+                      <span class="plus-minus-toggle"></span>
+                      <div class="border-bottom"></div>
+                    </a>
+                  </div>
                 <?php } else { ?>
                   <div class="sched-accordion <?php echo $cpt ?>">
                     <a href="javascript:void(0)" class="sched-title show-sched" data-id="<?php echo $postid ?>">

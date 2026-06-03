@@ -3694,7 +3694,8 @@ section.affiliate {
 
 /* SCHEDULE ACCORDION */
 section.schedule-activities {
-  .sched-accordion {
+  .sched-accordion,
+  .sched-popup {
     background-color: $color1;
     border-radius: 10px;
     margin: 0;

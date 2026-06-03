@@ -2259,33 +2259,33 @@ section.affiliate .wrapper{margin:50px auto 80px;width:100%;display:-webkit-box;
 section.affiliate .affiliates{display:-webkit-box;display:-ms-flexbox;display:flex;width:65%;aspect-ratio:3/2;-o-object-fit:contain;object-fit:contain;margin:0 auto;-ms-flex-preferred-size:65%;flex-basis:65%}
 section.affiliate .affiliates img{width:100%;-webkit-transform:scale(0.9);transform:scale(0.9);-webkit-transition:all ease .2s;transition:all ease .2s}
 section.affiliate .affiliates img:hover{-webkit-transform:scale(1);transform:scale(1)}
-section.schedule-activities .sched-accordion{background-color:#afb660;border-radius:10px;margin:0;padding:3px 40px 3px 15px;position:relative;width:100%}
-section.schedule-activities .sched-accordion .sched-title .time,section.schedule-activities .sched-accordion .sched-title .name{color:#fef8e0;position:relative;z-index:2}
-section.schedule-activities .sched-accordion.practices{background-color:#215d48}
-section.schedule-activities .sched-accordion.practices .sched-title .time,section.schedule-activities .sched-accordion.practices .sched-title .name{background-color:#215d48}
-section.schedule-activities .sched-accordion.workshops{background-color:#13648d}
-section.schedule-activities .sched-accordion.workshops .sched-title .time,section.schedule-activities .sched-accordion.workshops .sched-title .name{background-color:#13648d}
-section.schedule-activities .sched-accordion.festival{background-color:#afb660}
-section.schedule-activities .sched-accordion.festival .sched-title .time,section.schedule-activities .sched-accordion.festival .sched-title .name{background-color:#afb660}
-section.schedule-activities .sched-accordion.yoga-immersion{background-color:#95b7ab;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:10px}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title{margin:4px 0 8px}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title .time,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name{background-color:#95b7ab;color:#fff;font-size:14px;padding:0}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title a{color:#fff;font-size:14px}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:before,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:after{background:#215d48;height:3px;width:13px;left:4px}
-section.schedule-activities .sched-accordion.yoga-immersion.no-plus{padding-right:15px}
-section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
-section.schedule-activities .sched-accordion.active.practices{background-color:#215d48}
-section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name{background-color:#215d48}
-section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a{background-color:#5298a7}
-section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a:hover{background-color:#afb660}
-section.schedule-activities .sched-accordion.active.workshops{background-color:#13648d}
-section.schedule-activities .sched-accordion.active.workshops .sched-title .time,section.schedule-activities .sched-accordion.active.workshops .sched-title .name{background-color:#13648d}
-section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a{background-color:#afb660}
-section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a:hover{background-color:#5298a7}
-section.schedule-activities .sched-accordion.active.festival{background-color:#afb660}
-section.schedule-activities .sched-accordion.active.festival .sched-title .time,section.schedule-activities .sched-accordion.active.festival .sched-title .name{background-color:#afb660}
-section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a{background-color:#215d48}
-section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a:hover{background-color:#5298a7}
+section.schedule-activities .sched-accordion,section.schedule-activities .sched-popup{background-color:#afb660;border-radius:10px;margin:0;padding:3px 40px 3px 15px;position:relative;width:100%}
+section.schedule-activities .sched-accordion .sched-title .time,section.schedule-activities .sched-accordion .sched-title .name,section.schedule-activities .sched-popup .sched-title .time,section.schedule-activities .sched-popup .sched-title .name{color:#fef8e0;position:relative;z-index:2}
+section.schedule-activities .sched-accordion.practices,section.schedule-activities .sched-popup.practices{background-color:#215d48}
+section.schedule-activities .sched-accordion.practices .sched-title .time,section.schedule-activities .sched-accordion.practices .sched-title .name,section.schedule-activities .sched-popup.practices .sched-title .time,section.schedule-activities .sched-popup.practices .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.workshops,section.schedule-activities .sched-popup.workshops{background-color:#13648d}
+section.schedule-activities .sched-accordion.workshops .sched-title .time,section.schedule-activities .sched-accordion.workshops .sched-title .name,section.schedule-activities .sched-popup.workshops .sched-title .time,section.schedule-activities .sched-popup.workshops .sched-title .name{background-color:#13648d}
+section.schedule-activities .sched-accordion.festival,section.schedule-activities .sched-popup.festival{background-color:#afb660}
+section.schedule-activities .sched-accordion.festival .sched-title .time,section.schedule-activities .sched-accordion.festival .sched-title .name,section.schedule-activities .sched-popup.festival .sched-title .time,section.schedule-activities .sched-popup.festival .sched-title .name{background-color:#afb660}
+section.schedule-activities .sched-accordion.yoga-immersion,section.schedule-activities .sched-popup.yoga-immersion{background-color:#95b7ab;color:#fff;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;-webkit-box-align:center;-ms-flex-align:center;align-items:center;padding-top:10px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title,section.schedule-activities .sched-popup.yoga-immersion .sched-title{margin:4px 0 8px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .time,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name,section.schedule-activities .sched-popup.yoga-immersion .sched-title .time,section.schedule-activities .sched-popup.yoga-immersion .sched-title .name{background-color:#95b7ab;color:#fff;font-size:14px;padding:0}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title a,section.schedule-activities .sched-popup.yoga-immersion .sched-title a{color:#fff;font-size:14px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:before,section.schedule-activities .sched-accordion.yoga-immersion .sched-title .plus-minus-toggle:after,section.schedule-activities .sched-popup.yoga-immersion .sched-title .plus-minus-toggle:before,section.schedule-activities .sched-popup.yoga-immersion .sched-title .plus-minus-toggle:after{background:#215d48;height:3px;width:13px;left:4px}
+section.schedule-activities .sched-accordion.yoga-immersion.no-plus,section.schedule-activities .sched-popup.yoga-immersion.no-plus{padding-right:15px}
+section.schedule-activities .sched-accordion.active .sched-title .plus-minus-toggle:after,section.schedule-activities .sched-popup.active .sched-title .plus-minus-toggle:after{-webkit-transform:rotate(0);transform:rotate(0)}
+section.schedule-activities .sched-accordion.active.practices,section.schedule-activities .sched-popup.active.practices{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.practices .sched-title .time,section.schedule-activities .sched-accordion.active.practices .sched-title .name,section.schedule-activities .sched-popup.active.practices .sched-title .time,section.schedule-activities .sched-popup.active.practices .sched-title .name{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a,section.schedule-activities .sched-popup.active.practices .sched-content .button-small a{background-color:#5298a7}
+section.schedule-activities .sched-accordion.active.practices .sched-content .button-small a:hover,section.schedule-activities .sched-popup.active.practices .sched-content .button-small a:hover{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.workshops,section.schedule-activities .sched-popup.active.workshops{background-color:#13648d}
+section.schedule-activities .sched-accordion.active.workshops .sched-title .time,section.schedule-activities .sched-accordion.active.workshops .sched-title .name,section.schedule-activities .sched-popup.active.workshops .sched-title .time,section.schedule-activities .sched-popup.active.workshops .sched-title .name{background-color:#13648d}
+section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a,section.schedule-activities .sched-popup.active.workshops .sched-content .button-small a{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.workshops .sched-content .button-small a:hover,section.schedule-activities .sched-popup.active.workshops .sched-content .button-small a:hover{background-color:#5298a7}
+section.schedule-activities .sched-accordion.active.festival,section.schedule-activities .sched-popup.active.festival{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.festival .sched-title .time,section.schedule-activities .sched-accordion.active.festival .sched-title .name,section.schedule-activities .sched-popup.active.festival .sched-title .time,section.schedule-activities .sched-popup.active.festival .sched-title .name{background-color:#afb660}
+section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a,section.schedule-activities .sched-popup.active.festival .sched-content .button-small a{background-color:#215d48}
+section.schedule-activities .sched-accordion.active.festival .sched-content .button-small a:hover,section.schedule-activities .sched-popup.active.festival .sched-content .button-small a:hover{background-color:#5298a7}
 section.schedule-activities .indication{background-color:#fef8e0;-webkit-column-gap:20px;-moz-column-gap:20px;column-gap:20px;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:horizontal;-webkit-box-direction:normal;-ms-flex-direction:row;flex-direction:row;font-size:16px;-webkit-box-pack:start;-ms-flex-pack:start;justify-content:flex-start;margin-bottom:20px;position:relative;z-index:3}
 section.schedule-activities .indication div{color:#fef8e0;border-radius:10px;padding:15px}
 section.schedule-activities .indication .header{color:#215d48}
@@ -2452,9 +2452,9 @@ body.logged-in.admin-bar section.pagetitle{top:90px}
 .home-content section.contact-info .flexwrap .flexcol{width:50%}
 .site-footer .sponsor-footer .sponsor{max-width:20%;width:auto}
 section.affiliate .affiliates{width:22%;-ms-flex-preferred-size:22%;flex-basis:22%;margin:10px 10px 20px 10px}
-section.schedule-activities .sched-accordion.yoga-immersion{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0 40px 0 15px}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title{margin:10px 0}
-section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name{padding-left:10px}
+section.schedule-activities .sched-accordion.yoga-immersion,section.schedule-activities .sched-popup.yoga-immersion{-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;padding:0 40px 0 15px}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title,section.schedule-activities .sched-popup.yoga-immersion .sched-title{margin:10px 0}
+section.schedule-activities .sched-accordion.yoga-immersion .sched-title .name,section.schedule-activities .sched-popup.yoga-immersion .sched-title .name{padding-left:10px}
 section.schedule-activities .indication{font-size:20px}
 .feeds-wrapper .column{width:48.3%}
 .button-big{min-width:375px;width:auto}
