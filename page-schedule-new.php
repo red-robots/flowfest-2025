@@ -1,0 +1,205 @@
+<?php
+/**
+ * Template Name: Schedule (New Layout)
+ *
+ */
+
+get_header();
+$CS = get_field('coming_soon');
+?>
+
+  <div id="primary" class="content-area-full content-default-template">
+    <main id="main" class="site-main" role="main">
+
+      <?php if( !empty($CS) && $CS[0] === 'soon' ) { ?>
+        <section class="coming-soon">
+          <div>Coming Soon</div>
+        </section>
+      <?php } else { ?>
+
+			<?php while ( have_posts() ) : the_post(); ?>
+        <div class="wrapper">
+          <h1 class="pagetitle text-center"><?php the_title(); ?></h1>
+        </div>
+        <?php if ( get_the_content() ) {  ?>
+          <div class="wrapper"><?php get_template_part( 'parts/content', 'page' ); ?></div>
+        <?php } ?>
+      <?php endwhile; ?>
+
+      <?php
+      $post_types = array( 'practices', 'workshops', 'festival' );
+      $days = array(
+        'saturday' => 'Saturday',
+        'sunday'   => 'Sunday',
+      );
+      $filter_options = scheduled_activities_filter();
+      unset( $filter_options['other'] );
+      ?>
+      <section class="schedule-activities schedule-new">
+        <div class="wrapper">
+          <div class="indication">
+            <div class="header">Legend:</div>
+            <div class="indication-practices">Practices</div>
+            <div class="indication-workshops">Workshops</div>
+            <div class="indication-festival">Festival</div>
+          </div>
+
+          <div class="schedule-tabs">
+            <ul class="schedule-tabs__nav" role="tablist">
+              <?php $is_first_tab = true; ?>
+              <?php foreach ( $days as $day_slug => $day_label ) : ?>
+                <li role="presentation">
+                  <button
+                    type="button"
+                    class="schedule-tabs__tab<?php echo $is_first_tab ? ' is-active' : ''; ?>"
+                    role="tab"
+                    id="schedule-tab-<?php echo esc_attr( $day_slug ); ?>"
+                    aria-selected="<?php echo $is_first_tab ? 'true' : 'false'; ?>"
+                    aria-controls="schedule-panel-<?php echo esc_attr( $day_slug ); ?>"
+                    data-tab="<?php echo esc_attr( $day_slug ); ?>"
+                  >
+                    <?php echo esc_html( $day_label ); ?>
+                  </button>
+                </li>
+                <?php $is_first_tab = false; ?>
+              <?php endforeach; ?>
+            </ul>
+
+            <div class="schedule-tabs__panels">
+              <?php $is_first_panel = true; ?>
+              <?php foreach ( $days as $day_slug => $day_label ) : ?>
+                <div
+                  class="schedule-tabs__panel<?php echo $is_first_panel ? ' is-active' : ''; ?>"
+                  role="tabpanel"
+                  id="schedule-panel-<?php echo esc_attr( $day_slug ); ?>"
+                  aria-labelledby="schedule-tab-<?php echo esc_attr( $day_slug ); ?>"
+                  data-panel="<?php echo esc_attr( $day_slug ); ?>"
+                  <?php echo $is_first_panel ? '' : 'hidden'; ?>
+                >
+                  <?php
+                  $earliest_date = flowfest_get_earliest_event_date_by_day( $day_slug, $post_types );
+                  $event_date_label = $earliest_date ? strtoupper( date( 'F j, Y', strtotime( $earliest_date ) ) ) : '';
+                  $event_day_label  = $earliest_date ? strtoupper( date( 'l', strtotime( $earliest_date ) ) ) : strtoupper( $day_label );
+                  ?>
+
+                  <?php if ( $event_date_label ) { ?>
+                    <div class="schedule-title">
+                      <h3><?php echo esc_html( $event_date_label ); ?></h3>
+                      <p class="dayName"><?php echo esc_html( $event_day_label ); ?></p>
+                    </div>
+                  <?php } ?>
+
+                  <div class="filter-option">
+                    <label for="filterby-<?php echo esc_attr( $day_slug ); ?>">Filter By</label>
+                    <div class="select-wrap">
+                      <select
+                        name="filterby-<?php echo esc_attr( $day_slug ); ?>"
+                        id="filterby-<?php echo esc_attr( $day_slug ); ?>"
+                        class="js-select2 schedule-filter"
+                        multiple
+                      >
+                        <?php foreach ( $filter_options as $slug => $label ) : ?>
+                          <option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></option>
+                        <?php endforeach; ?>
+                      </select>
+                      <span class="select2-selected-options" id="select2-selected-options-<?php echo esc_attr( $day_slug ); ?>">All</span>
+                    </div>
+                  </div>
+
+                  <div class="activities">
+                    <?php
+                    $events = get_event_details_by_event_day( $day_slug, $post_types );
+
+                    if ( $events->have_posts() ) :
+                      while ( $events->have_posts() ) :
+                        $events->the_post();
+
+                        $post_id   = get_the_ID();
+                        $cpt       = get_post_type( $post_id );
+                        $date_time = get_field( 'date_and_time', $post_id );
+                        $time_only = '';
+
+                        if ( $date_time ) {
+                          $date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_time );
+                          if ( $date ) {
+                            $time_only = $date->format( 'g:i a' );
+                          }
+                        }
+                    ?>
+                    <div class="item" data-postid="<?php echo esc_attr( $post_id ); ?>" data-posttypeslug="<?php echo esc_attr( $cpt ); ?>">
+                      <div class="sched-popup <?php echo esc_attr( $cpt ); ?>">
+                        <a href="javascript:void(0)" class="popup-activity popup-activity-schedule <?php echo esc_attr( $cpt ); ?> sched-title" data-id="<?php echo esc_attr( $post_id ); ?>">
+                          <?php if ( $time_only ) { ?>
+                            <span class="time"><?php echo esc_html( $time_only ); ?></span>
+                          <?php } else { ?>
+                            <span class="time-NA"></span>
+                          <?php } ?>
+                          <span class="name"><?php the_title(); ?></span>
+                          <span class="plus-minus-toggle"></span>
+                          <div class="border-bottom"></div>
+                        </a>
+                      </div>
+                    </div>
+                    <?php
+                      endwhile;
+                      wp_reset_postdata();
+                    endif;
+                    ?>
+                  </div>
+                </div>
+                <?php $is_first_panel = false; ?>
+              <?php endforeach; ?>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <?php } ?>
+
+		</main><!-- #main -->
+	</div><!-- #primary -->
+
+  <script>
+    jQuery(document).ready(function($){
+      $('.schedule-tabs__tab').on('click', function(){
+        var tab = $(this).data('tab');
+        var $tabs = $(this).closest('.schedule-tabs');
+
+        $tabs.find('.schedule-tabs__tab').removeClass('is-active').attr('aria-selected', 'false');
+        $(this).addClass('is-active').attr('aria-selected', 'true');
+
+        $tabs.find('.schedule-tabs__panel').removeClass('is-active').attr('hidden', true);
+        $tabs.find('.schedule-tabs__panel[data-panel="' + tab + '"]').addClass('is-active').removeAttr('hidden');
+      });
+
+      $('.schedule-new .js-select2').each(function(){
+        $(this).select2({
+          closeOnSelect: false,
+          placeholder: '',
+          allowClear: true,
+          dropdownCssClass: 'schedule-new-dropdown'
+        });
+      });
+
+      $('.schedule-new .schedule-filter').on('change', function(){
+        var selectedFilters = $(this).val();
+        var count = selectedFilters ? selectedFilters.length : 0;
+        var $panel = $(this).closest('.schedule-tabs__panel');
+        var $status = $(this).closest('.filter-option').find('.select2-selected-options');
+        var totalOptions = $(this).find('option').length;
+
+        if ( count === 0 || count === totalOptions ) {
+          $status.text('All');
+          $panel.find('[data-posttypeslug]').show();
+        } else {
+          $status.text('Selected ' + count + ' of ' + totalOptions);
+          $panel.find('[data-posttypeslug]').hide();
+          $(selectedFilters).each(function(k, slug){
+            $panel.find('[data-posttypeslug="' + slug + '"]').show();
+          });
+        }
+      });
+    });
+  </script>
+<?php
+get_footer();

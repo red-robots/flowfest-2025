@@ -105,7 +105,7 @@ function feeds_shortcode_func( $atts ) {
     'filter'=>'',
     'perpage'=>'-1'
   ), $atts );
-  
+
   $filter = (isset($a['filter']) && $a['filter']) ? $a['filter'] : '';
   $post_type = (isset($a['post']) && $a['post']) ? $a['post'] : '';
   $perpage = (isset($a['perpage']) && $a['perpage']) ? $a['perpage'] : '-1';
@@ -125,7 +125,7 @@ function feeds_shortcode_func( $atts ) {
     $output = ob_get_contents();
     ob_end_clean();
     if($output) {
-      $pattern = "/<p[^>]*><\\/p[^>]*>/"; 
+      $pattern = "/<p[^>]*><\\/p[^>]*>/";
       $output = str_replace('<p></p>','',$output);
       $output = preg_replace( $pattern, '', $output );
       $output = preg_replace('/<br>|\n|<br( ?)\/>/', '', $output);
@@ -153,7 +153,7 @@ function get_page_id_by_template($fileName) {
 
 function string_cleaner($str) {
     if($str) {
-        $str = str_replace(' ', '', $str); 
+        $str = str_replace(' ', '', $str);
         $str = preg_replace('/\s+/', '', $str);
         $str = preg_replace('/[^A-Za-z0-9\-]/', '', $str);
         $str = strtolower($str);
@@ -234,7 +234,7 @@ function parse_external_url( $url = '', $internal_class = 'internal-link', $exte
         return false;
     }
 
-    //$home_url = parse_url( $_SERVER['HTTP_HOST'] );     
+    //$home_url = parse_url( $_SERVER['HTTP_HOST'] );
     $home_url = parse_url( home_url() );  // Works for WordPress
 
     $target = '_self';
@@ -261,7 +261,7 @@ function parse_external_url( $url = '', $internal_class = 'internal-link', $exte
                 $target = '_blank';
                 $class = $external_class;
             }
-        } 
+        }
     }
 
     // Return array
@@ -310,7 +310,7 @@ function getPostData() {
     $post_id = ($_POST['post_id']) ? $_POST['post_id'] : 0;
     $post = get_post($post_id);
     $html = ($post) ? getPostContentHTML($post) : '';
-    
+
     $response['content'] = $html;
     echo json_encode($response);
   }
@@ -323,7 +323,7 @@ function getPostContentHTML($obj) {
   $post_id = $obj->ID;
   $post_title = $obj->post_title;
   $content = $obj->post_content;
-  $content = apply_filters('the_content',$content); 
+  $content = apply_filters('the_content',$content);
   ob_start(); ?>
   <div id="event-details" class="fullwidth-block event-details animated fadeIn">
     <div class="inner">
@@ -346,9 +346,9 @@ function ea_disable_gutenberg( $can_edit, $post_type ) {
     return $can_edit;
 
   $exclude_post_types = ['schedule'];
-  $current_post_type = get_post_type($_GET['post']);
+  $current_post_type = ( isset($_GET['post']) && $_GET['post'] ) ? get_post_type($_GET['post']) : '';
 
-  if( in_array($current_post_type,$exclude_post_types) )
+  if( $current_post_type && in_array($current_post_type,$exclude_post_types) )
     $can_edit = false;
 
   // if( in_array($_GET['post_type'],$exclude_post_types) )
@@ -512,7 +512,7 @@ function display_social_media_func( $atts ){
   $a = shortcode_atts( array(
     'exclude' => '',
   ), $atts );
-  
+
   $exclude = (isset($a['exclude']) && $a['exclude']) ? explode(',',$a['exclude']) : '';
   $links = get_social_links();
   if($exclude) {
@@ -521,7 +521,7 @@ function display_social_media_func( $atts ){
         unset($links[$k]);
       }
     }
-  } 
+  }
 
   $output = '';
   ob_start();
@@ -534,7 +534,7 @@ function display_social_media_func( $atts ){
   <?php }
   $output = ob_get_contents();
   ob_end_clean();
-  
+
   return $output;
 }
 

@@ -106,17 +106,53 @@ function js_custom_init() {
 }
 
 // Add new taxonomy, make it hierarchical (like categories)
-add_action( 'init', 'ii_custom_taxonomies', 0 );
-function ii_custom_taxonomies() {
+add_action( 'init', 'build_taxonomies', 0 ); 
+function build_taxonomies() {
         $posts = array(
-            array(
-                'post_type' => 'teams',
-                'menu_name' => 'Team Groups',
-                'plural'    => 'Team Groups',
-                'single'    => 'Team Group',
-                'taxonomy'  => 'team-groups',
-                'rewrite'   => 'team'
-            ),
+			array(
+				'post_type' => 'teams',
+				'menu_name' => 'Team Groups',
+				'plural'    => 'Team Groups',
+				'single'    => 'Team Group',
+				'taxonomy'  => 'team-groups',
+				'rewrite'   => 'team'
+			),
+			array(
+				'post_type' => array('workshops','practices','festival'),
+				'menu_name' => 'Instructors',
+				'plural'    => 'Instructors',
+				'single'    => 'Instructor',
+				'taxonomy'  => 'instructors-list',
+				'rewrite'   => 'instructors-list',
+				'query_var' => true
+			),
+			array(
+				'post_type' => array('workshops','practices','festival'),
+				'menu_name' => 'Locations',
+				'plural'    => 'Locations',
+				'single'    => 'Locations',
+				'taxonomy'  => 'locations-list',
+				'rewrite'   => 'locations-list',
+				'query_var' => true
+			),
+			array(
+				'post_type' => array('workshops','practices','festival'),
+				'menu_name' => 'Class Types',
+				'plural'    => 'Class Types',
+				'single'    => 'Class Type',
+				'taxonomy'  => 'class-types',
+				'rewrite'   => 'class-types',
+				'query_var' => true
+			),
+			array(
+				'post_type' => array('workshops','practices','festival'),
+				'menu_name' => 'Difficulty Levels',
+				'plural'    => 'Difficulty Levels',
+				'single'    => 'Difficulty Level',
+				'taxonomy'  => 'difficulty-levels',
+				'rewrite'   => 'difficulty-levels',
+				'query_var' => true
+			),
         );
     
     if($posts) {
@@ -127,6 +163,8 @@ function ii_custom_taxonomies() {
             $menu_name = ( isset($p['menu_name']) && $p['menu_name'] ) ? $p['menu_name'] : $p['plural'];
             $taxonomy = ( isset($p['taxonomy']) && $p['taxonomy'] ) ? $p['taxonomy'] : "";
             $rewrite = ( isset($p['rewrite']) && $p['rewrite'] ) ? $p['rewrite'] : $taxonomy;
+			$query_var = ( isset($p['query_var']) && $p['query_var'] ) ? $p['query_var'] : true;
+      		$show_admin_column = ( isset($p['show_admin_column']) ) ? $p['show_admin_column'] : true;
             
             
             if( $taxonomy && $p_type ) {
@@ -144,19 +182,55 @@ function ii_custom_taxonomies() {
                     'new_item_name' => __( 'New ' . $single_name ),
                   );
 
-              register_taxonomy($taxonomy,array($p_type), array(
-                'hierarchical' => true,
-                'labels' => $labels,
-                'show_ui' => true,
-                'show_in_rest' => true,
-                'show_admin_column' => true,
-                'query_var' => true,
-                'rewrite' => array( 'slug' => $rewrite ),
-              ));
+              register_taxonomy($taxonomy, $p_type, array(
+				'hierarchical' => true,
+				'labels' => $labels,
+				'show_admin_column' => $show_admin_column,
+				'query_var' => $query_var,
+				'show_ui' => true,
+				'show_in_rest' => true,
+				'public' => true,
+				'_builtin' => true,
+				'rewrite' => array( 'slug' => $rewrite ),
+			  ));
             }
             
         }
     }
+}
+
+/**
+ * Post types that use the date_and_time ACF field.
+ *
+ * @return array
+ */
+function flowfest_get_date_time_post_types() {
+    return array( 'practices', 'workshops', 'festival' );
+}
+
+/**
+ * Format the date_and_time ACF value for display.
+ *
+ * @param string $date_time Raw date/time value.
+ * @return string
+ */
+function flowfest_format_date_and_time( $date_time ) {
+    if ( ! $date_time ) {
+        return '';
+    }
+
+    $date = DateTime::createFromFormat( 'Y-m-d H:i:s', $date_time );
+
+    if ( ! $date ) {
+        $timestamp = strtotime( $date_time );
+        if ( ! $timestamp ) {
+            return '';
+        }
+
+        return date( 'l, F j, Y', $timestamp ) . ' | ' . date( 'g:i a', $timestamp );
+    }
+
+    return $date->format( 'l, F j, Y' ) . ' | ' . $date->format( 'g:i a' );
 }
 
 // Add the custom columns to the position post type:
@@ -181,6 +255,20 @@ function set_custom_cpt_columns($columns) {
         $columns['photo'] = __( 'Photo', 'bellaworks' );
         $columns['taxonomy-team-groups'] = __( 'Group', 'bellaworks' );
         $columns['date'] = __( 'Date', 'bellaworks' );
+    }
+
+    if ( in_array( $post_type, flowfest_get_date_time_post_types(), true ) ) {
+        $new_columns = array();
+
+        foreach ( $columns as $key => $label ) {
+            $new_columns[ $key ] = $label;
+
+            if ( 'title' === $key ) {
+                $new_columns['date_and_time'] = __( 'Date and Time', 'bellaworks' );
+            }
+        }
+
+        return $new_columns;
     }
     
     return $columns;
@@ -213,6 +301,12 @@ function custom_post_column( $column, $post_id ) {
                 echo $the_photo;
                 break;
         }
+    }
+
+    if ( in_array( $post_type, flowfest_get_date_time_post_types(), true ) && 'date_and_time' === $column ) {
+        $date_time = get_field( 'date_and_time', $post_id );
+        $formatted = flowfest_format_date_and_time( $date_time );
+        echo $formatted ? esc_html( $formatted ) : '—';
     }
     
 }

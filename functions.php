@@ -69,3 +69,4 @@ require get_template_directory() . '/inc/jetpack.php';
 require get_template_directory() . '/inc/anti-email-spam.php';
 
 
+require get_template_directory() . '/inc/custom-queries.php';
