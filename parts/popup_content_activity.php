@@ -33,7 +33,7 @@ $activity_taxonomies = array(
   'Instructor'   => 'instructors-list',
   'Difficulty'   => 'difficulty-levels',
   'Location'     => 'locations-list',
-  'Class Length' => 'class-types',
+  'Class Type'   => 'class-types',
 );
 
 $activity_details = array();
@@ -89,8 +89,8 @@ $flexClass = ($imgURL) ? 'half':'full';
           <?php if( isset($activity_details['Location']) && $activity_details['Location'] ) { ?>
             <div class="info info_location"><strong>Location:</strong> <?php echo esc_html( $activity_details['Location'] ); ?></div>
           <?php } ?>
-          <?php if( isset($activity_details['Class Length']) && $activity_details['Class Length'] ) { ?>
-            <div class="info info_class_length"><strong>Class Length:</strong> <?php echo esc_html( $activity_details['Class Length'] ); ?></div>
+          <?php if( isset($activity_details['Class Type']) && $activity_details['Class Type'] ) { ?>
+            <div class="info info_class_length"><strong>Class Type:</strong> <?php echo esc_html( $activity_details['Class Type'] ); ?></div>
           <?php } ?>
 
           <?php if ( $class_length ) { ?>
