@@ -10,8 +10,12 @@ $spotify_url = get_field('spotify_embed',$post_id);
 $spotify = apply_filters('the_content', $spotify_url);
 $cost = get_field('cost',$post_id);
 $class_length = get_field('class_length',$post_id);
-$bio = get_field('bio',$post_id);
 $drop_in_times = get_field('drop_in_times',$post_id);
+
+$instructor_terms = get_the_terms( $post_id, 'instructors-list' );
+$instructorData = ( isset($instructor_terms[0]) ) ? $instructor_terms[0] : null;
+$bio = ( isset($instructorData->description) ) ? $instructorData->description : '';
+
 if( $img = get_field('tile_image',$post_id) ) {
   $image_style = ($img) ? ' style="background-image:url('.$img['url'].')"':'';
   $imgURL = ($img) ? $img['url']:'';

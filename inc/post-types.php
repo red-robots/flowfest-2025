@@ -310,3 +310,16 @@ function custom_post_column( $column, $post_id ) {
     }
     
 }
+
+/**
+ * Remove Description column from Instructors taxonomy admin list.
+ *
+ * @param array $columns Taxonomy list table columns.
+ * @return array
+ */
+add_filter( 'manage_edit-instructors-list_columns', 'flowfest_remove_instructors_list_description_column' );
+function flowfest_remove_instructors_list_description_column( $columns ) {
+    unset( $columns['description'] );
+
+    return $columns;
+}
