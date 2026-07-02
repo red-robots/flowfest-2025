@@ -312,14 +312,63 @@ function custom_post_column( $column, $post_id ) {
 }
 
 /**
- * Remove Description column from Instructors taxonomy admin list.
+ * Truncate text to a character limit with an ellipsis.
+ *
+ * @param string $text   Text to truncate.
+ * @param int    $length Character limit.
+ * @return string
+ */
+function flowfest_truncate_text( $text, $length = 100 ) {
+    $text = wp_strip_all_tags( $text );
+
+    if ( mb_strlen( $text ) <= $length ) {
+        return $text;
+    }
+
+    return rtrim( mb_substr( $text, 0, $length ) ) . '...';
+}
+
+/**
+ * Replace Description with Bio on the Instructors taxonomy admin list.
  *
  * @param array $columns Taxonomy list table columns.
  * @return array
  */
-add_filter( 'manage_edit-instructors-list_columns', 'flowfest_remove_instructors_list_description_column' );
-function flowfest_remove_instructors_list_description_column( $columns ) {
-    unset( $columns['description'] );
+add_filter( 'manage_edit-instructors-list_columns', 'flowfest_instructors_list_admin_columns' );
+function flowfest_instructors_list_admin_columns( $columns ) {
+    unset( $columns['description'], $columns['slug'] );
 
-    return $columns;
+    $new_columns = array();
+
+    foreach ( $columns as $key => $label ) {
+        $new_columns[ $key ] = $label;
+
+        if ( 'name' === $key ) {
+            $new_columns['instructor_bio'] = __( 'Bio', 'bellaworks' );
+        }
+    }
+
+    return $new_columns;
+}
+
+/**
+ * Output truncated Bio column content for Instructors taxonomy admin list.
+ *
+ * @param string $content     Default column content.
+ * @param string $column_name Column key.
+ * @param int    $term_id     Term ID.
+ */
+add_action( 'manage_instructors-list_custom_column', 'flowfest_instructors_list_bio_column_content', 10, 3 );
+function flowfest_instructors_list_bio_column_content( $content, $column_name, $term_id ) {
+    if ( 'instructor_bio' !== $column_name ) {
+        return;
+    }
+
+    $description = term_description( $term_id, 'instructors-list' );
+
+    if ( empty( $description ) ) {
+        return;
+    }
+
+    echo esc_html( flowfest_truncate_text( $description, 100 ) );
 }
