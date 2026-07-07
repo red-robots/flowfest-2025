@@ -4240,6 +4240,98 @@ section.schedule-activities.schedule-new {
       }
     }
   }
+
+  &.schedule-v2 {
+    .schedule-time-group {
+      margin-bottom: 40px;
+      background: #FFF;
+      border-radius: 15px;
+      box-shadow: 3px 4px 0 1px rgba(0,0,0,.05);
+      &:last-child {
+        margin-bottom: 0;
+      }
+      &__title {
+        color: $color_secondary;
+        // font-family: $font-brandon-medium;
+        font-family: $font-roylands;
+        font-size: 25px;
+        font-weight: 400;
+        letter-spacing: 0.5px;
+        line-height: 1.2;
+        margin: 0 0;
+        text-transform: uppercase;
+        padding: 18px 20px 15px;
+        text-align: left;
+        border-bottom: 1px solid #d0caaf;
+      }
+      .sched-popup:has(a) {
+        position: relative;
+        &:hover, &:focus-visible, &:focus-within {
+          transform: scale(1.2);
+          // box-shadow: 2px 2px 0 1px rgba(0,0,0,.35);
+          box-shadow: -1px 3px 5px rgba(0,0,0,.7);
+          //box-shadow: none!important;
+          border: 2px solid #FFF;
+          z-index: 20;
+        }
+        a.sched-title {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 1rem;
+          position: relative;
+          padding: 20px 20px;
+          padding-right: 20px;
+          [class*="fa-"] {
+            display: inline-block;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 12px;
+            color: #FFF;
+          }
+          .time-and-name {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            color: #FFF;
+            span {
+              padding: 0 0;
+              color: #FFF!important;
+              &.time {
+                font-weight: bold;
+              }
+              * {
+                color: #FFF!important;
+              }
+            }
+          }
+          .instructor-and-location {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            color: #FFF;
+            * {
+              color: #FFF!important;
+            }
+          }
+        }
+      }
+      .activities {
+        padding: 20px;
+        max-width: unset;
+        width: unset;
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -5px;
+        .item {
+          margin: 0 0;
+          padding: 5px!important;
+          width: 33.333%;
+        }
+      }
+    }
+  }
 }
 /* SCHEDULE NEW LAYOUT END */
 

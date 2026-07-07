@@ -2346,6 +2346,21 @@ section.schedule-activities.schedule-new .schedule-tabs__tab.is-active{backgroun
 section.schedule-activities.schedule-new .schedule-tabs__tab.is-active::after{border-left:9px solid transparent;border-right:9px solid transparent;border-top:10px solid #215d48;bottom:-10px;content:"";height:0;left:50%;position:absolute;-webkit-transform:translateX(-50%);transform:translateX(-50%);width:0}
 section.schedule-activities.schedule-new .schedule-tabs__panel{display:none}
 section.schedule-activities.schedule-new .schedule-tabs__panel.is-active{display:block}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group{margin-bottom:40px;background:#fff;border-radius:15px;-webkit-box-shadow:3px 4px 0 1px rgba(0,0,0,.05);box-shadow:3px 4px 0 1px rgba(0,0,0,.05)}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group:last-child{margin-bottom:0}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group__title{color:#215d48;font-family:"Roylands Sans",sans-serif;font-size:25px;font-weight:400;letter-spacing:.5px;line-height:1.2;margin:0;text-transform:uppercase;padding:18px 20px 15px;text-align:left;border-bottom:1px solid #d0caaf}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a){position:relative}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a):hover,section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a):focus-visible,section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a):focus-within{-webkit-transform:scale(1.2);transform:scale(1.2);-webkit-box-shadow:-1px 3px 5px rgba(0,0,0,.7);box-shadow:-1px 3px 5px rgba(0,0,0,.7);border:2px solid #fff;z-index:20}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title{display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;gap:1rem;position:relative;padding:20px 20px;padding-right:20px}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title [class*=fa-]{display:inline-block;position:absolute;top:10px;right:10px;font-size:12px;color:#fff}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .time-and-name{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-orient:vertical;-webkit-box-direction:normal;-ms-flex-direction:column;flex-direction:column;color:#fff}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .time-and-name span{padding:0;color:#fff !important}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .time-and-name span.time{font-weight:bold}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .time-and-name span *{color:#fff !important}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .instructor-and-location{width:100%;display:-webkit-box;display:-ms-flexbox;display:flex;-webkit-box-align:center;-ms-flex-align:center;align-items:center;-webkit-box-pack:justify;-ms-flex-pack:justify;justify-content:space-between;color:#fff}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .sched-popup:has(a) a.sched-title .instructor-and-location *{color:#fff !important}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities{padding:20px;max-width:unset;width:unset;display:-webkit-box;display:-ms-flexbox;display:flex;-ms-flex-wrap:wrap;flex-wrap:wrap;margin:0 -5px}
+section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities .item{margin:0;padding:5px !important;width:33.333%}
 .schedule-new-dropdown.select2-dropdown{border-color:#707070;margin-top:40px}
 .schedule-new-dropdown .select2-results__options[aria-multiselectable=true] li.select2-results__option{color:#215d48;font-family:"Brandon Medium";font-size:14px;padding-left:34px}
 .schedule-new-dropdown .select2-results__options[aria-multiselectable=true] li.select2-results__option.select2-results__option--highlighted{background-color:#5b9aff;color:#fff}
