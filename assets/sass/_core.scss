@@ -4329,10 +4329,10 @@ section.schedule-activities.schedule-new {
           margin-top: 0 !important;
           padding: 5px!important;
           width: 33.333%;
-          @include max(900px) {
+          @include max(950px) {
             width: 50%;
           }
-          @include max(768px) {
+          @include max(850px) {
             width: 100%;
           }
         }

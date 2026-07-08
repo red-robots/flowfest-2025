@@ -2678,12 +2678,12 @@ body.mobile-menu-open .floral-pattern{background-image:none !important}
 }@media screen and (max-width:1139px){.schedule.schedules-list li.item{padding:15px 0}
 .schedule.schedules-list li.item:after{position:relative;bottom:-14px}
 .schedule.schedules-list li.item:last-child:after{display:none}
-}@media screen and (max-width:900px){section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities .item{width:50%}
+}@media screen and (max-width:950px){section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities .item{width:50%}
 }@media screen and (max-width:860px){.flex-direction-nav .flex-prev{opacity:1;left:10px}
 .flex-direction-nav .flex-next{opacity:1;right:10px}
+}@media screen and (max-width:850px){section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities .item{width:100%}
 }@media screen and (max-width:820px){#banner ul.slides.single-slide #playYoutube{display:none}
 #banner ul.slides.single-slide .type-video .videoIframe{z-index:101}
-}@media screen and (max-width:768px){section.schedule-activities.schedule-new.schedule-v2 .schedule-time-group .activities .item{width:100%}
 }@media(max-width:640px){.fancybox__toolbar__items--center:not(:last-child){display:none}
 }@media screen and (max-width:600px){.schedule-activities .item{display:block;padding-bottom:15px;margin-top:17px !important}
 .schedule-activities .item span.time,.schedule-activities .item span.name{display:block;width:100%}
