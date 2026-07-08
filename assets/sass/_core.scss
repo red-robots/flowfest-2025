@@ -4324,6 +4324,9 @@ section.schedule-activities.schedule-new {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -5px;
+        @media screen and (max-width: 768px) {
+          flex-direction: column;
+        }
         .item {
           margin: 0 0;
           margin-top: 0 !important;
@@ -4332,8 +4335,8 @@ section.schedule-activities.schedule-new {
           @include max(950px) {
             width: 50%;
           }
-          @include max(850px) {
-            width: 100%;
+          @media screen and (max-width: 768px) {
+            width: 100%!important;
           }
         }
       }
