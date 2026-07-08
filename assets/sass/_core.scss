@@ -4043,6 +4043,20 @@ section.schedule-activities {
 /* SCHEDULE ACCORDION END */
 
 /* SCHEDULE NEW LAYOUT */
+body:has(.schedule-new.schedule-v2) .select2-container--open .select2-dropdown {
+  z-index: 1000;
+  margin-top: 0!important;
+  // li.select2-results__option[id*="festival"] {
+  //   color: $color-lime!important;
+  // }
+  // li.select2-results__option[id*="workshops"] {
+  //   color: $color_blue!important;
+  // }
+  // li.select2-results__option[id*="practices"] {
+  //   color: $green!important;
+  // }
+}
+
 section.schedule-activities.schedule-new {
   .indication {
     margin-bottom: 30px;
@@ -4052,8 +4066,26 @@ section.schedule-activities.schedule-new {
     div.header {
       padding: 0 0;
     }
-    div:not(.header) {
-      padding: 8px 15px;
+    .indicator {
+      border-radius: 6px;
+      padding: 6px 15px;
+      color: #FFF;
+      &[role="button"] {
+        cursor: pointer;
+      }
+    }
+    &.fixed {
+      position: fixed;
+      top: 85px;
+      left: 0;
+      width: 100%;
+      padding: 15px 0;
+      z-index: 100;
+    }
+    @include max(768px) {
+      justify-content: center;
+      align-items: center;
+      gap: 0.4rem;
     }
   }
 
@@ -4148,6 +4180,7 @@ section.schedule-activities.schedule-new {
 
     .select2-container {
       z-index: 100;
+      width: 100%!important;
     }
 
     .select2-container--default .select2-selection--multiple {
@@ -4324,7 +4357,7 @@ section.schedule-activities.schedule-new {
         display: flex;
         flex-wrap: wrap;
         margin: 0 -5px;
-        @media screen and (max-width: 768px) {
+        @include max(768px) {
           flex-direction: column;
         }
         .item {
@@ -4335,7 +4368,7 @@ section.schedule-activities.schedule-new {
           @include max(950px) {
             width: 50%;
           }
-          @media screen and (max-width: 768px) {
+          @include max(768px) {
             width: 100%!important;
           }
         }

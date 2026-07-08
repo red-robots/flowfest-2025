@@ -574,11 +574,14 @@ $('.sponsors-loop').owlCarousel({
           windowScrollTop = $(window).scrollTop(),
           elementOffset = s.offset().top + 350;
       if(elementOffset <= windowScrollTop && windowWidth >= 1140) {
-        sn.css({position:'fixed',top:'0',width:'100%',padding:'15px 0'});
+        //sn.css({position:'fixed',top:'0',width:'100%',padding:'15px 0'});
+        sn.addClass('fixed');
       } else if(elementOffset <= windowScrollTop && windowWidth < 1140) {
-        sn.css({position:'fixed',top:'120px',width:'100%',padding:'10px 0 15px'});
+        sn.addClass('fixed');
+        //sn.css({position:'fixed',top:'120px',width:'100%',padding:'10px 0 15px'});
       } else {
-        sn.css({position:'initial'});
+        //sn.css({position:'initial'});
+        sn.removeClass('fixed');
       }
     });
   }

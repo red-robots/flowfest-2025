@@ -24,14 +24,16 @@ get_header();
       'saturday' => 'Saturday',
       'sunday'   => 'Sunday',
     );
+    $filter_options = scheduled_activities_filter();
+    unset( $filter_options['other'] );
     ?>
     <section class="schedule-activities schedule-new schedule-v2">
       <div class="wrapper">
         <div class="indication">
           <div class="header">Legend:</div>
-          <div class="indication-practices">Practices</div>
-          <div class="indication-workshops">Workshops</div>
-          <div class="indication-festival">Festival</div>
+          <span data-name="practices" class="indicator indication-practices">Practices</span>
+          <span data-name="workshops" class="indicator indication-workshops">Workshops</span>
+          <span data-name="festival" class="indicator indication-festival">Festival</span>
         </div>
 
         <div class="schedule-tabs">
@@ -77,6 +79,23 @@ get_header();
                     <p class="dayName"><?php echo esc_html( $event_day_label ); ?></p>
                   </div>
                 <?php } ?>
+
+                <div class="filter-option">
+                  <label for="filterby-<?php echo esc_attr( $day_slug ); ?>">Filter By</label>
+                  <div class="select-wrap">
+                    <select
+                      name="filterby-<?php echo esc_attr( $day_slug ); ?>"
+                      id="filterby-<?php echo esc_attr( $day_slug ); ?>"
+                      class="js-select2 schedule-filter"
+                      multiple
+                    >
+                      <?php foreach ( $filter_options as $slug => $label ) : ?>
+                        <option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></option>
+                      <?php endforeach; ?>
+                    </select>
+                    <span class="select2-selected-options" id="select2-selected-options-<?php echo esc_attr( $day_slug ); ?>">All</span>
+                  </div>
+                </div>
 
                 <?php foreach ( $schedule['groups'] as $group_slug => $group ) : ?>
                   <?php if ( empty( $group['events'] ) ) {
@@ -147,7 +166,74 @@ get_header();
       $tabs.find('.schedule-tabs__panel').removeClass('is-active').attr('hidden', true);
       $tabs.find('.schedule-tabs__panel[data-panel="' + tab + '"]').addClass('is-active').removeAttr('hidden');
     });
+
+    $('.schedule-new.schedule-v2 .js-select2').each(function(){
+      $(this).select2({
+        closeOnSelect: false,
+        placeholder: '',
+        allowClear: true,
+        dropdownCssClass: 'schedule-new-dropdown'
+      });
+    });
+
+    $('.schedule-new.schedule-v2 .schedule-filter').on('change', function(){
+      var selectedFilters = $(this).val();
+      var count = selectedFilters ? selectedFilters.length : 0;
+      var $panel = $(this).closest('.schedule-tabs__panel');
+      var $status = $(this).closest('.filter-option').find('.select2-selected-options');
+      var totalOptions = $(this).find('option').length;
+
+      if ( count === 0 || count === totalOptions ) {
+        $status.text('All');
+        $panel.find('[data-posttypeslug]').show();
+      } else {
+        $status.text('Selected ' + count + ' of ' + totalOptions);
+        $panel.find('[data-posttypeslug]').hide();
+        $(selectedFilters).each(function(k, slug){
+          $panel.find('[data-posttypeslug="' + slug + '"]').show();
+        });
+      }
+    });
+
+    // $(document).on('click', '.indicator[role="button"]', function(){
+    //   var name = $(this).data('name');
+    //   var $panel = $('.schedule-tabs__panel');
+
+    //   if( $panel.hasClass('is-active') ) {
+    //     if( $panel.find('.item[data-posttypeslug]').length > 0 ) {
+    //       console.log(name);
+
+    //       $panel.find('.item[data-posttypeslug]').each(function(){
+    //         const slug = $(this).data('posttypeslug');
+    //         if( slug!=name ) {
+    //           $(this).hide();
+    //         } else {
+    //           $(this).show();
+    //         }
+    //       });
+    //     }
+    //   } else {
+    //     if( $panel.find('a.sched-title').length > 0 ) {
+    //       $panel.find('a.sched-title').each(function(){
+    //         $(this).removeAttr('style');
+    //       });
+    //     }
+    //   }
+
+    //   // if ( count === 0 || count === totalOptions ) {
+    //   //   $status.text('All');
+    //   //   $panel.find('[data-posttypeslug]').show();
+    //   // } else {
+    //   //   $status.text('Selected ' + count + ' of ' + totalOptions);
+    //   //   $panel.find('[data-posttypeslug]').hide();
+    //   //   $(selectedFilters).each(function(k, slug){
+    //   //     $panel.find('[data-posttypeslug="' + slug + '"]').show();
+    //   //   });
+    //   // }
+    // });
+
   });
 </script>
+
 <?php
 get_footer();
