@@ -2322,7 +2322,6 @@ section.schedule-activities.schedule-new .indication{margin-bottom:30px;display:
 section.schedule-activities.schedule-new .indication div.header{padding:0}
 section.schedule-activities.schedule-new .indication .indicator{border-radius:6px;padding:6px 15px;color:#fff}
 section.schedule-activities.schedule-new .indication .indicator[role=button]{cursor:pointer}
-section.schedule-activities.schedule-new .indication.fixed{position:fixed;top:85px;left:0;width:100%;padding:15px 0;z-index:100}
 section.schedule-activities.schedule-new .activities .item .border-bottom{background-position:top right;background-repeat:repeat}
 section.schedule-activities.schedule-new .sched-popup:has(a.sched-title){cursor:pointer;-webkit-transition:all ease .3s;transition:all ease .3s;padding:0 0 !important;border-radius:10px;overflow:hidden}
 section.schedule-activities.schedule-new .sched-popup:has(a.sched-title):hover{-webkit-box-shadow:0 5px 15px rgba(0,0,0,.45),0 30px 30px rgba(0,0,0,.1);box-shadow:0 5px 15px rgba(0,0,0,.45),0 30px 30px rgba(0,0,0,.1)}

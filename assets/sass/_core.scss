@@ -4074,14 +4074,14 @@ section.schedule-activities.schedule-new {
         cursor: pointer;
       }
     }
-    &.fixed {
-      position: fixed;
-      top: 85px;
-      left: 0;
-      width: 100%;
-      padding: 15px 0;
-      z-index: 100;
-    }
+    // &.fixed {
+    //   position: fixed;
+    //   top: 85px;
+    //   left: 0;
+    //   width: 100%;
+    //   padding: 15px 0;
+    //   z-index: 100;
+    // }
     @include max(768px) {
       justify-content: center;
       align-items: center;
