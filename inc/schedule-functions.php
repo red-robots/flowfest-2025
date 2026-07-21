@@ -15,11 +15,11 @@ function flowfest_get_schedule_time_groups() {
 		'morning'          => array(
 			'label' => 'Morning',
 			'start' => null,
-			'end'   => 600,
+			'end'   => 580,
 		),
 		'mid-morning'      => array(
 			'label' => 'Mid-morning',
-			'start' => 600,
+			'start' => 580,
 			'end'   => 705,
 		),
 		'early-afternoon'  => array(
