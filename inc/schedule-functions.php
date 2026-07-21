@@ -11,6 +11,8 @@
  * @return array<string, array{label: string, start: int, end: int|null}>
  */
 function flowfest_get_schedule_time_groups() {
+  //580 => 9:30am
+  //600 => 10:00am
 	return array(
 		'morning'          => array(
 			'label' => 'Morning',
