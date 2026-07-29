@@ -20,7 +20,6 @@ $registerLink = ( isset($regs['url']) && $regs['url'] ) ? $regs['url'] : '';
 $registerName = ( isset($regs['title']) && $regs['title'] ) ? $regs['title'] : '';
 $registerTarget = ( isset($regs['target']) && $regs['target'] ) ? $regs['target'] : '_self';
 
-
 if( $img = get_field('tile_image',$post_id) ) {
   $image_style = ($img) ? ' style="background-image:url('.$img['url'].')"':'';
   $imgURL = ($img) ? $img['url']:'';
@@ -55,12 +54,13 @@ $flexClass = ($imgURL) ? 'half':'full';
   <div class="middle-content">
     <div class="flex-wrap <?php echo $flexClass ?>">
       <div class="text">
-        <div class="popup-content-titleWrap">
-          <h2 class="title"><?php echo $post->post_title ?></h2> 
-          <?php if( $registerLink && $registerName ) { ?>
-          <a href="<?php echo $registerLink ?>" target="<?php echo $registerTarget ?>" class="button-green button_4"><?php echo $registerName ?></a>
-          <?php } ?>
-        </div>
+		  <div class="popup-content-titleWrap">
+			  <h2 class="title"><?php echo $post->post_title ?></h2> 
+			  <?php if( $registerLink && $registerName ) { ?>
+			  <a href="<?php echo $registerLink ?>" target="<?php echo $registerTarget ?>" class="button-green button_4"><?php echo $registerName ?></a>
+              <?php } ?>
+		  </div>
+        
           <?php if ( $time_only || $other_info || ! empty( $activity_details ) ) { ?>
         <div class="other-info">
           <?php if ( $time_only ) { ?>

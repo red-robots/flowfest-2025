@@ -26,6 +26,12 @@ get_header();
     );
     $filter_options = scheduled_activities_filter();
     unset( $filter_options['other'] );
+
+    // $premium_terms = get_terms( array(
+    //   'taxonomy'   => 'premium-levels', 
+    //   'hide_empty' => false,
+    // ));
+
     ?>
     <section class="schedule-activities schedule-new schedule-v2">
       <div class="wrapper">
@@ -92,6 +98,7 @@ get_header();
                       <?php foreach ( $filter_options as $slug => $label ) : ?>
                         <option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></option>
                       <?php endforeach; ?>
+                        <option value="premium-experiences">Premium Experiences</option>
                     </select>
                     <span class="select2-selected-options" id="select2-selected-options-<?php echo esc_attr( $day_slug ); ?>">All</span>
                   </div>
@@ -106,14 +113,22 @@ get_header();
                     <div class="activities">
                       <?php foreach ( $group['events'] as $event ) : ?>
                         <?php
+                        $premium_terms = get_the_terms( $event['post_id'], 'premium-levels' );
                         $instructor_terms = get_the_terms( $event['post_id'], 'instructors-list' );
                         $instructorData = ( isset($instructor_terms[0]) ) ? $instructor_terms[0] : null;
                         $instructorName = ( isset($instructorData->name) ) ? $instructorData->name : '';
                         $location_terms = get_the_terms( $event['post_id'], 'locations-list' );
                         $locationData = ( isset($location_terms[0]) ) ? $location_terms[0] : null;
                         $locationName = ( isset($locationData->name) ) ? $locationData->name : '';
+                        $premium_terms_string = '';
+                        if($premium_terms) {
+                          foreach($premium_terms as $premium_term) {
+                            $premium_terms_string .= $premium_term->slug . ', ';
+                          }
+                          $premium_terms_string = rtrim($premium_terms_string, ', ');
+                        }
                         ?>
-                        <div class="item" data-postid="<?php echo esc_attr( $event['post_id'] ); ?>" data-posttypeslug="<?php echo esc_attr( $event['post_type'] ); ?>">
+                        <div class="item" data-postid="<?php echo esc_attr( $event['post_id'] ); ?>" data-posttypeslug="<?php echo esc_attr( $event['post_type'] ); ?>" data-terms="<?php echo esc_attr( $premium_terms_string ); ?>">
                           <div class="sched-popup <?php echo esc_attr( $event['post_type'] ); ?>">
                             <a href="javascript:void(0)" class="popup-activity popup-activity-schedule <?php echo esc_attr( $event['post_type'] ); ?> sched-title" data-id="<?php echo esc_attr( $event['post_id'] ); ?>">
                               <div class="time-and-name">
@@ -191,6 +206,12 @@ get_header();
         $panel.find('[data-posttypeslug]').hide();
         $(selectedFilters).each(function(k, slug){
           $panel.find('[data-posttypeslug="' + slug + '"]').show();
+          $panel.find('.item[data-terms]').each(function(){
+            const terms = $(this).data('terms');
+            if( terms.includes(slug) ) {
+              $(this).show();
+            }
+          });
         });
       }
     });

@@ -153,6 +153,15 @@ function build_taxonomies() {
 				'rewrite'   => 'difficulty-levels',
 				'query_var' => true
 			),
+            array(
+				'post_type' => array('workshops','practices','festival'),
+				'menu_name' => 'Premium',
+				'plural'    => 'Premium',
+				'single'    => 'Premium',
+				'taxonomy'  => 'premium-levels',
+				'rewrite'   => 'premium-levels',
+				'query_var' => true
+			),
         );
     
     if($posts) {
