@@ -147,6 +147,7 @@
               $spotify = get_field('spotify_embed', $post_id);
               //$column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
               $column = ($count==1 && $count_column==3) ? 'column column_half' : 'column column_half';
+              //print_r($location_time);
             ?>
             <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
               <div class="inner">
@@ -172,17 +173,17 @@
                     $time = $detail['start_time'];
                     $title = $detail['title'];
 
-                    if($count!=1 && $location && $time) {
-                ?>
-                  <div class="schedule">
-                    <div class="location"><?php echo $location; ?></div>
-                    <div class="time"><?php echo $time; ?></div>
-                  </div>
-                  <?php if($title){ ?>
-                    <!-- <div class="cf more-details" data-id="<?php echo $post_id; ?>" data-item="<?php echo $j; ?>">
-                      <a href="<?php echo $pagelink; ?>" class="learn-more">Learn More</a>
-                    </div> -->
-                  <?php
+                    //if($count!=1 && $location && $time) 
+                    if($location && $time) { ?>
+                    <div class="schedule">
+                      <div class="location"><?php echo $location; ?></div>
+                      <div class="time"><?php echo $time; ?></div>
+                    </div>
+                    <?php if($title){ ?>
+                      <!-- <div class="cf more-details" data-id="<?php echo $post_id; ?>" data-item="<?php echo $j; ?>">
+                        <a href="<?php echo $pagelink; ?>" class="learn-more">Learn More</a>
+                      </div> -->
+                    <?php
                     }
                     $j++;
                   }
