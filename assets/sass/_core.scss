@@ -4940,6 +4940,7 @@ section.vendors {
       text-decoration: none;
     }
   }
+
   .schedule {
     font-size: 16px;
     margin: 20px 0 0;
@@ -4987,7 +4988,33 @@ section.vendors {
       color: $color_lightblue1;
     }
   }
+
+  div.card {
+    background: $color_secondary;
+    width: 100%;
+    float: left;
+    margin-bottom: 15px;
+    .cardTitle {
+      padding: 15px;
+      width: 100%;
+      float: left;
+    }
+    h4.title {
+      background: transparent;
+      margin: 0 0;
+      padding: 0 0!important;
+      min-height: unset!important;
+    }
+    .day-time-info {
+      font-size: 15px;
+      color: $yellow;
+      width: 100%;
+      float: left;
+      margin-top: 5px;
+    }
+  }
 }
+
 .button-small {
   a {
     display: inline-block;

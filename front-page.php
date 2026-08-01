@@ -144,19 +144,46 @@
               $pagelink = ($postType=='artists') ? 'javascript:void(0)' : get_permalink($post_id);
               $popup = ($postType=='artists') ? 'popup-activity' : '';
               $location_time = get_field('location_time', $post_id);
+              $day_title = get_field('title', $post_id);
               $spotify = get_field('spotify_embed', $post_id);
               //$column = ($count==1 && $count_column==3) ? 'column column_full' : 'column column_half';
               $column = ($count==1 && $count_column==3) ? 'column column_half' : 'column column_half';
-              //print_r($location_time);
+              $start_time = '';
+              $event_day = '';
+              if( $location_time ) {
+                $firstloc = $location_time[0];
+                $first_location = $firstloc['location'];
+                $start_time = $firstloc['start_time'];
+                $event_day = $firstloc['title'];
+              }
+              $day_time_info = '';
+              if($event_day) {
+                $day_time_info .= $event_day;
+              }
+              if($start_time) {
+                if($event_day) {
+                  $day_time_info .= ' | ' . $start_time;
+                } else {
+                  $day_time_info .= $start_time;
+                }
+              }
+              if($day_time_info) {
+                $day_time_info = '<div class="day-time-info">' . trim(preg_replace('/\s+/', ' ', $day_time_info)) . '</div>';
+              }
             ?>
             <div data-postid="<?php echo $post_id ?>" class="<?php echo $postTypeTitle . ' ' . $column; ?>">
               <div class="inner">
-                <div class="image">
-                  <figure<?php echo $imageStyle ?>>
-                    <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/square.png" class="helper" alt="">
-                  </figure>
+                <div class="card">
+                  <div class="image">
+                    <figure<?php echo $imageStyle ?>>
+                      <img src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/square.png" class="helper" alt="">
+                    </figure>
+                  </div>
+                  <div class="cardTitle">
+                    <h4 class="title"><?php echo $music_artist_title; ?></h4>
+                    <?php echo $day_time_info; ?>
+                  </div>
                 </div>
-                <h4 class="title"><?php echo $music_artist_title; ?></h4>
                 <?php
                   if($spotify){ ?>
                   <div class="button-small">
@@ -164,7 +191,8 @@
                   </div>
                 <?php
                   }
-
+                  
+                  $location_time = FALSE; // to hide location and time
                   if( $location_time ){
                   $j = 1;
 
