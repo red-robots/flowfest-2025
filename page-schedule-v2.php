@@ -37,10 +37,20 @@ get_header();
     $filter_options = scheduled_activities_filter();
     unset( $filter_options['other'] );
 
-    // $premium_terms = get_terms( array(
-    //   'taxonomy'   => 'premium-levels', 
-    //   'hide_empty' => false,
-    // ));
+    $premium_terms = get_terms( array(
+      'taxonomy'   => 'premium-levels', 
+      'hide_empty' => false,
+    ));
+    $extra_filter_options = array();
+    if($premium_terms) {
+      foreach($premium_terms as $premium_term) {
+        $x_term_id = $premium_term->taxonomy . '_' . $premium_term->term_id;
+        $addto_filter = get_field('addto_filter', $x_term_id);
+        if($addto_filter) {
+          $extra_filter_options[$premium_term->slug] = $premium_term;
+        }
+      }
+    }
     ?>
     <section class="schedule-activities schedule-new schedule-v2">
       <div class="wrapper">
@@ -107,7 +117,10 @@ get_header();
                       <?php foreach ( $filter_options as $slug => $label ) : ?>
                         <option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( $label ); ?></option>
                       <?php endforeach; ?>
-                        <option value="premium-experiences">Premium Experiences</option>
+                      <?php foreach ( $extra_filter_options as $slug => $label ) : ?>
+                        <option value="<?php echo esc_attr( $slug ); ?>"><?php echo esc_html( ucwords( $label->name ) ); ?></option>
+                      <?php endforeach; ?>
+                        <!-- <option value="premium-experiences">Premium Experiences</option> -->
                     </select>
                     <span class="select2-selected-options" id="select2-selected-options-<?php echo esc_attr( $day_slug ); ?>">All</span>
                   </div>
