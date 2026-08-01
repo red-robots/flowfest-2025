@@ -8,8 +8,11 @@ if($dateTime) {
   $date = DateTime::createFromFormat('Y-m-d H:i:s', $dateTime);
   $time_only = $date->format('g:i a');
 }
-$content = $post->post_content;
-apply_filters('the_content',$content);
+//$content = $post->post_content;
+$content = get_the_content($post_id);
+if($content) {
+  apply_filters('the_content',$content);
+}
 $flexClass = ($img) ? 'half':'full';
 
 $registration = get_field('registration_button',$post_id);
@@ -47,7 +50,7 @@ $registration_button_target = (isset($registration['target']) && $registration['
         <?php } ?>
 
         <?php if ( $content ) { ?>
-        <div class="description"><?php echo $content ?></div>
+        <div class="description"><?php echo $content ?> TEST</div>
         <?php } ?>
 
       </div>

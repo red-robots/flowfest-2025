@@ -48,8 +48,38 @@ foreach ( $activity_taxonomies as $label => $taxonomy ) {
   }
 }
 $flexClass = ($imgURL) ? 'half':'full';
+$post_type = get_post_type( $post_id );
+$bio_artist = '';
+$artist_location = '';
+$artist_start_time = '';
+$artist_event_day = '';
+$day_time_info = '';
+if($post_type=='artists') {
+  $bio_artist = $post->post_content;
+  $bio_artist = apply_filters('the_content', $bio_artist);
+  $location_time = get_field('location_time', $post_id);
+  if($location_time) {
+    $firstloc = $location_time[0];
+    $artist_location = $firstloc['location'][0];
+    $artist_start_time = $firstloc['start_time'];
+    $artist_event_day = $firstloc['title'];
+  }
+  if($artist_event_day) {
+    $day_time_info .= $artist_event_day;
+  }
+  if($artist_start_time) {
+    if($artist_event_day) {
+      $day_time_info .= ' | ' . $artist_start_time;
+    } else {
+      $day_time_info .= $artist_start_time; 
+    }
+  }
+  if($day_time_info) {
+    $day_time_info = trim(preg_replace('/\s+/', ' ', $day_time_info));
+  }
+}
 ?>
-<div class="popup-content activity">
+<div class="popup-content activity popup-content-<?php echo $post_type ?>">
   <a href="javascript:void(0)" id="closeModalBtn"><span>close</span></a>
   <div class="middle-content">
     <div class="flex-wrap <?php echo $flexClass ?>">
@@ -61,7 +91,7 @@ $flexClass = ($imgURL) ? 'half':'full';
               <?php } ?>
 		  </div>
         
-          <?php if ( $time_only || $other_info || ! empty( $activity_details ) ) { ?>
+        <?php if ( $time_only || $other_info || ! empty( $activity_details ) ) { ?>
         <div class="other-info">
           <?php if ( $time_only ) { ?>
             <div class="time"><?php echo $time_only ?></div>
@@ -72,45 +102,63 @@ $flexClass = ($imgURL) ? 'half':'full';
         </div>
         <?php } ?>
 
-        <div class="description">
+        <?php if($post_type=='artists') { ?>
+          <?php if($bio_artist || $artist_location || $day_time_info) { ?>
+            <div class="description">
+              <?php if($artist_location) { ?>
+                <div class="info info_location"><strong>Location:</strong> <?php echo $artist_location ?></div>
+              <?php } ?>
+              <?php if($day_time_info) { ?>
+                <div class="info day_time_info"><strong>Day & Time:</strong> <?php echo $day_time_info ?></div>
+              <?php } ?>
+              <?php if($bio_artist) { ?>
+                <div class="bio_artist">
+                  <?php echo $bio_artist ?>
+                </div>
+              <?php } ?>
+            </div>
+          <?php } ?>
+        <?php } else { ?>
+          <div class="description">
 
-          <?php if ( $cost ) { ?>
-          <div class="info info_cost"><strong>Cost:</strong> <?php echo $cost; ?></div>
-          <?php } ?>
+            <?php if ( $cost ) { ?>
+            <div class="info info_cost"><strong>Cost:</strong> <?php echo $cost; ?></div>
+            <?php } ?>
 
-          <?php if( isset($activity_details['Instructor']) && $activity_details['Instructor'] ) { ?>
-            <div class="info info_instructor"><strong>Instructor:</strong> <?php echo esc_html( $activity_details['Instructor'] ); ?></div>
-          <?php } ?>
+            <?php if( isset($activity_details['Instructor']) && $activity_details['Instructor'] ) { ?>
+              <div class="info info_instructor"><strong>Instructor:</strong> <?php echo esc_html( $activity_details['Instructor'] ); ?></div>
+            <?php } ?>
 
-          <?php if ( $bio ) {
-            $bio_content = apply_filters( 'the_content', $bio );
-            if ( preg_match( '/<p[^>]*>/', $bio_content ) ) {
-              $bio_content = preg_replace( '/(<p[^>]*>)/', '$1<strong>Bio:</strong> ', $bio_content, 1 );
-            } else {
-              $bio_content = '<p><strong>Bio:</strong> ' . wp_kses_post( $bio ) . '</p>';
-            }
-          ?>
-          <div class="info info_bio"><?php echo $bio_content; ?></div>
-          <?php } ?>
+            <?php if ( $bio ) {
+              $bio_content = apply_filters( 'the_content', $bio );
+              if ( preg_match( '/<p[^>]*>/', $bio_content ) ) {
+                $bio_content = preg_replace( '/(<p[^>]*>)/', '$1<strong>Bio:</strong> ', $bio_content, 1 );
+              } else {
+                $bio_content = '<p><strong>Bio:</strong> ' . wp_kses_post( $bio ) . '</p>';
+              }
+            ?>
+            <div class="info info_bio"><?php echo $bio_content; ?></div>
+            <?php } ?>
 
-          <?php if( isset($activity_details['Difficulty']) && $activity_details['Difficulty'] ) { ?>
-            <div class="info info_difficulty"><strong>Difficulty:</strong> <?php echo esc_html( $activity_details['Difficulty'] ); ?></div>
-          <?php } ?>
-          <?php if( isset($activity_details['Location']) && $activity_details['Location'] ) { ?>
-            <div class="info info_location"><strong>Location:</strong> <?php echo esc_html( $activity_details['Location'] ); ?></div>
-          <?php } ?>
-          <?php if( isset($activity_details['Class Type']) && $activity_details['Class Type'] ) { ?>
-            <div class="info info_class_length"><strong>Class Type:</strong> <?php echo esc_html( $activity_details['Class Type'] ); ?></div>
-          <?php } ?>
+            <?php if( isset($activity_details['Difficulty']) && $activity_details['Difficulty'] ) { ?>
+              <div class="info info_difficulty"><strong>Difficulty:</strong> <?php echo esc_html( $activity_details['Difficulty'] ); ?></div>
+            <?php } ?>
+            <?php if( isset($activity_details['Location']) && $activity_details['Location'] ) { ?>
+              <div class="info info_location"><strong>Location:</strong> <?php echo esc_html( $activity_details['Location'] ); ?></div>
+            <?php } ?>
+            <?php if( isset($activity_details['Class Type']) && $activity_details['Class Type'] ) { ?>
+              <div class="info info_class_length"><strong>Class Type:</strong> <?php echo esc_html( $activity_details['Class Type'] ); ?></div>
+            <?php } ?>
 
-          <?php if ( $class_length ) { ?>
-          <div class="info info_class_length"><strong>Class Length:</strong> <?php echo $class_length; ?></div>
-          <?php } ?>
+            <?php if ( $class_length ) { ?>
+            <div class="info info_class_length"><strong>Class Length:</strong> <?php echo $class_length; ?></div>
+            <?php } ?>
 
-          <?php if ( $drop_in_times ) { ?>
-          <div class="info info_drop_in_times"><strong>Drop-In Times:</strong> <?php echo $drop_in_times; ?></div>
-          <?php } ?>
-        </div>
+            <?php if ( $drop_in_times ) { ?>
+            <div class="info info_drop_in_times"><strong>Drop-In Times:</strong> <?php echo $drop_in_times; ?></div>
+            <?php } ?>
+          </div>
+        <?php } ?>
       </div>
 
       <?php if ($imgURL) { ?>
