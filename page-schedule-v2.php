@@ -19,7 +19,17 @@ get_header();
     <?php endwhile; ?>
 
     <?php
-    $post_types = array( 'practices', 'workshops', 'festival' );
+    //$post_types = array( 'practices', 'workshops', 'festival' );
+    $post_types_names = array(
+      'practices' => 'Practices',
+      'workshops' => 'Workshops',
+      'festival' => 'Festival',
+    );
+    $post_types = [];
+    foreach($post_types_names as $post_type => $post_type_name) {
+      $post_types[] = $post_type;
+    }
+
     $days = array(
       'saturday' => 'Saturday',
       'sunday'   => 'Sunday',
@@ -31,15 +41,14 @@ get_header();
     //   'taxonomy'   => 'premium-levels', 
     //   'hide_empty' => false,
     // ));
-
     ?>
     <section class="schedule-activities schedule-new schedule-v2">
       <div class="wrapper">
         <div class="indication">
           <div class="header">Legend:</div>
-          <span data-name="practices" class="indicator indication-practices">Practices</span>
-          <span data-name="workshops" class="indicator indication-workshops">Workshops</span>
-          <span data-name="festival" class="indicator indication-festival">Festival</span>
+          <?php foreach ( $post_types_names as $post_type => $post_type_name ) : ?>
+            <span data-name="<?php echo esc_attr( $post_type ); ?>" class="indicator indication-<?php echo esc_attr( $post_type ); ?>"><?php echo esc_html( $post_type_name ); ?></span>
+          <?php endforeach; ?>
         </div>
 
         <div class="schedule-tabs">
@@ -252,7 +261,18 @@ get_header();
     //   //   });
     //   // }
     // });
-
+                      
+    if( $('.schedule-new.schedule-v2 .indicator').length > 0 ) {
+      $('.schedule-new.schedule-v2 .indicator').each(function(){
+        const name = $(this).data('name');
+        if( $('[data-posttypeslug="' + name + '"]').length > 0 ) {
+          $(this).show();
+        } else {
+          $(this).hide();
+        }
+        $(this).addClass('is--checked');
+      });
+    }
   });
 </script>
 

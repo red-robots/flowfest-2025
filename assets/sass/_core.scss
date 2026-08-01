@@ -4070,6 +4070,11 @@ section.schedule-activities.schedule-new {
       border-radius: 6px;
       padding: 6px 15px;
       color: #FFF;
+      opacity: 0;
+      transform: opacity 0.3s ease;
+      &.is--checked {
+        opacity: 1;
+      }
       &[role="button"] {
         cursor: pointer;
       }
